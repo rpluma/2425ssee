@@ -62,6 +62,7 @@
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bCalcSignoMag_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcX_i.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcX_i.vhf">
       <branch xil_pn:name="Implementation"/>
@@ -160,7 +161,7 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730557712" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1730557712">
+    <transform xil_pn:end_ts="1730627708" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1730627708">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Remote_Lab.vhd"/>
@@ -171,13 +172,15 @@
       <outfile xil_pn:name="control_bin_bcd.vhd"/>
       <outfile xil_pn:name="fsm_convol.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1730555318" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:start_ts="1730555318">
+    <transform xil_pn:end_ts="1730627040" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:start_ts="1730627040">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730556309" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1730556307">
+    <transform xil_pn:end_ts="1730627042" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1730627040">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -208,9 +211,10 @@
       <outfile xil_pn:name="ipcore_dir/cont_3b.vhd"/>
       <outfile xil_pn:name="ipcore_dir/dcm_100m_5m.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1730558096" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1730558096">
+    <transform xil_pn:end_ts="1730627709" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1730627708">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -228,19 +232,13 @@
       <outfile xil_pn:name="control_bcd_bin.vhd"/>
       <outfile xil_pn:name="control_bin_bcd.vhd"/>
       <outfile xil_pn:name="fsm_convol.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMemory.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMultiplier.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/bIpSumador.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/biPAccumlator.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/cont_16bits.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/cont_3b.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/dcm_100m_5m.vhd"/>
       <outfile xil_pn:name="reg_desp_4_cifras.vhf"/>
       <outfile xil_pn:name="regdesp8b.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1730558103" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1730558096">
+    <transform xil_pn:end_ts="1730627717" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1730627709">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_beh.prj"/>
@@ -250,9 +248,10 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1730558104" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1730558103">
+    <transform xil_pn:end_ts="1730627717" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1730627717">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.wdb"/>
@@ -266,6 +265,8 @@
     <transform xil_pn:end_ts="1730556266" xil_pn:name="TRAN_schematicsToHdl" xil_pn:start_ts="1730556256">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>

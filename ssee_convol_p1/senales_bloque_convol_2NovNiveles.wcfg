@@ -27,7 +27,7 @@
          </top_modules>
       </db_ref>
    </db_ref_list>
-   <WVObjectSize size="34" />
+   <WVObjectSize size="37" />
    <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/cod_tecla" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">cod_tecla[3:0]</obj_property>
       <obj_property name="ObjectShortName">cod_tecla[3:0]</obj_property>
@@ -52,7 +52,7 @@
       <obj_property name="ObjectShortName">indice[3:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider30" type="divider">
-      <obj_property name="label">Xi</obj_property>
+      <obj_property name="label">Xi (XLXI_2)</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">128 128 255</obj_property>
       <obj_property name="TextColor">230 230 230</obj_property>
@@ -95,7 +95,7 @@
       <obj_property name="ObjectShortName">xlxn_1[7:0]</obj_property>
    </wvobject>
    <wvobject fp_name="divider29" type="divider">
-      <obj_property name="label">calc_conv</obj_property>
+      <obj_property name="label">calc_conv (XLXI_36)</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">128 128 255</obj_property>
       <obj_property name="TextColor">230 230 230</obj_property>
@@ -118,10 +118,6 @@
       <obj_property name="ElementShortName">xi_por_ci[15:0]</obj_property>
       <obj_property name="ObjectShortName">xi_por_ci[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/punto_decimal" type="array" db_ref_id="1">
-      <obj_property name="ElementShortName">punto_decimal[4:1]</obj_property>
-      <obj_property name="ObjectShortName">punto_decimal[4:1]</obj_property>
    </wvobject>
    <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/acumular" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">acumular</obj_property>
@@ -146,10 +142,31 @@
       <obj_property name="ObjectShortName">dato_sal_sync</obj_property>
    </wvobject>
    <wvobject fp_name="divider48" type="divider">
-      <obj_property name="label">Calc_SignoMag</obj_property>
+      <obj_property name="label">Calc_SignoMag (XLXI_34)</obj_property>
       <obj_property name="DisplayName">label</obj_property>
       <obj_property name="BkColor">128 128 255</obj_property>
       <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_34/dato_sal_pos" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_sal_pos[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato_sal_pos[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_34/dato_sal_pos_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_sal_pos_sync</obj_property>
+      <obj_property name="ObjectShortName">dato_sal_pos_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_34/dato_sal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_sal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato_sal[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_34/dato_sal_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_sal_sync</obj_property>
+      <obj_property name="ObjectShortName">dato_sal_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/punto_decimal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">punto_decimal[4:1]</obj_property>
+      <obj_property name="ObjectShortName">punto_decimal[4:1]</obj_property>
    </wvobject>
    <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display1" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">display1[3:0]</obj_property>
@@ -168,10 +185,6 @@
    <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display4" type="array" db_ref_id="1">
       <obj_property name="ElementShortName">display4[3:0]</obj_property>
       <obj_property name="ObjectShortName">display4[3:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/clk_period" type="other" db_ref_id="1">
-      <obj_property name="ElementShortName">clk_period</obj_property>
-      <obj_property name="ObjectShortName">clk_period</obj_property>
    </wvobject>
    <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/reset" type="logic" db_ref_id="1">
       <obj_property name="ElementShortName">reset</obj_property>

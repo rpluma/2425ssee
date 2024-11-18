@@ -44,7 +44,11 @@ ARCHITECTURE behavioral OF bloque_convol_bloque_convol_sch_tb IS
    SIGNAL display4	:	STD_LOGIC_VECTOR (3 DOWNTO 0);
 
 	constant CLK_period : time := 10 ns;
-	constant CLK_TIEMPO_PROCESO : time := 20 * CLK_period;
+	constant CLK_RESET : time := 10 * CLK_period;
+	constant CLK_PROCESAR_INPUT : time := 50 * CLK_period;
+	constant CLK_SIGUIENTE_TECLA : time := 50 * CLK_period;
+	constant TECL_A : STD_LOGIC_VECTOR(3 DOWNTO 0) := "1010";
+	constant TECL_C : STD_LOGIC_VECTOR(3 DOWNTO 0) := "1100";
 
 BEGIN
 
@@ -81,97 +85,12 @@ CK_process :process
 		reset <= transport '1';
 		cod_tecla <= transport "0000";
 		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*20;
+		WAIT FOR CLK_RESET;
 
 		reset <= transport '0';
-		WAIT FOR CLK_period*30;
+		WAIT FOR CLK_RESET;
 	
-
--- Introducimos el número 64 y pulsamos "A"
-
-		cod_tecla <= transport "0000"; -- "0"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0001"; -- "1"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; --  CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
-		cod_tecla <= transport "0001"; -- "1"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0000"; -- "0"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
-		cod_tecla <= transport "0001"; -- "1"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0000"; -- "0"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-
-		cod_tecla <= transport "0000"; -- "0"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
+----------------------
 		cod_tecla <= transport "0110"; -- "6"
 		tecla_pulsada <= '1';
 		WAIT FOR CLK_period;
@@ -183,467 +102,70 @@ CK_process :process
 		WAIT FOR CLK_period;
 		tecla_pulsada <= transport '0';
 		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
 
 
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
+	-- Introducimos el número 1,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0001"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
+	-- Introducimos el número 10,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0001"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
+	-- Introducimos el número 10,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0001"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
+-- Introducimos el número 127,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0001"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0010"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0111"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
+-- Introducimos el número 64,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0110"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0100"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
+-- Introducimos el número 32,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0011"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0010"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
+-- Introducimos el número 16,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0001"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0110"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
+-- Introducimos el número 8,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "1000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
-
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "1010"; -- "A"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_TIEMPO_PROCESO; -- Dejamos tiempo suficiente para ver el resultado
-
-		-- Pulsamos "C" para volver a introducir un dato
-		cod_tecla <= transport "1100"; -- "C"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;	
-
-
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---		
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
---
---
---
---		cod_tecla <= transport "0000"; -- "0"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;
---		
---		cod_tecla <= transport "1010"; -- "A"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*1000; -- Dejamos tiempo suficiente para ver el resultado
---
---		-- Pulsamos "C" para volver a introducir un dato
---		cod_tecla <= transport "1100"; -- "C"
---		tecla_pulsada <= '1';
---		WAIT FOR CLK_period;
---		tecla_pulsada <= transport '0';
---		WAIT FOR CLK_period*10;	
-
-
-
-
+-- Introducimos el número 4,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport "0100"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
+		cod_tecla <= transport TECL_A; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_PROCESAR_INPUT; 
+		cod_tecla <= transport TECL_C; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;
 
 
       WAIT; -- will wait forever
