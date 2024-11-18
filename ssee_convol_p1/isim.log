@@ -112,7 +112,7 @@ at 974 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0
 at 984 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 994 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 # restart
-# run 100.00us
+# run 1ms
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 at 4 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

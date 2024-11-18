@@ -8,9 +8,9 @@ Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMul
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/biPAccumlator.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpSumador.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/regdesp8b.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/fsm_convol.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bin_bcd.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bcd_bin.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Bin_A_BCD.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.vhf" into library work
@@ -110,8 +110,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalc
 Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
 Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 75 sub-compilation(s) to finish...
+Waiting for 73 sub-compilation(s) to finish...
 Compiled 145 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
-Fuse Memory Usage: 67776 KB
-Fuse CPU Usage: 1468 ms
+Fuse Memory Usage: 67632 KB
+Fuse CPU Usage: 1640 ms

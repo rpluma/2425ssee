@@ -2,9 +2,29 @@ Command line:
    bloque_convol_bloque_convol_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52305
+     -socket  52982
 
-Wed Nov 13 20:16:10 2024
+Wed Nov 13 21:11:09 2024
 
 
  Elaboration Time: 0.0625 sec
+
+ Current Memory Usage: 5163.29 Meg
+
+ Total Signals          : 2320
+ Total Nets             : 3368
+ Total Signal Drivers   : 720
+ Total Blocks           : 510
+ Total Primitive Blocks : 437
+ Total Processes        : 657
+ Total Traceable Variables  : 971
+ Total Scalar Nets and Variables : 6996
+Total Line Count : 2218
+Total Line Count : 2218
+
+ Total Simulation Time: 1.92188 sec
+
+ Current Memory Usage: 5006 Meg
+
+Wed Nov 13 21:13:04 2024
+

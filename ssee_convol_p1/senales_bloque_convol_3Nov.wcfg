@@ -5,6 +5,7 @@
    <db_ref_list>
       <db_ref path="C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.wdb" id="1" type="auto">
          <top_modules>
+            <top_module name="bip_dsp48_addsub_pkg_v2_0" />
             <top_module name="bip_usecase_utils_pkg_v2_0" />
             <top_module name="bip_utils_pkg_v2_0" />
             <top_module name="bloque_convol_bloque_convol_sch_tb" />
@@ -23,6 +24,8 @@
             <top_module name="xbip_accum_v2_0_comp" />
             <top_module name="xbip_accum_v2_0_pkg" />
             <top_module name="xbip_addsub_v2_0_comp" />
+            <top_module name="xbip_dsp48_addsub_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_comp" />
             <top_module name="xbip_pipe_v2_0_xst_comp" />
          </top_modules>
       </db_ref>
@@ -31,6 +34,10 @@
    <wvobject fp_name="group40" type="group">
       <obj_property name="label">Entrada</obj_property>
       <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/ventana" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">ventana[1:0]</obj_property>
+         <obj_property name="ObjectShortName">ventana[1:0]</obj_property>
+      </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/dato_nuevo" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">dato_nuevo</obj_property>
          <obj_property name="ObjectShortName">dato_nuevo</obj_property>
