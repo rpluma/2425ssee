@@ -9,3 +9,5 @@ mode=none
 order=1
 [Expand]
 ds_fsm_convol=1
+[Settings]
+Active=ds_fsm_convol

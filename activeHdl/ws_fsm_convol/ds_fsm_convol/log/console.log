@@ -1,13 +1,3 @@
-acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/compile/fsm_convol.vhd
-# Compile Entity "fsm_convol"
-# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Error: COMP96_0756: fsm_convol.asf(fsm_convol.vhd) : (92, 9): Subprogram call is ambiguous. At least two matching subprograms "ieee.std_logic_arith."="(L : UNSIGNED; R : UNSIGNED) return BOOLEAN" and "ieee.std_logic_arith."="(L : UNSIGNED; R : SIGNED) return BOOLEAN" were detected.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
-acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/compile/fsm_convol.vhd
-# Compile Entity "fsm_convol"
-# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Error: COMP96_0756: fsm_convol.asf(fsm_convol.vhd) : (92, 9): Subprogram call is ambiguous. At least two matching subprograms "ieee.std_logic_arith."="(L : UNSIGNED; R : UNSIGNED) return BOOLEAN" and "ieee.std_logic_arith."="(L : UNSIGNED; R : SIGNED) return BOOLEAN" were detected.
-# Compile failure 1 Errors 0 Warnings  Analysis time :  0.0 [ms]
 acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
 # Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
 # Loading State Diagram data...
@@ -16,59 +6,67 @@ acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
 # HDL code generation successful. 0 error(s), 0 warning(s)
 # Compile Entity "fsm_convol"
 # Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
+# Error: COMP96_0123: fsm_convol.asf(fsm_convol.vhd) : (101, 5): Variable or constant cannot be the target of a signal assignment.
+# Error: COMP96_0077: fsm_convol.asf(fsm_convol.vhd) : (101, 16): Undefined type of expression. Expected type 'UNSIGNED'.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (109, 16): Improper array length (4). Expected length is 3.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (128, 15): Improper array length (4). Expected length is 3.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  15.0 [ms]
 acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
 # Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
 # Loading State Diagram data...
 # Synthesis attributes will be generated for "Synopsys FPGA Express"
 # Generating interface file...
 # HDL code generation successful. 0 error(s), 0 warning(s)
+# Compile Entity "fsm_convol"
+# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
+# Error: COMP96_0077: fsm_convol.asf(fsm_convol.vhd) : (101, 16): Undefined type of expression. Expected type 'UNSIGNED'.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (109, 16): Improper array length (4). Expected length is 3.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (128, 15): Improper array length (4). Expected length is 3.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)
+# Compile Entity "fsm_convol"
+# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
+# Compile success 0 Errors 0 Warnings  Analysis time :  46.0 [ms]
+acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/compile/fsm_convol.vhd
 # Compile Entity "fsm_convol"
 # Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
 # Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
 acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
 # Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
 # Loading State Diagram data...
-# Warning: FSM2HDL_3058 fsm_convol.asf : Duplicated state codes, check state machine "Sreg0" - states: "S1" and "S5".
 # Synthesis attributes will be generated for "Synopsys FPGA Express"
 # Generating interface file...
-# HDL code generation completed. 0 error(s), 1 warning(s)
-# Double-click on error/warning line to see the source of error/warning.
+# HDL code generation successful. 0 error(s), 0 warning(s)
 # Compile Entity "fsm_convol"
 # Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (101, 16): Improper array length (3). Expected length is 4.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (109, 15): Improper array length (4). Expected length is 3.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (128, 14): Improper array length (4). Expected length is 3.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  16.0 [ms]
 acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
 # Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
 # Loading State Diagram data...
-# Warning: FSM2HDL_3058 fsm_convol.asf : Duplicated state codes, check state machine "Sreg0" - states: "S1" and "S5".
 # Synthesis attributes will be generated for "Synopsys FPGA Express"
 # Generating interface file...
-# HDL code generation completed. 0 error(s), 1 warning(s)
-# Double-click on error/warning line to see the source of error/warning.
+# HDL code generation successful. 0 error(s), 0 warning(s)
+# Compile Entity "fsm_convol"
+# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (96, 15): Improper array length (3). Expected length is 4.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (100, 13): Improper array length (3). Expected length is 4.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (101, 16): Improper array length (3). Expected length is 4.
+# Error: COMP96_0367: fsm_convol.asf(fsm_convol.vhd) : (123, 16): Improper array length (3). Expected length is 4.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)
 # Compile Entity "fsm_convol"
 # Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
 # Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
-acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
-# Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
-# Loading State Diagram data...
-# Warning: FSM2HDL_3058 fsm_convol.asf : Duplicated state codes, check state machine "Sreg0" - states: "S1", "S5" and "S6".
-# Synthesis attributes will be generated for "Synopsys FPGA Express"
-# Warning: FSM2HDL_3124 fsm_convol.asf : Output port used as a source. Check expression: "indice=0".
-# Generating interface file...
-# HDL code generation completed. 0 error(s), 2 warning(s)
-# Double-click on error/warning line to see the source of error/warning.
-# Compile Entity "fsm_convol"
-# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Error: COMP96_0393: fsm_convol.asf(fsm_convol.vhd) : (96, 9): Cannot read output : "indice".
-# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
-acom -O3 -e 100 -work ds_fsm_convol -2002  $dsn/src/fsm_convol.asf
-# Generating "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\compile\fsm_convol.vhd" from "C:\Users\Usuario_UMA\Desktop\activeHdl\ws_fsm_convol\ds_fsm_convol\src\fsm_convol.asf"
-# Loading State Diagram data...
-# Warning: FSM2HDL_3058 fsm_convol.asf : Duplicated state codes, check state machine "Sreg0" - states: "S1", "S5" and "S6".
-# Synthesis attributes will be generated for "Synopsys FPGA Express"
-# Generating interface file...
-# HDL code generation completed. 0 error(s), 1 warning(s)
-# Double-click on error/warning line to see the source of error/warning.
-# Compile Entity "fsm_convol"
-# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
-# Compile success 0 Errors 0 Warnings  Analysis time :  31.0 [ms]
