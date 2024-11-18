@@ -348,7 +348,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="bloque_convol">
-            <timestamp>2024-11-4T10:35:58</timestamp>
+            <timestamp>2024-11-13T18:38:22</timestamp>
             <rect width="416" x="64" y="-320" height="320" />
             <line x2="0" y1="-48" y2="-48" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />

@@ -36,6 +36,7 @@
         <signal name="dato_sal_pos_sync" />
         <signal name="signo_sal" />
         <signal name="dato_sal_sync" />
+        <signal name="ceros(1:0)" />
         <port polarity="Input" name="ck" />
         <port polarity="Input" name="cod_tecla(3:0)" />
         <port polarity="Input" name="tecla_pulsada" />
@@ -165,7 +166,9 @@
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
         <blockdef name="bCalcConv">
-            <timestamp>2024-11-4T10:30:31</timestamp>
+            <timestamp>2024-11-13T18:40:15</timestamp>
+            <rect width="64" x="0" y="84" height="24" />
+            <line x2="0" y1="96" y2="96" x1="64" />
             <rect width="64" x="368" y="20" height="24" />
             <line x2="432" y1="32" y2="32" x1="368" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -174,7 +177,7 @@
             <rect width="64" x="0" y="-44" height="24" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="432" y1="-32" y2="-32" x1="368" />
-            <rect width="304" x="64" y="-256" height="320" />
+            <rect width="304" x="64" y="-256" height="384" />
         </blockdef>
         <block symbolname="Comp_Num_Letra" name="XLXI_3">
             <blockpin signalname="tecla_pulsada" name="tecla_pulsada" />
@@ -254,6 +257,7 @@
             <blockpin signalname="dato_ent(7:0)" name="dato_ent(7:0)" />
             <blockpin signalname="dato_sal(7:0)" name="dat_sal(7:0)" />
             <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
+            <blockpin signalname="ceros(1:0)" name="ventana(1:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3801" height="2688">
@@ -600,5 +604,9 @@
         </branch>
         <instance x="336" y="1712" name="XLXI_34" orien="R0">
         </instance>
+        <branch name="ceros(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2976" y="1280" type="branch" />
+            <wire x2="3024" y1="1280" y2="1280" x1="2976" />
+        </branch>
     </sheet>
 </drawing>

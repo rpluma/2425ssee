@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="bloque_convol">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-11-4T10:35:58</timestamp>
+    <timestamp>2024-11-13T18:38:22</timestamp>
     <pin polarity="Input" x="0" y="-128" name="ck" />
     <pin polarity="Input" x="0" y="-288" name="cod_tecla(3:0)" />
     <pin polarity="Input" x="0" y="-208" name="tecla_pulsada" />

@@ -14,7 +14,7 @@
         <signal name="dato_sal_sync" />
         <signal name="c_i(7:0)" />
         <signal name="x_i(7:0)" />
-        <signal name="indice(2:0)" />
+        <signal name="ventana(1:0),indice(2:0)" />
         <signal name="acumular" />
         <signal name="inicializar" />
         <signal name="ceros(7:0)" />
@@ -26,12 +26,14 @@
         <signal name="guardar" />
         <signal name="res_parc(15:0)" />
         <signal name="indice(3:0)" />
+        <signal name="ventana(1:0)" />
         <port polarity="Input" name="dato_nuevo" />
         <port polarity="Input" name="ck" />
         <port polarity="Input" name="reset" />
         <port polarity="Input" name="dato_ent(7:0)" />
         <port polarity="Output" name="dat_sal(7:0)" />
         <port polarity="Output" name="dato_sal_sync" />
+        <port polarity="Input" name="ventana(1:0)" />
         <blockdef name="bCalcX_i">
             <timestamp>2024-11-4T10:30:39</timestamp>
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -45,7 +47,7 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="bIpMemory">
-            <timestamp>2024-11-4T12:47:12</timestamp>
+            <timestamp>2024-11-13T18:23:26</timestamp>
             <rect width="512" x="32" y="32" height="1344" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" style="linewidth:W" x1="0" />
@@ -154,7 +156,7 @@
             <blockpin signalname="x_i(7:0)" name="x_i(7:0)" />
         </block>
         <block symbolname="bIpMemory" name="XLXI_5">
-            <blockpin signalname="indice(2:0)" name="addra(2:0)" />
+            <blockpin signalname="ventana(1:0),indice(2:0)" name="addra(4:0)" />
             <blockpin signalname="ceros(7:0)" name="dina(7:0)" />
             <blockpin signalname="ceros(0)" name="wea(0:0)" />
             <blockpin signalname="ck" name="clka" />
@@ -181,7 +183,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="864" type="branch" />
             <wire x2="1424" y1="864" y2="864" x1="1408" />
         </branch>
-        <rect width="828" x="360" y="516" height="832" />
         <branch name="dato_nuevo">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="576" y="128" type="branch" />
             <wire x2="576" y1="128" y2="128" x1="560" />
@@ -298,7 +299,7 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="576" y="1232" type="branch" />
             <wire x2="592" y1="1232" y2="1232" x1="576" />
         </branch>
-        <branch name="indice(2:0)">
+        <branch name="ventana(1:0),indice(2:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="576" y="1040" type="branch" />
             <wire x2="592" y1="1040" y2="1040" x1="576" />
         </branch>
@@ -344,5 +345,11 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1952" y="512" type="branch" />
             <wire x2="1952" y1="512" y2="512" x1="1936" />
         </branch>
+        <rect width="776" x="420" y="508" height="1900" />
+        <branch name="ventana(1:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="576" y="336" type="branch" />
+            <wire x2="576" y1="336" y2="336" x1="560" />
+        </branch>
+        <iomarker fontsize="28" x="560" y="336" name="ventana(1:0)" orien="R180" />
     </sheet>
 </drawing>

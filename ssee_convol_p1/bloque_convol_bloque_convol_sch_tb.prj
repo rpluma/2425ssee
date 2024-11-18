@@ -1,0 +1,8 @@
+vhdl work "ipcore_dir/bIpMemory.vhd"
+vhdl work "ipcore_dir/bIpMultiplier.vhd"
+vhdl work "ipcore_dir/biPAccumlator.vhd"
+vhdl work "ipcore_dir/bIpSumador.vhd"
+vhdl work "fsm_convol.vhd"
+vhdl work "control_bin_bcd.vhd"
+vhdl work "control_bcd_bin.vhd"
+vhdl work "bCalcConvFSM.vhd"

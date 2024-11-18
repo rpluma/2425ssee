@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="bCalcConv">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-11-4T10:30:31</timestamp>
+    <timestamp>2024-11-13T18:40:15</timestamp>
     <pin polarity="Input" x="0" y="-224" name="dato_nuevo" />
     <pin polarity="Input" x="0" y="-160" name="ck" />
     <pin polarity="Input" x="0" y="-96" name="reset" />
     <pin polarity="Input" x="0" y="-32" name="dato_ent(7:0)" />
     <pin polarity="Output" x="432" y="32" name="dat_sal(7:0)" />
     <pin polarity="Output" x="432" y="-32" name="dato_sal_sync" />
+    <pin polarity="Input" x="0" y="96" name="ventana(1:0)" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="216" y="-264" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin dato_nuevo" />
@@ -16,6 +17,9 @@
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin dato_ent(7:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="32" type="pin dat_sal(7:0)" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="360" y="-32" type="pin dato_sal_sync" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="96" type="pin ventana(1:0)" />
+        <rect width="64" x="0" y="84" height="24" />
+        <line x2="0" y1="96" y2="96" x1="64" />
         <rect width="64" x="368" y="20" height="24" />
         <line x2="432" y1="32" y2="32" x1="368" />
         <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -24,6 +28,6 @@
         <rect width="64" x="0" y="-44" height="24" />
         <line x2="0" y1="-32" y2="-32" x1="64" />
         <line x2="432" y1="-32" y2="-32" x1="368" />
-        <rect width="304" x="64" y="-256" height="320" />
+        <rect width="304" x="64" y="-256" height="384" />
     </graph>
 </symbol>
