@@ -6,7 +6,8 @@ component fsm_convol
 		inicializar: out STD_LOGIC;
 		acumular: out STD_LOGIC;
 		dato_sal_sync: out STD_LOGIC;
-		incrementar: out STD_LOGIC);
+		indice: out UNSIGNED (2 downto 0);
+		multiplicar: out STD_LOGIC);
 end component;
 
 
@@ -17,4 +18,5 @@ instance_name : fsm_convol
  inicializar => ,
  acumular => ,
  dato_sal_sync => ,
- incrementar => );
+ indice => ,
+ multiplicar => );
