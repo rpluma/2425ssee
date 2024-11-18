@@ -300,3 +300,4 @@ at 1814 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U
 at 1824 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 1834 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 1844 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 10.00us

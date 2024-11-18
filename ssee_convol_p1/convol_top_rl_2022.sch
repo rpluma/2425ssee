@@ -86,6 +86,7 @@
         <signal name="ck_100MHz_pad" />
         <signal name="XLXN_1" />
         <signal name="cuenta_dcm(15:0)" />
+        <signal name="ceros(1:0)" />
         <port polarity="BiDirectional" name="fila_pad(4:1)" />
         <port polarity="Input" name="col_pad(4:1)" />
         <port polarity="Input" name="reset_pad" />
@@ -348,8 +349,9 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="bloque_convol">
-            <timestamp>2024-11-13T18:38:22</timestamp>
-            <rect width="416" x="64" y="-320" height="320" />
+            <timestamp>2024-11-13T18:51:22</timestamp>
+            <rect width="64" x="0" y="20" height="24" />
+            <line x2="0" y1="32" y2="32" x1="64" />
             <line x2="0" y1="-48" y2="-48" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
@@ -365,6 +367,7 @@
             <line x2="544" y1="-96" y2="-96" x1="480" />
             <rect width="64" x="480" y="-44" height="24" />
             <line x2="544" y1="-32" y2="-32" x1="480" />
+            <rect width="416" x="64" y="-320" height="384" />
         </blockdef>
         <block symbolname="obuft" name="XLXI_114(4:1)">
             <blockpin signalname="XLXN_406(4:1)" name="I" />
@@ -547,6 +550,7 @@
             <blockpin signalname="cent_bcd(3:0)" name="display2(3:0)" />
             <blockpin signalname="dec_bcd(3:0)" name="display3(3:0)" />
             <blockpin signalname="unid_bcd(3:0)" name="display4(3:0)" />
+            <blockpin signalname="ceros(1:0)" name="ventana(1:0)" />
         </block>
         <block symbolname="dcm_100m_5m" name="XLXI_306">
             <blockpin signalname="ck_100MHz_pad" name="clk_in1" />
@@ -1154,6 +1158,10 @@
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="496" y="2544" type="branch" />
             <wire x2="496" y1="2544" y2="2544" x1="352" />
             <wire x2="688" y1="2544" y2="2544" x1="496" />
+        </branch>
+        <branch name="ceros(1:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2880" y="896" type="branch" />
+            <wire x2="2944" y1="896" y2="896" x1="2880" />
         </branch>
     </sheet>
 </drawing>

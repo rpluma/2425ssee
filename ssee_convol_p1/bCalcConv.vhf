@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/13/2024 19:17:03
+-- /___/   /\     Timestamp : 11/13/2024 19:51:02
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_75";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_74";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_73";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_72";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_71";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_70";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_69";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_68";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_57";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_56";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_55";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_54";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_53";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_52";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_51";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_50";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -703,6 +703,7 @@ entity bCalcConv is
           dato_ent      : in    std_logic_vector (7 downto 0); 
           dato_nuevo    : in    std_logic; 
           reset         : in    std_logic; 
+          ventana       : in    std_logic_vector (1 downto 0); 
           dato_sal_sync : out   std_logic; 
           dat_sal       : out   std_logic_vector (7 downto 0));
 end bCalcConv;
@@ -729,7 +730,7 @@ architecture BEHAVIORAL of bCalcConv is
    end component;
    
    component bIpMemory
-      port ( addra : in    std_logic_vector (2 downto 0); 
+      port ( addra : in    std_logic_vector (4 downto 0); 
              dina  : in    std_logic_vector (7 downto 0); 
              wea   : in    std_logic_vector (0 downto 0); 
              clka  : in    std_logic; 
@@ -793,7 +794,8 @@ begin
                 x_i(7 downto 0)=>x_i(7 downto 0));
    
    XLXI_5 : bIpMemory
-      port map (addra(2 downto 0)=>indice(2 downto 0),
+      port map (addra(4 downto 3)=>ventana(1 downto 0),
+                addra(2 downto 0)=>indice(2 downto 0),
                 clka=>ck,
                 dina(7 downto 0)=>ceros(7 downto 0),
                 wea(0)=>ceros(0),

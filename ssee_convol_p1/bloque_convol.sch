@@ -36,7 +36,7 @@
         <signal name="dato_sal_pos_sync" />
         <signal name="signo_sal" />
         <signal name="dato_sal_sync" />
-        <signal name="ceros(1:0)" />
+        <signal name="ventana(1:0)" />
         <port polarity="Input" name="ck" />
         <port polarity="Input" name="cod_tecla(3:0)" />
         <port polarity="Input" name="tecla_pulsada" />
@@ -46,6 +46,7 @@
         <port polarity="Output" name="display2(3:0)" />
         <port polarity="Output" name="display3(3:0)" />
         <port polarity="Output" name="display4(3:0)" />
+        <port polarity="Input" name="ventana(1:0)" />
         <blockdef name="Conversor_BCD_Bin">
             <timestamp>2024-11-4T10:35:22</timestamp>
             <rect width="64" x="0" y="-364" height="24" />
@@ -257,7 +258,7 @@
             <blockpin signalname="dato_ent(7:0)" name="dato_ent(7:0)" />
             <blockpin signalname="dato_sal(7:0)" name="dat_sal(7:0)" />
             <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
-            <blockpin signalname="ceros(1:0)" name="ventana(1:0)" />
+            <blockpin signalname="ventana(1:0)" name="ventana(1:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3801" height="2688">
@@ -604,9 +605,13 @@
         </branch>
         <instance x="336" y="1712" name="XLXI_34" orien="R0">
         </instance>
-        <branch name="ceros(1:0)">
+        <branch name="ventana(1:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2976" y="1280" type="branch" />
             <wire x2="3024" y1="1280" y2="1280" x1="2976" />
         </branch>
+        <branch name="ventana(1:0)">
+            <wire x2="960" y1="2224" y2="2224" x1="688" />
+        </branch>
+        <iomarker fontsize="28" x="688" y="2224" name="ventana(1:0)" orien="R180" />
     </sheet>
 </drawing>

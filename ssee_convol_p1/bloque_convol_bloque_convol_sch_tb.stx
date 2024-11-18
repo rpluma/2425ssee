@@ -4,13 +4,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Parameter xsthdpdir set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.08 secs
+Total CPU time to Xst completion: 0.11 secs
  
 --> Reading design: bloque_convol_bloque_convol_sch_tb.prj
 
@@ -66,7 +66,7 @@ Parsing architecture <behavioral> of entity <bloque_convol_bloque_convol_sch_tb>
 
 
 Total REAL time to Xst completion: 3.00 secs
-Total CPU time to Xst completion: 3.06 secs
+Total CPU time to Xst completion: 3.31 secs
  
 --> 
 
