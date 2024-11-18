@@ -101,7 +101,7 @@
             <line x2="64" y1="-64" y2="0" x1="64" />
         </blockdef>
         <blockdef name="fsm_convol">
-            <timestamp>2024-11-14T10:37:2</timestamp>
+            <timestamp>2024-11-14T10:56:54</timestamp>
             <line x2="416" y1="288" y2="288" x1="352" />
             <line x2="416" y1="160" y2="160" x1="352" />
             <line x2="416" y1="96" y2="96" x1="352" />
@@ -160,10 +160,10 @@
             <blockpin signalname="dato_nuevo" name="dato_nuevo" />
             <blockpin signalname="reset" name="reset" />
             <blockpin signalname="inicializar" name="inicializar" />
-            <blockpin signalname="multiplicar" name="multiplicar" />
             <blockpin signalname="acumular" name="acumular" />
-            <blockpin signalname="guardar" name="guardar" />
             <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
+            <blockpin signalname="multiplicar" name="multiplicar" />
+            <blockpin signalname="guardar" name="guardar" />
             <blockpin signalname="indice(2:0)" name="indice(2:0)" />
         </block>
     </netlist>

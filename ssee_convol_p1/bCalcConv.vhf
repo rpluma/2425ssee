@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/14/2024 11:39:14
+-- /___/   /\     Timestamp : 11/14/2024 12:08:25
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_73";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_72";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_71";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_70";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_69";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_68";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_67";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_66";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_4";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_3";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_2";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -778,10 +778,10 @@ architecture BEHAVIORAL of bCalcConv is
              dato_nuevo    : in    std_logic; 
              reset         : in    std_logic; 
              inicializar   : out   std_logic; 
-             multiplicar   : out   std_logic; 
              acumular      : out   std_logic; 
-             guardar       : out   std_logic; 
              dato_sal_sync : out   std_logic; 
+             multiplicar   : out   std_logic; 
+             guardar       : out   std_logic; 
              indice        : out   std_logic_vector (2 downto 0));
    end component;
    

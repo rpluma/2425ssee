@@ -22,7 +22,6 @@
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_34 - bCalcSignoMag</ClosedNode>
-         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_36 - bCalcConv</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_1 - teclado_hexa_completo</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_864 - displays_7seg_nexys3_RemLab</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_865 - Remote_Lab - Behavioral</ClosedNode>
@@ -61,7 +60,7 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems/>
-      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="vertical" >6</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff00000000000000010000000000000001010000000000000000000000000000000000000392000000040101000100000000000000000000000064ffffffff000000810000000000000004000001160000000100000000000001390000000100000000000000920000000100000000000000b10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
@@ -96,13 +95,13 @@
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem/>
+         <SelectedItem>Create Schematic Symbol</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem>Create Schematic Symbol</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -133,6 +132,9 @@
    <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/bloque_convol_bloque_convol_sch_tb - behavioral C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|bloque_convol_tb_4vent.vhd/UUT - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
+         <ClosedNode>/bloque_convol_bloque_convol_sch_tb - behavioral C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|bloque_convol_tb_4vent.vhd/UUT - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
+         <ClosedNode>/bloque_convol_bloque_convol_sch_tb - behavioral C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|bloque_convol_tb_4vent.vhd/UUT - bloque_convol/XLXI_34 - bCalcSignoMag</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_1 - teclado_hexa_completo</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_864 - displays_7seg_nexys3_RemLab</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_865 - Remote_Lab - Behavioral</ClosedNode>
@@ -140,15 +142,16 @@
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_34 - bCalcSignoMag</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_36 - bCalcConv</ClosedNode>
       </ClosedNodes>
       <SelectedItems>
-         <SelectedItem>Unassigned User Library Modules</SelectedItem>
+         <SelectedItem>bloque_convol_bloque_convol_sch_tb - behavioral (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb_4vent.vhd)</SelectedItem>
       </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001fb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001fb0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f10000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>Unassigned User Library Modules</CurrentItem>
+      <CurrentItem>bloque_convol_bloque_convol_sch_tb - behavioral (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb_4vent.vhd)</CurrentItem>
    </ItemView>
    <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
       <ClosedNodes>

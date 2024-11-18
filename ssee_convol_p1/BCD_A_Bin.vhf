@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : BCD_A_Bin.vhf
--- /___/   /\     Timestamp : 11/14/2024 11:39:13
+-- /___/   /\     Timestamp : 11/14/2024 12:04:54
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

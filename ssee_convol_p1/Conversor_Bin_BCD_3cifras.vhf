@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_Bin_BCD_3cifras.vhf
--- /___/   /\     Timestamp : 11/14/2024 11:39:13
+-- /___/   /\     Timestamp : 11/14/2024 12:04:55
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
