@@ -65,12 +65,12 @@
             <line x2="544" y1="80" y2="80" style="linewidth:W" x1="576" />
         </blockdef>
         <blockdef name="biPAccumlator">
-            <timestamp>2024-11-4T12:48:42</timestamp>
+            <timestamp>2024-11-14T13:41:40</timestamp>
             <rect width="224" x="32" y="32" height="352" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" x1="0" />
             <line x2="32" y1="208" y2="208" x1="0" />
-            <line x2="32" y1="272" y2="272" x1="0" />
+            <line x2="32" y1="336" y2="336" x1="0" />
             <line x2="256" y1="80" y2="80" style="linewidth:W" x1="288" />
         </blockdef>
         <blockdef name="gnd">
@@ -132,8 +132,8 @@
             <blockpin signalname="xi_por_ci(15:0)" name="b(15:0)" />
             <blockpin signalname="ck" name="clk" />
             <blockpin signalname="acumular" name="ce" />
-            <blockpin signalname="inicializar" name="sclr" />
-            <blockpin signalname="res_parc(15:0)" name="q(15:0)" />
+            <blockpin signalname="inicializar" name="sinit" />
+            <blockpin signalname="res_parc(15:0)" name="q(18:0)" />
         </block>
         <block symbolname="bIpMultiplier" name="XLXI_6">
             <blockpin signalname="x_i(7:0)" name="a(7:0)" />
@@ -220,10 +220,6 @@
         <branch name="ck">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1696" y="1568" type="branch" />
             <wire x2="1712" y1="1568" y2="1568" x1="1696" />
-        </branch>
-        <branch name="inicializar">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2448" y="1600" type="branch" />
-            <wire x2="2464" y1="1600" y2="1600" x1="2448" />
         </branch>
         <branch name="acumular">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2448" y="1536" type="branch" />
@@ -362,5 +358,9 @@
         </branch>
         <instance x="1824" y="960" name="XLXI_22" orien="R0">
         </instance>
+        <branch name="inicializar">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2448" y="1664" type="branch" />
+            <wire x2="2464" y1="1664" y2="1664" x1="2448" />
+        </branch>
     </sheet>
 </drawing>

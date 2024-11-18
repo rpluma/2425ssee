@@ -60,6 +60,7 @@
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/cont_3b.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/cont_3b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/cont_3b.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/dcm_100m_5m.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/dcm_100m_5m.vho" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
@@ -94,6 +95,8 @@
     <transform xil_pn:end_ts="1731582553" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1731582551">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -110,6 +113,10 @@
     <transform xil_pn:end_ts="1731582508" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1731582507">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ipcore_dir/bIpMemory.ngc"/>
       <outfile xil_pn:name="ipcore_dir/bIpMemory.vhd"/>
       <outfile xil_pn:name="ipcore_dir/bIpMultiplier.ngc"/>
@@ -127,6 +134,11 @@
     <transform xil_pn:end_ts="1731582508" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1731582508">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -156,7 +168,10 @@
     <transform xil_pn:end_ts="1731582561" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1731582553">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_beh.prj"/>
       <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.exe"/>
@@ -168,6 +183,7 @@
     <transform xil_pn:end_ts="1731582562" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1731582561">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.wdb"/>

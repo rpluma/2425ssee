@@ -55,8 +55,8 @@ COMPONENT biPAccumlator
     b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
-    sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    sinit : IN STD_LOGIC;
+    q : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
@@ -70,7 +70,7 @@ your_instance_name : biPAccumlator
     b => b,
     clk => clk,
     ce => ce,
-    sclr => sclr,
+    sinit => sinit,
     q => q
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

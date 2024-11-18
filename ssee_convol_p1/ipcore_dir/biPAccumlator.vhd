@@ -45,8 +45,8 @@ ENTITY biPAccumlator IS
     b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
-    sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    sinit : IN STD_LOGIC;
+    q : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
   );
 END biPAccumlator;
 
@@ -57,8 +57,8 @@ COMPONENT wrapped_biPAccumlator
     b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
-    sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
+    sinit : IN STD_LOGIC;
+    q : OUT STD_LOGIC_VECTOR(18 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -74,15 +74,15 @@ END COMPONENT;
       c_has_bypass => 0,
       c_has_c_in => 0,
       c_has_ce => 1,
-      c_has_sclr => 1,
-      c_has_sinit => 0,
+      c_has_sclr => 0,
+      c_has_sinit => 1,
       c_has_sset => 0,
       c_implementation => 0,
       c_latency => 1,
-      c_out_width => 16,
+      c_out_width => 19,
       c_scale => 0,
       c_sclr_overrides_sset => 1,
-      c_sinit_val => "0",
+      c_sinit_val => "100000",
       c_verbosity => 0,
       c_xdevicefamily => "spartan6"
     );
@@ -94,7 +94,7 @@ U0 : wrapped_biPAccumlator
     b => b,
     clk => clk,
     ce => ce,
-    sclr => sclr,
+    sinit => sinit,
     q => q
   );
 -- synthesis translate_on

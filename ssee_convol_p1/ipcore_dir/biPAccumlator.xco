@@ -1,7 +1,7 @@
 ##############################################################
 #
 # Xilinx Core Generator version 14.7
-# Date: Mon Nov 04 12:48:03 2024
+# Date: Thu Nov 14 13:41:03 2024
 #
 ##############################################################
 #
@@ -51,11 +51,11 @@ CSET input_type=Signed
 CSET input_width=16
 CSET latency=1
 CSET latency_configuration=Manual
-CSET output_width=16
+CSET output_width=19
 CSET scale=0
-CSET sclr=true
-CSET sinit=false
-CSET sinit_value=0
+CSET sclr=false
+CSET sinit=true
+CSET sinit_value=20
 CSET sset=false
 CSET sync_ce_priority=Sync_Overrides_CE
 CSET syncctrlpriority=Reset_Overrides_Set
@@ -64,4 +64,4 @@ CSET syncctrlpriority=Reset_Overrides_Set
 MISC pkg_timestamp=2013-07-22T10:36:54Z
 # END Extra information
 GENERATE
-# CRC: ce49ebca
+# CRC: 12f57f87
