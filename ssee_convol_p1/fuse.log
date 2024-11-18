@@ -1,151 +1,81 @@
-Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_isim_beh.exe -prj C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_beh.prj work.convol_top_rl_2022 
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe -prj C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_beh.prj work.bloque_convol_bloque_convol_sch_tb 
 ISim P.20131013 (signature 0x7708f090)
 Number of CPUs detected in this system: 4
 Turning on mult-threading, number of parallel sub-compilation jobs: 8 
 Determining compilation order of HDL files
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/dcm_100m_5m.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_16bits.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_3b.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMemory.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMultiplier.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/biPAccumlator.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpSumador.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/regdesp8b.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/nivel_a_pulso.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/cont_anillo_ce.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bin_bcd.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bcd_bin.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Bin_A_BCD.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConvFSM.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/teclado_4x4.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sincroniza.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/reg_desp_4_cifras.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/detector.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_Bin_BCD_3cifras.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_BCD_Bin.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Comp_Num_Letra.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/codif_tecla.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bcd_7seg_neg.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/teclado_hexa_completo.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sinc_entrada.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Remote_Lab.vhd" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/displays_7seg_nexys3_RemLab.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022.vhf" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
 Compiling package std_logic_1164
 Compiling package numeric_std
 Compiling package vcomponents
-Compiling package textio
-Compiling package vital_timing
-Compiling package vital_primitives
-Compiling package vpkg
 Compiling package std_logic_arith
 Compiling package std_logic_unsigned
-Compiling architecture behavioral of entity FD4CE_HXILINX_convol_top_rl_2022 [fd4ce_hxilinx_convol_top_rl_2022...]
-Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
-Compiling architecture gnd_v of entity GND [gnd_default]
-Compiling architecture fdse_v of entity FDSE [\FDSE('1')\]
-Compiling architecture behavioral of entity cont_anillo_ce_MUSER_convol_top_rl_2022 [cont_anillo_ce_muser_convol_top_...]
-Compiling package bip_utils_pkg_v2_0
-Compiling package xbip_counter_v2_0_pkg
-Compiling package c_counter_binary_v11_0_pkg
-Compiling package xbip_counter_v2_0_xst_comp
-Compiling package bip_usecase_utils_pkg_v2_0
-Compiling package c_addsub_pkg_v11_0
-Compiling package c_compare_v11_0_comp
-Compiling package c_mux_bus_v11_0_comp
-Compiling package c_reg_fd_v11_0_comp
-Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(3,"0","0",1,0,0,...]
-Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(3,3,3,0,2...]
-Compiling architecture behavioral of entity c_counter_binary_v11_0_legacy [\c_counter_binary_v11_0_legacy("...]
-Compiling architecture behavioral of entity c_counter_binary_v11_0 [\c_counter_binary_v11_0(0,0,"spa...]
-Compiling architecture cont_3b_a of entity cont_3b [cont_3b_default]
-Compiling architecture and5b3_v of entity AND5B3 [and5b3_default]
-Compiling architecture and3_v of entity AND3 [and3_default]
-Compiling architecture behavioral of entity teclado_4x4_MUSER_convol_top_rl_2022 [teclado_4x4_muser_convol_top_rl_...]
-Compiling architecture fd_v of entity FD [\FD('0')\]
-Compiling architecture behavioral of entity detector_MUSER_convol_top_rl_2022 [detector_muser_convol_top_rl_202...]
-Compiling architecture or8_hxilinx_convol_top_rl_2022_v of entity OR8_HXILINX_convol_top_rl_2022 [or8_hxilinx_convol_top_rl_2022_d...]
-Compiling architecture or2_v of entity OR2 [or2_default]
-Compiling architecture and2b1_v of entity AND2B1 [and2b1_default]
-Compiling architecture behavioral of entity nivel_a_pulso_MUSER_convol_top_rl_2022 [nivel_a_pulso_muser_convol_top_r...]
-Compiling architecture behavioral of entity codif_tecla_MUSER_convol_top_rl_2022 [codif_tecla_muser_convol_top_rl_...]
-Compiling architecture behavioral of entity teclado_hexa_completo_MUSER_convol_top_rl_2022 [teclado_hexa_completo_muser_conv...]
-Compiling architecture bufg_v of entity BUFG [bufg_default]
-Compiling architecture ibuf_v of entity IBUF [\IBUF("DONT_CARE","0",true,"AUTO...]
-Compiling architecture behavioral of entity OFD8_HXILINX_convol_top_rl_2022 [ofd8_hxilinx_convol_top_rl_2022_...]
-Compiling architecture inv_v of entity INV [inv_default]
-Compiling architecture obuft_v of entity OBUFT [\OBUFT("DONT_CARE",12,"DEFAULT",...]
-Compiling architecture vcc_v of entity VCC [vcc_default]
-Compiling architecture startup_spartan6_v of entity STARTUP_SPARTAN6 [startup_spartan6_default]
-Compiling architecture oddr2_v of entity ODDR2 [\ODDR2("NONE",'0',"SYNC")(1,4,1,...]
-Compiling architecture behavioral of entity OFD_HXILINX_convol_top_rl_2022 [\OFD_HXILINX_convol_top_rl_2022(...]
-Compiling architecture behavioral of entity IFD4_HXILINX_convol_top_rl_2022 [ifd4_hxilinx_convol_top_rl_2022_...]
-Compiling architecture behavioral of entity IFD_HXILINX_convol_top_rl_2022 [\IFD_HXILINX_convol_top_rl_2022(...]
-Compiling architecture ibufg_v of entity IBUFG [\IBUFG("DONT_CARE","0",true,"DEF...]
-Compiling architecture dcm_sp_clock_divide_by_2_v of entity dcm_sp_clock_divide_by_2 [dcm_sp_clock_divide_by_2_default]
-Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
-Compiling architecture dcm_sp_maximum_period_check_v of entity dcm_sp_maximum_period_check [\dcm_sp_maximum_period_check("*"...]
-Compiling architecture dcm_sp_clock_lost_v of entity dcm_sp_clock_lost [dcm_sp_clock_lost_default]
-Compiling architecture dcm_sp_v of entity DCM_SP [\DCM_SP(true,"*",true,false,10.0...]
-Compiling architecture xilinx of entity dcm_100m_5m [dcm_100m_5m_default]
-Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(16,"0","0",1,0,0...]
-Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(16,16,16,...]
-Compiling architecture behavioral of entity c_counter_binary_v11_0_legacy [\c_counter_binary_v11_0_legacy("...]
-Compiling architecture behavioral of entity c_counter_binary_v11_0 [\c_counter_binary_v11_0(0,0,"spa...]
-Compiling architecture cont_16bits_a of entity cont_16bits [cont_16bits_default]
-Compiling architecture behavioral of entity IFD8_HXILINX_convol_top_rl_2022 [ifd8_hxilinx_convol_top_rl_2022_...]
-Compiling architecture behavioral of entity bcd_7seg_neg [bcd_7seg_neg_default]
-Compiling architecture nand2_v of entity NAND2 [nand2_default]
-Compiling architecture buf_v of entity BUF [buf_default]
-Compiling architecture behavioral of entity displays_7seg_nexys3_RemLab_MUSER_convol_top_rl_2022 [displays_7seg_nexys3_remlab_muse...]
-Compiling architecture behavioral of entity Genera_Tono [genera_tono_default]
-Compiling architecture behavioral of entity Division [division_default]
-Compiling architecture behavioral of entity Modulo [modulo_default]
-Compiling architecture behavioral of entity Remote_Lab [remote_lab_default]
-Compiling architecture behavioral of entity sincroniza_MUSER_convol_top_rl_2022 [sincroniza_muser_convol_top_rl_2...]
-Compiling architecture behavioral of entity sinc_entrada_MUSER_convol_top_rl_2022 [sinc_entrada_muser_convol_top_rl...]
 Compiling architecture and2_v of entity AND2 [and2_default]
-Compiling architecture m2_1_hxilinx_convol_top_rl_2022_v of entity M2_1_HXILINX_convol_top_rl_2022 [m2_1_hxilinx_convol_top_rl_2022_...]
+Compiling architecture m2_1_hxilinx_bloque_convol_v of entity M2_1_HXILINX_bloque_convol [m2_1_hxilinx_bloque_convol_defau...]
+Compiling architecture fd_v of entity FD [\FD('0')\]
 Compiling architecture xor2_v of entity XOR2 [xor2_default]
 Compiling architecture or3_v of entity OR3 [or3_default]
 Compiling architecture xor3_v of entity XOR3 [xor3_default]
-Compiling architecture behavioral of entity BCD_A_Bin_MUSER_convol_top_rl_2022 [bcd_a_bin_muser_convol_top_rl_20...]
-Compiling architecture behavioral of entity FD8RE_HXILINX_convol_top_rl_2022 [fd8re_hxilinx_convol_top_rl_2022...]
+Compiling architecture behavioral of entity BCD_A_Bin_MUSER_bloque_convol [bcd_a_bin_muser_bloque_convol_de...]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture behavioral of entity FD8RE_HXILINX_bloque_convol [fd8re_hxilinx_bloque_convol_defa...]
 Compiling architecture control_bcd_bin_arch of entity control_bcd_bin [control_bcd_bin_default]
-Compiling architecture behavioral of entity Conversor_BCD_Bin_MUSER_convol_top_rl_2022 [conversor_bcd_bin_muser_convol_t...]
-Compiling architecture compm4_hxilinx_convol_top_rl_2022_v of entity COMPM4_HXILINX_convol_top_rl_2022 [compm4_hxilinx_convol_top_rl_202...]
-Compiling architecture behavioral of entity FD4RE_HXILINX_convol_top_rl_2022 [fd4re_hxilinx_convol_top_rl_2022...]
-Compiling architecture comp4_hxilinx_convol_top_rl_2022_v of entity COMP4_HXILINX_convol_top_rl_2022 [comp4_hxilinx_convol_top_rl_2022...]
+Compiling architecture behavioral of entity Conversor_BCD_Bin_MUSER_bloque_convol [conversor_bcd_bin_muser_bloque_c...]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture compm4_hxilinx_bloque_convol_v of entity COMPM4_HXILINX_bloque_convol [compm4_hxilinx_bloque_convol_def...]
+Compiling architecture behavioral of entity FD4RE_HXILINX_bloque_convol [fd4re_hxilinx_bloque_convol_defa...]
+Compiling architecture comp4_hxilinx_bloque_convol_v of entity COMP4_HXILINX_bloque_convol [comp4_hxilinx_bloque_convol_defa...]
 Compiling architecture and3b1_v of entity AND3B1 [and3b1_default]
-Compiling architecture behavioral of entity Comp_Num_Letra_MUSER_convol_top_rl_2022 [comp_num_letra_muser_convol_top_...]
+Compiling architecture behavioral of entity Comp_Num_Letra_MUSER_bloque_convol [comp_num_letra_muser_bloque_conv...]
 Compiling architecture fdre_v of entity FDRE [\FDRE('0')\]
-Compiling architecture behavioral of entity reg_desp_4_cifras_MUSER_convol_top_rl_2022 [reg_desp_4_cifras_muser_convol_t...]
-Compiling architecture behavioral of entity Mux_Ent_Sal_7seg_4cifras_MUSER_convol_top_rl_2022 [mux_ent_sal_7seg_4cifras_muser_c...]
+Compiling architecture behavioral of entity reg_desp_4_cifras_MUSER_bloque_convol [reg_desp_4_cifras_muser_bloque_c...]
+Compiling architecture fdce_v of entity FDCE [\FDCE('0')\]
+Compiling architecture or2_v of entity OR2 [or2_default]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture behavioral of entity Mux_Ent_Sal_7seg_4cifras_MUSER_bloque_convol [mux_ent_sal_7seg_4cifras_muser_b...]
 Compiling architecture xnor2_v of entity XNOR2 [xnor2_default]
+Compiling architecture inv_v of entity INV [inv_default]
 Compiling architecture fdr_v of entity FDR [\FDR('0')\]
-Compiling architecture behavioral of entity Bin_A_BCD_MUSER_convol_top_rl_2022 [bin_a_bcd_muser_convol_top_rl_20...]
-Compiling architecture behavioral of entity regdesp8b_MUSER_convol_top_rl_2022 [regdesp8b_muser_convol_top_rl_20...]
+Compiling architecture behavioral of entity Bin_A_BCD_MUSER_bloque_convol [bin_a_bcd_muser_bloque_convol_de...]
+Compiling architecture behavioral of entity regdesp8b_MUSER_bloque_convol [regdesp8b_muser_bloque_convol_de...]
 Compiling architecture control_bin_bcd_arch of entity control_bin_bcd [control_bin_bcd_default]
-Compiling architecture behavioral of entity Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022 [conversor_bin_bcd_3cifras_muser_...]
+Compiling architecture behavioral of entity Conversor_Bin_BCD_3cifras_MUSER_bloque_convol [conversor_bin_bcd_3cifras_muser_...]
 Compiling package xbip_addsub_v2_0_comp
+Compiling package textio
+Compiling package bip_utils_pkg_v2_0
+Compiling package bip_usecase_utils_pkg_v2_0
+Compiling package c_addsub_pkg_v11_0
 Compiling package xbip_pipe_v2_0_xst_comp
+Compiling package c_reg_fd_v11_0_comp
 Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(8,"0","0",1,0,1,...]
 Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(8,8,8,0,7...]
 Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"spartan6",0,8...]
 Compiling architecture bipsumador_a of entity bIpSumador [bipsumador_default]
 Compiling architecture fde_v of entity FDE [\FDE('0')\]
-Compiling architecture behavioral of entity bCalcSignoMag_MUSER_convol_top_rl_2022 [bcalcsignomag_muser_convol_top_r...]
-Compiling architecture m8_1e_hxilinx_convol_top_rl_2022_v of entity M8_1E_HXILINX_convol_top_rl_2022 [m8_1e_hxilinx_convol_top_rl_2022...]
-Compiling architecture behavioral of entity bCalcX_i_MUSER_convol_top_rl_2022 [bcalcx_i_muser_convol_top_rl_202...]
+Compiling architecture behavioral of entity bCalcSignoMag_MUSER_bloque_convol [bcalcsignomag_muser_bloque_convo...]
+Compiling architecture m8_1e_hxilinx_bloque_convol_v of entity M8_1E_HXILINX_bloque_convol [m8_1e_hxilinx_bloque_convol_defa...]
+Compiling architecture behavioral of entity bCalcX_i_MUSER_bloque_convol [bcalcx_i_muser_bloque_convol_def...]
 Compiling package std_logic_textio
 Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
 Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
@@ -165,12 +95,12 @@ Compiling architecture behavioral of entity c_accum_v11_0_legacy [\c_accum_v11_0
 Compiling architecture behavioral of entity c_accum_v11_0 [\c_accum_v11_0("spartan6",0,0,16...]
 Compiling architecture bipaccumlator_a of entity biPAccumlator [bipaccumlator_default]
 Compiling architecture fsm_convol_arch of entity fsm_convol [fsm_convol_default]
-Compiling architecture behavioral of entity bCalcConv_MUSER_convol_top_rl_2022 [bcalcconv_muser_convol_top_rl_20...]
-Compiling architecture behavioral of entity bloque_convol_MUSER_convol_top_rl_2022 [bloque_convol_muser_convol_top_r...]
-Compiling architecture behavioral of entity convol_top_rl_2022
+Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalcconv_muser_bloque_convol_de...]
+Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
+Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 118 sub-compilation(s) to finish...
-Compiled 230 VHDL Units
-Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_isim_beh.exe
-Fuse Memory Usage: 81832 KB
-Fuse CPU Usage: 2374 ms
+Waiting for 64 sub-compilation(s) to finish...
+Compiled 126 VHDL Units
+Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
+Fuse Memory Usage: 67896 KB
+Fuse CPU Usage: 1421 ms

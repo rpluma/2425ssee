@@ -222,7 +222,7 @@
             <line x2="576" y1="272" y2="272" x1="608" />
         </blockdef>
         <blockdef name="cont_16bits">
-            <timestamp>2024-10-31T21:4:46</timestamp>
+            <timestamp>2024-11-2T8:17:20</timestamp>
             <rect width="512" x="32" y="32" height="384" />
             <line x2="32" y1="208" y2="208" x1="0" />
             <line x2="32" y1="304" y2="304" x1="0" />
@@ -348,7 +348,7 @@
             <line x2="464" y1="-32" y2="-32" x1="400" />
         </blockdef>
         <blockdef name="bloque_convol">
-            <timestamp>2024-10-31T21:19:32</timestamp>
+            <timestamp>2024-2-6T18:33:11</timestamp>
             <rect width="416" x="64" y="-320" height="320" />
             <line x2="0" y1="-48" y2="-48" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
@@ -404,9 +404,9 @@
             <blockpin signalname="locked_OK" name="locked" />
         </block>
         <block symbolname="cont_16bits" name="XLXI_309">
-            <blockpin name="clk" />
-            <blockpin name="sclr" />
-            <blockpin name="q(15:0)" />
+            <blockpin signalname="ck_5MHz" name="clk" />
+            <blockpin signalname="XLXN_1" name="sclr" />
+            <blockpin signalname="cuenta_dcm(15:0)" name="q(15:0)" />
         </block>
         <block symbolname="inv" name="XLXI_87">
             <blockpin signalname="locked_OK" name="I" />
@@ -554,10 +554,10 @@
             <blockpin signalname="seg0(7:0)" name="siete_seg0(7:0)" />
         </block>
         <block symbolname="bloque_convol" name="XLXI_872">
-            <blockpin signalname="ck_100MHz" name="ck" />
+            <blockpin signalname="reset" name="reset" />
             <blockpin signalname="cod_tecla_sinc(3:0)" name="cod_tecla(3:0)" />
             <blockpin signalname="tecla_pulsada_sinc" name="tecla_pulsada" />
-            <blockpin signalname="reset" name="reset" />
+            <blockpin signalname="ck_100MHz" name="ck" />
             <blockpin signalname="punto_dec(3:0)" name="punto_decimal(4:1)" />
             <blockpin signalname="mill_bcd(3:0)" name="display1(3:0)" />
             <blockpin signalname="cent_bcd(3:0)" name="display2(3:0)" />

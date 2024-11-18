@@ -22,7 +22,7 @@
         <port polarity="Output" name="dato_sal_pos_sync" />
         <port polarity="Output" name="dato_sal_pos(7:0)" />
         <blockdef name="bIpSumador">
-            <timestamp>2024-10-31T21:10:7</timestamp>
+            <timestamp>2024-11-2T8:21:27</timestamp>
             <rect width="224" x="32" y="32" height="384" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" style="linewidth:W" x1="0" />
@@ -95,7 +95,9 @@
             <blockpin signalname="XLXN_5" name="O" />
         </block>
     </netlist>
-    <sheet sheetnum="1" width="3520" height="2720">
+    <sheet sheetnum="1" width="2688" height="1900">
+        <attr value="CM" name="LengthUnitName" />
+        <attr value="4" name="GridsPerUnit" />
         <instance x="1120" y="496" name="XLXI_2" orien="R0">
         </instance>
         <instance x="1088" y="1312" name="XLXI_4" orien="R0" />

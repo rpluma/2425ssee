@@ -2,14 +2,14 @@ Command line:
    convol_top_rl_2022_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  54117
+     -socket  50033
 
-Thu Oct 31 21:59:36 2024
+Sat Nov 02 08:46:06 2024
 
 
  Elaboration Time: 0.109375 sec
 
- Current Memory Usage: 5180.3 Meg
+ Current Memory Usage: 5180.82 Meg
 
  Total Signals          : 3814
  Total Nets             : 4656
@@ -21,11 +21,10 @@ Thu Oct 31 21:59:36 2024
  Total Scalar Nets and Variables : 13202
 Total Line Count : 4727
 Total Line Count : 4727
-Total Line Count : 4727
 
- Total Simulation Time: 0.3125 sec
+ Total Simulation Time: 0.171875 sec
 
- Current Memory Usage: 5023.01 Meg
+ Current Memory Usage: 4708.96 Meg
 
-Thu Oct 31 22:00:39 2024
+Sat Nov 02 08:50:53 2024
 

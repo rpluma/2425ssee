@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_isim_beh.exe" -prj "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_beh.prj" "work.convol_top_rl_2022" 
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe" -prj "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_beh.prj" "work.bloque_convol_bloque_convol_sch_tb" 

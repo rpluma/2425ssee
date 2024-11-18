@@ -22,7 +22,7 @@ proc findRtfPath { relativePath } {
 
 source [ findRtfPath "data/projnav/scripts/dpm_cgUtils.tcl" ]
 
-set result [ run_cg_vcheck {C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/dcm_100m_5m.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_16bits.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_3b.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpCont_i.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMemory.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMultiplier.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/biPAccumlator.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpSumador.xco} xc6slx16-3csg324 ]
+set result [ run_cg_vcheck {C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/dcm_100m_5m.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_16bits.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/cont_3b.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMemory.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMultiplier.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/biPAccumlator.xco C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpSumador.xco} xc6slx16-3csg324 ]
 
 if { $result == 0 } {
    puts "Core Generator checkversion command completed successfully."

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : regdesp8b.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:21:37
+-- /___/   /\     Timestamp : 11/02/2024 10:23:38
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -102,14 +102,14 @@ architecture BEHAVIORAL of regdesp8b is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_120";
-   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_119";
-   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_118";
-   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_117";
-   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_116";
-   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_115";
-   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_114";
-   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_113";
+   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_25";
+   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_24";
+   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_23";
+   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_22";
+   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_21";
+   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_20";
+   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_19";
+   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_18";
 begin
    XLXI_1_0 : FDRE
       port map (C=>ck,

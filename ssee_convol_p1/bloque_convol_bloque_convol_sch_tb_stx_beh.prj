@@ -1,0 +1,8 @@
+vhdl isim_temp "ipcore_dir/bIpMemory.vhd"
+vhdl isim_temp "ipcore_dir/bIpMultiplier.vhd"
+vhdl isim_temp "ipcore_dir/biPAccumlator.vhd"
+vhdl isim_temp "ipcore_dir/bIpSumador.vhd"
+vhdl isim_temp "control_bin_bcd.vhd"
+vhdl isim_temp "control_bcd_bin.vhd"
+vhdl isim_temp "bCalcConvFSM.vhd"
+vhdl isim_temp "bloque_convol_tb.vhd"

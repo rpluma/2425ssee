@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:21:42
+-- /___/   /\     Timestamp : 11/02/2024 11:09:41
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,17 +132,17 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_327";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_326";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_325";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_324";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_323";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_322";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_321";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_320";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_15";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_14";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_13";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_12";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_11";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_10";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_9";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_8";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(0),
+      port map (D0=>dato_ent(0),
                 D1=>x_1(0),
                 D2=>x_2(0),
                 D3=>x_3(0),
@@ -157,7 +157,7 @@ begin
                 O=>XLXN_1(0));
    
    XLXI_9_1 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(1),
+      port map (D0=>dato_ent(1),
                 D1=>x_1(1),
                 D2=>x_2(1),
                 D3=>x_3(1),
@@ -172,7 +172,7 @@ begin
                 O=>XLXN_1(1));
    
    XLXI_9_2 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(2),
+      port map (D0=>dato_ent(2),
                 D1=>x_1(2),
                 D2=>x_2(2),
                 D3=>x_3(2),
@@ -187,7 +187,7 @@ begin
                 O=>XLXN_1(2));
    
    XLXI_9_3 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(3),
+      port map (D0=>dato_ent(3),
                 D1=>x_1(3),
                 D2=>x_2(3),
                 D3=>x_3(3),
@@ -202,7 +202,7 @@ begin
                 O=>XLXN_1(3));
    
    XLXI_9_4 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(4),
+      port map (D0=>dato_ent(4),
                 D1=>x_1(4),
                 D2=>x_2(4),
                 D3=>x_3(4),
@@ -217,7 +217,7 @@ begin
                 O=>XLXN_1(4));
    
    XLXI_9_5 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(5),
+      port map (D0=>dato_ent(5),
                 D1=>x_1(5),
                 D2=>x_2(5),
                 D3=>x_3(5),
@@ -232,7 +232,7 @@ begin
                 O=>XLXN_1(5));
    
    XLXI_9_6 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(6),
+      port map (D0=>dato_ent(6),
                 D1=>x_1(6),
                 D2=>x_2(6),
                 D3=>x_3(6),
@@ -247,7 +247,7 @@ begin
                 O=>XLXN_1(6));
    
    XLXI_9_7 : M8_1E_HXILINX_bCalcConv
-      port map (D0=>x_0(7),
+      port map (D0=>dato_ent(7),
                 D1=>x_1(7),
                 D2=>x_2(7),
                 D3=>x_3(7),
