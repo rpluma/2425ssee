@@ -1,0 +1,20 @@
+component fsm_convol
+	port (
+		ck: in STD_LOGIC;
+		dato_nuevo: in STD_LOGIC;
+		reset: in STD_LOGIC;
+		inicializar: out STD_LOGIC;
+		acumular: out STD_LOGIC;
+		dato_sal_sync: out STD_LOGIC;
+		incrementar: out STD_LOGIC);
+end component;
+
+
+instance_name : fsm_convol
+( ck => ,
+ dato_nuevo => ,
+ reset => ,
+ inicializar => ,
+ acumular => ,
+ dato_sal_sync => ,
+ incrementar => );

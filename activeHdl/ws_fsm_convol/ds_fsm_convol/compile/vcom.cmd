@@ -1,0 +1,1 @@
+-w -d C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/ds_fsm_convol/compile -s C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/library.cfg -j C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/ds_fsm_convol/projlib.cfg -work ds_fsm_convol -O3 -e 100 -work ds_fsm_convol -2002 C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/ds_fsm_convol/compile/fsm_convol.vhd 
