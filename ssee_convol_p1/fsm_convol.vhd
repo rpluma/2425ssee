@@ -91,6 +91,12 @@ begin
 		-- Set default values for outputs, signals and variables
 		-- ...
 		case Sreg0 is
+			when S1Ini =>
+				if dato_nuevo='1' then
+					Sreg0 <= S2Dir;
+					inicializar <= '0';
+					indice <= "0000";
+				end if;
 			when S2Dir =>
 				Sreg0 <= S3Load;
 				indice <= "0001";
@@ -99,6 +105,11 @@ begin
 				Sreg0 <= S4Mul;
 				indice<="0010";
 				vIndice := "0010";
+				acumular <= '1';
+			when S4Mul =>
+				Sreg0 <= S5Acc;
+				vIndice := vIndice + 1;
+				indice <=std_logic_vector(vIndice);
 			when S5Acc =>
 				if vIndice=8 then
 					Sreg0 <= S6FinMul;
@@ -109,24 +120,9 @@ begin
 					indice <=std_logic_vector(vIndice);
 					acumular <= '1';
 				end if;
-			when S9Fin =>
-				Sreg0 <= S1Ini;
-				inicializar <= '1';
-				multiplicar <= '0';
-				acumular <= '0';
-				guardar <= '0';
-				dato_sal_sync <= '0';
-			when S1Ini =>
-				if dato_nuevo='1' then
-					Sreg0 <= S2Dir;
-					inicializar <= '0';
-					indice <= "0000";
-				end if;
-			when S4Mul =>
-				Sreg0 <= S5Acc;
-				vIndice := vIndice + 1;
-				indice <=std_logic_vector(vIndice);
-				acumular <= '1';
+			when S6FinMul =>
+				Sreg0 <= S7FinAcc;
+				acumular<='0';
 			when S7FinAcc =>
 				Sreg0 <= S8Sto;
 				guardar<='1';
@@ -134,9 +130,13 @@ begin
 				Sreg0 <= S9Fin;
 				guardar <= '0';
 				dato_sal_sync <= '1';
-			when S6FinMul =>
-				Sreg0 <= S7FinAcc;
-				acumular<='0';
+			when S9Fin =>
+				Sreg0 <= S1Ini;
+				inicializar <= '1';
+				multiplicar <= '0';
+				acumular <= '0';
+				guardar <= '0';
+				dato_sal_sync <= '0';
 --vhdl_cover_off
 			when others =>
 				null;

@@ -2,9 +2,9 @@ Command line:
    bloque_convol_bloque_convol_sch_tb_isim_beh.exe
      -simmode  gui
      -simrunnum  0
-     -socket  52061
+     -socket  52305
 
-Wed Nov 13 19:56:30 2024
+Wed Nov 13 20:16:10 2024
 
 
- Elaboration Time: 0.078125 sec
+ Elaboration Time: 0.0625 sec
