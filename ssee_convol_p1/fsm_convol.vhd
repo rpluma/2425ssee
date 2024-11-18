@@ -31,7 +31,7 @@ entity fsm_convol is
 		inicializar: out STD_LOGIC;
 		acumular: out STD_LOGIC;
 		dato_sal_sync: out STD_LOGIC;
-		indice: out STD_LOGIC_VECTOR (3 downto 0);
+		indice: out STD_LOGIC_VECTOR (2 downto 0);
 		multiplicar: out STD_LOGIC;
 		guardar: out STD_LOGIC
 );
@@ -76,7 +76,7 @@ begin
 ----------------------------------------------------------------------
 Sreg0_machine: process (ck, reset)
 -- machine variables declarations
-variable vIndice: UNSIGNED (3 downto 0);
+variable vIndice: STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 	if reset='1' then
@@ -95,29 +95,29 @@ begin
 				if dato_nuevo='1' then
 					Sreg0 <= S2Dir;
 					inicializar <= '0';
-					indice <= "0000";
+					indice <= "000";
 				end if;
 			when S2Dir =>
 				Sreg0 <= S3Load;
-				indice <= "0001";
+				indice <= "001";
 				multiplicar <= '1';
 			when S3Load =>
 				Sreg0 <= S4Mul;
-				indice<="0010";
+				indice<="010";
 				vIndice := "0010";
 				acumular <= '1';
 			when S4Mul =>
 				Sreg0 <= S5Acc;
-				vIndice := vIndice + 1;
-				indice <=std_logic_vector(vIndice);
+				vIndice := UNSIGNED(vIndice) + 1;
+				indice <= vIndice(2 DOWNTO 0);
 			when S5Acc =>
 				if vIndice=8 then
 					Sreg0 <= S6FinMul;
 					multiplicar<='0';
 				else
 					Sreg0 <= S5Acc;
-					vIndice := vIndice + 1;
-					indice <=std_logic_vector(vIndice);
+					vIndice := UNSIGNED(vIndice) + 1;
+					indice <= vIndice(2 DOWNTO 0);
 					acumular <= '1';
 				end if;
 			when S6FinMul =>

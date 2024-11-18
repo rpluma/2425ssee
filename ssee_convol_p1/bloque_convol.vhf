@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bloque_convol.vhf
--- /___/   /\     Timestamp : 11/13/2024 19:56:18
+-- /___/   /\     Timestamp : 11/14/2024 08:24:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

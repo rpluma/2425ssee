@@ -1,5 +1,6 @@
 ISim log file
 Running: C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bloque_convol_bloque_convol_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -view C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/senales_bloque_convol_3Nov.wcfg -wdb C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.wdb 
+INFO: There is another simulation running in the same directory. Using database file name isim1.wdb.
 ISim P.20131013 (signature 0x7708f090)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -7,7 +8,7 @@ WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for 
 This is a Lite version of ISim.
 Time resolution is 1 ps
 # onerror resume
-# run 1000 ns
+# run 1000 us
 Simulator is doing circuit initialization process.
 at 0 ps, Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_3/XLXI_4/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
 Finished circuit initialization process.
@@ -111,8 +112,93 @@ at 964 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0
 at 974 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 984 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 994 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1004 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1014 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1024 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1034 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1044 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1054 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1064 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1074 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1084 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1094 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1104 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1114 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1124 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1134 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1144 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1154 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1164 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1174 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1184 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1194 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1204 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1214 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1224 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1234 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1244 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1254 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1264 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1274 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1284 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1294 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1304 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1314 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1324 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1334 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1344 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1354 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1364 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1374 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1384 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1394 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1404 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1414 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1424 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1434 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1444 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1454 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1464 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1474 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1484 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1494 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1504 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1514 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1524 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1534 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1544 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1554 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1564 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1574 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1584 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1594 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1604 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1614 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1624 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1634 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1644 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1654 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1664 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1674 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1684 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1694 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1704 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1714 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1724 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1734 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1744 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1754 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1764 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1774 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1784 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1794 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1804 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1814 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1824 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1834 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+at 1844 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 # restart
-# run 1ms
+# run 1us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
 at 4 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
@@ -215,6 +301,7 @@ at 964 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0
 at 974 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 984 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 994 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
+# run 1ms
 at 1004 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 1014 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.
 at 1024 ns(1), Instance /bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_5/U0/native_mem_module/mem_module/ : Warning: CONV_INTEGER: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, and it has been converted to 0.

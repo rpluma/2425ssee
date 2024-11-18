@@ -22,7 +22,7 @@ Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Comp_Num_Letra.vh
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConvFSM.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb_4vent.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -110,8 +110,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalc
 Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
 Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 73 sub-compilation(s) to finish...
+Waiting for 76 sub-compilation(s) to finish...
 Compiled 145 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
-Fuse Memory Usage: 67632 KB
-Fuse CPU Usage: 1640 ms
+Fuse Memory Usage: 68584 KB
+Fuse CPU Usage: 1655 ms
