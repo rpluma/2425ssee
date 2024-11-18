@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="Xst" timeStamp="Thu Oct 31 22:21:46 2024">
+  <application stringID="Xst" timeStamp="Sat Nov 02 15:04:28 2024">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -44,12 +44,12 @@
         <column stringID="arch"/>
         <column stringID="speed"/>
         <row stringID="row" value="0">
-          <item stringID="arch" value="Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz"/>
-          <item stringID="speed" value="2400 MHz"/>
+          <item stringID="arch" value="Intel(R) Xeon(R) Gold 6336Y CPU @ 2.40GHz"/>
+          <item stringID="speed" value="2394 MHz"/>
         </row>
         <row stringID="row" value="1">
-          <item stringID="arch" value="Intel(R) Xeon(R) Gold 6240R CPU @ 2.40GHz"/>
-          <item stringID="speed" value="2400 MHz"/>
+          <item stringID="arch" value="Intel(R) Xeon(R) Gold 6336Y CPU @ 2.40GHz"/>
+          <item stringID="speed" value="2394 MHz"/>
         </row>
       </table>
     </section>
@@ -250,8 +250,8 @@
     </section>
     <section stringID="XST_ERRORS_STATISTICS">
       <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_ERRORS" value="0"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="639"/>
-      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="40"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_WARNINGS" value="632"/>
+      <item dataType="int" filtered="0" stringID="XST_NUMBER_OF_INFOS" value="37"/>
     </section>
   </application>
 

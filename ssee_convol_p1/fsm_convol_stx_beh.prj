@@ -1,0 +1,2 @@
+vhdl isim_temp "bCalcConvFSM.vhd"
+vhdl isim_temp "bloque_convol_tb.vhd"

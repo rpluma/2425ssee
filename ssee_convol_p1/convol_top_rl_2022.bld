@@ -19,26 +19,6 @@ Done.
 Annotating constraints to design from ucf file "convol_top_rl_2022.ucf" ...
 Resolving constraint associations...
 Checking Constraint Associations...
-ERROR:ConstraintSystem:59 - Constraint <NET "cuenta_dcm<7>" TNM_NET =
-   cuenta_dcm<7>;> [convol_top_rl_2022.ucf(256)]: NET "cuenta_dcm<7>" not found.
-    Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_cuenta_dcm_7_ = PERIOD
-   "cuenta_dcm<7>" 20 KHz HIGH 50%;> [convol_top_rl_2022.ucf(257)]: Unable to
-   find an active 'TNM' or 'TimeGrp' constraint named 'cuenta_dcm<7>'.
-
-ERROR:ConstraintSystem:59 - Constraint <NET "cuenta_dcm<13>" TNM_NET =
-   cuenta_dcm<13>;> [convol_top_rl_2022.ucf(258)]: NET "cuenta_dcm<13>" not
-   found.  Please verify that:
-   1. The specified design element actually exists in the original design.
-   2. The specified object is spelled correctly in the constraint source file.
-
-WARNING:ConstraintSystem:56 - Constraint <TIMESPEC TS_cuenta_dcm_13_ = PERIOD
-   "cuenta_dcm<13>" 2 KHz HIGH 50%;> [convol_top_rl_2022.ucf(259)]: Unable to
-   find an active 'TNM' or 'TimeGrp' constraint named 'cuenta_dcm<13>'.
-
 INFO:ConstraintSystem:178 - TNM 'ck_100MHz_pad', used in period specification
    'TS_ck_100MHz_pad', was traced into DCM_SP instance XLXI_306/dcm_sp_inst. The
    following new TNM groups and period specifications were generated at the
@@ -46,35 +26,12 @@ INFO:ConstraintSystem:178 - TNM 'ck_100MHz_pad', used in period specification
    CLK2X: <TIMESPEC TS_XLXI_306_clk2x = PERIOD "XLXI_306_clk2x" TS_ck_100MHz_pad
    HIGH 50%>
 
-WARNING:ConstraintSystem:191 - The TNM 'cuenta_dcm<7>', does not directly or
-   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
-   used by the referencing Period constraint 'TS_cuenta_dcm_7_'. If clock
-   manager blocks are directly or indirectly driven, a new TNM constraint will
-   not be derived even though the referencing constraint is a PERIOD constraint
-   unless an output of the clock manager drives flip-flops, latches or RAMs.
-   This TNM is used in the following user PERIOD specification:
-   <TIMESPEC TS_cuenta_dcm_7_ = PERIOD "cuenta_dcm<7>" 20 KHz HIGH 50%;>
-   [convol_top_rl_2022.ucf(257)]
-
-WARNING:ConstraintSystem:197 - The following specification is invalid because
-   the referenced TNM constraint was removed:
-   <TIMESPEC TS_cuenta_dcm_7_ = PERIOD "cuenta_dcm<7>" 20 KHz HIGH 50%;>
-   [convol_top_rl_2022.ucf(257)]
-
-WARNING:ConstraintSystem:191 - The TNM 'cuenta_dcm<13>', does not directly or
-   indirectly drive any flip-flops, latches and/or RAMS and cannot be actively
-   used by the referencing Period constraint 'TS_cuenta_dcm_13_'. If clock
-   manager blocks are directly or indirectly driven, a new TNM constraint will
-   not be derived even though the referencing constraint is a PERIOD constraint
-   unless an output of the clock manager drives flip-flops, latches or RAMs.
-   This TNM is used in the following user PERIOD specification:
-   <TIMESPEC TS_cuenta_dcm_13_ = PERIOD "cuenta_dcm<13>" 2 KHz HIGH 50%;>
-   [convol_top_rl_2022.ucf(259)]
-
-WARNING:ConstraintSystem:197 - The following specification is invalid because
-   the referenced TNM constraint was removed:
-   <TIMESPEC TS_cuenta_dcm_13_ = PERIOD "cuenta_dcm<13>" 2 KHz HIGH 50%;>
-   [convol_top_rl_2022.ucf(259)]
+INFO:ConstraintSystem:178 - TNM 'ck_100MHz_pad', used in period specification
+   'TS_ck_100MHz_pad', was traced into DCM_SP instance XLXI_306/dcm_sp_inst. The
+   following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_XLXI_306_clkfx = PERIOD "XLXI_306_clkfx" TS_ck_100MHz_pad
+   * 0.05 HIGH 50%>
 
 Done...
 
@@ -100,14 +57,13 @@ Partition Implementation Status
 -------------------------------
 
 NGDBUILD Design Results Summary:
-  Number of errors:     2
-  Number of warnings:  10
+  Number of errors:     0
+  Number of warnings:   4
 
-Total memory usage is 4397616 kilobytes
+Total memory usage is 4397644 kilobytes
 
-Total REAL time to NGDBUILD completion:  3 sec
-Total CPU time to NGDBUILD completion:   3 sec
-
-One or more errors were found during NGDBUILD.  No NGD file will be written.
+Writing NGD file "convol_top_rl_2022.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
 
 Writing NGDBUILD log file "convol_top_rl_2022.bld"...

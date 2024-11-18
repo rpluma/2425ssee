@@ -8,22 +8,10 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_addsub_v11_0\c_addsub_v11_0_legacy.vhd" Line 282: Net &lt;<arg fmt="%s" index="1">c_in_i</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 196: Net &lt;<arg fmt="%s" index="1">bypass_i</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_addsub_v11_0\c_addsub_v11_0_xst.vhd" Line 244: Net &lt;<arg fmt="%s" index="1">i_baseblox.i_b_in</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 200: Net &lt;<arg fmt="%s" index="1">sset_i</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 201: Net &lt;<arg fmt="%s" index="1">sinit_i</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 205: Net &lt;<arg fmt="%s" index="1">add_i</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="old" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 206: Net &lt;<arg fmt="%s" index="1">c_in_i</arg>&gt; does not have a driver.
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\c_accum_v11_0\c_accum_v11_0_fabric_legacy.vhd" Line 207: Net &lt;<arg fmt="%s" index="1">b_in_i</arg>&gt; does not have a driver.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\tmp\_cg\_dbg\bIpSumador.vhd</arg>&quot; line <arg fmt="%s" index="2">125</arg>: Output port &lt;<arg fmt="%s" index="3">c_out</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">U0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.

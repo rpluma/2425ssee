@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : BCD_A_Bin.vhf
--- /___/   /\     Timestamp : 11/02/2024 10:23:38
+-- /___/   /\     Timestamp : 11/02/2024 15:04:22
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -124,10 +124,10 @@ architecture BEHAVIORAL of BCD_A_Bin is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_8";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_6";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_7";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_9";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_203";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_201";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_202";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_204";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,

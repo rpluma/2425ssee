@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Oct 31 22:02:55 2024
+// Written by: Map P.20131013 on Sat Nov 02 15:04:51 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -351,8 +351,8 @@ TIMEGRP ck_100MHz_pad = PIN "SP6_BUFIO_INSERT_ML_BUFIO2_0_pins<0>" PIN
 TS_ck_100MHz_pad = PERIOD TIMEGRP "ck_100MHz_pad" 100 MHz HIGH 50%;
 TS_cuenta_dcm_7_ = PERIOD TIMEGRP "cuenta_dcm<7>" 0.02 MHz HIGH 50%;
 TS_cuenta_dcm_13_ = PERIOD TIMEGRP "cuenta_dcm<13>" 0.002 MHz HIGH 50%;
-TS_XLXI_306_clk2x = PERIOD TIMEGRP "XLXI_306_clk2x" TS_ck_100MHz_pad HIGH 50%;
 TS_XLXI_306_clkfx = PERIOD TIMEGRP "XLXI_306_clkfx" TS_ck_100MHz_pad * 0.05
         HIGH 50%;
+TS_XLXI_306_clk2x = PERIOD TIMEGRP "XLXI_306_clk2x" TS_ck_100MHz_pad HIGH 50%;
 SCHEMATIC END;
 

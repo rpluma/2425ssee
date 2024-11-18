@@ -10,10 +10,10 @@ Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpSum
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/regdesp8b.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bin_bcd.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/control_bcd_bin.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Bin_A_BCD.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConvFSM.vhd" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/reg_desp_4_cifras.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_Bin_BCD_3cifras.vhf" into library work
@@ -22,7 +22,7 @@ Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Comp_Num_Letra.vh
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" into library work
-Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConvFSM.vhd" into library work
 Starting static elaboration
 Completed static elaboration
 Compiling package standard
@@ -99,8 +99,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalc
 Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
 Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 64 sub-compilation(s) to finish...
+Waiting for 65 sub-compilation(s) to finish...
 Compiled 126 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
-Fuse Memory Usage: 67896 KB
-Fuse CPU Usage: 1421 ms
+Fuse Memory Usage: 67572 KB
+Fuse CPU Usage: 1484 ms

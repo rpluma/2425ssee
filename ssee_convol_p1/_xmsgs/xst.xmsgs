@@ -5,19 +5,16 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4814: Assignment to <arg fmt="%s" index="1">boton_der</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4812: Assignment to <arg fmt="%s" index="1">boton_der</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4815: Assignment to <arg fmt="%s" index="1">boton_aba</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4813: Assignment to <arg fmt="%s" index="1">boton_aba</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4816: Assignment to <arg fmt="%s" index="1">boton_izq</arg> ignored, since the identifier is never used
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4814: Assignment to <arg fmt="%s" index="1">boton_izq</arg> ignored, since the identifier is never used
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4817: Assignment to <arg fmt="%s" index="1">boton_arr</arg> ignored, since the identifier is never used
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4270: Net &lt;<arg fmt="%s" index="1">cuenta_dcm[13]</arg>&gt; does not have a driver.
+<msg type="warning" file="HDLCompiler" num="1127" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4815: Assignment to <arg fmt="%s" index="1">boton_arr</arg> ignored, since the identifier is never used
 </msg>
 
 <msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4290: Net &lt;<arg fmt="%s" index="1">uart_tx</arg>&gt; does not have a driver.
@@ -29,82 +26,61 @@
 <msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4302: Net &lt;<arg fmt="%s" index="1">XLXI_138_KEYCLEARB_openSignal</arg>&gt; does not have a driver.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4303: Net &lt;<arg fmt="%s" index="1">XLXI_309_clk_openSignal</arg>&gt; does not have a driver.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4514</arg>: Output port &lt;<arg fmt="%s" index="3">tecla</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="634" delta="new" >"C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4304: Net &lt;<arg fmt="%s" index="1">XLXI_309_sclr_openSignal</arg>&gt; does not have a driver.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4593</arg>: Output port &lt;<arg fmt="%s" index="3">CFGCLK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4516</arg>: Output port &lt;<arg fmt="%s" index="3">tecla</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4593</arg>: Output port &lt;<arg fmt="%s" index="3">CFGMCLK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4543</arg>: Output port &lt;<arg fmt="%s" index="3">O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_87</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4593</arg>: Output port &lt;<arg fmt="%s" index="3">EOS</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4595</arg>: Output port &lt;<arg fmt="%s" index="3">CFGCLK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4705</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4595</arg>: Output port &lt;<arg fmt="%s" index="3">CFGMCLK</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4708</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4595</arg>: Output port &lt;<arg fmt="%s" index="3">EOS</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_138</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4711</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4686</arg>: Output port &lt;<arg fmt="%s" index="3">CLK_OUT2</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_306</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4714</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_3</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4693</arg>: Output port &lt;<arg fmt="%s" index="3">q</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_309</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4756</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_0</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4707</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4759</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_1</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4710</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4762</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_2</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4713</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4765</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_3</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4716</arg>: Output port &lt;<arg fmt="%s" index="3">G</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_708_3</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4768</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_4</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4758</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_0</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4771</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_5</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4761</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_1</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4774</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_6</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4764</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_2</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4777</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_7</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4767</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_3</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4780</arg>: Output port &lt;<arg fmt="%s" index="3">anodo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_864</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4770</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_4</arg>&gt; is unconnected or connected to loadless signal.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4793</arg>: Output port &lt;<arg fmt="%s" index="3">swInternal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_865</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4773</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_5</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4776</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_6</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4779</arg>: Output port &lt;<arg fmt="%s" index="3">P</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_860_7</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4782</arg>: Output port &lt;<arg fmt="%s" index="3">anodo</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_864</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4795</arg>: Output port &lt;<arg fmt="%s" index="3">swInternal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_865</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4795</arg>: Output port &lt;<arg fmt="%s" index="3">RxInternal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_865</arg>&gt; is unconnected or connected to loadless signal.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">cuenta_dcm&lt;13&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">cuenta_dcm&lt;7&gt;</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
+<msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">4793</arg>: Output port &lt;<arg fmt="%s" index="3">RxInternal</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_865</arg>&gt; is unconnected or connected to loadless signal.
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">uart_tx</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
@@ -114,12 +90,6 @@
 </msg>
 
 <msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_138_KEYCLEARB_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_309_clk_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
-</msg>
-
-<msg type="warning" file="Xst" num="653" delta="new" >Signal &lt;<arg fmt="%s" index="1">XLXI_309_sclr_openSignal</arg>&gt; is used but never assigned. This sourceless signal will be automatically connected to value <arg fmt="%s" index="2">GND</arg>.
 </msg>
 
 <msg type="info" file="Xst" num="3210" delta="new" >&quot;<arg fmt="%s" index="1">C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf</arg>&quot; line <arg fmt="%s" index="2">3250</arg>: Output port &lt;<arg fmt="%s" index="3">O</arg>&gt; of the instance &lt;<arg fmt="%s" index="4">XLXI_26</arg>&gt; is unconnected or connected to loadless signal.

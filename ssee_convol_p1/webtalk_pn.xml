@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pn" timeStamp="Thu Oct 31 22:21:45 2024">
+<application name="pn" timeStamp="Sat Nov 02 15:04:53 2024">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="C393C2FE8E8740BABB16CBD687848DF3" type="project"/>
-<property name="ProjectIteration" value="2" type="project"/>
+<property name="ProjectIteration" value="1" type="project"/>
 <property name="ProjectFile" value="C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ssee_convol_p1.xise" type="project"/>
 <property name="ProjectCreationTimestamp" value="2013-11-23T13:30:44" type="project"/>
 </section>
@@ -18,7 +18,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_ManualCompileOrderImp" value="false" type="design"/>
 <property name="PROP_OverwriteSym" value="true" type="process"/>
 <property name="PROP_PropSpecInProjFile" value="Store all values" type="design"/>
-<property name="PROP_SelectedInstanceHierarchicalPath" value="/convol_top_rl_2022" type="process"/>
+<property name="PROP_SelectedInstanceHierarchicalPath" value="/bloque_convol_bloque_convol_sch_tb" type="process"/>
 <property name="PROP_Simulator" value="ISim (VHDL/Verilog)" type="design"/>
 <property name="PROP_SynthTopFile" value="changed" type="process"/>
 <property name="PROP_Top_Level_Module_Type" value="Schematic" type="design"/>
@@ -27,15 +27,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_UserConstraintEditorPreference" value="Text Editor" type="process"/>
 <property name="PROP_intProjectCreationTimestamp" value="2013-11-23T13:30:44" type="design"/>
 <property name="PROP_intWbtProjectID" value="C393C2FE8E8740BABB16CBD687848DF3" type="design"/>
-<property name="PROP_intWbtProjectIteration" value="2" type="process"/>
+<property name="PROP_intWbtProjectIteration" value="1" type="process"/>
 <property name="PROP_intWorkingDirLocWRTProjDir" value="Same" type="design"/>
 <property name="PROP_intWorkingDirUsed" value="No" type="design"/>
 <property name="PROP_lockPinsUcfFile" value="changed" type="process"/>
-<property name="PROP_selectedSimRootSourceNode_behav" value="work.convol_top_rl_2022" type="process"/>
+<property name="PROP_selectedSimRootSourceNode_behav" value="work.bloque_convol_bloque_convol_sch_tb" type="process"/>
 <property name="PROP_selectedSimRootSourceNode_par" value="work.bloque_media_bloque_media_sch_tb" type="process"/>
 <property name="PROP_xilxMapReportDetail" value="true" type="process"/>
 <property name="PROPEXT_mapTimingMode_spartan6" value="Non Timing Driven" type="process"/>
 <property name="PROP_AutoTop" value="true" type="design"/>
+<property name="PROP_CompxlibSimulator" value="Modelsim-DE VHDL" type="process"/>
 <property name="PROP_DevFamily" value="Spartan6" type="design"/>
 <property name="PROP_DevDevice" value="xc6slx16" type="design"/>
 <property name="PROP_DevFamilyPMName" value="spartan6" type="design"/>
@@ -43,10 +44,10 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PROP_Synthesis_Tool" value="XST (VHDL/Verilog)" type="design"/>
 <property name="PROP_DevSpeed" value="-3" type="design"/>
 <property name="PROP_PreferredLanguage" value="VHDL" type="design"/>
-<property name="FILE_COREGEN" value="8" type="source"/>
+<property name="FILE_COREGEN" value="7" type="source"/>
 <property name="FILE_SCHEMATIC" value="22" type="source"/>
 <property name="FILE_UCF" value="1" type="source"/>
-<property name="FILE_VHDL" value="6" type="source"/>
+<property name="FILE_VHDL" value="7" type="source"/>
 </section>
 </application>
 </document>

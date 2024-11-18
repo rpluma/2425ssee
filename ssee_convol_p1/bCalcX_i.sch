@@ -86,7 +86,7 @@
             <blockpin signalname="uno" name="P" />
         </block>
         <block symbolname="m8_1e" name="XLXI_9(7:0)">
-            <blockpin signalname="dato_ent(7:0)" name="D0" />
+            <blockpin signalname="x_0(7:0)" name="D0" />
             <blockpin signalname="x_1(7:0)" name="D1" />
             <blockpin signalname="x_2(7:0)" name="D2" />
             <blockpin signalname="x_3(7:0)" name="D3" />
@@ -178,7 +178,7 @@
             <wire x2="896" y1="480" y2="480" x1="864" />
             <wire x2="944" y1="480" y2="480" x1="896" />
         </branch>
-        <branch name="dato_ent(7:0)">
+        <branch name="x_0(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2560" y="320" type="branch" />
             <wire x2="2640" y1="320" y2="320" x1="2560" />
         </branch>

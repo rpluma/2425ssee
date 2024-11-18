@@ -11,7 +11,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 31 22:02:49 2024
+Mapped Date    : Sat Nov 02 15:04:46 2024
 
 Mapping design into LUTs...
 Running directed packing...
@@ -52,22 +52,22 @@ Phase 8.5  Local Placement Optimization (Checksum:a8007c57) REAL time: 4 secs
 Phase 9.8  Global Placement
 .............
 ........
-Phase 9.8  Global Placement (Checksum:373454fe) REAL time: 4 secs 
+Phase 9.8  Global Placement (Checksum:dc795fdf) REAL time: 4 secs 
 
 Phase 10.5  Local Placement Optimization
-Phase 10.5  Local Placement Optimization (Checksum:373454fe) REAL time: 4 secs 
+Phase 10.5  Local Placement Optimization (Checksum:dc795fdf) REAL time: 4 secs 
 
 Phase 11.18  Placement Optimization
-Phase 11.18  Placement Optimization (Checksum:937cd806) REAL time: 5 secs 
+Phase 11.18  Placement Optimization (Checksum:258fd27f) REAL time: 4 secs 
 
 Phase 12.5  Local Placement Optimization
-Phase 12.5  Local Placement Optimization (Checksum:937cd806) REAL time: 5 secs 
+Phase 12.5  Local Placement Optimization (Checksum:258fd27f) REAL time: 4 secs 
 
 Phase 13.34  Placement Validation
-Phase 13.34  Placement Validation (Checksum:625495d1) REAL time: 5 secs 
+Phase 13.34  Placement Validation (Checksum:f46dc742) REAL time: 4 secs 
 
-Total REAL time to Placer completion: 5 secs 
-Total CPU  time to Placer completion: 5 secs 
+Total REAL time to Placer completion: 4 secs 
+Total CPU  time to Placer completion: 4 secs 
 Running post-placement packing...
 Writing output files...
 WARNING:PhysDesignRules:2410 - This design is using one or more 9K Block RAMs

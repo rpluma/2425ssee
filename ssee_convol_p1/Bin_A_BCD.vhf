@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Bin_A_BCD.vhf
--- /___/   /\     Timestamp : 11/02/2024 10:23:38
+-- /___/   /\     Timestamp : 11/02/2024 15:04:22
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -169,10 +169,10 @@ architecture BEHAVIORAL of Bin_A_BCD is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_12";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_10";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_11";
-   attribute HU_SET of XLXI_53 : label is "XLXI_53_13";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_207";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_205";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_206";
+   attribute HU_SET of XLXI_53 : label is "XLXI_53_208";
 begin
    mod_out <= mod_out_DUMMY;
    q(3 downto 0) <= q_DUMMY(3 downto 0);

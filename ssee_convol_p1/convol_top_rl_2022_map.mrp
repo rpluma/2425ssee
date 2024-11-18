@@ -11,7 +11,7 @@ Target Device  : xc6slx16
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : spartan6 -- $Revision: 1.55 $
-Mapped Date    : Thu Oct 31 22:02:49 2024
+Mapped Date    : Sat Nov 02 15:04:46 2024
 
 Design Summary
 --------------
@@ -511,8 +511,8 @@ Section 12 - Control Set Information
 | ck_100MHz         |                                      |            | XLXI_872/XLXI_32/XLXN_132              | 1                | 1              |
 | ck_100MHz         |                                      |            | XLXI_872/XLXI_33/XLXI_46/ce_reg_salida | 3                | 12             |
 | ck_100MHz         |                                      |            | XLXI_872/XLXI_33/XLXI_9/ce_total       | 2                | 8              |
-| ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/_n0179_inv    | 1                | 3              |
-| ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/_n0200_inv    | 1                | 4              |
+| ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/_n0175_inv    | 1                | 3              |
+| ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/_n0196_inv    | 1                | 4              |
 | ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/dato_sal_sync | 3                | 9              |
 | ck_100MHz         |                                      |            | XLXI_872/XLXI_36/XLXI_16/guardar       | 2                | 8              |
 | ck_100MHz         | XLXI_872/XLXI_1/XLXI_22/dato_nuevo   |            | XLXI_872/carga_cifra                   | 3                | 12             |

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : codif_tecla.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:21:42
+-- /___/   /\     Timestamp : 11/02/2024 15:04:22
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -213,13 +213,13 @@ architecture BEHAVIORAL of codif_tecla is
              entrada : in    std_logic);
    end component;
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_314";
-   attribute HU_SET of XLXI_3 : label is "XLXI_3_315";
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_316";
-   attribute HU_SET of XLXI_5 : label is "XLXI_5_317";
-   attribute HU_SET of XLXI_10 : label is "XLXI_10_313";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_318";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_319";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_180";
+   attribute HU_SET of XLXI_3 : label is "XLXI_3_181";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_182";
+   attribute HU_SET of XLXI_5 : label is "XLXI_5_183";
+   attribute HU_SET of XLXI_10 : label is "XLXI_10_179";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_184";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_185";
 begin
    XLXI_1 : OR8_HXILINX_codif_tecla
       port map (I0=>tecla(15),
