@@ -82,21 +82,6 @@
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
-        <branch name="dato_sal(7:0)">
-            <wire x2="528" y1="288" y2="288" x1="400" />
-            <wire x2="640" y1="288" y2="288" x1="528" />
-        </branch>
-        <branch name="dato_sal_sync">
-            <wire x2="528" y1="352" y2="352" x1="400" />
-            <wire x2="640" y1="352" y2="352" x1="528" />
-        </branch>
-        <branch name="ck">
-            <wire x2="528" y1="416" y2="416" x1="400" />
-            <wire x2="640" y1="416" y2="416" x1="528" />
-        </branch>
-        <iomarker fontsize="28" x="400" y="288" name="dato_sal(7:0)" orien="R180" />
-        <iomarker fontsize="28" x="400" y="352" name="dato_sal_sync" orien="R180" />
-        <iomarker fontsize="28" x="400" y="416" name="ck" orien="R180" />
         <instance x="1120" y="496" name="XLXI_2" orien="R0">
         </instance>
         <instance x="1088" y="1312" name="XLXI_4" orien="R0" />
@@ -159,17 +144,32 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1568" y="1408" type="branch" />
             <wire x2="1568" y1="1408" y2="1408" x1="1472" />
         </branch>
-        <iomarker fontsize="28" x="2880" y="176" name="dato_sal_pos(7:0)" orien="R0" />
+        <branch name="dato_sal(7:0)">
+            <wire x2="544" y1="528" y2="528" x1="416" />
+            <wire x2="656" y1="528" y2="528" x1="544" />
+        </branch>
+        <branch name="dato_sal_sync">
+            <wire x2="544" y1="592" y2="592" x1="416" />
+            <wire x2="656" y1="592" y2="592" x1="544" />
+        </branch>
+        <branch name="ck">
+            <wire x2="544" y1="656" y2="656" x1="416" />
+            <wire x2="656" y1="656" y2="656" x1="544" />
+        </branch>
+        <iomarker fontsize="28" x="416" y="528" name="dato_sal(7:0)" orien="R180" />
+        <iomarker fontsize="28" x="416" y="592" name="dato_sal_sync" orien="R180" />
+        <iomarker fontsize="28" x="416" y="656" name="ck" orien="R180" />
         <branch name="dato_sal_pos(7:0)">
-            <wire x2="2880" y1="176" y2="176" x1="2640" />
+            <wire x2="2112" y1="576" y2="576" x1="1872" />
         </branch>
-        <iomarker fontsize="28" x="2880" y="256" name="dato_sal_pos_sync" orien="R0" />
         <branch name="dato_sal_pos_sync">
-            <wire x2="2880" y1="256" y2="256" x1="2640" />
+            <wire x2="2112" y1="656" y2="656" x1="1872" />
         </branch>
-        <iomarker fontsize="28" x="2880" y="336" name="signo_sal" orien="R0" />
         <branch name="signo_sal">
-            <wire x2="2880" y1="336" y2="336" x1="2640" />
+            <wire x2="2112" y1="736" y2="736" x1="1872" />
         </branch>
+        <iomarker fontsize="28" x="2112" y="576" name="dato_sal_pos(7:0)" orien="R0" />
+        <iomarker fontsize="28" x="2112" y="656" name="dato_sal_pos_sync" orien="R0" />
+        <iomarker fontsize="28" x="2112" y="736" name="signo_sal" orien="R0" />
     </sheet>
 </drawing>

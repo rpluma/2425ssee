@@ -31,6 +31,9 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="convol_top_rl_2022.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="convol_top_rl_2022_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="dcm_100m_5m.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="fsm_convol.spl"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fsm_convol.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="fsm_convol.vhi"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/cont_16bits.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/cont_16bits.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/cont_16bits.vho" xil_pn:origination="imported"/>

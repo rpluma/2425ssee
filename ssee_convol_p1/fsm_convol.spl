@@ -1,0 +1,10 @@
+[Inputs]
+ck
+dato_nuevo
+reset
+[Outputs]
+inicializar
+acumular
+dato_sal_sync
+incrementar
+[BiDir]

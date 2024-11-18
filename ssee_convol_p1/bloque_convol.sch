@@ -164,6 +164,18 @@
             <rect width="64" x="432" y="-44" height="24" />
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
+        <blockdef name="bCalcConv">
+            <timestamp>2024-10-30T8:23:34</timestamp>
+            <rect width="304" x="64" y="-256" height="256" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <rect width="64" x="0" y="-44" height="24" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <rect width="64" x="368" y="-236" height="24" />
+            <line x2="432" y1="-224" y2="-224" x1="368" />
+            <line x2="432" y1="-32" y2="-32" x1="368" />
+        </blockdef>
         <block symbolname="Comp_Num_Letra" name="XLXI_3">
             <blockpin signalname="cod_tecla(3:0)" name="cod_tecla(3:0)" />
             <blockpin signalname="carga_cifra" name="carga_cifra" />
@@ -234,6 +246,14 @@
             <blockpin signalname="signo_sal" name="signo_sal" />
             <blockpin signalname="dato_sal_pos_sync" name="dato_sal_pos_sync" />
             <blockpin signalname="dato_sal_pos(7:0)" name="dato_sal_pos(7:0)" />
+        </block>
+        <block symbolname="bCalcConv" name="XLXI_36">
+            <blockpin signalname="dato_nuevo" name="dato_nuevo" />
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="reset" name="reset" />
+            <blockpin signalname="dato_ent(7:0)" name="dato_ent(7:0)" />
+            <blockpin signalname="dato_sal(7:0)" name="dato_sal(7:0)" />
+            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3801" height="2688">
@@ -384,21 +404,6 @@
             <wire x2="2480" y1="1280" y2="1280" x1="2368" />
             <wire x2="2592" y1="1280" y2="1280" x1="2480" />
         </branch>
-        <branch name="dato_nuevo">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2848" y="1024" type="branch" />
-            <wire x2="2848" y1="1024" y2="1024" x1="2720" />
-            <wire x2="2944" y1="1024" y2="1024" x1="2848" />
-        </branch>
-        <branch name="ck">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2848" y="1152" type="branch" />
-            <wire x2="2848" y1="1152" y2="1152" x1="2720" />
-            <wire x2="2944" y1="1152" y2="1152" x1="2848" />
-        </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2848" y="1088" type="branch" />
-            <wire x2="2848" y1="1088" y2="1088" x1="2720" />
-            <wire x2="2944" y1="1088" y2="1088" x1="2848" />
-        </branch>
         <branch name="dato_sal(7:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3584" y="960" type="branch" />
             <wire x2="3584" y1="960" y2="960" x1="3456" />
@@ -408,16 +413,6 @@
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1760" y="1088" type="branch" />
             <wire x2="1760" y1="1088" y2="1088" x1="1584" />
             <wire x2="1952" y1="1088" y2="1088" x1="1760" />
-        </branch>
-        <branch name="dato_sal_sync">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3584" y="1024" type="branch" />
-            <wire x2="3584" y1="1024" y2="1024" x1="3456" />
-            <wire x2="3696" y1="1024" y2="1024" x1="3584" />
-        </branch>
-        <branch name="dato_ent(7:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2848" y="960" type="branch" />
-            <wire x2="2848" y1="960" y2="960" x1="2720" />
-            <wire x2="2944" y1="960" y2="960" x1="2848" />
         </branch>
         <branch name="punto_decimal(4:1)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3584" y="1552" type="branch" />
@@ -579,6 +574,33 @@
         <branch name="dato_sal_pos(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1040" y="1680" type="branch" />
             <wire x2="1040" y1="1680" y2="1680" x1="912" />
+        </branch>
+        <instance x="3024" y="1184" name="XLXI_36" orien="R0">
+        </instance>
+        <branch name="dato_nuevo">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2896" y="960" type="branch" />
+            <wire x2="2896" y1="960" y2="960" x1="2800" />
+            <wire x2="3024" y1="960" y2="960" x1="2896" />
+        </branch>
+        <branch name="reset">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2928" y="1088" type="branch" />
+            <wire x2="2928" y1="1088" y2="1088" x1="2800" />
+            <wire x2="3024" y1="1088" y2="1088" x1="2928" />
+        </branch>
+        <branch name="ck">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2928" y="1024" type="branch" />
+            <wire x2="2928" y1="1024" y2="1024" x1="2800" />
+            <wire x2="3024" y1="1024" y2="1024" x1="2928" />
+        </branch>
+        <branch name="dato_ent(7:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2928" y="1152" type="branch" />
+            <wire x2="2928" y1="1152" y2="1152" x1="2800" />
+            <wire x2="3024" y1="1152" y2="1152" x1="2928" />
+        </branch>
+        <branch name="dato_sal_sync">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="3584" y="1152" type="branch" />
+            <wire x2="3584" y1="1152" y2="1152" x1="3456" />
+            <wire x2="3696" y1="1152" y2="1152" x1="3584" />
         </branch>
     </sheet>
 </drawing>
