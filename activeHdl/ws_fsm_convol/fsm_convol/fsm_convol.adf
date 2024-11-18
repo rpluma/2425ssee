@@ -1,0 +1,52 @@
+[Project]
+Current Flow=Generic
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=fsm_convol
+[Settings]
+AccessRead=0
+AccessReadWrite=0
+AccessACCB=0
+AccessACCR=0
+AccessReadWriteSLP=0
+AccessReadTopLevel=1
+DisableC=1
+ENABLE_ADV_DATAFLOW=0
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=NONE
+FAMILY=
+fileopenfolder=C:\Users\albertod\Documents\_Doc_\Aldec_Designs\media_nexys3\media_nexys3\src
+[LocalVerilogSets]
+EnableSLP=1
+EnableDebug=0
+[LocalVhdlSets]
+CompileWithDebug=0
+[$LibMap$]
+Active_lib=
+fsm_convol=.
+[SpecTracer]
+WindowVisible=0
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=
+[Files]
+/control_bcd_bin.asf=-1
+/control_bin_bcd.asf=-1
+/control_media.asf=-1
+[Files.Data]
+.\src\control_bcd_bin.asf=State Diagram
+.\src\control_bin_bcd.asf=State Diagram
+.\src\control_media.asf=State Diagram
+[file_out:/control_bcd_bin.asf]
+/..\compile\control_bcd_bin.vhd=-1
+[file_out:/control_bin_bcd.asf]
+/..\compile\control_bin_bcd.vhd=-1
+[file_out:/control_media.asf]
+/..\compile\control_media.vhd=-1
+[Library]
+fsm_convol=.\fsm_convol\fsm_convol.lib

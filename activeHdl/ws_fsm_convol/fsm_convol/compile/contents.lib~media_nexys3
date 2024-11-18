@@ -1,0 +1,7 @@
+129
+~E 1 "./../compile/control_bcd_bin.vhd" 27 control_bcd_bin
+~A 1 "./../compile/control_bcd_bin.vhd" 37 control_bcd_bin_arch
+~E 1 "./../compile/control_bin_bcd.vhd" 27 control_bin_bcd
+~A 1 "./../compile/control_bin_bcd.vhd" 38 control_bin_bcd_arch
+~E 1 "./../compile/control_media.VHD" 27 control_media
+~A 1 "./../compile/control_media.VHD" 40 control_media_arch

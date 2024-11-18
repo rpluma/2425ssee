@@ -1,0 +1,30 @@
+[COMPILESTATUS|.\src\control_media.asf]
+FileTimeLow=1959248318
+FileTimeHigh=30409311
+Status=Modified
+[COMPILESTATUS|.\compile\control_media.vhd]
+FileTimeLow=1973449130
+FileTimeHigh=30409311
+Status=Modified
+[General]
+CurrentVersion=103
+[CACHEDOC|Aldec.Project.Generic.7|.\fsm_convol.adf|]
+Path=
+[COMPILESTATUS|.\src\control_bcd_bin.asf]
+FileTimeLow=901106998
+FileTimeHigh=30407746
+Status=Modified
+[COMPILESTATUS|.\compile\control_bcd_bin.vhd]
+FileTimeLow=914387757
+FileTimeHigh=30407746
+Status=Modified
+[COMPILESTATUS|.\src\control_bin_bcd.asf]
+FileTimeLow=571974416
+FileTimeHigh=30407959
+Status=Modified
+[COMPILESTATUS|.\compile\control_bin_bcd.vhd]
+FileTimeLow=592685600
+FileTimeHigh=30407959
+Status=Modified
+[Gui config]
+RunFor=100 ns
