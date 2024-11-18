@@ -9,3 +9,5 @@ MODULE bloque_convol
 		INSTANCE XLXI_32
 	SUBMODULE Conversor_Bin_BCD_3cifras
 		INSTANCE XLXI_33
+	SUBMODULE bCalcSignoMag
+		INSTANCE XLXI_34

@@ -1,0 +1,17 @@
+# Output products list for <biPAccumlator>
+_xmsgs\pn_parser.xmsgs
+biPAccumlator.asy
+biPAccumlator.gise
+biPAccumlator.ngc
+biPAccumlator.sym
+biPAccumlator.vhd
+biPAccumlator.vho
+biPAccumlator.xco
+biPAccumlator.xise
+biPAccumlator\doc\c_accum_v11_0_readme.txt
+biPAccumlator\doc\c_accum_v11_0_vinfo.html
+biPAccumlator\doc\ds213_accum.pdf
+biPAccumlator_flist.txt
+biPAccumlator_xmdf.tcl
+core_resources.txt
+gui_latency.txt

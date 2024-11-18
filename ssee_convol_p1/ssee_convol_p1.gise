@@ -19,9 +19,16 @@
 
   <version xmlns="http://www.xilinx.com/XMLSchema">11.1</version>
 
-  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="ssee_convol_p1.xise"/>
+  <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="../../ssee_convol_p1.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcConv.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcConv_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcSignoMag.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcSignoMag_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcX_i.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcX_i_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="convol_top_rl_2022.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="convol_top_rl_2022_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="dcm_100m_5m.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/cont_16bits.asy" xil_pn:origination="imported"/>
@@ -30,6 +37,7 @@
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/cont_3b.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="ipcore_dir/cont_3b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/cont_3b.vho" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_LOG" xil_pn:name="ipcore_dir/coregen.log"/>
     <file xil_pn:fileType="FILE_ASY" xil_pn:name="ipcore_dir/dcm_100m_5m.asy" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHO" xil_pn:name="ipcore_dir/dcm_100m_5m.vho" xil_pn:origination="imported"/>
   </files>

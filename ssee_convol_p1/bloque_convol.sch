@@ -152,6 +152,18 @@
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
+        <blockdef name="bCalcSignoMag">
+            <timestamp>2024-10-30T10:34:44</timestamp>
+            <rect width="368" x="64" y="-192" height="192" />
+            <rect width="64" x="0" y="-172" height="24" />
+            <line x2="0" y1="-160" y2="-160" x1="64" />
+            <line x2="0" y1="-96" y2="-96" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="496" y1="-160" y2="-160" x1="432" />
+            <line x2="496" y1="-96" y2="-96" x1="432" />
+            <rect width="64" x="432" y="-44" height="24" />
+            <line x2="496" y1="-32" y2="-32" x1="432" />
+        </blockdef>
         <block symbolname="Comp_Num_Letra" name="XLXI_3">
             <blockpin signalname="cod_tecla(3:0)" name="cod_tecla(3:0)" />
             <blockpin signalname="carga_cifra" name="carga_cifra" />
@@ -214,6 +226,14 @@
             <blockpin signalname="dato_sal_pos(7:0)" name="dato_bin_entero(7:0)" />
             <blockpin signalname="dato_sal_pos_sync" name="inicio" />
             <blockpin signalname="ck" name="ck" />
+        </block>
+        <block symbolname="bCalcSignoMag" name="XLXI_34">
+            <blockpin signalname="dato_sal(7:0)" name="dato_sal(7:0)" />
+            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="signo_sal" name="signo_sal" />
+            <blockpin signalname="dato_sal_pos_sync" name="dato_sal_pos_sync" />
+            <blockpin signalname="dato_sal_pos(7:0)" name="dato_sal_pos(7:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3801" height="2688">
@@ -488,7 +508,7 @@
         </branch>
         <branch name="dato_sal_pos(7:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1232" y="1552" type="branch" />
-            <wire x2="1232" y1="1552" y2="1552" x1="944" />
+            <wire x2="1232" y1="1552" y2="1552" x1="1168" />
             <wire x2="1520" y1="1552" y2="1552" x1="1232" />
         </branch>
         <branch name="ck">
@@ -503,7 +523,8 @@
         </branch>
         <branch name="dato_sal_pos_sync">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1248" y="1616" type="branch" />
-            <wire x2="1248" y1="1616" y2="1616" x1="944" />
+            <wire x2="1168" y1="1616" y2="1616" x1="912" />
+            <wire x2="1248" y1="1616" y2="1616" x1="1168" />
             <wire x2="1520" y1="1616" y2="1616" x1="1248" />
         </branch>
         <instance x="1520" y="1776" name="XLXI_33" orien="R0">
@@ -531,27 +552,33 @@
         <branch name="dato_sal(7:0)">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1552" type="branch" />
             <wire x2="240" y1="1552" y2="1552" x1="112" />
-            <wire x2="352" y1="1552" y2="1552" x1="240" />
+            <wire x2="416" y1="1552" y2="1552" x1="240" />
         </branch>
         <branch name="dato_sal_sync">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1616" type="branch" />
             <wire x2="240" y1="1616" y2="1616" x1="112" />
-            <wire x2="352" y1="1616" y2="1616" x1="240" />
+            <wire x2="416" y1="1616" y2="1616" x1="240" />
         </branch>
         <branch name="ck">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1680" type="branch" />
             <wire x2="240" y1="1680" y2="1680" x1="112" />
-            <wire x2="352" y1="1680" y2="1680" x1="240" />
-        </branch>
-        <branch name="signo_sal">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1056" y="1680" type="branch" />
-            <wire x2="1056" y1="1680" y2="1680" x1="944" />
-            <wire x2="1184" y1="1680" y2="1680" x1="1056" />
+            <wire x2="416" y1="1680" y2="1680" x1="240" />
         </branch>
         <branch name="ck">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="2656" y="2256" type="branch" />
             <wire x2="2656" y1="2256" y2="2256" x1="2496" />
             <wire x2="2832" y1="2256" y2="2256" x1="2656" />
+        </branch>
+        <instance x="416" y="1712" name="XLXI_34" orien="R0">
+        </instance>
+        <branch name="signo_sal">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1008" y="1552" type="branch" />
+            <wire x2="1008" y1="1552" y2="1552" x1="912" />
+            <wire x2="1040" y1="1552" y2="1552" x1="1008" />
+        </branch>
+        <branch name="dato_sal_pos(7:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1040" y="1680" type="branch" />
+            <wire x2="1040" y1="1680" y2="1680" x1="912" />
         </branch>
     </sheet>
 </drawing>

@@ -1,0 +1,6 @@
+; Ejemplo de inicialización de memoria RAM con palabras de 8 bits de ancho
+; 16 posiciones en total
+; Introducimos los valores en decimal
+MEMORY_INITIALIZATION_RADIX = 10;
+MEMORY_INITIALIZATION_VECTOR =
+43, 57, 98, 230, 1, 177, 85, 49;
