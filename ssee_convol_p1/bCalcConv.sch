@@ -20,7 +20,7 @@
         <signal name="indice(2:0)" />
         <signal name="ventana(1:0)" />
         <signal name="res_parcl(7:0)" />
-        <signal name="res_parc(13:6)" />
+        <signal name="res_parc(18),res_parc(12:6)" />
         <signal name="XLXN_2" />
         <signal name="acceder" />
         <signal name="XLXN_23(7:0)" />
@@ -125,14 +125,8 @@
             <rect width="288" x="64" y="-256" height="640" />
         </blockdef>
         <block symbolname="buf" name="XLXI_21(7:0)">
-            <blockpin signalname="res_parc(13:6)" name="I" />
+            <blockpin signalname="res_parc(18),res_parc(12:6)" name="I" />
             <blockpin signalname="res_parcl(7:0)" name="O" />
-        </block>
-        <block symbolname="fde" name="XLXI_18(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="guardar" name="CE" />
-            <blockpin signalname="res_parcl(7:0)" name="D" />
-            <blockpin signalname="dat_sal(7:0)" name="Q" />
         </block>
         <block symbolname="gnd" name="XLXI_17(7:0)">
             <blockpin signalname="ceros(7:0)" name="G" />
@@ -178,6 +172,12 @@
             <blockpin signalname="ck" name="clk" />
             <blockpin signalname="multiplicar" name="ce" />
             <blockpin signalname="xi_por_ci(15:0)" name="p(15:0)" />
+        </block>
+        <block symbolname="fde" name="XLXI_18(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="guardar" name="CE" />
+            <blockpin signalname="res_parcl(7:0)" name="D" />
+            <blockpin signalname="dat_sal(7:0)" name="Q" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -233,27 +233,23 @@
         <text style="fontsize:40;fontname:Arial" x="740" y="368">4. El acumulador almacena los resultados parciales y se resetea con cada dato nuevo</text>
         <text style="fontsize:40;fontname:Arial" x="740" y="432">5. El registro a la salida del acumulador evita que los resultados parciales se vean fuera</text>
         <text style="fontsize:40;fontname:Arial" x="740" y="496">6. La maquina de estados genera las salidas que requiere el datapath</text>
-        <instance x="2304" y="1936" name="XLXI_21(7:0)" orien="R0" />
         <branch name="res_parcl(7:0)">
-            <wire x2="2576" y1="1904" y2="1904" x1="2528" />
+            <wire x2="2752" y1="1904" y2="1904" x1="2688" />
         </branch>
-        <branch name="res_parc(13:6)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="1904" type="branch" />
-            <wire x2="2304" y1="1904" y2="1904" x1="2256" />
-        </branch>
-        <branch name="dat_sal(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2992" y="1904" type="branch" />
-            <wire x2="2992" y1="1904" y2="1904" x1="2960" />
+        <branch name="res_parc(18),res_parc(12:6)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2432" y="1904" type="branch" />
+            <wire x2="2464" y1="1904" y2="1904" x1="2432" />
         </branch>
         <branch name="guardar">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2560" y="1968" type="branch" />
             <wire x2="2576" y1="1968" y2="1968" x1="2560" />
+            <wire x2="2752" y1="1968" y2="1968" x1="2576" />
         </branch>
         <branch name="ck">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2560" y="2032" type="branch" />
             <wire x2="2576" y1="2032" y2="2032" x1="2560" />
+            <wire x2="2752" y1="2032" y2="2032" x1="2576" />
         </branch>
-        <instance x="2576" y="2160" name="XLXI_18(7:0)" orien="R0" />
         <text style="fontsize:44;fontname:Arial" x="1256" y="68">Bloque bCalcConv: Calculo de la convolucion</text>
         <instance x="336" y="2112" name="XLXI_17(7:0)" orien="R0" />
         <branch name="ceros(7:0)">
@@ -386,5 +382,12 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="288" y="1024" type="branch" />
             <wire x2="304" y1="1024" y2="1024" x1="288" />
         </branch>
+        <branch name="dat_sal(7:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="3168" y="1904" type="branch" />
+            <wire x2="3152" y1="1904" y2="1904" x1="3136" />
+            <wire x2="3168" y1="1904" y2="1904" x1="3152" />
+        </branch>
+        <instance x="2752" y="2160" name="XLXI_18(7:0)" orien="R0" />
+        <instance x="2464" y="1936" name="XLXI_21(7:0)" orien="R0" />
     </sheet>
 </drawing>

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/14/2024 17:11:12
+-- /___/   /\     Timestamp : 11/14/2024 19:10:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -125,14 +125,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_15";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_14";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_13";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_12";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_11";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_10";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_9";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_8";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_4";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_3";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_2";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -923,7 +923,7 @@ begin
                 O=>res_parcl(6));
    
    XLXI_21_7 : BUF
-      port map (I=>res_parc(13),
+      port map (I=>res_parc(18),
                 O=>res_parcl(7));
    
    XLXI_22 : fsm_convol
