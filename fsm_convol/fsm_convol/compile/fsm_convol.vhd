@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------
 --
 -- File        : c:/My_Designs/fsm_convol/fsm_convol/compile/fsm_convol.vhd
--- Generated   : Thu Nov 14 10:29:51 2024
+-- Generated   : Thu Nov 14 10:50:07 2024
 -- From        : c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf
 -- By          : Active-HDL Student Edition FSM Code Generator ver. 6.0
 --
@@ -34,7 +34,7 @@ entity fsm_convol is
 		multiplicar: out STD_LOGIC;
 		acumular: out STD_LOGIC;
 		guardar: out STD_LOGIC;
-		dato_salida_sync: out STD_LOGIC
+		dato_sal_sync: out STD_LOGIC
 );
 end fsm_convol;
 
@@ -82,10 +82,10 @@ begin
 		-- Set reset or default values for outputs, signals and variables
 		inicializar<='1';
 		indice<="000";
-		multiplicar<='0'';
+		multiplicar<='0';
 		acumular<='0';
 		guardar<='0';
-		dato_salida_sync<='0';
+		dato_sal_sync<='0';
 	elsif ck'event and ck = '1' then
 		-- Set default values for outputs, signals and variables
 		-- ...
@@ -105,15 +105,15 @@ begin
 			when S3 =>
 				Sreg0 <= S4;
 				vIndice:=vIndice+1;
-				indice <= vIndice(2:0);
+				indice <= vIndice(2 DOWNTO 0);
 			when S4 =>
-				if vIndice=="1000" then
+				if vIndice="1000" then
 					Sreg0 <= S5;
 					multiplicar <= '0';
 				else
 					Sreg0 <= S4;
 					vIndice:=vIndice+1;
-					indice <= vIndice(2:0);
+					indice <= vIndice(2 DOWNTO 0);
 				end if;
 			when S5 =>
 				Sreg0 <= S6;
@@ -129,10 +129,10 @@ begin
 				Sreg0 <= S1;
 				inicializar <= '1';
 				indice <= "000";
-				multiplicar <= '0'';
+				multiplicar <= '0';
 				acumular <= '0';
 				guardar <= '0';
-				dato_salida_sync<='0';
+				dato_sal_sync<='0';
 --vhdl_cover_off
 			when others =>
 				null;

@@ -8,7 +8,7 @@ component fsm_convol
 		multiplicar: out STD_LOGIC;
 		acumular: out STD_LOGIC;
 		guardar: out STD_LOGIC;
-		dato_salida_sync: out STD_LOGIC);
+		dato_sal_sync: out STD_LOGIC);
 end component;
 
 
@@ -21,4 +21,4 @@ instance_name : fsm_convol
  multiplicar => ,
  acumular => ,
  guardar => ,
- dato_salida_sync => );
+ dato_sal_sync => );
