@@ -91,18 +91,17 @@ CK_process :process
 		WAIT FOR CLK_RESET;
 	
 ----------------------
-		cod_tecla <= transport "0110"; -- "6"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-		
-		cod_tecla <= transport "0100"; -- "4"
-		tecla_pulsada <= '1';
-		WAIT FOR CLK_period;
-		tecla_pulsada <= transport '0';
-		WAIT FOR CLK_period*10;
-
+--		cod_tecla <= transport "0110"; -- "6"
+--		tecla_pulsada <= '1';
+--		WAIT FOR CLK_period;
+--		tecla_pulsada <= transport '0';
+--		WAIT FOR CLK_period*10;
+--		
+--		cod_tecla <= transport "0100"; -- "4"
+--		tecla_pulsada <= '1';
+--		WAIT FOR CLK_period;
+--		tecla_pulsada <= transport '0';
+--		WAIT FOR CLK_period*10;
 
 	-- Introducimos el número 1,  pulsamos A y esperamos para ver el resultado, pulsamos C para introducir el siguiente dato
 		cod_tecla <= transport "0000"; tecla_pulsada <= '1'; WAIT FOR CLK_period; tecla_pulsada <= transport '0'; WAIT FOR CLK_SIGUIENTE_TECLA;

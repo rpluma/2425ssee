@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:18
+-- /___/   /\     Timestamp : 11/03/2024 13:07:56
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_39";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_38";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_37";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_36";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_35";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_34";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_33";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_32";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_75";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_74";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_73";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_72";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_71";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_70";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_69";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_68";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(0),

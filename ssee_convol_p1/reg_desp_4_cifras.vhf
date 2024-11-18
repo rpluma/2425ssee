@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : reg_desp_4_cifras.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:23
+-- /___/   /\     Timestamp : 11/03/2024 13:07:55
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

@@ -99,8 +99,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalc
 Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
 Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 65 sub-compilation(s) to finish...
+Waiting for 64 sub-compilation(s) to finish...
 Compiled 126 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
-Fuse Memory Usage: 67756 KB
-Fuse CPU Usage: 1483 ms
+Fuse Memory Usage: 67228 KB
+Fuse CPU Usage: 1374 ms

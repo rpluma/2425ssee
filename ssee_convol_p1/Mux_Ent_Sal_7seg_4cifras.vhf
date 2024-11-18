@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Mux_Ent_Sal_7seg_4cifras.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:18
+-- /___/   /\     Timestamp : 11/03/2024 13:07:56
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -115,23 +115,23 @@ architecture BEHAVIORAL of Mux_Ent_Sal_7seg_4cifras is
    end component;
    attribute BOX_TYPE of BUF : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_26";
-   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_25";
-   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_24";
-   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_23";
-   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_30";
-   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_29";
-   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_28";
-   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_27";
-   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_18";
-   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_17";
-   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_16";
-   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_15";
-   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_22";
-   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_21";
-   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_20";
-   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_19";
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_31";
+   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_87";
+   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_86";
+   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_85";
+   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_84";
+   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_91";
+   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_90";
+   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_89";
+   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_88";
+   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_79";
+   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_78";
+   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_77";
+   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_76";
+   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_83";
+   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_82";
+   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_81";
+   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_80";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_92";
 begin
    entZ_sal <= entZ_sal_DUMMY;
    XLXI_2 : GND
