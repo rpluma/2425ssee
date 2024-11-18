@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.ncd
-OUTFILE=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.bit
+INFILE=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.ncd
+OUTFILE=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.bit
 FAMILY=Spartan6
 PART=xc6slx16-3csg324
-WORKINGDIR=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto
+WORKINGDIR=C:\Users\Usuario_UMA\Desktop\ssee_convol_p1
 LICENSE=WebPack
 USER_INFO=176074171_0_0_047

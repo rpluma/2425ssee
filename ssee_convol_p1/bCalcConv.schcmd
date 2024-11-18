@@ -1,3 +1,0 @@
-select figure at 486 1296 8 -branches -sn=1
-update symbols bIpMemory
-select figure at 4370 431 8 -branches -sn=1

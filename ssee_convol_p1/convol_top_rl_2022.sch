@@ -86,7 +86,7 @@
         <signal name="ck_100MHz_pad" />
         <signal name="XLXN_1" />
         <signal name="cuenta_dcm(15:0)" />
-        <signal name="ceros(1:0)" />
+        <signal name="sw(1:0)" />
         <port polarity="BiDirectional" name="fila_pad(4:1)" />
         <port polarity="Input" name="col_pad(4:1)" />
         <port polarity="Input" name="reset_pad" />
@@ -550,7 +550,7 @@
             <blockpin signalname="cent_bcd(3:0)" name="display2(3:0)" />
             <blockpin signalname="dec_bcd(3:0)" name="display3(3:0)" />
             <blockpin signalname="unid_bcd(3:0)" name="display4(3:0)" />
-            <blockpin signalname="ceros(1:0)" name="ventana(1:0)" />
+            <blockpin signalname="sw(1:0)" name="ventana(1:0)" />
         </block>
         <block symbolname="dcm_100m_5m" name="XLXI_306">
             <blockpin signalname="ck_100MHz_pad" name="clk_in1" />
@@ -1159,7 +1159,7 @@
             <wire x2="496" y1="2544" y2="2544" x1="352" />
             <wire x2="688" y1="2544" y2="2544" x1="496" />
         </branch>
-        <branch name="ceros(1:0)">
+        <branch name="sw(1:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2880" y="896" type="branch" />
             <wire x2="2944" y1="896" y2="896" x1="2880" />
         </branch>
