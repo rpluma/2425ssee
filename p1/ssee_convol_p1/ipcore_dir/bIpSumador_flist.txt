@@ -1,0 +1,15 @@
+# Output products list for <bIpSumador>
+_xmsgs\pn_parser.xmsgs
+bIpSumador.asy
+bIpSumador.gise
+bIpSumador.ngc
+bIpSumador.sym
+bIpSumador.vhd
+bIpSumador.vho
+bIpSumador.xco
+bIpSumador.xise
+bIpSumador\doc\c_addsub_v11_0_readme.txt
+bIpSumador\doc\c_addsub_v11_0_vinfo.html
+bIpSumador\doc\ds214_addsub.pdf
+bIpSumador_flist.txt
+bIpSumador_xmdf.tcl

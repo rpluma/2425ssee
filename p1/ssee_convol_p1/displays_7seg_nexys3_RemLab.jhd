@@ -1,0 +1,9 @@
+MODULE displays_7seg_nexys3_RemLab
+	SUBMODULE bcd_7seg_neg
+		INSTANCE XLXI_16
+	SUBMODULE bcd_7seg_neg
+		INSTANCE XLXI_38
+	SUBMODULE bcd_7seg_neg
+		INSTANCE XLXI_39
+	SUBMODULE bcd_7seg_neg
+		INSTANCE XLXI_40

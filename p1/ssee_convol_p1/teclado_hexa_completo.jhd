@@ -1,0 +1,13 @@
+MODULE teclado_hexa_completo
+	SUBMODULE teclado_4x4
+		INSTANCE XLXI_1
+	SUBMODULE detector
+		INSTANCE XLXI_5
+	SUBMODULE detector
+		INSTANCE XLXI_6
+	SUBMODULE detector
+		INSTANCE XLXI_7
+	SUBMODULE detector
+		INSTANCE XLXI_8
+	SUBMODULE codif_tecla
+		INSTANCE XLXI_39

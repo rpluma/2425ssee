@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="cont_3b">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2013-11-30T18:31:44</timestamp>
+    <pin polarity="Input" x="0" y="64" name="clk" />
+    <pin polarity="Output" x="336" y="64" name="q(2:0)" />
+    <graph>
+        <rect width="272" x="32" y="32" height="60" />
+        <line x2="32" y1="64" y2="64" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="64" type="pin clk" />
+        <text style="fontsize:40;fontname:Arial" x="32" y="12">cont_3b</text>
+        <line x2="304" y1="64" y2="64" style="linewidth:W" x1="336" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="300" y="64" type="pin q(2:0)" />
+    </graph>
+</symbol>

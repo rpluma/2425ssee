@@ -1,0 +1,17 @@
+
+;Coeficientes: para filtro paso banda, entre 300 y 3400 Hz, con Fs=14000
+;Coeficientes enunciado:  -0,11486508, -0,12143762, 0,11724033, 0,39711936, ...
+;Coeficientes * 2^6: -7,35136512, -7,77200768, 7,50338112, 25,41563904, ...
+;Coeficientes * 2^6 redondeados: -7, -8, 8, 25, ...
+;Coeficientes * 2^6 redondeados en complemento a 2: 249, 248, 8, 25, ...
+
+MEMORY_INITIALIZATION_RADIX = 10;
+MEMORY_INITIALIZATION_VECTOR =
+; Ventana rectangular
+249, 248, 8, 25, 25, 8, 248, 249,
+; Ventana Hamming
+255, 254, 6, 31, 31, 6, 254, 255,
+; Ventana Hann
+0, 254, 6, 32, 32, 6, 254, 0,
+; Ventana Kaiser
+250, 249, 7, 23, 23, 7, 249, 250;

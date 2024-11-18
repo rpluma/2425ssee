@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="teclado_hexa_completo">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-11-4T12:8:2</timestamp>
+    <pin polarity="Input" x="0" y="-1376" name="col1" />
+    <pin polarity="Input" x="0" y="-1328" name="col2" />
+    <pin polarity="Input" x="0" y="-1280" name="col3" />
+    <pin polarity="Input" x="0" y="-1232" name="col4" />
+    <pin polarity="Output" x="496" y="-1376" name="fila1" />
+    <pin polarity="Output" x="496" y="-1328" name="fila2" />
+    <pin polarity="Output" x="496" y="-1280" name="fila3" />
+    <pin polarity="Output" x="496" y="-1232" name="fila4" />
+    <pin polarity="Output" x="496" y="-1088" name="tecla(15:0)" />
+    <pin polarity="Input" x="0" y="-1184" name="ck_teclado" />
+    <pin polarity="Output" x="496" y="-1184" name="codigo_tecla(3:0)" />
+    <pin polarity="Output" x="496" y="-1136" name="tecla_pulsada" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="244" y="-1416" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1376" type="pin col1" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1328" type="pin col2" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1280" type="pin col3" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1232" type="pin col4" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1376" type="pin fila1" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1328" type="pin fila2" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1280" type="pin fila3" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1232" type="pin fila4" />
+        <line x2="0" y1="-1376" y2="-1376" x1="64" />
+        <line x2="0" y1="-1328" y2="-1328" x1="64" />
+        <line x2="0" y1="-1280" y2="-1280" x1="64" />
+        <line x2="0" y1="-1232" y2="-1232" x1="64" />
+        <line x2="496" y1="-1376" y2="-1376" x1="432" />
+        <line x2="496" y1="-1328" y2="-1328" x1="432" />
+        <line x2="496" y1="-1280" y2="-1280" x1="432" />
+        <line x2="496" y1="-1232" y2="-1232" x1="432" />
+        <rect width="368" x="64" y="-1408" height="356" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1088" type="pin tecla(15:0)" />
+        <rect width="64" x="432" y="-1100" height="24" />
+        <line x2="496" y1="-1088" y2="-1088" x1="432" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1184" type="pin ck_teclado" />
+        <line x2="0" y1="-1184" y2="-1184" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1184" type="pin codigo_tecla(3:0)" />
+        <rect width="64" x="432" y="-1196" height="24" />
+        <line x2="496" y1="-1184" y2="-1184" x1="432" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="424" y="-1136" type="pin tecla_pulsada" />
+        <line x2="496" y1="-1136" y2="-1136" x1="432" />
+    </graph>
+</symbol>

@@ -1,0 +1,11 @@
+MODULE bloque_convol
+	SUBMODULE Conversor_BCD_Bin
+		INSTANCE XLXI_1
+	SUBMODULE Comp_Num_Letra
+		INSTANCE XLXI_3
+	SUBMODULE reg_desp_4_cifras
+		INSTANCE XLXI_6
+	SUBMODULE Mux_Ent_Sal_7seg_4cifras
+		INSTANCE XLXI_32
+	SUBMODULE Conversor_Bin_BCD_3cifras
+		INSTANCE XLXI_33

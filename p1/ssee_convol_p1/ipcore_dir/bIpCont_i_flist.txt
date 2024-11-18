@@ -1,0 +1,17 @@
+# Output products list for <bIpCont_i>
+_xmsgs\pn_parser.xmsgs
+bIpCont_i.asy
+bIpCont_i.gise
+bIpCont_i.ngc
+bIpCont_i.sym
+bIpCont_i.vhd
+bIpCont_i.vho
+bIpCont_i.xco
+bIpCont_i.xise
+bIpCont_i\doc\c_counter_binary_v11_0_readme.txt
+bIpCont_i\doc\c_counter_binary_v11_0_vinfo.html
+bIpCont_i\doc\ds215_counter.pdf
+bIpCont_i_flist.txt
+bIpCont_i_xmdf.tcl
+core_resources.txt
+gui_latency.txt

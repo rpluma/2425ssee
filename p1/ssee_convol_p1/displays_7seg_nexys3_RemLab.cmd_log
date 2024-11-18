@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl displays_7seg_nexys3_RemLab_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/displays_7seg_nexys3_RemLab.sch 

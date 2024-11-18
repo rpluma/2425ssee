@@ -1,0 +1,5 @@
+MODULE teclado_4x4
+	SUBMODULE cont_anillo_ce
+		INSTANCE XLXI_2
+	SUBMODULE cont_3b
+		INSTANCE XLXI_3

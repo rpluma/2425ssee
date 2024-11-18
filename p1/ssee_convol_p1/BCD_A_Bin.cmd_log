@@ -1,0 +1,3 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym BCD_A_Bin C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl BCD_A_Bin_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.sch 
+sch2vhdl -intstyle ise -family spartan6 -tionly -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.sch BCD_A_Bin.vhi 

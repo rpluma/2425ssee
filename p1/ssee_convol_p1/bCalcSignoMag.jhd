@@ -1,0 +1,3 @@
+MODULE bCalcSignoMag
+	SUBMODULE bIpSumador
+		INSTANCE XLXI_2

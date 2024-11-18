@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_usecase_utils_pkg_v2_0" />
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="bloque_convol_bloque_convol_sch_tb" />
+            <top_module name="c_accum_pkg_v11_0" />
+            <top_module name="c_addsub_pkg_v11_0" />
+            <top_module name="c_reg_fd_v11_0_comp" />
+            <top_module name="mult_gen_pkg_v11_2" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="xbip_accum_v2_0_comp" />
+            <top_module name="xbip_accum_v2_0_pkg" />
+            <top_module name="xbip_addsub_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_xst_comp" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="24" />
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/cod_tecla" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">cod_tecla[3:0]</obj_property>
+      <obj_property name="ObjectShortName">cod_tecla[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/tecla_pulsada" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tecla_pulsada</obj_property>
+      <obj_property name="ObjectShortName">tecla_pulsada</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/dato_ent" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_ent[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dato_ent[7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_1/dato_nuevo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_nuevo</obj_property>
+      <obj_property name="ObjectShortName">dato_nuevo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/dato_nuevo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_nuevo</obj_property>
+      <obj_property name="ObjectShortName">dato_nuevo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_16/sreg0" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">sreg0</obj_property>
+      <obj_property name="ObjectShortName">sreg0</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/inicializar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">inicializar</obj_property>
+      <obj_property name="ObjectShortName">inicializar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/x_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">x_i[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/c_i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">c_i[7:0]</obj_property>
+      <obj_property name="ObjectShortName">c_i[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/multiplicar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">multiplicar</obj_property>
+      <obj_property name="ObjectShortName">multiplicar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/xi_por_ci" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">xi_por_ci[15:0]</obj_property>
+      <obj_property name="ObjectShortName">xi_por_ci[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/acumular" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">acumular</obj_property>
+      <obj_property name="ObjectShortName">acumular</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/res_parcl" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">res_parcl[7:0]</obj_property>
+      <obj_property name="ObjectShortName">res_parcl[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/guardar" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">guardar</obj_property>
+      <obj_property name="ObjectShortName">guardar</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/dat_sal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">dat_sal[7:0]</obj_property>
+      <obj_property name="ObjectShortName">dat_sal[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/dato_sal_sync" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_sal_sync</obj_property>
+      <obj_property name="ObjectShortName">dato_sal_sync</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_16/dato_nuevo" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">dato_nuevo</obj_property>
+      <obj_property name="ObjectShortName">dato_nuevo</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/punto_decimal" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">punto_decimal[4:1]</obj_property>
+      <obj_property name="ObjectShortName">punto_decimal[4:1]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display1[3:0]</obj_property>
+      <obj_property name="ObjectShortName">display1[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display2" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display2[3:0]</obj_property>
+      <obj_property name="ObjectShortName">display2[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display3" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display3[3:0]</obj_property>
+      <obj_property name="ObjectShortName">display3[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/display4" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">display4[3:0]</obj_property>
+      <obj_property name="ObjectShortName">display4[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/ck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck</obj_property>
+      <obj_property name="ObjectShortName">ck</obj_property>
+   </wvobject>
+</wave_config>

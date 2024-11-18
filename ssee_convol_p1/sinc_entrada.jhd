@@ -1,0 +1,7 @@
+MODULE sinc_entrada
+	SUBMODULE nivel_a_pulso
+		INSTANCE XLXI_9
+	SUBMODULE sincroniza
+		INSTANCE XLXI_10
+	SUBMODULE sincroniza
+		INSTANCE XLXI_17(3:0)

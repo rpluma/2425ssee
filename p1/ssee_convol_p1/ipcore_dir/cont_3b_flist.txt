@@ -1,0 +1,17 @@
+# Output products list for <cont_3b>
+_xmsgs\pn_parser.xmsgs
+cont_3b.asy
+cont_3b.gise
+cont_3b.ngc
+cont_3b.sym
+cont_3b.vhd
+cont_3b.vho
+cont_3b.xco
+cont_3b.xise
+cont_3b\doc\c_counter_binary_v11_0_readme.txt
+cont_3b\doc\c_counter_binary_v11_0_vinfo.html
+cont_3b\doc\ds215_counter.pdf
+cont_3b_flist.txt
+cont_3b_xmdf.tcl
+core_resources.txt
+gui_latency.txt

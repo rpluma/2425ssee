@@ -1,0 +1,3 @@
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl Mux_Ent_Sal_7seg_4cifras_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym Mux_Ent_Sal_7seg_4cifras C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl Mux_Ent_Sal_7seg_4cifras_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.sch 

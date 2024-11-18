@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl teclado_hexa_completo_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/teclado_hexa_completo.sch 

@@ -1,0 +1,3 @@
+MODULE codif_tecla
+	SUBMODULE nivel_a_pulso
+		INSTANCE XLXI_41

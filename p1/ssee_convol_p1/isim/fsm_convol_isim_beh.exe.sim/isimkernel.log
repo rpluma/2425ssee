@@ -1,0 +1,30 @@
+Command line:
+   fsm_convol_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  52295
+
+Wed Nov 13 20:15:25 2024
+
+
+ Elaboration Time: 0.03125 sec
+
+ Current Memory Usage: 5150.76 Meg
+
+ Total Signals          : 10
+ Total Nets             : 13
+ Total Signal Drivers   : 7
+ Total Blocks           : 4
+ Total Primitive Blocks : 4
+ Total Processes        : 1
+ Total Traceable Variables  : 10
+ Total Scalar Nets and Variables : 391
+Total Line Count : 43
+Total Line Count : 43
+
+ Total Simulation Time: 0.046875 sec
+
+ Current Memory Usage: 5150.76 Meg
+
+Wed Nov 13 20:15:47 2024
+

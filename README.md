@@ -7,7 +7,6 @@
 - PC Virtual: https://eii.cv.uma.es/mod/virtualpc/view.php?id=419021
 - Launcher: https://pcvirtual.cv.uma.es/uds/page/ticket/launcher
 - Local: od\Documents\200inv\200gierm\2425.304.ssee\Prácticas
-1173
 
 ## Remote lab
 URL:  http://fpga-lab.uma.es/

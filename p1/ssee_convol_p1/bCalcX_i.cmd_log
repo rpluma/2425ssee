@@ -1,0 +1,16 @@
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bCalcX_i C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcX_i_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch 

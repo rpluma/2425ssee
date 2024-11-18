@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="teclado_4x4">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-11-4T11:46:40</timestamp>
+    <pin polarity="Input" x="0" y="-1248" name="col1" />
+    <pin polarity="Input" x="0" y="-1184" name="col2" />
+    <pin polarity="Input" x="0" y="-1120" name="col3" />
+    <pin polarity="Input" x="0" y="-1056" name="col4" />
+    <pin polarity="Output" x="416" y="-992" name="tecla(15:0)" />
+    <pin polarity="Output" x="416" y="-1056" name="fila4" />
+    <pin polarity="Output" x="416" y="-1248" name="fila1" />
+    <pin polarity="Output" x="416" y="-1184" name="fila2" />
+    <pin polarity="Output" x="416" y="-1120" name="fila3" />
+    <pin polarity="Input" x="0" y="-992" name="ck_teclado" />
+    <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="192" y="-1288" type="symbol" />
+        <rect width="288" x="64" y="-1280" height="320" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1248" type="pin col1" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1184" type="pin col2" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1120" type="pin col3" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-1056" type="pin col4" />
+        <line x2="0" y1="-1248" y2="-1248" x1="64" />
+        <line x2="0" y1="-1184" y2="-1184" x1="64" />
+        <line x2="0" y1="-1120" y2="-1120" x1="64" />
+        <line x2="0" y1="-1056" y2="-1056" x1="64" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-992" type="pin tecla(15:0)" />
+        <rect width="64" x="352" y="-1004" height="24" />
+        <line x2="416" y1="-992" y2="-992" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-1056" type="pin fila4" />
+        <line x2="416" y1="-1056" y2="-1056" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-1248" type="pin fila1" />
+        <line x2="416" y1="-1248" y2="-1248" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-1184" type="pin fila2" />
+        <line x2="416" y1="-1184" y2="-1184" x1="352" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-1120" type="pin fila3" />
+        <line x2="416" y1="-1120" y2="-1120" x1="352" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-992" type="pin ck_teclado" />
+        <line x2="0" y1="-992" y2="-992" x1="64" />
+    </graph>
+</symbol>
