@@ -59,11 +59,13 @@ directory11=c:\My_Designs\fsm_convol\fsm_convol\
 extension11=asdb;awc;asdbc;asdbe
 [Files]
 /fsm_convol.asf=-1
-/fsm_convol.asf=-1
 [Files.Data]
 .\src\fsm_convol.asf=State Diagram
-.\src\fsm_convol.asf=State Diagram
 [file_out:/fsm_convol.asf]
 /..\compile\fsm_convol.vhd=-1
 [file_out:/fsm_convol.asf]
 /..\compile\fsm_convol.vhd=-1
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

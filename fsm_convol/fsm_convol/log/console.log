@@ -64,4 +64,69 @@ acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
 # Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
 # Compile success 0 Errors 0 Warnings  Analysis time :  94.0 [ms]
 acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
-# Generati
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:\My_Designs\fsm_convol\fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)
+# Compile Entity "fsm_convol"
+# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
+# Compile success 0 Errors 0 Warnings  Analysis time :  32.0 [ms]
+acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:\My_Designs\fsm_convol\fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)
+# Compile Entity "fsm_convol"
+# Compile Architecture "fsm_convol_arch" of Entity "fsm_convol"
+# Compile success 0 Errors 0 Warnings  Analysis time :  47.0 [ms]
+acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:\My_Designs\fsm_convol\fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Error: FSM2HDL_3007 fsm_convol.asf : Missing condition. Two unconditional transitions detected.
+# HDL code generation completed. 1 error(s), 0 warning(s)
+# Double-click on error/warning line to see the source of error/warning.
+# Serious errors detected during compilation. HDL file has not been generated.
+acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:\My_Designs\fsm_convol\fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Error: FSM2HDL_3007 fsm_convol.asf : Missing condition. Two unconditional transitions detected.
+# HDL code generation completed. 1 error(s), 0 warning(s)
+# Double-click on error/warning line to see the source of error/warning.
+# Serious errors detected during compilation. HDL file has not been generated.
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Error: FSM2HDL_3007 fsm_convol.asf : Missing condition. Two unconditional transitions detected.
+# HDL code generation completed. 1 error(s), 0 warning(s)
+# Double-click on error/warning line to see the source of error/warning.
+# Serious errors detected during compilation. HDL file has not been generated.
+acom -O3 -e 100 -work fsm_convol -2002  $dsn/src/fsm_convol.asf
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:\My_Designs\fsm_convol\fsm_convol\src\fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Error: FSM2HDL_3007 fsm_convol.asf : Missing condition. Two unconditional transitions detected.
+# HDL code generation completed. 1 error(s), 0 warning(s)
+# Double-click on error/warning line to see the source of error/warning.
+# Serious errors detected during compilation. HDL file has not been generated.
+# Design: Design "fsm_convol" has been set as active.
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Error: FSM2HDL_3007 fsm_convol.asf : Missing condition. Two unconditional transitions detected.
+# HDL code generation completed. 1 error(s), 0 warning(s)
+# Double-click on error/warning line to see the source of error/warning.
+# Serious errors detected during compilation. HDL file has not been generated.
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)
+# Generating "c:\My_Designs\fsm_convol\fsm_convol\compile\fsm_convol.vhd" from "c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf"
+# Loading State Diagram data...
+# Synthesis attributes will be generated for "Synopsys FPGA Express"
+# Generating interface file...
+# HDL code generation successful. 0 error(s), 0 warning(s)

@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------
 --
 -- File        : c:/My_Designs/fsm_convol/fsm_convol/compile/fsm_convol.vhd
--- Generated   : Thu Nov 14 10:50:07 2024
+-- Generated   : Thu Nov 14 17:15:17 2024
 -- From        : c:/My_Designs/fsm_convol/fsm_convol/src/fsm_convol.asf
 -- By          : Active-HDL Student Edition FSM Code Generator ver. 6.0
 --
@@ -34,7 +34,8 @@ entity fsm_convol is
 		multiplicar: out STD_LOGIC;
 		acumular: out STD_LOGIC;
 		guardar: out STD_LOGIC;
-		dato_sal_sync: out STD_LOGIC
+		dato_sal_sync: out STD_LOGIC;
+		acceder: out STD_LOGIC
 );
 end fsm_convol;
 
@@ -43,17 +44,18 @@ architecture fsm_convol_arch of fsm_convol is
 -- BINARY ENCODED state machine: Sreg0
 attribute ENUM_ENCODING: string;
 type Sreg0_type is (
-	S1, S2, S3, S4, S5, S6, S7, S8
+	S1, S2, S3, S4, S5, S6, S7, S8, S9
 );
 attribute ENUM_ENCODING of Sreg0_type: type is
-	"000 " &		-- S1
-	"001 " &		-- S2
-	"010 " &		-- S3
-	"011 " &		-- S4
-	"100 " &		-- S5
-	"101 " &		-- S6
-	"110 " &		-- S7
-	"111" ;		-- S8
+	"0000 " &		-- S1
+	"0001 " &		-- S2
+	"0010 " &		-- S3
+	"0011 " &		-- S4
+	"0100 " &		-- S5
+	"0101 " &		-- S6
+	"0110 " &		-- S7
+	"0111 " &		-- S8
+	"1000" ;		-- S9
 
 signal Sreg0: Sreg0_type;
 
@@ -62,8 +64,8 @@ begin
 -- FSM coverage pragmas
 -- Aldec enum Machine_Sreg0 CURRENT=Sreg0
 -- Aldec enum Machine_Sreg0 INITIAL_STATE=S1
--- Aldec enum Machine_Sreg0 STATES=S2,S3,S4,S5,S6,S7,S8
--- Aldec enum Machine_Sreg0 TRANS=S1->S2,S2->S3,S3->S4,S4->S4,S4->S5,S5->S6,S6->S7,S7->S8,S8->S1
+-- Aldec enum Machine_Sreg0 STATES=S2,S3,S4,S5,S6,S7,S8,S9
+-- Aldec enum Machine_Sreg0 TRANS=S1->S2,S2->S9,S3->S4,S4->S4,S4->S5,S5->S6,S6->S7,S7->S8,S8->S1,S9->S3
 
 -- User statements
 
@@ -82,6 +84,7 @@ begin
 		-- Set reset or default values for outputs, signals and variables
 		inicializar<='1';
 		indice<="000";
+		acceder<='0';
 		multiplicar<='0';
 		acumular<='0';
 		guardar<='0';
@@ -93,15 +96,13 @@ begin
 			when S1 =>
 				if dato_nuevo='1' then
 					Sreg0 <= S2;
-					inicializar<='0';
-					multiplicar <= '1';
-					indice <= "001";
+					inicializar <= '0';
+					acceder <= '1';
 				end if;
 			when S2 =>
-				Sreg0 <= S3;
-				vIndice := "0010";
-				indice <= "010";
-				acumular <= '1';
+				Sreg0 <= S9;
+				multiplicar <='1';
+				indice <= "001";
 			when S3 =>
 				Sreg0 <= S4;
 				vIndice:=vIndice+1;
@@ -109,6 +110,7 @@ begin
 			when S4 =>
 				if vIndice="1000" then
 					Sreg0 <= S5;
+					acceder <= '0';
 					multiplicar <= '0';
 				else
 					Sreg0 <= S4;
@@ -129,10 +131,16 @@ begin
 				Sreg0 <= S1;
 				inicializar <= '1';
 				indice <= "000";
+				acceder <= '0';
 				multiplicar <= '0';
 				acumular <= '0';
 				guardar <= '0';
 				dato_sal_sync<='0';
+			when S9 =>
+				Sreg0 <= S3;
+				vIndice := "0010";
+				indice <= "010";
+				acumular <= '1';
 --vhdl_cover_off
 			when others =>
 				null;
