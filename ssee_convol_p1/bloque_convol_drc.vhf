@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bloque_convol_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:22:09
+-- /___/   /\     Timestamp : 10/31/2024 22:19:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -1067,35 +1067,35 @@ begin
                 Q=>dat_sal(7));
    
    XLXI_21_0 : BUF
-      port map (I=>res_parc(8),
+      port map (I=>res_parc(6),
                 O=>res_parcl(0));
    
    XLXI_21_1 : BUF
-      port map (I=>res_parc(9),
+      port map (I=>res_parc(7),
                 O=>res_parcl(1));
    
    XLXI_21_2 : BUF
-      port map (I=>res_parc(10),
+      port map (I=>res_parc(8),
                 O=>res_parcl(2));
    
    XLXI_21_3 : BUF
-      port map (I=>res_parc(11),
+      port map (I=>res_parc(9),
                 O=>res_parcl(3));
    
    XLXI_21_4 : BUF
-      port map (I=>res_parc(12),
+      port map (I=>res_parc(10),
                 O=>res_parcl(4));
    
    XLXI_21_5 : BUF
-      port map (I=>res_parc(13),
+      port map (I=>res_parc(11),
                 O=>res_parcl(5));
    
    XLXI_21_6 : BUF
-      port map (I=>res_parc(14),
+      port map (I=>res_parc(12),
                 O=>res_parcl(6));
    
    XLXI_21_7 : BUF
-      port map (I=>res_parc(15),
+      port map (I=>res_parc(13),
                 O=>res_parcl(7));
    
 end BEHAVIORAL;

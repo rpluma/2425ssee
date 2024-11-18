@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-TIC-EII-040::  Thu Oct 31 19:00:19 2024
+TIC-EII-040::  Thu Oct 31 22:02:57 2024
 
 par -w -intstyle ise -ol high -mt off convol_top_rl_2022_map.ncd
 convol_top_rl_2022.ncd convol_top_rl_2022.pcf 
@@ -22,30 +22,30 @@ Device speed data version:  "PRODUCTION 1.23 2013-10-13".
 Device Utilization Summary:
 
 Slice Logic Utilization:
-  Number of Slice Registers:                   325 out of  18,224    1%
-    Number used as Flip Flops:                 325
+  Number of Slice Registers:                   323 out of  18,224    1%
+    Number used as Flip Flops:                 323
     Number used as Latches:                      0
     Number used as Latch-thrus:                  0
     Number used as AND/OR logics:                0
-  Number of Slice LUTs:                        280 out of   9,112    3%
-    Number used as logic:                      238 out of   9,112    2%
-      Number using O6 output only:             173
+  Number of Slice LUTs:                        277 out of   9,112    3%
+    Number used as logic:                      236 out of   9,112    2%
+      Number using O6 output only:             171
       Number using O5 output only:              29
       Number using O5 and O6:                   36
       Number used as ROM:                        0
     Number used as Memory:                       0 out of   2,176    0%
-    Number used exclusively as route-thrus:     42
-      Number with same-slice register load:     39
+    Number used exclusively as route-thrus:     41
+      Number with same-slice register load:     38
       Number with same-slice carry load:         3
       Number with other load:                    0
 
 Slice Logic Distribution:
-  Number of occupied Slices:                   129 out of   2,278    5%
+  Number of occupied Slices:                   132 out of   2,278    5%
   Number of MUXCYs used:                        64 out of   4,556    1%
-  Number of LUT Flip Flop pairs used:          358
-    Number with an unused Flip Flop:            81 out of     358   22%
-    Number with an unused LUT:                  78 out of     358   21%
-    Number of fully used LUT-FF pairs:         199 out of     358   55%
+  Number of LUT Flip Flop pairs used:          366
+    Number with an unused Flip Flop:            90 out of     366   24%
+    Number with an unused LUT:                  89 out of     366   24%
+    Number of fully used LUT-FF pairs:         187 out of     366   51%
     Number of slice register sites lost
       to control set restrictions:               0 out of  18,224    0%
 
@@ -118,13 +118,13 @@ WARNING:Par:288 - The signal boton_izq_pad_IBUF has no load.  PAR will not attem
 Starting Router
 
 
-Phase  1  : 1604 unrouted;      REAL time: 2 secs 
+Phase  1  : 1596 unrouted;      REAL time: 2 secs 
 
-Phase  2  : 1262 unrouted;      REAL time: 3 secs 
+Phase  2  : 1256 unrouted;      REAL time: 3 secs 
 
-Phase  3  : 357 unrouted;      REAL time: 4 secs 
+Phase  3  : 380 unrouted;      REAL time: 3 secs 
 
-Phase  4  : 357 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+Phase  4  : 380 unrouted; (Setup:0, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
 
 Updating file: convol_top_rl_2022.ncd with current fully routed design.
 
@@ -158,17 +158,17 @@ Generating Clock Report
 +---------------------+--------------+------+------+------------+-------------+
 |        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
 +---------------------+--------------+------+------+------------+-------------+
-|           ck_100MHz |  BUFGMUX_X2Y2| No   |   81 |  0.051     |  0.901      |
+|           ck_100MHz |  BUFGMUX_X2Y2| No   |   82 |  0.055     |  0.902      |
 +---------------------+--------------+------+------+------------+-------------+
-|            ck_300Hz |  BUFGMUX_X2Y4| No   |   17 |  0.488     |  1.362      |
+|            ck_300Hz |  BUFGMUX_X2Y4| No   |   16 |  0.488     |  1.362      |
 +---------------------+--------------+------+------+------------+-------------+
-|             ck_5MHz | BUFGMUX_X3Y13| No   |    4 |  0.006     |  0.859      |
+|             ck_5MHz | BUFGMUX_X3Y13| No   |    4 |  0.001     |  0.865      |
 +---------------------+--------------+------+------+------------+-------------+
 |            ck_20KHz |  BUFGMUX_X2Y1| No   |    2 |  0.005     |  1.372      |
 +---------------------+--------------+------+------+------------+-------------+
-|   EppDSTB_IBUF_BUFG | BUFGMUX_X2Y11| No   |    4 |  0.003     |  0.891      |
+|   EppDSTB_IBUF_BUFG | BUFGMUX_X2Y11| No   |    4 |  0.002     |  0.890      |
 +---------------------+--------------+------+------+------------+-------------+
-|   EppASTB_IBUF_BUFG | BUFGMUX_X2Y10| No   |    2 |  0.004     |  0.893      |
+|   EppASTB_IBUF_BUFG | BUFGMUX_X2Y10| No   |    2 |  0.000     |  0.893      |
 +---------------------+--------------+------+------+------------+-------------+
 
 * Net Skew is the difference between the minimum and maximum routing
@@ -193,18 +193,18 @@ Asterisk (*) preceding a constraint indicates it was not met.
   TS_ck_100MHz_pad = PERIOD TIMEGRP "ck_100 | MAXPERIOD   |     0.000ns|            |       0|           0
   MHz_pad" 100 MHz HIGH 50%                 | MINLOWPULSE |    14.660ns|     5.340ns|       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_XLXI_306_clk2x = PERIOD TIMEGRP "XLXI_ | SETUP       |     3.601ns|     6.399ns|       0|           0
-  306_clk2x" TS_ck_100MHz_pad HIGH 50%      | HOLD        |     0.310ns|            |       0|           0
+  TS_XLXI_306_clk2x = PERIOD TIMEGRP "XLXI_ | SETUP       |     3.720ns|     6.280ns|       0|           0
+  306_clk2x" TS_ck_100MHz_pad HIGH 50%      | HOLD        |     0.211ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
-  TS_XLXI_306_clkfx = PERIOD TIMEGRP "XLXI_ | SETUP       |   197.232ns|     2.768ns|       0|           0
-  306_clkfx" TS_ck_100MHz_pad * 0.05        | HOLD        |     0.504ns|            |       0|           0
+  TS_XLXI_306_clkfx = PERIOD TIMEGRP "XLXI_ | SETUP       |   197.055ns|     2.945ns|       0|           0
+  306_clkfx" TS_ck_100MHz_pad * 0.05        | HOLD        |     0.529ns|            |       0|           0
     HIGH 50%                                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
   TS_cuenta_dcm_7_ = PERIOD TIMEGRP "cuenta | MINPERIOD   | 49998.270ns|     1.730ns|       0|           0
   _dcm<7>" 0.02 MHz HIGH 50%                |             |            |            |        |            
 ----------------------------------------------------------------------------------------------------------
-  TS_cuenta_dcm_13_ = PERIOD TIMEGRP "cuent | SETUP       | 499995.899ns|     4.101ns|       0|           0
-  a_dcm<13>" 0.002 MHz HIGH 50%             | HOLD        |     0.473ns|            |       0|           0
+  TS_cuenta_dcm_13_ = PERIOD TIMEGRP "cuent | SETUP       | 499996.230ns|     3.770ns|       0|           0
+  a_dcm<13>" 0.002 MHz HIGH 50%             | HOLD        |     0.429ns|            |       0|           0
 ----------------------------------------------------------------------------------------------------------
 
 
@@ -218,9 +218,9 @@ Derived Constraints for TS_ck_100MHz_pad
 |           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
 |                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
-|TS_ck_100MHz_pad               |     10.000ns|      5.340ns|      6.399ns|            0|            0|            0|         1683|
-| TS_XLXI_306_clk2x             |     10.000ns|      6.399ns|          N/A|            0|            0|         1578|            0|
-| TS_XLXI_306_clkfx             |    200.000ns|      2.768ns|          N/A|            0|            0|          105|            0|
+|TS_ck_100MHz_pad               |     10.000ns|      5.340ns|      6.280ns|            0|            0|            0|         1588|
+| TS_XLXI_306_clk2x             |     10.000ns|      6.280ns|          N/A|            0|            0|         1483|            0|
+| TS_XLXI_306_clkfx             |    200.000ns|      2.945ns|          N/A|            0|            0|          105|            0|
 +-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
 
 All constraints were met.
@@ -235,7 +235,7 @@ WARNING:Par:283 - There are 13 loadless signals in this design. This design will
 Total REAL time to PAR completion: 5 secs 
 Total CPU time to PAR completion: 5 secs 
 
-Peak Memory Usage:  4476 MB
+Peak Memory Usage:  4475 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

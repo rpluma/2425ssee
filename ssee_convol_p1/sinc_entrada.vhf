@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sinc_entrada.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:11
+-- /___/   /\     Timestamp : 10/31/2024 22:21:41
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

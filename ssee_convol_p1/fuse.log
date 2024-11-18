@@ -169,8 +169,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_convol_top_rl_2022 [
 Compiling architecture behavioral of entity bloque_convol_MUSER_convol_top_rl_2022 [bloque_convol_muser_convol_top_r...]
 Compiling architecture behavioral of entity convol_top_rl_2022
 Time Resolution for simulation is 1ps.
-Waiting for 120 sub-compilation(s) to finish...
+Waiting for 118 sub-compilation(s) to finish...
 Compiled 230 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022_isim_beh.exe
 Fuse Memory Usage: 81832 KB
-Fuse CPU Usage: 2249 ms
+Fuse CPU Usage: 2374 ms

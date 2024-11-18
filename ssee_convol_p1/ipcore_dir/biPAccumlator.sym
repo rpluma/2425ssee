@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="biPAccumlator">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-10-31T7:50:3</timestamp>
+    <timestamp>2024-10-31T21:9:25</timestamp>
     <pin polarity="Input" x="0" y="80" name="b[15:0]" />
     <pin polarity="Input" x="0" y="112" name="clk" />
     <pin polarity="Input" x="0" y="208" name="ce" />

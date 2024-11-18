@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Oct 31 19:00:17 2024
+// Written by: Map P.20131013 on Thu Oct 31 22:02:55 2024
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -282,8 +282,6 @@ TIMEGRP XLXI_306_clk2x = BEL "XLXI_867/XLXI_9/XLXI_1" BEL
         PIN
         "XLXI_872/XLXI_36/XLXI_5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram_pins<27>"
         PIN "XLXI_872/XLXI_36/XLXI_6/blk00000001/blk00000004_pins<92>" BEL
-        "XLXI_872/XLXI_36/XLXI_7/blk00000001/blk00000022" BEL
-        "XLXI_872/XLXI_36/XLXI_7/blk00000001/blk00000023" BEL
         "XLXI_872/XLXI_36/XLXI_7/blk00000001/blk00000024" BEL
         "XLXI_872/XLXI_36/XLXI_7/blk00000001/blk00000025" BEL
         "XLXI_872/XLXI_36/XLXI_7/blk00000001/blk00000026" BEL

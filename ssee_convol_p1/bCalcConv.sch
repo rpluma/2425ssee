@@ -45,7 +45,7 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="bIpMemory">
-            <timestamp>2024-10-31T20:16:55</timestamp>
+            <timestamp>2024-10-31T21:7:55</timestamp>
             <rect width="512" x="32" y="32" height="1344" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" style="linewidth:W" x1="0" />
@@ -54,7 +54,7 @@
             <line x2="544" y1="80" y2="80" style="linewidth:W" x1="576" />
         </blockdef>
         <blockdef name="bIpMultiplier">
-            <timestamp>2024-10-31T16:18:34</timestamp>
+            <timestamp>2024-10-31T21:8:38</timestamp>
             <rect width="512" x="32" y="32" height="384" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="144" y2="144" style="linewidth:W" x1="0" />
@@ -63,7 +63,7 @@
             <line x2="544" y1="80" y2="80" style="linewidth:W" x1="576" />
         </blockdef>
         <blockdef name="biPAccumlator">
-            <timestamp>2024-10-31T7:50:4</timestamp>
+            <timestamp>2024-10-31T21:9:26</timestamp>
             <rect width="224" x="32" y="32" height="352" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" x1="0" />
@@ -181,7 +181,7 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="864" type="branch" />
             <wire x2="1424" y1="864" y2="864" x1="1408" />
         </branch>
-        <rect width="828" x="360" y="516" height="832" />
+        <rect width="828" x="360" y="516" height="1864" />
         <branch name="dato_nuevo">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="576" y="128" type="branch" />
             <wire x2="576" y1="128" y2="128" x1="560" />

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Comp_Num_Letra.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:03
+-- /___/   /\     Timestamp : 10/31/2024 22:21:34
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -228,10 +228,10 @@ architecture BEHAVIORAL of Comp_Num_Letra is
    end component;
    attribute BOX_TYPE of AND3B1 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_24";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_25";
-   attribute HU_SET of XLXI_24 : label is "XLXI_24_23";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_26";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_9";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_10";
+   attribute HU_SET of XLXI_24 : label is "XLXI_24_8";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_11";
 begin
    XLXI_2 : GND
       port map (G=>cero);

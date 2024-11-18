@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl reg_desp_4_cifras_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/reg_desp_4_cifras.sch 

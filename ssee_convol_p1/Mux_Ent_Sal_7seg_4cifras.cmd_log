@@ -1,0 +1,1 @@
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl Mux_Ent_Sal_7seg_4cifras_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Mux_Ent_Sal_7seg_4cifras.sch 

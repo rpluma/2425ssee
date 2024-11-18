@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : nivel_a_pulso.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:05
+-- /___/   /\     Timestamp : 10/31/2024 22:21:37
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

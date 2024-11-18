@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : teclado_hexa_completo.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:08
+-- /___/   /\     Timestamp : 10/31/2024 22:21:39
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -275,10 +275,10 @@ architecture BEHAVIORAL of teclado_4x4_MUSER_teclado_hexa_completo is
    end component;
    attribute BOX_TYPE of AND3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_219";
-   attribute HU_SET of XLXI_9 : label is "XLXI_9_220";
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_221";
-   attribute HU_SET of XLXI_15 : label is "XLXI_15_222";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_208";
+   attribute HU_SET of XLXI_9 : label is "XLXI_9_209";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_210";
+   attribute HU_SET of XLXI_15 : label is "XLXI_15_211";
 begin
    fila1 <= fila1_DUMMY;
    fila2 <= fila2_DUMMY;
@@ -556,13 +556,13 @@ architecture BEHAVIORAL of codif_tecla_MUSER_teclado_hexa_completo is
              entrada : in    std_logic);
    end component;
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_224";
-   attribute HU_SET of XLXI_3 : label is "XLXI_3_225";
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_226";
-   attribute HU_SET of XLXI_5 : label is "XLXI_5_227";
-   attribute HU_SET of XLXI_10 : label is "XLXI_10_223";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_228";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_229";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_213";
+   attribute HU_SET of XLXI_3 : label is "XLXI_3_214";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_215";
+   attribute HU_SET of XLXI_5 : label is "XLXI_5_216";
+   attribute HU_SET of XLXI_10 : label is "XLXI_10_212";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_217";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_218";
 begin
    XLXI_1 : OR8_HXILINX_teclado_hexa_completo
       port map (I0=>tecla(15),

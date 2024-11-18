@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_BCD_Bin.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:09
+-- /___/   /\     Timestamp : 10/31/2024 22:21:39
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -159,10 +159,10 @@ architecture BEHAVIORAL of BCD_A_Bin_MUSER_Conversor_BCD_Bin is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_236";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_234";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_235";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_237";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_221";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_219";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_220";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_222";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,
@@ -318,8 +318,8 @@ architecture BEHAVIORAL of Conversor_BCD_Bin is
              ldZ           : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_238";
-   attribute HU_SET of XLXI_23 : label is "XLXI_23_239";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_223";
+   attribute HU_SET of XLXI_23 : label is "XLXI_23_224";
 begin
    XLXI_1 : BCD_A_Bin_MUSER_Conversor_BCD_Bin
       port map (ck=>ck,

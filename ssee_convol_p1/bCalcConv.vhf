@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:09
+-- /___/   /\     Timestamp : 10/31/2024 22:21:42
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_247";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_246";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_245";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_244";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_243";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_242";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_241";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_240";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_327";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_326";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_325";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_324";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_323";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_322";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_321";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_320";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -897,35 +897,35 @@ begin
                 Q=>dat_sal(7));
    
    XLXI_21_0 : BUF
-      port map (I=>res_parc(8),
+      port map (I=>res_parc(6),
                 O=>res_parcl(0));
    
    XLXI_21_1 : BUF
-      port map (I=>res_parc(9),
+      port map (I=>res_parc(7),
                 O=>res_parcl(1));
    
    XLXI_21_2 : BUF
-      port map (I=>res_parc(10),
+      port map (I=>res_parc(8),
                 O=>res_parcl(2));
    
    XLXI_21_3 : BUF
-      port map (I=>res_parc(11),
+      port map (I=>res_parc(9),
                 O=>res_parcl(3));
    
    XLXI_21_4 : BUF
-      port map (I=>res_parc(12),
+      port map (I=>res_parc(10),
                 O=>res_parcl(4));
    
    XLXI_21_5 : BUF
-      port map (I=>res_parc(13),
+      port map (I=>res_parc(11),
                 O=>res_parcl(5));
    
    XLXI_21_6 : BUF
-      port map (I=>res_parc(14),
+      port map (I=>res_parc(12),
                 O=>res_parcl(6));
    
    XLXI_21_7 : BUF
-      port map (I=>res_parc(15),
+      port map (I=>res_parc(13),
                 O=>res_parcl(7));
    
 end BEHAVIORAL;

@@ -3,14 +3,14 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Parameter xsthdpdir set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
-Total CPU time to Xst completion: 0.13 secs
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.14 secs
  
 --> Reading design: bloque_convol_bloque_convol_sch_tb.prj
 
@@ -51,22 +51,130 @@ Parsing architecture <biPAccumlator_a> of entity <bipaccumlator>.
 Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpSumador.vhd" into library work
 Parsing entity <bIpSumador>.
 Parsing architecture <bIpSumador_a> of entity <bipsumador>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\regdesp8b.vhf" into library work
+Parsing entity <M2_1_HXILINX_regdesp8b>.
+Parsing architecture <M2_1_HXILINX_regdesp8b_V> of entity <m2_1_hxilinx_regdesp8b>.
+Parsing entity <regdesp8b>.
+Parsing architecture <BEHAVIORAL> of entity <regdesp8b>.
 Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bin_bcd.vhd" into library work
 Parsing entity <control_bin_bcd>.
 Parsing architecture <control_bin_bcd_arch> of entity <control_bin_bcd>.
 Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bcd_bin.vhd" into library work
 Parsing entity <control_bcd_bin>.
 Parsing architecture <control_bcd_bin_arch> of entity <control_bcd_bin>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Bin_A_BCD.vhf" into library work
+Parsing entity <COMPM4_HXILINX_Bin_A_BCD>.
+Parsing architecture <COMPM4_HXILINX_Bin_A_BCD_V> of entity <compm4_hxilinx_bin_a_bcd>.
+Parsing entity <M2_1_HXILINX_Bin_A_BCD>.
+Parsing architecture <M2_1_HXILINX_Bin_A_BCD_V> of entity <m2_1_hxilinx_bin_a_bcd>.
+Parsing entity <Bin_A_BCD>.
+Parsing architecture <BEHAVIORAL> of entity <bin_a_bcd>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\BCD_A_Bin.vhf" into library work
+Parsing entity <M2_1_HXILINX_BCD_A_Bin>.
+Parsing architecture <M2_1_HXILINX_BCD_A_Bin_V> of entity <m2_1_hxilinx_bcd_a_bin>.
+Parsing entity <BCD_A_Bin>.
+Parsing architecture <BEHAVIORAL> of entity <bcd_a_bin>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcX_i.vhf" into library work
+Parsing entity <M8_1E_HXILINX_bCalcX_i>.
+Parsing architecture <M8_1E_HXILINX_bCalcX_i_V> of entity <m8_1e_hxilinx_bcalcx_i>.
+Parsing entity <bCalcX_i>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcx_i>.
 Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcConvFSM.vhd" into library work
 Parsing entity <fsm_convol>.
 Parsing architecture <fsm_convol_arch> of entity <fsm_convol>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\reg_desp_4_cifras.vhf" into library work
+Parsing entity <reg_desp_4_cifras>.
+Parsing architecture <BEHAVIORAL> of entity <reg_desp_4_cifras>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Mux_Ent_Sal_7seg_4cifras.vhf" into library work
+Parsing entity <M2_1_HXILINX_Mux_Ent_Sal_7seg_4cifras>.
+Parsing architecture <M2_1_HXILINX_Mux_Ent_Sal_7seg_4cifras_V> of entity <m2_1_hxilinx_mux_ent_sal_7seg_4cifras>.
+Parsing entity <Mux_Ent_Sal_7seg_4cifras>.
+Parsing architecture <BEHAVIORAL> of entity <mux_ent_sal_7seg_4cifras>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Conversor_Bin_BCD_3cifras.vhf" into library work
+Parsing entity <COMPM4_HXILINX_Conversor_Bin_BCD_3cifras>.
+Parsing architecture <COMPM4_HXILINX_Conversor_Bin_BCD_3cifras_V> of entity <compm4_hxilinx_conversor_bin_bcd_3cifras>.
+Parsing entity <FD4RE_HXILINX_Conversor_Bin_BCD_3cifras>.
+Parsing architecture <Behavioral> of entity <fd4re_hxilinx_conversor_bin_bcd_3cifras>.
+Parsing entity <M2_1_HXILINX_Conversor_Bin_BCD_3cifras>.
+Parsing architecture <M2_1_HXILINX_Conversor_Bin_BCD_3cifras_V> of entity <m2_1_hxilinx_conversor_bin_bcd_3cifras>.
+Parsing entity <Bin_A_BCD_MUSER_Conversor_Bin_BCD_3cifras>.
+Parsing architecture <BEHAVIORAL> of entity <bin_a_bcd_muser_conversor_bin_bcd_3cifras>.
+Parsing entity <regdesp8b_MUSER_Conversor_Bin_BCD_3cifras>.
+Parsing architecture <BEHAVIORAL> of entity <regdesp8b_muser_conversor_bin_bcd_3cifras>.
+Parsing entity <Conversor_Bin_BCD_3cifras>.
+Parsing architecture <BEHAVIORAL> of entity <conversor_bin_bcd_3cifras>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Conversor_BCD_Bin.vhf" into library work
+Parsing entity <FD8RE_HXILINX_Conversor_BCD_Bin>.
+Parsing architecture <Behavioral> of entity <fd8re_hxilinx_conversor_bcd_bin>.
+Parsing entity <M2_1_HXILINX_Conversor_BCD_Bin>.
+Parsing architecture <M2_1_HXILINX_Conversor_BCD_Bin_V> of entity <m2_1_hxilinx_conversor_bcd_bin>.
+Parsing entity <BCD_A_Bin_MUSER_Conversor_BCD_Bin>.
+Parsing architecture <BEHAVIORAL> of entity <bcd_a_bin_muser_conversor_bcd_bin>.
+Parsing entity <Conversor_BCD_Bin>.
+Parsing architecture <BEHAVIORAL> of entity <conversor_bcd_bin>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Comp_Num_Letra.vhf" into library work
+Parsing entity <COMPM4_HXILINX_Comp_Num_Letra>.
+Parsing architecture <COMPM4_HXILINX_Comp_Num_Letra_V> of entity <compm4_hxilinx_comp_num_letra>.
+Parsing entity <FD4RE_HXILINX_Comp_Num_Letra>.
+Parsing architecture <Behavioral> of entity <fd4re_hxilinx_comp_num_letra>.
+Parsing entity <COMP4_HXILINX_Comp_Num_Letra>.
+Parsing architecture <COMP4_HXILINX_Comp_Num_Letra_V> of entity <comp4_hxilinx_comp_num_letra>.
+Parsing entity <Comp_Num_Letra>.
+Parsing architecture <BEHAVIORAL> of entity <comp_num_letra>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcSignoMag.vhf" into library work
+Parsing entity <bCalcSignoMag>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcsignomag>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcConv.vhf" into library work
+Parsing entity <M8_1E_HXILINX_bCalcConv>.
+Parsing architecture <M8_1E_HXILINX_bCalcConv_V> of entity <m8_1e_hxilinx_bcalcconv>.
+Parsing entity <bCalcX_i_MUSER_bCalcConv>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcx_i_muser_bcalcconv>.
+Parsing entity <bCalcConv>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcconv>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bloque_convol.vhf" into library work
+Parsing entity <COMPM4_HXILINX_bloque_convol>.
+Parsing architecture <COMPM4_HXILINX_bloque_convol_V> of entity <compm4_hxilinx_bloque_convol>.
+Parsing entity <FD4RE_HXILINX_bloque_convol>.
+Parsing architecture <Behavioral> of entity <fd4re_hxilinx_bloque_convol>.
+Parsing entity <COMP4_HXILINX_bloque_convol>.
+Parsing architecture <COMP4_HXILINX_bloque_convol_V> of entity <comp4_hxilinx_bloque_convol>.
+Parsing entity <M8_1E_HXILINX_bloque_convol>.
+Parsing architecture <M8_1E_HXILINX_bloque_convol_V> of entity <m8_1e_hxilinx_bloque_convol>.
+Parsing entity <FD8RE_HXILINX_bloque_convol>.
+Parsing architecture <Behavioral> of entity <fd8re_hxilinx_bloque_convol>.
+Parsing entity <M2_1_HXILINX_bloque_convol>.
+Parsing architecture <M2_1_HXILINX_bloque_convol_V> of entity <m2_1_hxilinx_bloque_convol>.
+Parsing entity <bCalcX_i_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcx_i_muser_bloque_convol>.
+Parsing entity <bCalcConv_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcconv_muser_bloque_convol>.
+Parsing entity <bCalcSignoMag_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bcalcsignomag_muser_bloque_convol>.
+Parsing entity <Bin_A_BCD_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bin_a_bcd_muser_bloque_convol>.
+Parsing entity <regdesp8b_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <regdesp8b_muser_bloque_convol>.
+Parsing entity <Conversor_Bin_BCD_3cifras_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <conversor_bin_bcd_3cifras_muser_bloque_convol>.
+Parsing entity <Mux_Ent_Sal_7seg_4cifras_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <mux_ent_sal_7seg_4cifras_muser_bloque_convol>.
+Parsing entity <BCD_A_Bin_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bcd_a_bin_muser_bloque_convol>.
+Parsing entity <Conversor_BCD_Bin_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <conversor_bcd_bin_muser_bloque_convol>.
+Parsing entity <reg_desp_4_cifras_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <reg_desp_4_cifras_muser_bloque_convol>.
+Parsing entity <Comp_Num_Letra_MUSER_bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <comp_num_letra_muser_bloque_convol>.
+Parsing entity <bloque_convol>.
+Parsing architecture <BEHAVIORAL> of entity <bloque_convol>.
 Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\sim_bloque_convolucion.vhd" into library work
 Parsing entity <bloque_convol_bloque_convol_sch_tb>.
 Parsing architecture <behavioral> of entity <bloque_convol_bloque_convol_sch_tb>.
 
 
 Total REAL time to Xst completion: 5.00 secs
-Total CPU time to Xst completion: 4.11 secs
+Total CPU time to Xst completion: 4.86 secs
  
 --> 
 

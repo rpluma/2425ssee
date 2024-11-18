@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : displays_7seg_nexys3_RemLab.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:24:04
+-- /___/   /\     Timestamp : 10/31/2024 22:21:34
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

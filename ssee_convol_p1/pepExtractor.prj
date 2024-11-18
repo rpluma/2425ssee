@@ -1,1 +1,4 @@
 work	"bCalcConvFSM.vhd"
+work	"control_bcd_bin.vhd"
+work	"control_bin_bcd.vhd"
+work	"sim_bloque_convolucion.vhd"

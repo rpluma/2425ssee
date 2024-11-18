@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcSignoMag.vhf
--- /___/   /\     Timestamp : 10/31/2024 21:22:50
+-- /___/   /\     Timestamp : 10/31/2024 22:17:24
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\sch2hdl.exe -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bCalcSignoMag.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcSignoMag.sch
 --Design Name: bCalcSignoMag
 --Device: spartan6
 --Purpose:
