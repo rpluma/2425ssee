@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/14/2024 10:55:29
+-- /___/   /\     Timestamp : 11/14/2024 11:39:14
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_152";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_151";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_150";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_149";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_148";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_147";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_146";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_145";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_73";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_72";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_71";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_70";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_69";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_68";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_67";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_66";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -753,18 +753,6 @@ architecture BEHAVIORAL of bCalcConv is
              q    : out   std_logic_vector (15 downto 0));
    end component;
    
-   component fsm_convol
-      port ( ck            : in    std_logic; 
-             dato_nuevo    : in    std_logic; 
-             reset         : in    std_logic; 
-             inicializar   : out   std_logic; 
-             multiplicar   : out   std_logic; 
-             acumular      : out   std_logic; 
-             guardar       : out   std_logic; 
-             indice        : out   std_logic_vector (2 downto 0); 
-             dato_sal_sync : out   std_logic);
-   end component;
-   
    component GND
       port ( G : out   std_logic);
    end component;
@@ -784,6 +772,18 @@ architecture BEHAVIORAL of bCalcConv is
              O : out   std_logic);
    end component;
    attribute BOX_TYPE of BUF : component is "BLACK_BOX";
+   
+   component fsm_convol
+      port ( ck            : in    std_logic; 
+             dato_nuevo    : in    std_logic; 
+             reset         : in    std_logic; 
+             inicializar   : out   std_logic; 
+             multiplicar   : out   std_logic; 
+             acumular      : out   std_logic; 
+             guardar       : out   std_logic; 
+             dato_sal_sync : out   std_logic; 
+             indice        : out   std_logic_vector (2 downto 0));
+   end component;
    
 begin
    XLXI_2 : bCalcX_i_MUSER_bCalcConv
@@ -814,17 +814,6 @@ begin
                 clk=>ck,
                 sclr=>inicializar,
                 q(15 downto 0)=>res_parc(15 downto 0));
-   
-   XLXI_16 : fsm_convol
-      port map (ck=>ck,
-                dato_nuevo=>dato_nuevo,
-                reset=>reset,
-                acumular=>acumular,
-                dato_sal_sync=>dato_sal_sync,
-                guardar=>guardar,
-                indice(2 downto 0)=>indice(2 downto 0),
-                inicializar=>inicializar,
-                multiplicar=>multiplicar);
    
    XLXI_17_0 : GND
       port map (G=>ceros(0));
@@ -929,6 +918,17 @@ begin
    XLXI_21_7 : BUF
       port map (I=>res_parc(13),
                 O=>res_parcl(7));
+   
+   XLXI_22 : fsm_convol
+      port map (ck=>ck,
+                dato_nuevo=>dato_nuevo,
+                reset=>reset,
+                acumular=>acumular,
+                dato_sal_sync=>dato_sal_sync,
+                guardar=>guardar,
+                indice(2 downto 0)=>indice(2 downto 0),
+                inicializar=>inicializar,
+                multiplicar=>multiplicar);
    
 end BEHAVIORAL;
 

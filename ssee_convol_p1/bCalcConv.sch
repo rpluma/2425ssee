@@ -73,20 +73,6 @@
             <line x2="32" y1="272" y2="272" x1="0" />
             <line x2="256" y1="80" y2="80" style="linewidth:W" x1="288" />
         </blockdef>
-        <blockdef name="fsm_convol">
-            <timestamp>2024-11-14T9:50:40</timestamp>
-            <line x2="416" y1="288" y2="288" x1="352" />
-            <line x2="416" y1="160" y2="160" x1="352" />
-            <line x2="416" y1="96" y2="96" x1="352" />
-            <rect width="64" x="352" y="20" height="24" />
-            <line x2="416" y1="32" y2="32" x1="352" />
-            <line x2="0" y1="-224" y2="-224" x1="64" />
-            <line x2="0" y1="-128" y2="-128" x1="64" />
-            <line x2="0" y1="-32" y2="-32" x1="64" />
-            <line x2="416" y1="-224" y2="-224" x1="352" />
-            <line x2="416" y1="-160" y2="-160" x1="352" />
-            <rect width="288" x="64" y="-256" height="576" />
-        </blockdef>
         <blockdef name="gnd">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="-96" x1="64" />
@@ -113,6 +99,20 @@
             <line x2="128" y1="0" y2="-32" x1="64" />
             <line x2="64" y1="-32" y2="-64" x1="128" />
             <line x2="64" y1="-64" y2="0" x1="64" />
+        </blockdef>
+        <blockdef name="fsm_convol">
+            <timestamp>2024-11-14T10:37:2</timestamp>
+            <line x2="416" y1="288" y2="288" x1="352" />
+            <line x2="416" y1="160" y2="160" x1="352" />
+            <line x2="416" y1="96" y2="96" x1="352" />
+            <rect width="64" x="352" y="20" height="24" />
+            <line x2="416" y1="32" y2="32" x1="352" />
+            <line x2="0" y1="-224" y2="-224" x1="64" />
+            <line x2="0" y1="-128" y2="-128" x1="64" />
+            <line x2="0" y1="-32" y2="-32" x1="64" />
+            <line x2="416" y1="-224" y2="-224" x1="352" />
+            <line x2="416" y1="-160" y2="-160" x1="352" />
+            <rect width="288" x="64" y="-256" height="576" />
         </blockdef>
         <block symbolname="bCalcX_i" name="XLXI_2">
             <blockpin signalname="dato_nuevo" name="dato_nuevo" />
@@ -142,17 +142,6 @@
             <blockpin signalname="multiplicar" name="ce" />
             <blockpin signalname="xi_por_ci(15:0)" name="p(15:0)" />
         </block>
-        <block symbolname="fsm_convol" name="XLXI_16">
-            <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="dato_nuevo" name="dato_nuevo" />
-            <blockpin signalname="reset" name="reset" />
-            <blockpin signalname="inicializar" name="inicializar" />
-            <blockpin signalname="multiplicar" name="multiplicar" />
-            <blockpin signalname="acumular" name="acumular" />
-            <blockpin signalname="guardar" name="guardar" />
-            <blockpin signalname="indice(2:0)" name="indice(2:0)" />
-            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
-        </block>
         <block symbolname="buf" name="XLXI_21(7:0)">
             <blockpin signalname="res_parc(13:6)" name="I" />
             <blockpin signalname="res_parcl(7:0)" name="O" />
@@ -165,6 +154,17 @@
         </block>
         <block symbolname="gnd" name="XLXI_17(7:0)">
             <blockpin signalname="ceros(7:0)" name="G" />
+        </block>
+        <block symbolname="fsm_convol" name="XLXI_22">
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="dato_nuevo" name="dato_nuevo" />
+            <blockpin signalname="reset" name="reset" />
+            <blockpin signalname="inicializar" name="inicializar" />
+            <blockpin signalname="multiplicar" name="multiplicar" />
+            <blockpin signalname="acumular" name="acumular" />
+            <blockpin signalname="guardar" name="guardar" />
+            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
+            <blockpin signalname="indice(2:0)" name="indice(2:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
@@ -325,8 +325,6 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="1120" type="branch" />
             <wire x2="2256" y1="1120" y2="1120" x1="2240" />
         </branch>
-        <instance x="1824" y="960" name="XLXI_16" orien="R0">
-        </instance>
         <text style="fontsize:40;fontname:Arial" x="740" y="432">5. El registro a la salida del acumulador evita que los resultados parciales se vean fuera</text>
         <text style="fontsize:40;fontname:Arial" x="740" y="496">6. La maquina de estados genera las salidas que requiere el datapath</text>
         <instance x="2304" y="1936" name="XLXI_21(7:0)" orien="R0" />
@@ -362,5 +360,7 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="1248" type="branch" />
             <wire x2="2256" y1="1248" y2="1248" x1="2240" />
         </branch>
+        <instance x="1824" y="960" name="XLXI_22" orien="R0">
+        </instance>
     </sheet>
 </drawing>

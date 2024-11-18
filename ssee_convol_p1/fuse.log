@@ -24,5 +24,5 @@ Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.vhf" in
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" into library work
 Parsing VHDL file "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_tb_4vent.vhd" into library work
 Starting static elaboration
-ERROR:HDLCompiler:410 - "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" Line 934: Expression has 3 elements ; expected 4
+ERROR:HDLCompiler:410 - "C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.vhf" Line 955: Expression has 3 elements ; expected 4
 ERROR:Simulator:777 - Static elaboration of top level VHDL design unit bloque_convol_bloque_convol_sch_tb in library work failed

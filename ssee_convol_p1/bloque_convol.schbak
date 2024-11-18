@@ -167,7 +167,7 @@
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
         <blockdef name="bCalcConv">
-            <timestamp>2024-11-13T18:40:15</timestamp>
+            <timestamp>2024-11-14T9:44:45</timestamp>
             <rect width="64" x="0" y="84" height="24" />
             <line x2="0" y1="96" y2="96" x1="64" />
             <rect width="64" x="368" y="20" height="24" />
@@ -256,9 +256,9 @@
             <blockpin signalname="ck" name="ck" />
             <blockpin signalname="reset" name="reset" />
             <blockpin signalname="dato_ent(7:0)" name="dato_ent(7:0)" />
+            <blockpin signalname="ventana(1:0)" name="ventana(1:0)" />
             <blockpin signalname="dato_sal(7:0)" name="dat_sal(7:0)" />
             <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
-            <blockpin signalname="ventana(1:0)" name="ventana(1:0)" />
         </block>
     </netlist>
     <sheet sheetnum="1" width="3801" height="2688">
