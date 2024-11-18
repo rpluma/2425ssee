@@ -17,11 +17,8 @@
         <signal name="col(4:1)" />
         <signal name="reset_pad" />
         <signal name="ck_100MHz" />
-        <signal name="ck_100MHz_pad" />
         <signal name="ck_5MHz" />
         <signal name="locked_OK" />
-        <signal name="XLXN_1" />
-        <signal name="cuenta_dcm(15:0)" />
         <signal name="cuenta_dcm(7)" />
         <signal name="cuenta_dcm(13)" />
         <signal name="seg3(7:0)" />
@@ -86,10 +83,12 @@
         <signal name="dec_bcd(3:0)" />
         <signal name="unid_bcd(3:0)" />
         <signal name="punto_dec(3:0)" />
+        <signal name="ck_100MHz_pad" />
+        <signal name="XLXN_1" />
+        <signal name="cuenta_dcm(15:0)" />
         <port polarity="BiDirectional" name="fila_pad(4:1)" />
         <port polarity="Input" name="col_pad(4:1)" />
         <port polarity="Input" name="reset_pad" />
-        <port polarity="Input" name="ck_100MHz_pad" />
         <port polarity="Output" name="display_pad(7:0)" />
         <port polarity="Output" name="ce_display_neg_pad(4:1)" />
         <port polarity="Output" name="signo_sal_pad" />
@@ -109,6 +108,7 @@
         <port polarity="Output" name="seg_pad(7:0)" />
         <port polarity="Output" name="anodo_pad(3:0)" />
         <port polarity="Output" name="uart_tx_pad" />
+        <port polarity="Input" name="ck_100MHz_pad" />
         <blockdef name="bufg">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="64" y1="-64" y2="0" x1="64" />
@@ -222,7 +222,7 @@
             <line x2="576" y1="272" y2="272" x1="608" />
         </blockdef>
         <blockdef name="cont_16bits">
-            <timestamp>2024-11-4T10:19:52</timestamp>
+            <timestamp>2024-11-4T12:46:9</timestamp>
             <rect width="512" x="32" y="32" height="384" />
             <line x2="32" y1="208" y2="208" x1="0" />
             <line x2="32" y1="304" y2="304" x1="0" />
@@ -396,22 +396,6 @@
             <blockpin name="CFGMCLK" />
             <blockpin name="EOS" />
         </block>
-        <block symbolname="dcm_100m_5m" name="XLXI_306">
-            <blockpin signalname="ck_100MHz_pad" name="clk_in1" />
-            <blockpin signalname="ck_100MHz" name="clk_out1" />
-            <blockpin signalname="ck_5MHz" name="clk_out2" />
-            <blockpin signalname="reset" name="reset" />
-            <blockpin signalname="locked_OK" name="locked" />
-        </block>
-        <block symbolname="cont_16bits" name="XLXI_309">
-            <blockpin name="clk" />
-            <blockpin name="sclr" />
-            <blockpin name="q(15:0)" />
-        </block>
-        <block symbolname="inv" name="XLXI_87">
-            <blockpin signalname="locked_OK" name="I" />
-            <blockpin signalname="XLXN_1" name="O" />
-        </block>
         <block symbolname="bufg" name="XLXI_14">
             <blockpin signalname="cuenta_dcm(7)" name="I" />
             <blockpin signalname="ck_20KHz" name="O" />
@@ -564,6 +548,22 @@
             <blockpin signalname="dec_bcd(3:0)" name="display3(3:0)" />
             <blockpin signalname="unid_bcd(3:0)" name="display4(3:0)" />
         </block>
+        <block symbolname="dcm_100m_5m" name="XLXI_306">
+            <blockpin signalname="ck_100MHz_pad" name="clk_in1" />
+            <blockpin signalname="ck_100MHz" name="clk_out1" />
+            <blockpin signalname="ck_5MHz" name="clk_out2" />
+            <blockpin signalname="reset" name="reset" />
+            <blockpin signalname="locked_OK" name="locked" />
+        </block>
+        <block symbolname="cont_16bits" name="XLXI_309">
+            <blockpin signalname="ck_5MHz" name="clk" />
+            <blockpin signalname="XLXN_1" name="sclr" />
+            <blockpin signalname="cuenta_dcm(15:0)" name="q(15:0)" />
+        </block>
+        <block symbolname="inv" name="XLXI_87">
+            <blockpin signalname="locked_OK" name="I" />
+            <blockpin signalname="XLXN_1" name="O" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="7609" height="5382">
         <attr value="CM" name="LengthUnitName" />
@@ -618,55 +618,7 @@
         <iomarker fontsize="28" x="1248" y="4944" name="fila_pad(4:1)" orien="R0" />
         <iomarker fontsize="28" x="416" y="4480" name="col_pad(4:1)" orien="R180" />
         <rect style="linestyle:Dash" width="6572" x="80" y="68" height="1344" />
-        <rect style="linestyle:Dash" width="1912" x="80" y="2084" height="1416" />
-        <instance x="688" y="2160" name="XLXI_306" orien="R0">
-        </instance>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="592" y="2336" type="branch" />
-            <wire x2="592" y1="2336" y2="2336" x1="432" />
-            <wire x2="688" y1="2336" y2="2336" x1="592" />
-        </branch>
-        <branch name="ck_100MHz_pad">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="576" y="2240" type="branch" />
-            <wire x2="576" y1="2240" y2="2240" x1="432" />
-            <wire x2="688" y1="2240" y2="2240" x1="576" />
-        </branch>
-        <branch name="ck_5MHz">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2336" type="branch" />
-            <wire x2="1408" y1="2336" y2="2336" x1="1296" />
-            <wire x2="1536" y1="2336" y2="2336" x1="1408" />
-        </branch>
-        <branch name="locked_OK">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2432" type="branch" />
-            <wire x2="1408" y1="2432" y2="2432" x1="1296" />
-            <wire x2="1536" y1="2432" y2="2432" x1="1408" />
-        </branch>
-        <branch name="ck_100MHz">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2240" type="branch" />
-            <wire x2="1408" y1="2240" y2="2240" x1="1296" />
-            <wire x2="1536" y1="2240" y2="2240" x1="1408" />
-        </branch>
-        <branch name="ck_5MHz">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="576" y="2624" type="branch" />
-            <wire x2="576" y1="2624" y2="2624" x1="432" />
-            <wire x2="768" y1="2624" y2="2624" x1="576" />
-        </branch>
-        <instance x="768" y="2544" name="XLXI_309" orien="R0">
-        </instance>
-        <branch name="locked_OK">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="400" y="2720" type="branch" />
-            <wire x2="400" y1="2720" y2="2720" x1="272" />
-            <wire x2="448" y1="2720" y2="2720" x1="400" />
-        </branch>
-        <instance x="448" y="2752" name="XLXI_87" orien="R0" />
-        <branch name="XLXN_1">
-            <wire x2="768" y1="2720" y2="2720" x1="672" />
-        </branch>
-        <branch name="cuenta_dcm(15:0)">
-            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1392" y="2624" type="branch" />
-            <wire x2="1392" y1="2624" y2="2624" x1="1264" />
-            <wire x2="1536" y1="2624" y2="2624" x1="1392" />
-        </branch>
+        <rect style="linestyle:Dash" width="1912" x="80" y="1916" height="1584" />
         <text style="fontsize:56;fontname:Arial" x="128" y="3432">Se toma el bit 13 del contador de 16 bits para dividir el reloj hasta 300 Hz.</text>
         <text style="fontsize:56;fontname:Arial" x="128" y="3348">Se toma el bit 7 del contador de 16 bits para dividir el reloj hasta 20 KHz.</text>
         <instance x="912" y="2944" name="XLXI_14" orien="R0" />
@@ -693,7 +645,6 @@
         </branch>
         <text style="fontsize:56;fontname:Arial" x="120" y="3184">Generacion de reloj. Se usa el DCM para sincronizar el reloj de</text>
         <text style="fontsize:56;fontname:Arial" x="120" y="3264">100 MHz de la entrada, y para obtener un reloj de 5 MHz.</text>
-        <iomarker fontsize="28" x="432" y="2240" name="ck_100MHz_pad" orien="R180" />
         <branch name="reset">
             <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="976" y="3808" type="branch" />
             <wire x2="976" y1="3808" y2="3808" x1="880" />
@@ -1154,5 +1105,55 @@
         <text style="fontsize:56;fontname:Arial" x="2804" y="168">Calculo de la convolucion de 8 datos</text>
         <instance x="2944" y="864" name="XLXI_872" orien="R0">
         </instance>
+        <instance x="688" y="1968" name="XLXI_306" orien="R0">
+        </instance>
+        <branch name="reset">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="592" y="2144" type="branch" />
+            <wire x2="592" y1="2144" y2="2144" x1="432" />
+            <wire x2="688" y1="2144" y2="2144" x1="592" />
+        </branch>
+        <branch name="ck_100MHz_pad">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="576" y="2048" type="branch" />
+            <wire x2="576" y1="2048" y2="2048" x1="432" />
+            <wire x2="688" y1="2048" y2="2048" x1="576" />
+        </branch>
+        <branch name="ck_5MHz">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2144" type="branch" />
+            <wire x2="1408" y1="2144" y2="2144" x1="1296" />
+            <wire x2="1536" y1="2144" y2="2144" x1="1408" />
+        </branch>
+        <branch name="locked_OK">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2240" type="branch" />
+            <wire x2="1408" y1="2240" y2="2240" x1="1296" />
+            <wire x2="1536" y1="2240" y2="2240" x1="1408" />
+        </branch>
+        <branch name="ck_100MHz">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1408" y="2048" type="branch" />
+            <wire x2="1408" y1="2048" y2="2048" x1="1296" />
+            <wire x2="1536" y1="2048" y2="2048" x1="1408" />
+        </branch>
+        <iomarker fontsize="28" x="432" y="2048" name="ck_100MHz_pad" orien="R180" />
+        <instance x="688" y="2336" name="XLXI_309" orien="R0">
+        </instance>
+        <instance x="368" y="2672" name="XLXI_87" orien="R0" />
+        <branch name="XLXN_1">
+            <wire x2="608" y1="2640" y2="2640" x1="592" />
+            <wire x2="688" y1="2640" y2="2640" x1="608" />
+        </branch>
+        <branch name="locked_OK">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="320" y="2640" type="branch" />
+            <wire x2="320" y1="2640" y2="2640" x1="192" />
+            <wire x2="368" y1="2640" y2="2640" x1="320" />
+        </branch>
+        <branch name="cuenta_dcm(15:0)">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="1392" y="2480" type="branch" />
+            <wire x2="1392" y1="2480" y2="2480" x1="1264" />
+            <wire x2="1536" y1="2480" y2="2480" x1="1392" />
+        </branch>
+        <branch name="ck_5MHz">
+            <attrtext style="alignment:SOFT-BCENTER;fontsize:28;fontname:Arial" attrname="Name" x="496" y="2544" type="branch" />
+            <wire x2="496" y1="2544" y2="2544" x1="352" />
+            <wire x2="688" y1="2544" y2="2544" x1="496" />
+        </branch>
     </sheet>
 </drawing>
