@@ -8,7 +8,6 @@
     <netlist>
         <signal name="dato_nuevo" />
         <signal name="ck" />
-        <signal name="reset" />
         <signal name="dato_ent(7:0)" />
         <signal name="indice(2:0)" />
         <signal name="x_i(7:0)" />
@@ -20,29 +19,15 @@
         <signal name="x_6(7:0)" />
         <signal name="x_7(7:0)" />
         <signal name="uno" />
-        <signal name="x_0(7:0)" />
         <signal name="indice(0)" />
         <signal name="indice(1)" />
         <signal name="indice(2)" />
+        <signal name="x_0(7:0)" />
         <port polarity="Input" name="dato_nuevo" />
         <port polarity="Input" name="ck" />
-        <port polarity="Input" name="reset" />
         <port polarity="Input" name="dato_ent(7:0)" />
         <port polarity="Input" name="indice(2:0)" />
         <port polarity="Output" name="x_i(7:0)" />
-        <blockdef name="fdre">
-            <timestamp>2000-1-1T10:10:10</timestamp>
-            <line x2="64" y1="-128" y2="-128" x1="0" />
-            <line x2="64" y1="-192" y2="-192" x1="0" />
-            <line x2="64" y1="-256" y2="-256" x1="0" />
-            <line x2="320" y1="-256" y2="-256" x1="384" />
-            <line x2="64" y1="-32" y2="-32" x1="0" />
-            <rect width="256" x="64" y="-320" height="256" />
-            <line x2="192" y1="-64" y2="-32" x1="192" />
-            <line x2="64" y1="-32" y2="-32" x1="192" />
-            <line x2="80" y1="-112" y2="-128" x1="64" />
-            <line x2="64" y1="-128" y2="-144" x1="80" />
-        </blockdef>
         <blockdef name="m8_1e">
             <timestamp>2000-1-1T10:10:10</timestamp>
             <line x2="96" y1="-224" y2="-224" x1="0" />
@@ -77,67 +62,21 @@
             <line x2="64" y1="0" y2="-32" x1="64" />
             <line x2="32" y1="-64" y2="-64" x1="96" />
         </blockdef>
-        <block symbolname="fdre" name="fdrex0(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="dato_ent(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_0(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex4(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_3(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_4(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex5(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_4(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_5(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex1(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="dato_ent(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_1(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex6(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_5(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_6(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex2(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_1(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_2(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex7(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_6(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_7(7:0)" name="Q" />
-        </block>
-        <block symbolname="fdre" name="fdrex3(7:0)">
-            <blockpin signalname="ck" name="C" />
-            <blockpin signalname="dato_nuevo" name="CE" />
-            <blockpin signalname="x_2(7:0)" name="D" />
-            <blockpin signalname="reset" name="R" />
-            <blockpin signalname="x_3(7:0)" name="Q" />
-        </block>
+        <blockdef name="fde">
+            <timestamp>2000-1-1T10:10:10</timestamp>
+            <line x2="64" y1="-128" y2="-128" x1="0" />
+            <line x2="64" y1="-192" y2="-192" x1="0" />
+            <line x2="64" y1="-256" y2="-256" x1="0" />
+            <line x2="320" y1="-256" y2="-256" x1="384" />
+            <rect width="256" x="64" y="-320" height="256" />
+            <line x2="80" y1="-112" y2="-128" x1="64" />
+            <line x2="64" y1="-128" y2="-144" x1="80" />
+        </blockdef>
         <block symbolname="vcc" name="XLXI_10">
             <blockpin signalname="uno" name="P" />
         </block>
         <block symbolname="m8_1e" name="XLXI_9(7:0)">
-            <blockpin signalname="dato_ent(7:0)" name="D0" />
+            <blockpin signalname="x_0(7:0)" name="D0" />
             <blockpin signalname="x_1(7:0)" name="D1" />
             <blockpin signalname="x_2(7:0)" name="D2" />
             <blockpin signalname="x_3(7:0)" name="D3" />
@@ -151,6 +90,54 @@
             <blockpin signalname="indice(2)" name="S2" />
             <blockpin signalname="x_i(7:0)" name="O" />
         </block>
+        <block symbolname="fde" name="XLXI_11(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="dato_ent(7:0)" name="D" />
+            <blockpin signalname="x_0(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_15(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_0(7:0)" name="D" />
+            <blockpin signalname="x_1(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_16(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_1(7:0)" name="D" />
+            <blockpin signalname="x_2(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_17(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_2(7:0)" name="D" />
+            <blockpin signalname="x_3(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_18(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_3(7:0)" name="D" />
+            <blockpin signalname="x_4(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_19(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_4(7:0)" name="D" />
+            <blockpin signalname="x_5(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_20(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_5(7:0)" name="D" />
+            <blockpin signalname="x_6(7:0)" name="Q" />
+        </block>
+        <block symbolname="fde" name="XLXI_21(7:0)">
+            <blockpin signalname="ck" name="C" />
+            <blockpin signalname="dato_nuevo" name="CE" />
+            <blockpin signalname="x_6(7:0)" name="D" />
+            <blockpin signalname="x_7(7:0)" name="Q" />
+        </block>
     </netlist>
     <sheet sheetnum="1" width="3520" height="2720">
         <branch name="dato_nuevo">
@@ -159,44 +146,16 @@
         <branch name="ck">
             <wire x2="656" y1="560" y2="560" x1="432" />
         </branch>
-        <branch name="reset">
-            <wire x2="656" y1="496" y2="496" x1="432" />
-        </branch>
         <branch name="dato_ent(7:0)">
             <wire x2="656" y1="368" y2="368" x1="432" />
         </branch>
         <iomarker fontsize="28" x="432" y="368" name="dato_ent(7:0)" orien="R180" />
         <iomarker fontsize="28" x="432" y="432" name="dato_nuevo" orien="R180" />
-        <iomarker fontsize="28" x="432" y="496" name="reset" orien="R180" />
         <iomarker fontsize="28" x="432" y="560" name="ck" orien="R180" />
         <branch name="indice(2:0)">
             <wire x2="656" y1="640" y2="640" x1="432" />
         </branch>
         <iomarker fontsize="28" x="432" y="640" name="indice(2:0)" orien="R180" />
-        <branch name="dato_ent(7:0)">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="336" y="1024" type="branch" />
-            <wire x2="352" y1="1024" y2="1024" x1="336" />
-        </branch>
-        <branch name="dato_nuevo">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="336" y="1088" type="branch" />
-            <wire x2="352" y1="1088" y2="1088" x1="336" />
-        </branch>
-        <branch name="ck">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="320" y="1152" type="branch" />
-            <wire x2="336" y1="1152" y2="1152" x1="320" />
-            <wire x2="352" y1="1152" y2="1152" x1="336" />
-        </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="336" y="1248" type="branch" />
-            <wire x2="352" y1="1248" y2="1248" x1="336" />
-        </branch>
-        <branch name="x_0(7:0)">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="752" y="1024" type="branch" />
-            <wire x2="752" y1="1024" y2="1024" x1="736" />
-        </branch>
-        <instance x="256" y="2080" name="fdrex4(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_3(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1824" type="branch" />
             <wire x2="256" y1="1824" y2="1824" x1="240" />
@@ -208,10 +167,6 @@
         <branch name="ck">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1952" type="branch" />
             <wire x2="256" y1="1952" y2="1952" x1="240" />
-        </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="224" y="2048" type="branch" />
-            <wire x2="256" y1="2048" y2="2048" x1="224" />
         </branch>
         <branch name="x_4(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="656" y="1824" type="branch" />
@@ -229,27 +184,13 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="1952" type="branch" />
             <wire x2="976" y1="1952" y2="1952" x1="960" />
         </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="2048" type="branch" />
-            <wire x2="976" y1="2048" y2="2048" x1="960" />
-        </branch>
         <branch name="x_5(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1824" type="branch" />
             <wire x2="1376" y1="1824" y2="1824" x1="1360" />
         </branch>
-        <instance x="976" y="2080" name="fdrex5(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
-        <instance x="352" y="1280" name="fdrex0(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_1(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="1376" y="1344" type="branch" />
             <wire x2="1376" y1="1344" y2="1344" x1="1360" />
-        </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="1568" type="branch" />
-            <wire x2="976" y1="1568" y2="1568" x1="960" />
         </branch>
         <branch name="ck">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="1472" type="branch" />
@@ -259,13 +200,10 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="1408" type="branch" />
             <wire x2="976" y1="1408" y2="1408" x1="960" />
         </branch>
-        <branch name="dato_ent(7:0)">
+        <branch name="x_0(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="960" y="1344" type="branch" />
             <wire x2="976" y1="1344" y2="1344" x1="960" />
         </branch>
-        <instance x="976" y="1600" name="fdrex1(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_5(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1824" type="branch" />
             <wire x2="1696" y1="1824" y2="1824" x1="1680" />
@@ -278,20 +216,10 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1952" type="branch" />
             <wire x2="1696" y1="1952" y2="1952" x1="1680" />
         </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="2048" type="branch" />
-            <wire x2="1696" y1="2048" y2="2048" x1="1680" />
-        </branch>
         <branch name="x_6(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2144" y="1824" type="branch" />
             <wire x2="2144" y1="1824" y2="1824" x1="2080" />
         </branch>
-        <instance x="1696" y="2080" name="fdrex6(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
-        <instance x="1696" y="1600" name="fdrex2(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_1(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1344" type="branch" />
             <wire x2="1696" y1="1344" y2="1344" x1="1680" />
@@ -304,17 +232,10 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1472" type="branch" />
             <wire x2="1696" y1="1472" y2="1472" x1="1680" />
         </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1680" y="1568" type="branch" />
-            <wire x2="1696" y1="1568" y2="1568" x1="1680" />
-        </branch>
         <branch name="x_2(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2096" y="1344" type="branch" />
             <wire x2="2096" y1="1344" y2="1344" x1="2080" />
         </branch>
-        <instance x="2416" y="2080" name="fdrex7(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_6(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="1824" type="branch" />
             <wire x2="2416" y1="1824" y2="1824" x1="2400" />
@@ -327,17 +248,10 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="1952" type="branch" />
             <wire x2="2416" y1="1952" y2="1952" x1="2400" />
         </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="2048" type="branch" />
-            <wire x2="2416" y1="2048" y2="2048" x1="2400" />
-        </branch>
         <branch name="x_7(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2816" y="1824" type="branch" />
             <wire x2="2816" y1="1824" y2="1824" x1="2800" />
         </branch>
-        <instance x="2416" y="1600" name="fdrex3(7:0)" orien="R0">
-            <attrtext style="fontsize:28;fontname:Arial" attrname="InstName" x="144" y="0" type="instance" />
-        </instance>
         <branch name="x_2(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="1344" type="branch" />
             <wire x2="2416" y1="1344" y2="1344" x1="2400" />
@@ -350,10 +264,6 @@
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="1472" type="branch" />
             <wire x2="2416" y1="1472" y2="1472" x1="2400" />
         </branch>
-        <branch name="reset">
-            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2400" y="1568" type="branch" />
-            <wire x2="2416" y1="1568" y2="1568" x1="2400" />
-        </branch>
         <branch name="x_3(7:0)">
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2816" y="1344" type="branch" />
             <wire x2="2816" y1="1344" y2="1344" x1="2800" />
@@ -365,7 +275,7 @@
             <wire x2="896" y1="480" y2="480" x1="864" />
             <wire x2="944" y1="480" y2="480" x1="896" />
         </branch>
-        <branch name="dato_ent(7:0)">
+        <branch name="x_0(7:0)">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="2032" y="336" type="branch" />
             <wire x2="2112" y1="336" y2="336" x1="2032" />
         </branch>
@@ -422,5 +332,30 @@
             <wire x2="2720" y1="352" y2="352" x1="2688" />
         </branch>
         <iomarker fontsize="28" x="2720" y="352" name="x_i(7:0)" orien="R0" />
+        <branch name="dato_ent(7:0)">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1344" type="branch" />
+            <wire x2="256" y1="1344" y2="1344" x1="240" />
+        </branch>
+        <branch name="dato_nuevo">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="240" y="1408" type="branch" />
+            <wire x2="256" y1="1408" y2="1408" x1="240" />
+        </branch>
+        <branch name="ck">
+            <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="224" y="1472" type="branch" />
+            <wire x2="240" y1="1472" y2="1472" x1="224" />
+            <wire x2="256" y1="1472" y2="1472" x1="240" />
+        </branch>
+        <branch name="x_0(7:0)">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="656" y="1344" type="branch" />
+            <wire x2="656" y1="1344" y2="1344" x1="640" />
+        </branch>
+        <instance x="256" y="1600" name="XLXI_11(7:0)" orien="R0" />
+        <instance x="976" y="1600" name="XLXI_15(7:0)" orien="R0" />
+        <instance x="1696" y="1600" name="XLXI_16(7:0)" orien="R0" />
+        <instance x="2416" y="1600" name="XLXI_17(7:0)" orien="R0" />
+        <instance x="256" y="2080" name="XLXI_18(7:0)" orien="R0" />
+        <instance x="976" y="2080" name="XLXI_19(7:0)" orien="R0" />
+        <instance x="1696" y="2080" name="XLXI_20(7:0)" orien="R0" />
+        <instance x="2416" y="2080" name="XLXI_21(7:0)" orien="R0" />
     </sheet>
 </drawing>

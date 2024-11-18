@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="bIpMultiplier">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-10-30T15:27:59</timestamp>
-    <pin polarity="Input" x="0" y="80" name="a(7:0)" />
-    <pin polarity="Input" x="0" y="144" name="b(7:0)" />
+    <timestamp>2024-10-31T8:45:53</timestamp>
+    <pin polarity="Input" x="0" y="80" name="a[7:0]" />
+    <pin polarity="Input" x="0" y="144" name="b[7:0]" />
     <pin polarity="Input" x="0" y="240" name="clk" />
-    <pin polarity="Output" x="464" y="96" name="p(15:0)" />
+    <pin polarity="Input" x="0" y="304" name="ce" />
+    <pin polarity="Output" x="576" y="80" name="p[15:0]" />
     <graph>
-        <rect width="404" x="32" y="32" height="248" />
+        <text style="fontsize:40;fontname:Arial" x="32" y="32">bIpMultiplier</text>
+        <rect width="512" x="32" y="32" height="384" />
         <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin a(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin a[7:0]" />
         <line x2="32" y1="144" y2="144" style="linewidth:W" x1="0" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="144" type="pin b(7:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="144" type="pin b[7:0]" />
         <line x2="32" y1="240" y2="240" x1="0" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="240" type="pin clk" />
-        <text style="fontsize:40;fontname:Arial" x="152" y="156">bIpMultiplier</text>
-        <line x2="432" y1="96" y2="96" style="linewidth:W" x1="464" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="428" y="96" type="pin p(15:0)" />
+        <line x2="32" y1="304" y2="304" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="304" type="pin ce" />
+        <line x2="544" y1="80" y2="80" style="linewidth:W" x1="576" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="540" y="80" type="pin p[15:0]" />
     </graph>
 </symbol>

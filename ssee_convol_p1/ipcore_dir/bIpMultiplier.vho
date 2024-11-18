@@ -53,6 +53,7 @@ COMPONENT bIpMultiplier
     clk : IN STD_LOGIC;
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    ce : IN STD_LOGIC;
     p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
@@ -67,6 +68,7 @@ your_instance_name : bIpMultiplier
     clk => clk,
     a => a,
     b => b,
+    ce => ce,
     p => p
   );
 -- INST_TAG_END ------ End INSTANTIATION Template ------------

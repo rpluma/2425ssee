@@ -6,5 +6,6 @@ reset
 inicializar
 acumular
 dato_sal_sync
-incrementar
+multiplicar
+=indice[2:0]=
 [BiDir]

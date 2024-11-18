@@ -45,6 +45,7 @@ ENTITY bIpMultiplier IS
     clk : IN STD_LOGIC;
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    ce : IN STD_LOGIC;
     p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END bIpMultiplier;
@@ -56,6 +57,7 @@ COMPONENT wrapped_bIpMultiplier
     clk : IN STD_LOGIC;
     a : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    ce : IN STD_LOGIC;
     p : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
@@ -70,10 +72,10 @@ END COMPONENT;
       c_b_width => 8,
       c_ccm_imp => 0,
       c_ce_overrides_sclr => 0,
-      c_has_ce => 0,
+      c_has_ce => 1,
       c_has_sclr => 0,
       c_has_zero_detect => 0,
-      c_latency => 1,
+      c_latency => 2,
       c_model_type => 0,
       c_mult_type => 1,
       c_optimize_goal => 1,
@@ -92,6 +94,7 @@ U0 : wrapped_bIpMultiplier
     clk => clk,
     a => a,
     b => b,
+    ce => ce,
     p => p
   );
 -- synthesis translate_on

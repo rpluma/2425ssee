@@ -42,11 +42,11 @@ LIBRARY XilinxCoreLib;
 -- synthesis translate_on
 ENTITY biPAccumlator IS
   PORT (
-    b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
     sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END biPAccumlator;
 
@@ -54,11 +54,11 @@ ARCHITECTURE biPAccumlator_a OF biPAccumlator IS
 -- synthesis translate_off
 COMPONENT wrapped_biPAccumlator
   PORT (
-    b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
     sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
 
@@ -68,7 +68,7 @@ END COMPONENT;
       c_add_mode => 0,
       c_ainit_val => "0",
       c_b_type => 0,
-      c_b_width => 8,
+      c_b_width => 16,
       c_bypass_low => 0,
       c_ce_overrides_sclr => 0,
       c_has_bypass => 0,
@@ -79,7 +79,7 @@ END COMPONENT;
       c_has_sset => 0,
       c_implementation => 0,
       c_latency => 1,
-      c_out_width => 8,
+      c_out_width => 16,
       c_scale => 0,
       c_sclr_overrides_sset => 1,
       c_sinit_val => "0",

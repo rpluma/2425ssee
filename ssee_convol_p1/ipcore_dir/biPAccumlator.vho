@@ -52,11 +52,11 @@
 ------------- Begin Cut here for COMPONENT Declaration ------ COMP_TAG
 COMPONENT biPAccumlator
   PORT (
-    b : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    b : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     clk : IN STD_LOGIC;
     ce : IN STD_LOGIC;
     sclr : IN STD_LOGIC;
-    q : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
+    q : OUT STD_LOGIC_VECTOR(15 DOWNTO 0)
   );
 END COMPONENT;
 -- COMP_TAG_END ------ End COMPONENT Declaration ------------
