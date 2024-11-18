@@ -8,7 +8,7 @@
 -------------------------------------------------------------------------------
 --
 -- File        : C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/ds_fsm_convol/compile/fsm_convol.vhd
--- Generated   : Thu Oct 31 18:53:03 2024
+-- Generated   : Sat Nov  2 14:57:26 2024
 -- From        : C:/Users/Usuario_UMA/Desktop/activeHdl/ws_fsm_convol/ds_fsm_convol/src/fsm_convol.asf
 -- By          : Active-HDL Student Edition FSM Code Generator ver. 6.0
 --
@@ -42,7 +42,7 @@ architecture fsm_convol_arch of fsm_convol is
 -- USER DEFINED ENCODED state machine: Sreg0
 attribute ENUM_ENCODING: string;
 type Sreg0_type is (
-	S2Dir, S3Load, S5Acc, S9Fin, S1Ini, S4Mul, S7FinAcc, S8Sto, S6FinMul
+	S2Dir, S3Load, S5Acc, S9Fin, S1Ini, S7FinAcc, S8Sto, S6FinMul
 );
 attribute ENUM_ENCODING of Sreg0_type: type is
 	"0010 " &		-- S2Dir
@@ -50,7 +50,6 @@ attribute ENUM_ENCODING of Sreg0_type: type is
 	"0101 " &		-- S5Acc
 	"1001 " &		-- S9Fin
 	"0000 " &		-- S1Ini
-	"0100 " &		-- S4Mul
 	"0111 " &		-- S7FinAcc
 	"1000 " &		-- S8Sto
 	"0110" ;		-- S6FinMul
@@ -62,10 +61,9 @@ begin
 -- FSM coverage pragmas
 -- Aldec enum Machine_Sreg0 CURRENT=Sreg0
 -- Aldec enum Machine_Sreg0 INITIAL_STATE=S1Ini
--- Aldec enum Machine_Sreg0 STATES=S2Dir,S3Load,S4Mul,S5Acc,S6FinMul,S7FinAcc,S8Sto,S9Fin
--- Aldec enum Machine_Sreg0 TRANS=S1Ini->S2Dir,S2Dir->S3Load,S3Load->S4Mul,S4Mul->S5Acc,S5Acc->S5Acc
--- Aldec enum Machine_Sreg0 TRANS=S5Acc->S6FinMul,S6FinMul->S7FinAcc,S7FinAcc->S8Sto,S8Sto->S9Fin
--- Aldec enum Machine_Sreg0 TRANS=S9Fin->S1Ini
+-- Aldec enum Machine_Sreg0 STATES=S2Dir,S3Load,S5Acc,S6FinMul,S7FinAcc,S8Sto,S9Fin
+-- Aldec enum Machine_Sreg0 TRANS=S1Ini->S2Dir,S2Dir->S3Load,S3Load->S5Acc,S5Acc->S5Acc,S5Acc->S6FinMul
+-- Aldec enum Machine_Sreg0 TRANS=S6FinMul->S7FinAcc,S7FinAcc->S8Sto,S8Sto->S9Fin,S9Fin->S1Ini
 
 -- User statements
 
@@ -93,12 +91,14 @@ begin
 		case Sreg0 is
 			when S2Dir =>
 				Sreg0 <= S3Load;
+				vIndice := "0001";
 				indice <= "0001";
-			when S3Load =>
-				Sreg0 <= S4Mul;
 				multiplicar <= '1';
-				indice<="0010";
-				vIndice := "0010";
+			when S3Load =>
+				Sreg0 <= S5Acc;
+				vIndice := vIndice + 1;
+				indice <=std_logic_vector(vIndice);
+				acumular <= '1';
 			when S5Acc =>
 				if vIndice=8 then
 					Sreg0 <= S6FinMul;
@@ -122,11 +122,6 @@ begin
 					inicializar <= '0';
 					indice <= "0000";
 				end if;
-			when S4Mul =>
-				Sreg0 <= S5Acc;
-				vIndice := vIndice + 1;
-				indice <=std_logic_vector(vIndice);
-				acumular <= '1';
 			when S7FinAcc =>
 				Sreg0 <= S8Sto;
 				guardar<='1';
