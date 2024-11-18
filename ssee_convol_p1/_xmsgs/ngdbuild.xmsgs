@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ck_100MHz_pad</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ck_100MHz_pad</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">XLXI_306/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLK2X</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_XLXI_306_clk2x = PERIOD &quot;XLXI_306_clk2x&quot; TS_ck_100MHz_pad HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ck_100MHz_pad</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ck_100MHz_pad</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">XLXI_306/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_XLXI_306_clkfx = PERIOD &quot;XLXI_306_clkfx&quot; TS_ck_100MHz_pad * 0.05 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">XLXI_306/dcm_sp_inst</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_ck_100MHz_pad = PERIOD &quot;ck_100MHz_pad&quot; 100 MHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(255)]</arg>).
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_3</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_2</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_0</arg>&apos; has unconnected output pin
+</msg>
+
+</messages>
+

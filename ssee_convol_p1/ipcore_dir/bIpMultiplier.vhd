@@ -75,7 +75,7 @@ END COMPONENT;
       c_has_ce => 1,
       c_has_sclr => 0,
       c_has_zero_detect => 0,
-      c_latency => 2,
+      c_latency => 1,
       c_model_type => 0,
       c_mult_type => 1,
       c_optimize_goal => 1,

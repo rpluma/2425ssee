@@ -1,5 +1,5 @@
 
--- VHDL Instantiation Created from source file fsm_convol.vhd -- 15:28:12 10/30/2024
+-- VHDL Instantiation Created from source file fsm_convol.vhd -- 18:54:08 10/31/2024
 --
 -- Notes: 
 -- 1) This instantiation template has been automatically generated using types
@@ -14,7 +14,9 @@
 		inicializar : OUT std_logic;
 		acumular : OUT std_logic;
 		dato_sal_sync : OUT std_logic;
-		incrementar : OUT std_logic
+		indice : OUT std_logic_vector(3 downto 0);
+		multiplicar : OUT std_logic;
+		guardar : OUT std_logic
 		);
 	END COMPONENT;
 
@@ -25,7 +27,9 @@
 		inicializar => ,
 		acumular => ,
 		dato_sal_sync => ,
-		incrementar => 
+		indice => ,
+		multiplicar => ,
+		guardar => 
 	);
 
 

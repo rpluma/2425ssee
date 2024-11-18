@@ -1,0 +1,78 @@
+Release 14.7 - xst P.20131013 (nt64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst
+
+
+Total REAL time to Xst completion: 1.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Reading design: bloque_convol_bloque_convol_sch_tb.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpMemory.vhd" into library work
+Parsing entity <bIpMemory>.
+Parsing architecture <bIpMemory_a> of entity <bipmemory>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpMultiplier.vhd" into library work
+Parsing entity <bIpMultiplier>.
+Parsing architecture <bIpMultiplier_a> of entity <bipmultiplier>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\biPAccumlator.vhd" into library work
+Parsing entity <biPAccumlator>.
+Parsing architecture <biPAccumlator_a> of entity <bipaccumlator>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpSumador.vhd" into library work
+Parsing entity <bIpSumador>.
+Parsing architecture <bIpSumador_a> of entity <bipsumador>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bin_bcd.vhd" into library work
+Parsing entity <control_bin_bcd>.
+Parsing architecture <control_bin_bcd_arch> of entity <control_bin_bcd>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bcd_bin.vhd" into library work
+Parsing entity <control_bcd_bin>.
+Parsing architecture <control_bcd_bin_arch> of entity <control_bcd_bin>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcConvFSM.vhd" into library work
+Parsing entity <fsm_convol>.
+Parsing architecture <fsm_convol_arch> of entity <fsm_convol>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\sim_bloque_convolucion.vhd" into library work
+Parsing entity <bloque_convol_bloque_convol_sch_tb>.
+Parsing architecture <behavioral> of entity <bloque_convol_bloque_convol_sch_tb>.
+
+
+Total REAL time to Xst completion: 5.00 secs
+Total CPU time to Xst completion: 4.11 secs
+ 
+--> 
+
+Total memory usage is 4463016 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i_drc.vhf
--- /___/   /\     Timestamp : 10/30/2024 09:28:00
+-- /___/   /\     Timestamp : 10/31/2024 18:57:40
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -77,15 +77,15 @@ entity bCalcX_i is
    port ( ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
-          indice     : in    std_logic_vector (2 downto 0); 
-          reset      : in    std_logic; 
+          indice     : in    std_logic_vector (3 downto 0); 
           x_i        : out   std_logic_vector (7 downto 0));
 end bCalcX_i;
 
 architecture BEHAVIORAL of bCalcX_i is
-   attribute BOX_TYPE   : string ;
    attribute HU_SET     : string ;
+   attribute BOX_TYPE   : string ;
    signal uno        : std_logic;
+   signal XLXN_1     : std_logic_vector (7 downto 0);
    signal x_0        : std_logic_vector (7 downto 0);
    signal x_1        : std_logic_vector (7 downto 0);
    signal x_2        : std_logic_vector (7 downto 0);
@@ -94,15 +94,6 @@ architecture BEHAVIORAL of bCalcX_i is
    signal x_5        : std_logic_vector (7 downto 0);
    signal x_6        : std_logic_vector (7 downto 0);
    signal x_7        : std_logic_vector (7 downto 0);
-   component FDRE
-      port ( C  : in    std_logic; 
-             CE : in    std_logic; 
-             D  : in    std_logic; 
-             R  : in    std_logic; 
-             Q  : out   std_logic);
-   end component;
-   attribute BOX_TYPE of FDRE : component is "BLACK_BOX";
-   
    component M8_1E_HXILINX_bCalcX_i
       port ( D0 : in    std_logic; 
              D1 : in    std_logic; 
@@ -124,6 +115,23 @@ architecture BEHAVIORAL of bCalcX_i is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
+   component FDE
+      generic( INIT : bit :=  '0');
+      port ( C  : in    std_logic; 
+             CE : in    std_logic; 
+             D  : in    std_logic; 
+             Q  : out   std_logic);
+   end component;
+   attribute BOX_TYPE of FDE : component is "BLACK_BOX";
+   
+   component FD
+      generic( INIT : bit :=  '0');
+      port ( C : in    std_logic; 
+             D : in    std_logic; 
+             Q : out   std_logic);
+   end component;
+   attribute BOX_TYPE of FD : component is "BLACK_BOX";
+   
    attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
    attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
    attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
@@ -133,454 +141,6 @@ architecture BEHAVIORAL of bCalcX_i is
    attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
    attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
 begin
-   fdrex0_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(0),
-                R=>reset,
-                Q=>x_0(0));
-   
-   fdrex0_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(1),
-                R=>reset,
-                Q=>x_0(1));
-   
-   fdrex0_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(2),
-                R=>reset,
-                Q=>x_0(2));
-   
-   fdrex0_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(3),
-                R=>reset,
-                Q=>x_0(3));
-   
-   fdrex0_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(4),
-                R=>reset,
-                Q=>x_0(4));
-   
-   fdrex0_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(5),
-                R=>reset,
-                Q=>x_0(5));
-   
-   fdrex0_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(6),
-                R=>reset,
-                Q=>x_0(6));
-   
-   fdrex0_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>dato_ent(7),
-                R=>reset,
-                Q=>x_0(7));
-   
-   fdrex1_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(0),
-                R=>reset,
-                Q=>x_1(0));
-   
-   fdrex1_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(1),
-                R=>reset,
-                Q=>x_1(1));
-   
-   fdrex1_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(2),
-                R=>reset,
-                Q=>x_1(2));
-   
-   fdrex1_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(3),
-                R=>reset,
-                Q=>x_1(3));
-   
-   fdrex1_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(4),
-                R=>reset,
-                Q=>x_1(4));
-   
-   fdrex1_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(5),
-                R=>reset,
-                Q=>x_1(5));
-   
-   fdrex1_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(6),
-                R=>reset,
-                Q=>x_1(6));
-   
-   fdrex1_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_0(7),
-                R=>reset,
-                Q=>x_1(7));
-   
-   fdrex2_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(0),
-                R=>reset,
-                Q=>x_2(0));
-   
-   fdrex2_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(1),
-                R=>reset,
-                Q=>x_2(1));
-   
-   fdrex2_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(2),
-                R=>reset,
-                Q=>x_2(2));
-   
-   fdrex2_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(3),
-                R=>reset,
-                Q=>x_2(3));
-   
-   fdrex2_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(4),
-                R=>reset,
-                Q=>x_2(4));
-   
-   fdrex2_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(5),
-                R=>reset,
-                Q=>x_2(5));
-   
-   fdrex2_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(6),
-                R=>reset,
-                Q=>x_2(6));
-   
-   fdrex2_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_1(7),
-                R=>reset,
-                Q=>x_2(7));
-   
-   fdrex3_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(0),
-                R=>reset,
-                Q=>x_3(0));
-   
-   fdrex3_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(1),
-                R=>reset,
-                Q=>x_3(1));
-   
-   fdrex3_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(2),
-                R=>reset,
-                Q=>x_3(2));
-   
-   fdrex3_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(3),
-                R=>reset,
-                Q=>x_3(3));
-   
-   fdrex3_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(4),
-                R=>reset,
-                Q=>x_3(4));
-   
-   fdrex3_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(5),
-                R=>reset,
-                Q=>x_3(5));
-   
-   fdrex3_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(6),
-                R=>reset,
-                Q=>x_3(6));
-   
-   fdrex3_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_2(7),
-                R=>reset,
-                Q=>x_3(7));
-   
-   fdrex4_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(0),
-                R=>reset,
-                Q=>x_4(0));
-   
-   fdrex4_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(1),
-                R=>reset,
-                Q=>x_4(1));
-   
-   fdrex4_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(2),
-                R=>reset,
-                Q=>x_4(2));
-   
-   fdrex4_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(3),
-                R=>reset,
-                Q=>x_4(3));
-   
-   fdrex4_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(4),
-                R=>reset,
-                Q=>x_4(4));
-   
-   fdrex4_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(5),
-                R=>reset,
-                Q=>x_4(5));
-   
-   fdrex4_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(6),
-                R=>reset,
-                Q=>x_4(6));
-   
-   fdrex4_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_3(7),
-                R=>reset,
-                Q=>x_4(7));
-   
-   fdrex5_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(0),
-                R=>reset,
-                Q=>x_5(0));
-   
-   fdrex5_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(1),
-                R=>reset,
-                Q=>x_5(1));
-   
-   fdrex5_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(2),
-                R=>reset,
-                Q=>x_5(2));
-   
-   fdrex5_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(3),
-                R=>reset,
-                Q=>x_5(3));
-   
-   fdrex5_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(4),
-                R=>reset,
-                Q=>x_5(4));
-   
-   fdrex5_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(5),
-                R=>reset,
-                Q=>x_5(5));
-   
-   fdrex5_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(6),
-                R=>reset,
-                Q=>x_5(6));
-   
-   fdrex5_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_4(7),
-                R=>reset,
-                Q=>x_5(7));
-   
-   fdrex6_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(0),
-                R=>reset,
-                Q=>x_6(0));
-   
-   fdrex6_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(1),
-                R=>reset,
-                Q=>x_6(1));
-   
-   fdrex6_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(2),
-                R=>reset,
-                Q=>x_6(2));
-   
-   fdrex6_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(3),
-                R=>reset,
-                Q=>x_6(3));
-   
-   fdrex6_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(4),
-                R=>reset,
-                Q=>x_6(4));
-   
-   fdrex6_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(5),
-                R=>reset,
-                Q=>x_6(5));
-   
-   fdrex6_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(6),
-                R=>reset,
-                Q=>x_6(6));
-   
-   fdrex6_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_5(7),
-                R=>reset,
-                Q=>x_6(7));
-   
-   fdrex7_0 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(0),
-                R=>reset,
-                Q=>x_7(0));
-   
-   fdrex7_1 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(1),
-                R=>reset,
-                Q=>x_7(1));
-   
-   fdrex7_2 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(2),
-                R=>reset,
-                Q=>x_7(2));
-   
-   fdrex7_3 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(3),
-                R=>reset,
-                Q=>x_7(3));
-   
-   fdrex7_4 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(4),
-                R=>reset,
-                Q=>x_7(4));
-   
-   fdrex7_5 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(5),
-                R=>reset,
-                Q=>x_7(5));
-   
-   fdrex7_6 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(6),
-                R=>reset,
-                Q=>x_7(6));
-   
-   fdrex7_7 : FDRE
-      port map (C=>ck,
-                CE=>dato_nuevo,
-                D=>x_6(7),
-                R=>reset,
-                Q=>x_7(7));
-   
    XLXI_9_0 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(0),
                 D1=>x_1(0),
@@ -594,7 +154,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(0));
+                O=>XLXN_1(0));
    
    XLXI_9_1 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(1),
@@ -609,7 +169,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(1));
+                O=>XLXN_1(1));
    
    XLXI_9_2 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(2),
@@ -624,7 +184,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(2));
+                O=>XLXN_1(2));
    
    XLXI_9_3 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(3),
@@ -639,7 +199,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(3));
+                O=>XLXN_1(3));
    
    XLXI_9_4 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(4),
@@ -654,7 +214,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(4));
+                O=>XLXN_1(4));
    
    XLXI_9_5 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(5),
@@ -669,7 +229,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(5));
+                O=>XLXN_1(5));
    
    XLXI_9_6 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(6),
@@ -684,7 +244,7 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(6));
+                O=>XLXN_1(6));
    
    XLXI_9_7 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(7),
@@ -699,10 +259,434 @@ begin
                 S0=>indice(0),
                 S1=>indice(1),
                 S2=>indice(2),
-                O=>x_i(7));
+                O=>XLXN_1(7));
    
    XLXI_10 : VCC
       port map (P=>uno);
+   
+   XLXI_11_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(0),
+                Q=>x_0(0));
+   
+   XLXI_11_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(1),
+                Q=>x_0(1));
+   
+   XLXI_11_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(2),
+                Q=>x_0(2));
+   
+   XLXI_11_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(3),
+                Q=>x_0(3));
+   
+   XLXI_11_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(4),
+                Q=>x_0(4));
+   
+   XLXI_11_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(5),
+                Q=>x_0(5));
+   
+   XLXI_11_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(6),
+                Q=>x_0(6));
+   
+   XLXI_11_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>dato_ent(7),
+                Q=>x_0(7));
+   
+   XLXI_15_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(0),
+                Q=>x_1(0));
+   
+   XLXI_15_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(1),
+                Q=>x_1(1));
+   
+   XLXI_15_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(2),
+                Q=>x_1(2));
+   
+   XLXI_15_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(3),
+                Q=>x_1(3));
+   
+   XLXI_15_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(4),
+                Q=>x_1(4));
+   
+   XLXI_15_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(5),
+                Q=>x_1(5));
+   
+   XLXI_15_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(6),
+                Q=>x_1(6));
+   
+   XLXI_15_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_0(7),
+                Q=>x_1(7));
+   
+   XLXI_16_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(0),
+                Q=>x_2(0));
+   
+   XLXI_16_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(1),
+                Q=>x_2(1));
+   
+   XLXI_16_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(2),
+                Q=>x_2(2));
+   
+   XLXI_16_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(3),
+                Q=>x_2(3));
+   
+   XLXI_16_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(4),
+                Q=>x_2(4));
+   
+   XLXI_16_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(5),
+                Q=>x_2(5));
+   
+   XLXI_16_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(6),
+                Q=>x_2(6));
+   
+   XLXI_16_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_1(7),
+                Q=>x_2(7));
+   
+   XLXI_17_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(0),
+                Q=>x_3(0));
+   
+   XLXI_17_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(1),
+                Q=>x_3(1));
+   
+   XLXI_17_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(2),
+                Q=>x_3(2));
+   
+   XLXI_17_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(3),
+                Q=>x_3(3));
+   
+   XLXI_17_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(4),
+                Q=>x_3(4));
+   
+   XLXI_17_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(5),
+                Q=>x_3(5));
+   
+   XLXI_17_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(6),
+                Q=>x_3(6));
+   
+   XLXI_17_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_2(7),
+                Q=>x_3(7));
+   
+   XLXI_18_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(0),
+                Q=>x_4(0));
+   
+   XLXI_18_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(1),
+                Q=>x_4(1));
+   
+   XLXI_18_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(2),
+                Q=>x_4(2));
+   
+   XLXI_18_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(3),
+                Q=>x_4(3));
+   
+   XLXI_18_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(4),
+                Q=>x_4(4));
+   
+   XLXI_18_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(5),
+                Q=>x_4(5));
+   
+   XLXI_18_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(6),
+                Q=>x_4(6));
+   
+   XLXI_18_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_3(7),
+                Q=>x_4(7));
+   
+   XLXI_19_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(0),
+                Q=>x_5(0));
+   
+   XLXI_19_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(1),
+                Q=>x_5(1));
+   
+   XLXI_19_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(2),
+                Q=>x_5(2));
+   
+   XLXI_19_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(3),
+                Q=>x_5(3));
+   
+   XLXI_19_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(4),
+                Q=>x_5(4));
+   
+   XLXI_19_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(5),
+                Q=>x_5(5));
+   
+   XLXI_19_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(6),
+                Q=>x_5(6));
+   
+   XLXI_19_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_4(7),
+                Q=>x_5(7));
+   
+   XLXI_20_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(0),
+                Q=>x_6(0));
+   
+   XLXI_20_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(1),
+                Q=>x_6(1));
+   
+   XLXI_20_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(2),
+                Q=>x_6(2));
+   
+   XLXI_20_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(3),
+                Q=>x_6(3));
+   
+   XLXI_20_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(4),
+                Q=>x_6(4));
+   
+   XLXI_20_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(5),
+                Q=>x_6(5));
+   
+   XLXI_20_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(6),
+                Q=>x_6(6));
+   
+   XLXI_20_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_5(7),
+                Q=>x_6(7));
+   
+   XLXI_21_0 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(0),
+                Q=>x_7(0));
+   
+   XLXI_21_1 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(1),
+                Q=>x_7(1));
+   
+   XLXI_21_2 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(2),
+                Q=>x_7(2));
+   
+   XLXI_21_3 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(3),
+                Q=>x_7(3));
+   
+   XLXI_21_4 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(4),
+                Q=>x_7(4));
+   
+   XLXI_21_5 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(5),
+                Q=>x_7(5));
+   
+   XLXI_21_6 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(6),
+                Q=>x_7(6));
+   
+   XLXI_21_7 : FDE
+      port map (C=>ck,
+                CE=>dato_nuevo,
+                D=>x_6(7),
+                Q=>x_7(7));
+   
+   XLXI_23_0 : FD
+      port map (C=>ck,
+                D=>XLXN_1(0),
+                Q=>x_i(0));
+   
+   XLXI_23_1 : FD
+      port map (C=>ck,
+                D=>XLXN_1(1),
+                Q=>x_i(1));
+   
+   XLXI_23_2 : FD
+      port map (C=>ck,
+                D=>XLXN_1(2),
+                Q=>x_i(2));
+   
+   XLXI_23_3 : FD
+      port map (C=>ck,
+                D=>XLXN_1(3),
+                Q=>x_i(3));
+   
+   XLXI_23_4 : FD
+      port map (C=>ck,
+                D=>XLXN_1(4),
+                Q=>x_i(4));
+   
+   XLXI_23_5 : FD
+      port map (C=>ck,
+                D=>XLXN_1(5),
+                Q=>x_i(5));
+   
+   XLXI_23_6 : FD
+      port map (C=>ck,
+                D=>XLXN_1(6),
+                Q=>x_i(6));
+   
+   XLXI_23_7 : FD
+      port map (C=>ck,
+                D=>XLXN_1(7),
+                Q=>x_i(7));
    
 end BEHAVIORAL;
 

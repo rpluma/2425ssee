@@ -7,5 +7,6 @@ inicializar
 acumular
 dato_sal_sync
 multiplicar
-=indice[2:0]=
+guardar
+=indice[3:0]=
 [BiDir]

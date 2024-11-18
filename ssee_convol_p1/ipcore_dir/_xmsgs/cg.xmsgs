@@ -8,13 +8,16 @@
 <msg type="info" file="sim" num="172" delta="old" >Generating IP...
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bIpMultiplier&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bIpMemory&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bIpMultiplier&apos; already exists in the project. Output products for this core may be overwritten.</arg>
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">A core named &apos;bIpMemory&apos; already exists in the project. Output products for this core may be overwritten.</arg>
 </msg>
 
-<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;bIpMultiplier&apos;...</arg>
+<msg type="info" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Pre-processing HDL files for &apos;bIpMemory&apos;...</arg>
+</msg>
+
+<msg type="warning" file="sim" num="0" delta="new" ><arg fmt="%s" index="1">Overwriting existing file C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/tmp/_cg/bIpMemory/doc/blk_mem_gen_v7_3_vinfo.html with file from view xilinx_documentation</arg>
 </msg>
 
 <msg type="info" file="sim" num="949" delta="old" >Finished generation of ASY schematic symbol.

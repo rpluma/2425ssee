@@ -7,20 +7,26 @@
    <ItemView engineview="SynthesisOnly" guiview="Source" compilemode="AutoCompile" >
       <ClosedNodes>
          <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/bloque_convol_bloque_convol_sch_tb - behavioral C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|sim_bloque_convolucion.vhd/UUT - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
+         <ClosedNode>/bloque_convol_bloque_convol_sch_tb - behavioral C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|sim_bloque_convolucion.vhd/UUT - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_1 - teclado_hexa_completo</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_864 - displays_7seg_nexys3_RemLab</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_865 - Remote_Lab - Behavioral</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_867 - sinc_entrada</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_1 - teclado_hexa_completo</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_864 - displays_7seg_nexys3_RemLab</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_865 - Remote_Lab - Behavioral</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_867 - sinc_entrada</ClosedNode>
          <ClosedNode>/convol_top_rl_2022 C:|Users|albertod|Documents|_Doc_|Xilinx|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol</ClosedNode>
       </ClosedNodes>
-      <SelectedItems>
-         <SelectedItem>convol_top_rl_2022 (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022.sch)</SelectedItem>
-      </SelectedItems>
+      <SelectedItems/>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001fb000000020000000000000000000000000200000064ffffffff000000810000000300000002000001fb0000000100000003000000000000000100000003</ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f4000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f40000000100000003000000000000000100000003</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >true</UserChangedColumnWidths>
-      <CurrentItem>convol_top_rl_2022 (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022.sch)</CurrentItem>
+      <CurrentItem>UUT - bloque_convol (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch)</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
       <ClosedNodes>
@@ -44,12 +50,14 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>sim_bloque_convolucion.vhd</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
       <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000000000000000100000000000000000000000000000000000004d2000000040101000100000000000000000000000064ffffffff000000810000000000000004000001160000000100000000000001390000000100000000000000920000000100000000000001f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem>bCalcConv.sch</CurrentItem>
+      <CurrentItem>sim_bloque_convolucion.vhd</CurrentItem>
    </ItemView>
    <ItemView guiview="Library" >
       <ClosedNodes>
@@ -67,23 +75,27 @@
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" />
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem/>
+      <CurrentItem></CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="DESUT_VHDL_ARCHITECTURE" guiview="Process" >
       <ClosedNodes>
          <ClosedNodesVersion>1</ClosedNodesVersion>
       </ClosedNodes>
-      <SelectedItems/>
+      <SelectedItems>
+         <SelectedItem>Check Syntax</SelectedItem>
+      </SelectedItems>
       <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
       <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
-      <ViewHeaderState orientation="horizontal" ></ViewHeaderState>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
       <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
-      <CurrentItem></CurrentItem>
+      <CurrentItem>Check Syntax</CurrentItem>
    </ItemView>
    <ItemView engineview="SynthesisOnly" sourcetype="" guiview="Process" >
       <ClosedNodes>
@@ -100,4 +112,75 @@
    </ItemView>
    <SourceProcessView>000000ff00000000000000020000016f0000011b01000000050100000002</SourceProcessView>
    <CurrentView>Implementation</CurrentView>
+   <ItemView engineview="SynthesisOnly" sourcetype="DESUT_BMM" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems/>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" ></ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" guiview="Source" compilemode="AutoCompile" >
+      <ClosedNodes>
+         <ClosedNodesVersion>2</ClosedNodesVersion>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_1 - teclado_hexa_completo</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_864 - displays_7seg_nexys3_RemLab</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_865 - Remote_Lab - Behavioral</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_867 - sinc_entrada</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_1 - Conversor_BCD_Bin</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_33 - Conversor_Bin_BCD_3cifras</ClosedNode>
+         <ClosedNode>/convol_top_rl_2022 C:|Users|Usuario_UMA|Desktop|ssee_convol_p1|convol_top_rl_2022.sch/XLXI_872 - bloque_convol/XLXI_34 - bCalcSignoMag</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>XLXI_5 - bIpMemory (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMemory.xco)</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000202000000010000000100000064000001f1000000020000000000000000000000000200000064ffffffff000000810000000300000002000001f10000000100000003000000000000000100000003</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>XLXI_5 - bIpMemory (C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir/bIpMemory.xco)</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+         <ClosedNode>Design Utilities</ClosedNode>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_SCHEMATIC" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem>Simulate Behavioral Model</SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem>Simulate Behavioral Model</CurrentItem>
+   </ItemView>
+   <ItemView engineview="BehavioralSim" sourcetype="DESUT_XCO" guiview="Process" >
+      <ClosedNodes>
+         <ClosedNodesVersion>1</ClosedNodesVersion>
+      </ClosedNodes>
+      <SelectedItems>
+         <SelectedItem></SelectedItem>
+      </SelectedItems>
+      <ScrollbarPosition orientation="vertical" >0</ScrollbarPosition>
+      <ScrollbarPosition orientation="horizontal" >0</ScrollbarPosition>
+      <ViewHeaderState orientation="horizontal" >000000ff000000000000000100000001000000000000000000000000000000000000000000000001f1000000010000000100000000000000000000000064ffffffff000000810000000000000001000001f10000000100000000</ViewHeaderState>
+      <UserChangedColumnWidths orientation="horizontal" >false</UserChangedColumnWidths>
+      <CurrentItem></CurrentItem>
+   </ItemView>
 </Project>

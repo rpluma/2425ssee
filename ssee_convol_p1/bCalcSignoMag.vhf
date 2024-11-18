@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcSignoMag.vhf
--- /___/   /\     Timestamp : 10/30/2024 11:34:53
+-- /___/   /\     Timestamp : 10/31/2024 21:22:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -37,6 +37,7 @@ end bCalcSignoMag;
 architecture BEHAVIORAL of bCalcSignoMag is
    attribute BOX_TYPE   : string ;
    signal ceros             : std_logic_vector (7 downto 0);
+   signal XLXN_5            : std_logic;
    component bIpSumador
       port ( a   : in    std_logic_vector (7 downto 0); 
              b   : in    std_logic_vector (7 downto 0); 
@@ -68,10 +69,16 @@ architecture BEHAVIORAL of bCalcSignoMag is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
+   component INV
+      port ( I : in    std_logic; 
+             O : out   std_logic);
+   end component;
+   attribute BOX_TYPE of INV : component is "BLACK_BOX";
+   
 begin
    XLXI_2 : bIpSumador
       port map (a(7 downto 0)=>ceros(7 downto 0),
-                add=>dato_sal(7),
+                add=>XLXN_5,
                 b(7 downto 0)=>dato_sal(7 downto 0),
                 ce=>dato_sal_sync,
                 clk=>ck,
@@ -111,6 +118,10 @@ begin
       port map (C=>ck,
                 D=>dato_sal_sync,
                 Q=>dato_sal_pos_sync);
+   
+   XLXI_7 : INV
+      port map (I=>dato_sal(7),
+                O=>XLXN_5);
    
 end BEHAVIORAL;
 

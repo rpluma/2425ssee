@@ -17,7 +17,6 @@
         <signal name="XLXN_6" />
         <signal name="XLXN_7" />
         <signal name="XLXN_8" />
-        <signal name="XLXN_64" />
         <signal name="q(0)" />
         <signal name="q(1)" />
         <signal name="q(2)" />
@@ -26,8 +25,6 @@
         <signal name="XLXN_48" />
         <signal name="XLXN_49" />
         <signal name="XLXN_50" />
-        <signal name="XLXN_85" />
-        <signal name="XLXN_87" />
         <port polarity="Input" name="initZ" />
         <port polarity="Input" name="ck" />
         <port polarity="Output" name="mod_out" />

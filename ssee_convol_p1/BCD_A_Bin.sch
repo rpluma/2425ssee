@@ -6,12 +6,10 @@
         <trait edittrait="all:0" />
     </attr>
     <netlist>
-        <signal name="XLXN_89" />
         <signal name="XLXN_6" />
         <signal name="XLXN_7" />
         <signal name="XLXN_8" />
         <signal name="ck" />
-        <signal name="XLXN_137" />
         <signal name="ldZ" />
         <signal name="q1" />
         <signal name="q2" />
