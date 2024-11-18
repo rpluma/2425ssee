@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="convol_top_rl_2022">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-11-2T8:2:57</timestamp>
+    <timestamp>2024-11-4T11:21:40</timestamp>
     <pin polarity="Input" x="0" y="-736" name="col_pad(4:1)" />
     <pin polarity="Input" x="0" y="-672" name="reset_pad" />
     <pin polarity="Input" x="0" y="-608" name="ck_100MHz_pad" />

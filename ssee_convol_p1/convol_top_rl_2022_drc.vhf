@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : convol_top_rl_2022_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 18:22:44
+-- /___/   /\     Timestamp : 11/04/2024 12:22:12
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -502,7 +502,7 @@ entity bCalcX_i_MUSER_convol_top_rl_2022 is
    port ( ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
-          indice     : in    std_logic_vector (2 downto 0); 
+          indice     : in    std_logic_vector (3 downto 0); 
           x_i        : out   std_logic_vector (7 downto 0));
 end bCalcX_i_MUSER_convol_top_rl_2022;
 
@@ -1138,7 +1138,7 @@ architecture BEHAVIORAL of bCalcConv_MUSER_convol_top_rl_2022 is
    signal ceros         : std_logic_vector (7 downto 0);
    signal c_i           : std_logic_vector (7 downto 0);
    signal guardar       : std_logic;
-   signal indice        : std_logic_vector (2 downto 0);
+   signal indice        : std_logic_vector (3 downto 0);
    signal inicializar   : std_logic;
    signal multiplicar   : std_logic;
    signal res_parc      : std_logic_vector (15 downto 0);
@@ -1149,7 +1149,7 @@ architecture BEHAVIORAL of bCalcConv_MUSER_convol_top_rl_2022 is
       port ( dato_nuevo : in    std_logic; 
              ck         : in    std_logic; 
              dato_ent   : in    std_logic_vector (7 downto 0); 
-             indice     : in    std_logic_vector (2 downto 0); 
+             indice     : in    std_logic_vector (3 downto 0); 
              x_i        : out   std_logic_vector (7 downto 0));
    end component;
    
@@ -1185,8 +1185,8 @@ architecture BEHAVIORAL of bCalcConv_MUSER_convol_top_rl_2022 is
              acumular      : out   std_logic; 
              dato_sal_sync : out   std_logic; 
              multiplicar   : out   std_logic; 
-             indice        : out   std_logic_vector (2 downto 0); 
-             guardar       : out   std_logic);
+             guardar       : out   std_logic; 
+             indice        : out   std_logic_vector (3 downto 0));
    end component;
    
    component GND
@@ -1214,7 +1214,7 @@ begin
       port map (ck=>ck,
                 dato_ent(7 downto 0)=>dato_ent(7 downto 0),
                 dato_nuevo=>dato_nuevo,
-                indice(2 downto 0)=>indice(2 downto 0),
+                indice(3 downto 0)=>indice(3 downto 0),
                 x_i(7 downto 0)=>x_i(7 downto 0));
    
    XLXI_5 : bIpMemory
@@ -1245,7 +1245,7 @@ begin
                 acumular=>acumular,
                 dato_sal_sync=>dato_sal_sync,
                 guardar=>guardar,
-                indice(2 downto 0)=>indice(2 downto 0),
+                indice(3 downto 0)=>indice(3 downto 0),
                 inicializar=>inicializar,
                 multiplicar=>multiplicar);
    
@@ -1322,35 +1322,35 @@ begin
                 Q=>dat_sal(7));
    
    XLXI_21_0 : BUF
-      port map (I=>res_parc(8),
+      port map (I=>res_parc(6),
                 O=>res_parcl(0));
    
    XLXI_21_1 : BUF
-      port map (I=>res_parc(9),
+      port map (I=>res_parc(7),
                 O=>res_parcl(1));
    
    XLXI_21_2 : BUF
-      port map (I=>res_parc(10),
+      port map (I=>res_parc(8),
                 O=>res_parcl(2));
    
    XLXI_21_3 : BUF
-      port map (I=>res_parc(11),
+      port map (I=>res_parc(9),
                 O=>res_parcl(3));
    
    XLXI_21_4 : BUF
-      port map (I=>res_parc(12),
+      port map (I=>res_parc(10),
                 O=>res_parcl(4));
    
    XLXI_21_5 : BUF
-      port map (I=>res_parc(13),
+      port map (I=>res_parc(11),
                 O=>res_parcl(5));
    
    XLXI_21_6 : BUF
-      port map (I=>res_parc(14),
+      port map (I=>res_parc(12),
                 O=>res_parcl(6));
    
    XLXI_21_7 : BUF
-      port map (I=>res_parc(15),
+      port map (I=>res_parc(13),
                 O=>res_parcl(7));
    
 end BEHAVIORAL;
@@ -1865,11 +1865,11 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022 is
    signal XLXN_199        : std_logic;
    signal XLXN_200        : std_logic;
    component Bin_A_BCD_MUSER_convol_top_rl_2022
-      port ( mod_out : out   std_logic; 
-             q       : out   std_logic_vector (3 downto 0); 
+      port ( initZ   : in    std_logic; 
+             ck      : in    std_logic; 
              mod_in  : in    std_logic; 
-             initZ   : in    std_logic; 
-             ck      : in    std_logic);
+             mod_out : out   std_logic; 
+             q       : out   std_logic_vector (3 downto 0));
    end component;
    
    component regdesp8b_MUSER_convol_top_rl_2022
@@ -2443,11 +2443,11 @@ architecture BEHAVIORAL of Conversor_BCD_Bin_MUSER_convol_top_rl_2022 is
    signal XLXN_72       : std_logic;
    signal XLXN_77       : std_logic;
    component BCD_A_Bin_MUSER_convol_top_rl_2022
-      port ( q0  : out   std_logic; 
+      port ( ck  : in    std_logic; 
+             ldZ : in    std_logic; 
              sin : in    std_logic; 
-             ck  : in    std_logic; 
              d   : in    std_logic_vector (3 downto 0); 
-             ldZ : in    std_logic);
+             q0  : out   std_logic);
    end component;
    
    component GND
@@ -2933,25 +2933,25 @@ architecture BEHAVIORAL of bloque_convol_MUSER_convol_top_rl_2022 is
    end component;
    
    component Comp_Num_Letra_MUSER_convol_top_rl_2022
-      port ( cod_tecla     : in    std_logic_vector (3 downto 0); 
+      port ( tecla_pulsada : in    std_logic; 
+             ck            : in    std_logic; 
+             cod_tecla     : in    std_logic_vector (3 downto 0); 
+             entZ_sal      : in    std_logic; 
              carga_cifra   : out   std_logic; 
              letra_a       : out   std_logic; 
              letra_c       : out   std_logic; 
-             cifra         : out   std_logic_vector (3 downto 0); 
-             ck            : in    std_logic; 
-             tecla_pulsada : in    std_logic; 
-             entZ_sal      : in    std_logic);
+             cifra         : out   std_logic_vector (3 downto 0));
    end component;
    
    component reg_desp_4_cifras_MUSER_convol_top_rl_2022
-      port ( entrada    : in    std_logic_vector (3 downto 0); 
+      port ( ck         : in    std_logic; 
+             ce         : in    std_logic; 
+             entrada    : in    std_logic_vector (3 downto 0); 
+             sinc_reset : in    std_logic; 
              dato1      : out   std_logic_vector (3 downto 0); 
              dato2      : out   std_logic_vector (3 downto 0); 
              dato3      : out   std_logic_vector (3 downto 0); 
-             dato4      : out   std_logic_vector (3 downto 0); 
-             ck         : in    std_logic; 
-             sinc_reset : in    std_logic; 
-             ce         : in    std_logic);
+             dato4      : out   std_logic_vector (3 downto 0));
    end component;
    
    component GND
@@ -2971,24 +2971,24 @@ architecture BEHAVIORAL of bloque_convol_MUSER_convol_top_rl_2022 is
              dec_sal         : in    std_logic_vector (3 downto 0); 
              cent_sal        : in    std_logic_vector (3 downto 0); 
              mill_sal        : in    std_logic_vector (3 downto 0); 
+             signo_sal       : in    std_logic; 
              punto_decimal   : out   std_logic_vector (4 downto 1); 
              entZ_sal        : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
              cent            : out   std_logic_vector (3 downto 0); 
-             mill            : out   std_logic_vector (3 downto 0); 
-             signo_sal       : in    std_logic);
+             mill            : out   std_logic_vector (3 downto 0));
    end component;
    
    component Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022
-      port ( reset           : in    std_logic; 
+      port ( ck              : in    std_logic; 
+             dato_bin_entero : in    std_logic_vector (7 downto 0); 
+             inicio          : in    std_logic; 
+             reset           : in    std_logic; 
              dato_nuevo      : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
-             cent            : out   std_logic_vector (3 downto 0); 
-             dato_bin_entero : in    std_logic_vector (7 downto 0); 
-             inicio          : in    std_logic; 
-             ck              : in    std_logic);
+             cent            : out   std_logic_vector (3 downto 0));
    end component;
    
    component bCalcSignoMag_MUSER_convol_top_rl_2022
@@ -4300,6 +4300,8 @@ architecture BEHAVIORAL of convol_top_rl_2022 is
    signal XLXN_460                      : std_logic;
    signal XLXI_138_CLK_openSignal       : std_logic;
    signal XLXI_138_KEYCLEARB_openSignal : std_logic;
+   signal XLXI_309_clk_openSignal       : std_logic;
+   signal XLXI_309_sclr_openSignal      : std_logic;
    component teclado_hexa_completo_MUSER_convol_top_rl_2022
       port ( col1          : in    std_logic; 
              col2          : in    std_logic; 
@@ -4487,10 +4489,10 @@ architecture BEHAVIORAL of convol_top_rl_2022 is
    end component;
    
    component bloque_convol_MUSER_convol_top_rl_2022
-      port ( reset         : in    std_logic; 
+      port ( ck            : in    std_logic; 
              cod_tecla     : in    std_logic_vector (3 downto 0); 
              tecla_pulsada : in    std_logic; 
-             ck            : in    std_logic; 
+             reset         : in    std_logic; 
              punto_decimal : out   std_logic_vector (4 downto 1); 
              display1      : out   std_logic_vector (3 downto 0); 
              display2      : out   std_logic_vector (3 downto 0); 
@@ -4689,9 +4691,9 @@ begin
                 locked=>locked_OK);
    
    XLXI_309 : cont_16bits
-      port map (clk=>ck_5MHz,
-                sclr=>XLXN_1,
-                q(15 downto 0)=>cuenta_dcm(15 downto 0));
+      port map (clk=>XLXI_309_clk_openSignal,
+                sclr=>XLXI_309_sclr_openSignal,
+                q=>open);
    
    XLXI_314 : BUFG
       port map (I=>cuenta_dcm(13),

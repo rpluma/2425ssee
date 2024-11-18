@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : reg_desp_4_cifras.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:55
+-- /___/   /\     Timestamp : 11/04/2024 13:27:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/reg_desp_4_cifras.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/reg_desp_4_cifras.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/reg_desp_4_cifras.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/reg_desp_4_cifras.sch
 --Design Name: reg_desp_4_cifras
 --Device: spartan6
 --Purpose:

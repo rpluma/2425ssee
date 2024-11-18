@@ -22,30 +22,47 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="../../ssee_convol_p1.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="BCD_A_Bin.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="BCD_A_Bin.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="BCD_A_Bin.vhi"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="BCD_A_Bin_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Bin_A_BCD.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Bin_A_BCD.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL_INSTTEMPLATE" xil_pn:name="Bin_A_BCD.vhi"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Bin_A_BCD_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Comp_Num_Letra.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Comp_Num_Letra.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Comp_Num_Letra_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Conversor_BCD_Bin.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Conversor_BCD_Bin.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Conversor_BCD_Bin_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Conversor_Bin_BCD_3cifras.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Conversor_Bin_BCD_3cifras.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Conversor_Bin_BCD_3cifras_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="Mux_Ent_Sal_7seg_4cifras.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Mux_Ent_Sal_7seg_4cifras.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="Mux_Ent_Sal_7seg_4cifras_drc.vhf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="Remote_Lab.prj"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="Remote_Lab.stx"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="Remote_Lab.xst"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
     <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
@@ -57,17 +74,21 @@
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcConv_drc.vhf"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcSignoMag.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcSignoMag.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcSignoMag_drc.vhf"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bCalcSignoMag_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bCalcX_i.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcX_i.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bCalcX_i_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="bloque_convol.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bloque_convol.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
@@ -80,8 +101,19 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.wdb"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="bloque_convol_bloque_convol_sch_tb_stx_beh.prj"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="bloque_convol_drc.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="codif_tecla.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="cont_anillo_ce.vhf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control_bcd_bin.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="control_bcd_bin.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="control_bcd_bin.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="control_bcd_bin.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="control_bcd_bin.xst"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="control_bin_bcd.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="control_bin_bcd.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="control_bin_bcd.stx"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="control_bin_bcd.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="control_bin_bcd.xst"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="convol_top_rl_2022.bld"/>
     <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="convol_top_rl_2022.cmd_log"/>
     <file xil_pn:fileType="FILE_JHD" xil_pn:name="convol_top_rl_2022.jhd"/>
@@ -107,6 +139,8 @@
     </file>
     <file xil_pn:fileType="FILE_XPI" xil_pn:name="convol_top_rl_2022.xpi"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="convol_top_rl_2022.xst"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="convol_top_rl_2022_drc.vhf"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="convol_top_rl_2022_envsettings.html"/>
     <file xil_pn:fileType="FILE_NCD" xil_pn:name="convol_top_rl_2022_guide.ncd" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="convol_top_rl_2022_map.map" xil_pn:subbranch="Map"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="convol_top_rl_2022_map.mrp" xil_pn:subbranch="Map"/>
@@ -124,7 +158,12 @@
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="dcm_100m_5m.sym" xil_pn:origination="imported"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="detector.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="displays_7seg_nexys3_RemLab.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="displays_7seg_nexys3_RemLab_drc.vhf"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fsm_convol.prj"/>
+    <file xil_pn:fileType="FILE_SPL" xil_pn:name="fsm_convol.spl"/>
+    <file xil_pn:fileType="FILE_XST_STX" xil_pn:name="fsm_convol.stx"/>
     <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="fsm_convol.sym" xil_pn:origination="imported"/>
+    <file xil_pn:fileType="FILE_XST" xil_pn:name="fsm_convol.xst"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="fsm_convol_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="fsm_convol_stx_beh.prj"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
@@ -141,18 +180,24 @@
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="nivel_a_pulso.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="reg_desp_4_cifras.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="reg_desp_4_cifras.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="reg_desp_4_cifras_drc.vhf"/>
+    <file xil_pn:fileType="FILE_SYMBOL" xil_pn:name="regdesp8b.sym" xil_pn:origination="imported"/>
     <file xil_pn:fileType="FILE_VHDL" xil_pn:name="regdesp8b.vhf">
       <branch xil_pn:name="Implementation"/>
       <branch xil_pn:name="BehavioralSim"/>
     </file>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="regdesp8b_drc.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="sinc_entrada.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="sinc_entrada_drc.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="sincroniza.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="teclado_4x4.vhf"/>
     <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_VHDL" xil_pn:name="teclado_hexa_completo.vhf"/>
+    <file xil_pn:fileType="FILE_VHDL" xil_pn:name="teclado_hexa_completo_drc.vhf"/>
     <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
@@ -167,6 +212,10 @@
     <transform xil_pn:end_ts="1730632557" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1730632557">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="Remote_Lab.vhd"/>
       <outfile xil_pn:name="bCalcConvFSM.vhd"/>
       <outfile xil_pn:name="bcd_7seg_neg.vhd"/>
@@ -179,9 +228,13 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730635681" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1730635673">
+    <transform xil_pn:end_ts="1730714631" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1730714629">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -192,30 +245,29 @@
       <outfile xil_pn:name="bCalcSignoMag.vhf"/>
       <outfile xil_pn:name="bCalcX_i.vhf"/>
       <outfile xil_pn:name="bloque_convol.vhf"/>
-      <outfile xil_pn:name="convol_top_rl_2022.vhf"/>
       <outfile xil_pn:name="reg_desp_4_cifras.vhf"/>
       <outfile xil_pn:name="regdesp8b.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1730635500" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1730635499">
+    <transform xil_pn:end_ts="1730714631" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1730714631">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMemory.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMemory.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMultiplier.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/bIpMultiplier.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/bIpSumador.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/bIpSumador.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/biPAccumlator.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/biPAccumlator.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/cont_16bits.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/cont_16bits.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/cont_3b.ngc"/>
-      <outfile xil_pn:name="ipcore_dir/cont_3b.vhd"/>
-      <outfile xil_pn:name="ipcore_dir/dcm_100m_5m.vhd"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1730635681" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1730635681">
+    <transform xil_pn:end_ts="1730714631" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1730714631">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <status xil_pn:value="OutputRemoved"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -232,43 +284,45 @@
       <outfile xil_pn:name="bloque_convol_tb.vhd"/>
       <outfile xil_pn:name="control_bcd_bin.vhd"/>
       <outfile xil_pn:name="control_bin_bcd.vhd"/>
-      <outfile xil_pn:name="convol_top_rl_2022.vhf"/>
       <outfile xil_pn:name="fsm_convol.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/bIpMemory.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/bIpMultiplier.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/bIpSumador.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/biPAccumlator.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/cont_16bits.vhd"/>
+      <outfile xil_pn:name="ipcore_dir/dcm_100m_5m.vhd"/>
       <outfile xil_pn:name="reg_desp_4_cifras.vhf"/>
       <outfile xil_pn:name="regdesp8b.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1730635689" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1730635681">
+    <transform xil_pn:end_ts="1730714639" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1730714631">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_beh.prj"/>
-      <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.exe"/>
-      <outfile xil_pn:name="fuse.log"/>
-      <outfile xil_pn:name="isim"/>
-      <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="xilinxsim.ini"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1730635689" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1730635689">
+    <transform xil_pn:end_ts="1730714640" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1730714639">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
       <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="bloque_convol_bloque_convol_sch_tb_isim_beh.wdb"/>
-      <outfile xil_pn:name="isim.cmd"/>
-      <outfile xil_pn:name="isim.log"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1730556256" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1730556256">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730556266" xil_pn:name="TRAN_schematicsToHdl" xil_pn:start_ts="1730556256">
+    <transform xil_pn:end_ts="1730723277" xil_pn:name="TRAN_schematicsToHdl" xil_pn:start_ts="1730723265">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
       <outfile xil_pn:name="Bin_A_BCD.vhf"/>
       <outfile xil_pn:name="Comp_Num_Letra.vhf"/>
@@ -292,13 +346,9 @@
       <outfile xil_pn:name="teclado_4x4.vhf"/>
       <outfile xil_pn:name="teclado_hexa_completo.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1730556266" xil_pn:name="TRAN_regenerateCores" xil_pn:start_ts="1730556266">
+    <transform xil_pn:end_ts="1730723277" xil_pn:name="TRAN_regenerateCores" xil_pn:start_ts="1730723277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="ipcore_dir/bIpMemory.ngc"/>
       <outfile xil_pn:name="ipcore_dir/bIpMemory.vhd"/>
       <outfile xil_pn:name="ipcore_dir/bIpMultiplier.ngc"/>
@@ -321,25 +371,18 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1730556266" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:start_ts="1730556266">
+    <transform xil_pn:end_ts="1730723277" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:start_ts="1730723277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
     <transform xil_pn:end_ts="1730556266" xil_pn:name="TRAN_platgen" xil_pn:start_ts="1730556266">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
     </transform>
-    <transform xil_pn:end_ts="1730556280" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:start_ts="1730556266">
+    <transform xil_pn:end_ts="1730723292" xil_pn:name="TRANEXT_xstsynthesize_spartan6" xil_pn:start_ts="1730723277">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="InputChanged"/>
-      <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
       <outfile xil_pn:name="convol_top_rl_2022.jhd"/>
       <outfile xil_pn:name="convol_top_rl_2022.lso"/>
@@ -353,20 +396,14 @@
       <outfile xil_pn:name="webtalk_pn.xml"/>
       <outfile xil_pn:name="xst"/>
     </transform>
-    <transform xil_pn:end_ts="1730556280" xil_pn:name="TRAN_compileBCD2" xil_pn:start_ts="1730556280">
+    <transform xil_pn:end_ts="1730723757" xil_pn:name="TRAN_compileBCD2" xil_pn:start_ts="1730723757">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
     </transform>
-    <transform xil_pn:end_ts="1730556285" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:start_ts="1730556280">
-      <status xil_pn:value="SuccessfullyRun"/>
+    <transform xil_pn:end_ts="1730723762" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:start_ts="1730723757">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
-      <status xil_pn:value="OutOfDateForInputs"/>
-      <status xil_pn:value="OutOfDateForPredecessor"/>
-      <status xil_pn:value="InputChanged"/>
       <outfile xil_pn:name="_ngo"/>
       <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
       <outfile xil_pn:name="convol_top_rl_2022.bld"/>
@@ -376,40 +413,33 @@
     <transform xil_pn:end_ts="1730556292" xil_pn:name="TRANEXT_map_spartan6" xil_pn:start_ts="1730556285">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="convol_top_rl_2022.pcf"/>
-      <outfile xil_pn:name="convol_top_rl_2022_map.map"/>
-      <outfile xil_pn:name="convol_top_rl_2022_map.mrp"/>
-      <outfile xil_pn:name="convol_top_rl_2022_map.ncd"/>
-      <outfile xil_pn:name="convol_top_rl_2022_map.ngm"/>
-      <outfile xil_pn:name="convol_top_rl_2022_map.xrpt"/>
-      <outfile xil_pn:name="convol_top_rl_2022_summary.xml"/>
-      <outfile xil_pn:name="convol_top_rl_2022_usage.xml"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1730556304" xil_pn:name="TRANEXT_par_spartan6" xil_pn:start_ts="1730556292">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="WarningsGenerated"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="convol_top_rl_2022.ncd"/>
-      <outfile xil_pn:name="convol_top_rl_2022.pad"/>
-      <outfile xil_pn:name="convol_top_rl_2022.par"/>
-      <outfile xil_pn:name="convol_top_rl_2022.ptwx"/>
-      <outfile xil_pn:name="convol_top_rl_2022.unroutes"/>
-      <outfile xil_pn:name="convol_top_rl_2022.xpi"/>
-      <outfile xil_pn:name="convol_top_rl_2022_pad.csv"/>
-      <outfile xil_pn:name="convol_top_rl_2022_pad.txt"/>
-      <outfile xil_pn:name="convol_top_rl_2022_par.xrpt"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1730556304" xil_pn:name="TRAN_postRouteTrce" xil_pn:start_ts="1730556300">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="convol_top_rl_2022.twr"/>
-      <outfile xil_pn:name="convol_top_rl_2022.twx"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

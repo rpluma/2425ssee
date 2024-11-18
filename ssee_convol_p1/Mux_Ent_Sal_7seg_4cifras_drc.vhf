@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Mux_Ent_Sal_7seg_4cifras_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:24:42
+-- /___/   /\     Timestamp : 11/04/2024 11:27:46
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

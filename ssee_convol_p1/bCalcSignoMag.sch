@@ -22,7 +22,7 @@
         <port polarity="Output" name="dato_sal_pos_sync" />
         <port polarity="Output" name="dato_sal_pos(7:0)" />
         <blockdef name="bIpSumador">
-            <timestamp>2024-11-2T14:34:30</timestamp>
+            <timestamp>2024-11-4T10:58:20</timestamp>
             <rect width="224" x="32" y="32" height="384" />
             <line x2="32" y1="80" y2="80" style="linewidth:W" x1="0" />
             <line x2="32" y1="112" y2="112" style="linewidth:W" x1="0" />

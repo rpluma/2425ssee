@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : convol_top_rl_2022.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:58
+-- /___/   /\     Timestamp : 11/04/2024 13:27:53
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/convol_top_rl_2022.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/convol_top_rl_2022.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/convol_top_rl_2022.sch
 --Design Name: convol_top_rl_2022
 --Device: spartan6
 --Purpose:
@@ -557,14 +557,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_187";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_186";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_185";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_184";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_183";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_182";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_181";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_180";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_258";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_257";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_256";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_255";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_254";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_253";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_252";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_251";
 begin
    XLXI_9_0 : M8_1E_HXILINX_convol_top_rl_2022
       port map (D0=>x_0(0),
@@ -1552,10 +1552,10 @@ architecture BEHAVIORAL of Bin_A_BCD_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_190";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_188";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_189";
-   attribute HU_SET of XLXI_53 : label is "XLXI_53_191";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_261";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_259";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_260";
+   attribute HU_SET of XLXI_53 : label is "XLXI_53_262";
 begin
    mod_out <= mod_out_DUMMY;
    q(3 downto 0) <= q_DUMMY(3 downto 0);
@@ -1702,14 +1702,14 @@ architecture BEHAVIORAL of regdesp8b_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_199";
-   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_198";
-   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_197";
-   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_196";
-   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_195";
-   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_194";
-   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_193";
-   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_192";
+   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_270";
+   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_269";
+   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_268";
+   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_267";
+   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_266";
+   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_265";
+   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_264";
+   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_263";
 begin
    XLXI_1_0 : FDRE
       port map (C=>ck,
@@ -1865,11 +1865,11 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022 is
    signal XLXN_199        : std_logic;
    signal XLXN_200        : std_logic;
    component Bin_A_BCD_MUSER_convol_top_rl_2022
-      port ( mod_out : out   std_logic; 
-             q       : out   std_logic_vector (3 downto 0); 
+      port ( initZ   : in    std_logic; 
+             ck      : in    std_logic; 
              mod_in  : in    std_logic; 
-             initZ   : in    std_logic; 
-             ck      : in    std_logic);
+             mod_out : out   std_logic; 
+             q       : out   std_logic_vector (3 downto 0));
    end component;
    
    component regdesp8b_MUSER_convol_top_rl_2022
@@ -1910,9 +1910,9 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022 is
              load          : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_202";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_200";
-   attribute HU_SET of XLXI_37 : label is "XLXI_37_201";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_273";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_271";
+   attribute HU_SET of XLXI_37 : label is "XLXI_37_272";
 begin
    XLXI_1 : Bin_A_BCD_MUSER_convol_top_rl_2022
       port map (ck=>ck,
@@ -2076,23 +2076,23 @@ architecture BEHAVIORAL of Mux_Ent_Sal_7seg_4cifras_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of BUF : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_214";
-   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_213";
-   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_212";
-   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_211";
-   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_218";
-   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_217";
-   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_216";
-   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_215";
-   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_206";
-   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_205";
-   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_204";
-   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_203";
-   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_210";
-   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_209";
-   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_208";
-   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_207";
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_219";
+   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_285";
+   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_284";
+   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_283";
+   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_282";
+   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_289";
+   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_288";
+   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_287";
+   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_286";
+   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_277";
+   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_276";
+   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_275";
+   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_274";
+   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_281";
+   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_280";
+   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_279";
+   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_278";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_290";
 begin
    entZ_sal <= entZ_sal_DUMMY;
    XLXI_2 : GND
@@ -2313,10 +2313,10 @@ architecture BEHAVIORAL of BCD_A_Bin_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_222";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_220";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_221";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_223";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_293";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_291";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_292";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_294";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,
@@ -2443,11 +2443,11 @@ architecture BEHAVIORAL of Conversor_BCD_Bin_MUSER_convol_top_rl_2022 is
    signal XLXN_72       : std_logic;
    signal XLXN_77       : std_logic;
    component BCD_A_Bin_MUSER_convol_top_rl_2022
-      port ( q0  : out   std_logic; 
+      port ( ck  : in    std_logic; 
+             ldZ : in    std_logic; 
              sin : in    std_logic; 
-             ck  : in    std_logic; 
              d   : in    std_logic_vector (3 downto 0); 
-             ldZ : in    std_logic);
+             q0  : out   std_logic);
    end component;
    
    component GND
@@ -2472,8 +2472,8 @@ architecture BEHAVIORAL of Conversor_BCD_Bin_MUSER_convol_top_rl_2022 is
              ldZ           : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_224";
-   attribute HU_SET of XLXI_23 : label is "XLXI_23_225";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_295";
+   attribute HU_SET of XLXI_23 : label is "XLXI_23_296";
 begin
    XLXI_1 : BCD_A_Bin_MUSER_convol_top_rl_2022
       port map (ck=>ck,
@@ -2784,10 +2784,10 @@ architecture BEHAVIORAL of Comp_Num_Letra_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of AND3B1 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_227";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_228";
-   attribute HU_SET of XLXI_24 : label is "XLXI_24_226";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_229";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_298";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_299";
+   attribute HU_SET of XLXI_24 : label is "XLXI_24_297";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_300";
 begin
    XLXI_2 : GND
       port map (G=>cero);
@@ -2933,25 +2933,25 @@ architecture BEHAVIORAL of bloque_convol_MUSER_convol_top_rl_2022 is
    end component;
    
    component Comp_Num_Letra_MUSER_convol_top_rl_2022
-      port ( cod_tecla     : in    std_logic_vector (3 downto 0); 
+      port ( tecla_pulsada : in    std_logic; 
+             ck            : in    std_logic; 
+             cod_tecla     : in    std_logic_vector (3 downto 0); 
+             entZ_sal      : in    std_logic; 
              carga_cifra   : out   std_logic; 
              letra_a       : out   std_logic; 
              letra_c       : out   std_logic; 
-             cifra         : out   std_logic_vector (3 downto 0); 
-             ck            : in    std_logic; 
-             tecla_pulsada : in    std_logic; 
-             entZ_sal      : in    std_logic);
+             cifra         : out   std_logic_vector (3 downto 0));
    end component;
    
    component reg_desp_4_cifras_MUSER_convol_top_rl_2022
-      port ( entrada    : in    std_logic_vector (3 downto 0); 
+      port ( ck         : in    std_logic; 
+             ce         : in    std_logic; 
+             entrada    : in    std_logic_vector (3 downto 0); 
+             sinc_reset : in    std_logic; 
              dato1      : out   std_logic_vector (3 downto 0); 
              dato2      : out   std_logic_vector (3 downto 0); 
              dato3      : out   std_logic_vector (3 downto 0); 
-             dato4      : out   std_logic_vector (3 downto 0); 
-             ck         : in    std_logic; 
-             sinc_reset : in    std_logic; 
-             ce         : in    std_logic);
+             dato4      : out   std_logic_vector (3 downto 0));
    end component;
    
    component GND
@@ -2971,24 +2971,24 @@ architecture BEHAVIORAL of bloque_convol_MUSER_convol_top_rl_2022 is
              dec_sal         : in    std_logic_vector (3 downto 0); 
              cent_sal        : in    std_logic_vector (3 downto 0); 
              mill_sal        : in    std_logic_vector (3 downto 0); 
+             signo_sal       : in    std_logic; 
              punto_decimal   : out   std_logic_vector (4 downto 1); 
              entZ_sal        : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
              cent            : out   std_logic_vector (3 downto 0); 
-             mill            : out   std_logic_vector (3 downto 0); 
-             signo_sal       : in    std_logic);
+             mill            : out   std_logic_vector (3 downto 0));
    end component;
    
    component Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022
-      port ( reset           : in    std_logic; 
+      port ( ck              : in    std_logic; 
+             dato_bin_entero : in    std_logic_vector (7 downto 0); 
+             inicio          : in    std_logic; 
+             reset           : in    std_logic; 
              dato_nuevo      : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
-             cent            : out   std_logic_vector (3 downto 0); 
-             dato_bin_entero : in    std_logic_vector (7 downto 0); 
-             inicio          : in    std_logic; 
-             ck              : in    std_logic);
+             cent            : out   std_logic_vector (3 downto 0));
    end component;
    
    component bCalcSignoMag_MUSER_convol_top_rl_2022
@@ -3764,10 +3764,10 @@ architecture BEHAVIORAL of teclado_4x4_MUSER_convol_top_rl_2022 is
    end component;
    attribute BOX_TYPE of AND3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_230";
-   attribute HU_SET of XLXI_9 : label is "XLXI_9_231";
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_232";
-   attribute HU_SET of XLXI_15 : label is "XLXI_15_233";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_301";
+   attribute HU_SET of XLXI_9 : label is "XLXI_9_302";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_303";
+   attribute HU_SET of XLXI_15 : label is "XLXI_15_304";
 begin
    fila1 <= fila1_DUMMY;
    fila2 <= fila2_DUMMY;
@@ -4000,13 +4000,13 @@ architecture BEHAVIORAL of codif_tecla_MUSER_convol_top_rl_2022 is
              entrada : in    std_logic);
    end component;
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_235";
-   attribute HU_SET of XLXI_3 : label is "XLXI_3_236";
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_237";
-   attribute HU_SET of XLXI_5 : label is "XLXI_5_238";
-   attribute HU_SET of XLXI_10 : label is "XLXI_10_234";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_239";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_240";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_306";
+   attribute HU_SET of XLXI_3 : label is "XLXI_3_307";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_308";
+   attribute HU_SET of XLXI_5 : label is "XLXI_5_309";
+   attribute HU_SET of XLXI_10 : label is "XLXI_10_305";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_310";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_311";
 begin
    XLXI_1 : OR8_HXILINX_convol_top_rl_2022
       port map (I0=>tecla(15),
@@ -4300,6 +4300,8 @@ architecture BEHAVIORAL of convol_top_rl_2022 is
    signal XLXN_460                      : std_logic;
    signal XLXI_138_CLK_openSignal       : std_logic;
    signal XLXI_138_KEYCLEARB_openSignal : std_logic;
+   signal XLXI_309_clk_openSignal       : std_logic;
+   signal XLXI_309_sclr_openSignal      : std_logic;
    component teclado_hexa_completo_MUSER_convol_top_rl_2022
       port ( col1          : in    std_logic; 
              col2          : in    std_logic; 
@@ -4487,10 +4489,10 @@ architecture BEHAVIORAL of convol_top_rl_2022 is
    end component;
    
    component bloque_convol_MUSER_convol_top_rl_2022
-      port ( reset         : in    std_logic; 
+      port ( ck            : in    std_logic; 
              cod_tecla     : in    std_logic_vector (3 downto 0); 
              tecla_pulsada : in    std_logic; 
-             ck            : in    std_logic; 
+             reset         : in    std_logic; 
              punto_decimal : out   std_logic_vector (4 downto 1); 
              display1      : out   std_logic_vector (3 downto 0); 
              display2      : out   std_logic_vector (3 downto 0); 
@@ -4498,18 +4500,18 @@ architecture BEHAVIORAL of convol_top_rl_2022 is
              display4      : out   std_logic_vector (3 downto 0));
    end component;
    
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_250";
-   attribute HU_SET of XLXI_165 : label is "XLXI_165_249";
-   attribute HU_SET of XLXI_180 : label is "XLXI_180_251";
-   attribute HU_SET of XLXI_279_1 : label is "XLXI_279_1_244";
-   attribute HU_SET of XLXI_279_2 : label is "XLXI_279_2_243";
-   attribute HU_SET of XLXI_279_3 : label is "XLXI_279_3_242";
-   attribute HU_SET of XLXI_279_4 : label is "XLXI_279_4_241";
-   attribute HU_SET of XLXI_288_1 : label is "XLXI_288_1_248";
-   attribute HU_SET of XLXI_288_2 : label is "XLXI_288_2_247";
-   attribute HU_SET of XLXI_288_3 : label is "XLXI_288_3_246";
-   attribute HU_SET of XLXI_288_4 : label is "XLXI_288_4_245";
-   attribute HU_SET of XLXI_387 : label is "XLXI_387_252";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_321";
+   attribute HU_SET of XLXI_165 : label is "XLXI_165_320";
+   attribute HU_SET of XLXI_180 : label is "XLXI_180_322";
+   attribute HU_SET of XLXI_279_1 : label is "XLXI_279_1_315";
+   attribute HU_SET of XLXI_279_2 : label is "XLXI_279_2_314";
+   attribute HU_SET of XLXI_279_3 : label is "XLXI_279_3_313";
+   attribute HU_SET of XLXI_279_4 : label is "XLXI_279_4_312";
+   attribute HU_SET of XLXI_288_1 : label is "XLXI_288_1_319";
+   attribute HU_SET of XLXI_288_2 : label is "XLXI_288_2_318";
+   attribute HU_SET of XLXI_288_3 : label is "XLXI_288_3_317";
+   attribute HU_SET of XLXI_288_4 : label is "XLXI_288_4_316";
+   attribute HU_SET of XLXI_387 : label is "XLXI_387_323";
 begin
    XLXI_1 : teclado_hexa_completo_MUSER_convol_top_rl_2022
       port map (ck_teclado=>ck_300Hz,
@@ -4689,9 +4691,9 @@ begin
                 locked=>locked_OK);
    
    XLXI_309 : cont_16bits
-      port map (clk=>ck_5MHz,
-                sclr=>XLXN_1,
-                q(15 downto 0)=>cuenta_dcm(15 downto 0));
+      port map (clk=>XLXI_309_clk_openSignal,
+                sclr=>XLXI_309_sclr_openSignal,
+                q=>open);
    
    XLXI_314 : BUFG
       port map (I=>cuenta_dcm(13),

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : displays_7seg_nexys3_RemLab.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:23
+-- /___/   /\     Timestamp : 11/04/2024 13:27:48
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/displays_7seg_nexys3_RemLab.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/displays_7seg_nexys3_RemLab.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/displays_7seg_nexys3_RemLab.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/displays_7seg_nexys3_RemLab.sch
 --Design Name: displays_7seg_nexys3_RemLab
 --Device: spartan6
 --Purpose:

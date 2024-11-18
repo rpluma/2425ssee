@@ -46,7 +46,7 @@
         <port polarity="Output" name="display3(3:0)" />
         <port polarity="Output" name="display4(3:0)" />
         <blockdef name="Conversor_BCD_Bin">
-            <timestamp>2014-11-11T17:18:3</timestamp>
+            <timestamp>2024-11-4T10:35:22</timestamp>
             <rect width="64" x="0" y="-364" height="24" />
             <line x2="0" y1="-352" y2="-352" x1="64" />
             <rect width="64" x="0" y="-300" height="24" />
@@ -62,7 +62,7 @@
             <line x2="416" y1="-352" y2="-352" x1="352" />
         </blockdef>
         <blockdef name="Comp_Num_Letra">
-            <timestamp>2014-11-11T19:17:4</timestamp>
+            <timestamp>2024-11-4T10:27:28</timestamp>
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="416" y1="-96" y2="-96" x1="352" />
@@ -76,7 +76,7 @@
             <line x2="0" y1="-64" y2="-64" x1="64" />
         </blockdef>
         <blockdef name="reg_desp_4_cifras">
-            <timestamp>2014-11-9T20:27:48</timestamp>
+            <timestamp>2024-11-4T10:27:35</timestamp>
             <rect width="64" x="0" y="-236" height="24" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <rect width="64" x="352" y="-236" height="24" />
@@ -102,7 +102,7 @@
             <line x2="64" y1="-128" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="Mux_Ent_Sal_7seg_4cifras">
-            <timestamp>2024-10-10T15:53:7</timestamp>
+            <timestamp>2024-11-4T10:27:43</timestamp>
             <rect width="64" x="0" y="-556" height="24" />
             <line x2="0" y1="-544" y2="-544" x1="64" />
             <line x2="0" y1="-672" y2="-672" x1="64" />
@@ -137,7 +137,7 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
         </blockdef>
         <blockdef name="Conversor_Bin_BCD_3cifras">
-            <timestamp>2024-10-10T10:53:29</timestamp>
+            <timestamp>2024-11-4T10:27:52</timestamp>
             <rect width="400" x="64" y="-256" height="256" />
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="528" y1="-224" y2="-224" x1="464" />
@@ -153,7 +153,7 @@
             <line x2="0" y1="-96" y2="-96" x1="64" />
         </blockdef>
         <blockdef name="bCalcSignoMag">
-            <timestamp>2024-10-30T10:34:44</timestamp>
+            <timestamp>2024-11-4T10:29:42</timestamp>
             <rect width="368" x="64" y="-192" height="192" />
             <rect width="64" x="0" y="-172" height="24" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
@@ -165,7 +165,7 @@
             <line x2="496" y1="-32" y2="-32" x1="432" />
         </blockdef>
         <blockdef name="bCalcConv">
-            <timestamp>2024-10-31T17:58:42</timestamp>
+            <timestamp>2024-11-4T10:30:31</timestamp>
             <rect width="64" x="368" y="20" height="24" />
             <line x2="432" y1="32" y2="32" x1="368" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -177,24 +177,24 @@
             <rect width="304" x="64" y="-256" height="320" />
         </blockdef>
         <block symbolname="Comp_Num_Letra" name="XLXI_3">
+            <blockpin signalname="tecla_pulsada" name="tecla_pulsada" />
+            <blockpin signalname="ck" name="ck" />
             <blockpin signalname="cod_tecla(3:0)" name="cod_tecla(3:0)" />
+            <blockpin signalname="entZ_sal" name="entZ_sal" />
             <blockpin signalname="carga_cifra" name="carga_cifra" />
             <blockpin signalname="letra_a" name="letra_a" />
             <blockpin signalname="letra_c" name="letra_c" />
             <blockpin signalname="cifra(3:0)" name="cifra(3:0)" />
-            <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="tecla_pulsada" name="tecla_pulsada" />
-            <blockpin signalname="entZ_sal" name="entZ_sal" />
         </block>
         <block symbolname="reg_desp_4_cifras" name="XLXI_6">
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="carga_cifra" name="ce" />
             <blockpin signalname="cifra(3:0)" name="entrada(3:0)" />
+            <blockpin signalname="dato_nuevo" name="sinc_reset" />
             <blockpin signalname="ent_unid(3:0)" name="dato1(3:0)" />
             <blockpin signalname="ent_dec(3:0)" name="dato2(3:0)" />
             <blockpin signalname="ent_cent(3:0)" name="dato3(3:0)" />
             <blockpin name="dato4(3:0)" />
-            <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="dato_nuevo" name="sinc_reset" />
-            <blockpin signalname="carga_cifra" name="ce" />
         </block>
         <block symbolname="Conversor_BCD_Bin" name="XLXI_1">
             <blockpin signalname="ent_unid(3:0)" name="unid(3:0)" />
@@ -221,23 +221,23 @@
             <blockpin signalname="sal_dec(3:0)" name="dec_sal(3:0)" />
             <blockpin signalname="sal_cent(3:0)" name="cent_sal(3:0)" />
             <blockpin signalname="ceros(3:0)" name="mill_sal(3:0)" />
+            <blockpin signalname="signo_sal" name="signo_sal" />
             <blockpin signalname="punto_decimal(4:1)" name="punto_decimal(4:1)" />
             <blockpin signalname="entZ_sal" name="entZ_sal" />
             <blockpin signalname="display4(3:0)" name="unid(3:0)" />
             <blockpin signalname="display3(3:0)" name="dec(3:0)" />
             <blockpin signalname="display2(3:0)" name="cent(3:0)" />
             <blockpin signalname="display1(3:0)" name="mill(3:0)" />
-            <blockpin signalname="signo_sal" name="signo_sal" />
         </block>
         <block symbolname="Conversor_Bin_BCD_3cifras" name="XLXI_33">
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="dato_sal_pos(7:0)" name="dato_bin_entero(7:0)" />
+            <blockpin signalname="dato_sal_pos_sync" name="inicio" />
             <blockpin signalname="reset" name="reset" />
             <blockpin signalname="salida_bcd_nueva" name="dato_nuevo" />
             <blockpin signalname="sal_unid(3:0)" name="unid(3:0)" />
             <blockpin signalname="sal_dec(3:0)" name="dec(3:0)" />
             <blockpin signalname="sal_cent(3:0)" name="cent(3:0)" />
-            <blockpin signalname="dato_sal_pos(7:0)" name="dato_bin_entero(7:0)" />
-            <blockpin signalname="dato_sal_pos_sync" name="inicio" />
-            <blockpin signalname="ck" name="ck" />
         </block>
         <block symbolname="bCalcSignoMag" name="XLXI_34">
             <blockpin signalname="dato_sal(7:0)" name="dato_sal(7:0)" />

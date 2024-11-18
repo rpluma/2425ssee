@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_BCD_Bin_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:25:00
+-- /___/   /\     Timestamp : 11/04/2024 11:35:27
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -289,11 +289,11 @@ architecture BEHAVIORAL of Conversor_BCD_Bin is
    signal XLXN_72       : std_logic;
    signal XLXN_77       : std_logic;
    component BCD_A_Bin_MUSER_Conversor_BCD_Bin
-      port ( q0  : out   std_logic; 
+      port ( ck  : in    std_logic; 
+             ldZ : in    std_logic; 
              sin : in    std_logic; 
-             ck  : in    std_logic; 
              d   : in    std_logic_vector (3 downto 0); 
-             ldZ : in    std_logic);
+             q0  : out   std_logic);
    end component;
    
    component GND

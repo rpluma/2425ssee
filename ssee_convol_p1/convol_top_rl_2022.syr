@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: convol_top_rl_2022.prj
@@ -108,86 +108,86 @@ Cores Search Directories           : {"ipcore_dir"  }
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\dcm_100m_5m.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\dcm_100m_5m.vhd" into library work
 Parsing entity <dcm_100m_5m>.
 Parsing architecture <xilinx> of entity <dcm_100m_5m>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\cont_16bits.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\cont_16bits.vhd" into library work
 Parsing entity <cont_16bits>.
 Parsing architecture <cont_16bits_a> of entity <cont_16bits>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\cont_3b.vhd" into library work
-Parsing entity <cont_3b>.
-Parsing architecture <cont_3b_a> of entity <cont_3b>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpMemory.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\bIpMemory.vhd" into library work
 Parsing entity <bIpMemory>.
 Parsing architecture <bIpMemory_a> of entity <bipmemory>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpMultiplier.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\bIpMultiplier.vhd" into library work
 Parsing entity <bIpMultiplier>.
 Parsing architecture <bIpMultiplier_a> of entity <bipmultiplier>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\biPAccumlator.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\biPAccumlator.vhd" into library work
 Parsing entity <biPAccumlator>.
 Parsing architecture <biPAccumlator_a> of entity <bipaccumlator>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\bIpSumador.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\bIpSumador.vhd" into library work
 Parsing entity <bIpSumador>.
 Parsing architecture <bIpSumador_a> of entity <bipsumador>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\regdesp8b.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\cont_3b.vhd" into library work
+Parsing entity <cont_3b>.
+Parsing architecture <cont_3b_a> of entity <cont_3b>.
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\regdesp8b.vhf" into library work
 Parsing entity <M2_1_HXILINX_regdesp8b>.
 Parsing architecture <M2_1_HXILINX_regdesp8b_V> of entity <m2_1_hxilinx_regdesp8b>.
 Parsing entity <regdesp8b>.
 Parsing architecture <BEHAVIORAL> of entity <regdesp8b>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\nivel_a_pulso.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\nivel_a_pulso.vhf" into library work
 Parsing entity <nivel_a_pulso>.
 Parsing architecture <BEHAVIORAL> of entity <nivel_a_pulso>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\fsm_convol.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\fsm_convol.vhd" into library work
 Parsing entity <fsm_convol>.
 Parsing architecture <fsm_convol_arch> of entity <fsm_convol>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\cont_anillo_ce.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\cont_anillo_ce.vhf" into library work
 Parsing entity <cont_anillo_ce>.
 Parsing architecture <BEHAVIORAL> of entity <cont_anillo_ce>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bin_bcd.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bin_bcd.vhd" into library work
 Parsing entity <control_bin_bcd>.
 Parsing architecture <control_bin_bcd_arch> of entity <control_bin_bcd>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bcd_bin.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bcd_bin.vhd" into library work
 Parsing entity <control_bcd_bin>.
 Parsing architecture <control_bcd_bin_arch> of entity <control_bcd_bin>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Bin_A_BCD.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Bin_A_BCD.vhf" into library work
 Parsing entity <COMPM4_HXILINX_Bin_A_BCD>.
 Parsing architecture <COMPM4_HXILINX_Bin_A_BCD_V> of entity <compm4_hxilinx_bin_a_bcd>.
 Parsing entity <M2_1_HXILINX_Bin_A_BCD>.
 Parsing architecture <M2_1_HXILINX_Bin_A_BCD_V> of entity <m2_1_hxilinx_bin_a_bcd>.
 Parsing entity <Bin_A_BCD>.
 Parsing architecture <BEHAVIORAL> of entity <bin_a_bcd>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\BCD_A_Bin.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\BCD_A_Bin.vhf" into library work
 Parsing entity <M2_1_HXILINX_BCD_A_Bin>.
 Parsing architecture <M2_1_HXILINX_BCD_A_Bin_V> of entity <m2_1_hxilinx_bcd_a_bin>.
 Parsing entity <BCD_A_Bin>.
 Parsing architecture <BEHAVIORAL> of entity <bcd_a_bin>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcX_i.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bCalcX_i.vhf" into library work
 Parsing entity <M8_1E_HXILINX_bCalcX_i>.
 Parsing architecture <M8_1E_HXILINX_bCalcX_i_V> of entity <m8_1e_hxilinx_bcalcx_i>.
 Parsing entity <bCalcX_i>.
 Parsing architecture <BEHAVIORAL> of entity <bcalcx_i>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\teclado_4x4.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\teclado_4x4.vhf" into library work
 Parsing entity <FD4CE_HXILINX_teclado_4x4>.
 Parsing architecture <Behavioral> of entity <fd4ce_hxilinx_teclado_4x4>.
 Parsing entity <cont_anillo_ce_MUSER_teclado_4x4>.
 Parsing architecture <BEHAVIORAL> of entity <cont_anillo_ce_muser_teclado_4x4>.
 Parsing entity <teclado_4x4>.
 Parsing architecture <BEHAVIORAL> of entity <teclado_4x4>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\sincroniza.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\sincroniza.vhf" into library work
 Parsing entity <sincroniza>.
 Parsing architecture <BEHAVIORAL> of entity <sincroniza>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\reg_desp_4_cifras.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\reg_desp_4_cifras.vhf" into library work
 Parsing entity <reg_desp_4_cifras>.
 Parsing architecture <BEHAVIORAL> of entity <reg_desp_4_cifras>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Mux_Ent_Sal_7seg_4cifras.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Mux_Ent_Sal_7seg_4cifras.vhf" into library work
 Parsing entity <M2_1_HXILINX_Mux_Ent_Sal_7seg_4cifras>.
 Parsing architecture <M2_1_HXILINX_Mux_Ent_Sal_7seg_4cifras_V> of entity <m2_1_hxilinx_mux_ent_sal_7seg_4cifras>.
 Parsing entity <Mux_Ent_Sal_7seg_4cifras>.
 Parsing architecture <BEHAVIORAL> of entity <mux_ent_sal_7seg_4cifras>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\detector.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\detector.vhf" into library work
 Parsing entity <detector>.
 Parsing architecture <BEHAVIORAL> of entity <detector>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Conversor_Bin_BCD_3cifras.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Conversor_Bin_BCD_3cifras.vhf" into library work
 Parsing entity <COMPM4_HXILINX_Conversor_Bin_BCD_3cifras>.
 Parsing architecture <COMPM4_HXILINX_Conversor_Bin_BCD_3cifras_V> of entity <compm4_hxilinx_conversor_bin_bcd_3cifras>.
 Parsing entity <FD4RE_HXILINX_Conversor_Bin_BCD_3cifras>.
@@ -200,7 +200,7 @@ Parsing entity <regdesp8b_MUSER_Conversor_Bin_BCD_3cifras>.
 Parsing architecture <BEHAVIORAL> of entity <regdesp8b_muser_conversor_bin_bcd_3cifras>.
 Parsing entity <Conversor_Bin_BCD_3cifras>.
 Parsing architecture <BEHAVIORAL> of entity <conversor_bin_bcd_3cifras>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Conversor_BCD_Bin.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Conversor_BCD_Bin.vhf" into library work
 Parsing entity <FD8RE_HXILINX_Conversor_BCD_Bin>.
 Parsing architecture <Behavioral> of entity <fd8re_hxilinx_conversor_bcd_bin>.
 Parsing entity <M2_1_HXILINX_Conversor_BCD_Bin>.
@@ -209,7 +209,7 @@ Parsing entity <BCD_A_Bin_MUSER_Conversor_BCD_Bin>.
 Parsing architecture <BEHAVIORAL> of entity <bcd_a_bin_muser_conversor_bcd_bin>.
 Parsing entity <Conversor_BCD_Bin>.
 Parsing architecture <BEHAVIORAL> of entity <conversor_bcd_bin>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Comp_Num_Letra.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Comp_Num_Letra.vhf" into library work
 Parsing entity <COMPM4_HXILINX_Comp_Num_Letra>.
 Parsing architecture <COMPM4_HXILINX_Comp_Num_Letra_V> of entity <compm4_hxilinx_comp_num_letra>.
 Parsing entity <FD4RE_HXILINX_Comp_Num_Letra>.
@@ -218,7 +218,7 @@ Parsing entity <COMP4_HXILINX_Comp_Num_Letra>.
 Parsing architecture <COMP4_HXILINX_Comp_Num_Letra_V> of entity <comp4_hxilinx_comp_num_letra>.
 Parsing entity <Comp_Num_Letra>.
 Parsing architecture <BEHAVIORAL> of entity <comp_num_letra>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\codif_tecla.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\codif_tecla.vhf" into library work
 Parsing entity <OR8_HXILINX_codif_tecla>.
 Parsing architecture <OR8_HXILINX_codif_tecla_V> of entity <or8_hxilinx_codif_tecla>.
 Parsing entity <FD4CE_HXILINX_codif_tecla>.
@@ -227,20 +227,20 @@ Parsing entity <nivel_a_pulso_MUSER_codif_tecla>.
 Parsing architecture <BEHAVIORAL> of entity <nivel_a_pulso_muser_codif_tecla>.
 Parsing entity <codif_tecla>.
 Parsing architecture <BEHAVIORAL> of entity <codif_tecla>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bcd_7seg_neg.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bcd_7seg_neg.vhd" into library work
 Parsing entity <bcd_7seg_neg>.
 Parsing architecture <Behavioral> of entity <bcd_7seg_neg>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcSignoMag.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bCalcSignoMag.vhf" into library work
 Parsing entity <bCalcSignoMag>.
 Parsing architecture <BEHAVIORAL> of entity <bcalcsignomag>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcConv.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bCalcConv.vhf" into library work
 Parsing entity <M8_1E_HXILINX_bCalcConv>.
 Parsing architecture <M8_1E_HXILINX_bCalcConv_V> of entity <m8_1e_hxilinx_bcalcconv>.
 Parsing entity <bCalcX_i_MUSER_bCalcConv>.
 Parsing architecture <BEHAVIORAL> of entity <bcalcx_i_muser_bcalcconv>.
 Parsing entity <bCalcConv>.
 Parsing architecture <BEHAVIORAL> of entity <bcalcconv>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\teclado_hexa_completo.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\teclado_hexa_completo.vhf" into library work
 Parsing entity <OR8_HXILINX_teclado_hexa_completo>.
 Parsing architecture <OR8_HXILINX_teclado_hexa_completo_V> of entity <or8_hxilinx_teclado_hexa_completo>.
 Parsing entity <FD4CE_HXILINX_teclado_hexa_completo>.
@@ -257,14 +257,14 @@ Parsing entity <codif_tecla_MUSER_teclado_hexa_completo>.
 Parsing architecture <BEHAVIORAL> of entity <codif_tecla_muser_teclado_hexa_completo>.
 Parsing entity <teclado_hexa_completo>.
 Parsing architecture <BEHAVIORAL> of entity <teclado_hexa_completo>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\sinc_entrada.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\sinc_entrada.vhf" into library work
 Parsing entity <sincroniza_MUSER_sinc_entrada>.
 Parsing architecture <BEHAVIORAL> of entity <sincroniza_muser_sinc_entrada>.
 Parsing entity <nivel_a_pulso_MUSER_sinc_entrada>.
 Parsing architecture <BEHAVIORAL> of entity <nivel_a_pulso_muser_sinc_entrada>.
 Parsing entity <sinc_entrada>.
 Parsing architecture <BEHAVIORAL> of entity <sinc_entrada>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Remote_Lab.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Remote_Lab.vhd" into library work
 Parsing entity <Remote_Lab>.
 Parsing architecture <Behavioral> of entity <remote_lab>.
 Parsing entity <Modulo>.
@@ -273,10 +273,10 @@ Parsing entity <Division>.
 Parsing architecture <Behavioral> of entity <division>.
 Parsing entity <Genera_Tono>.
 Parsing architecture <behavioral> of entity <genera_tono>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\displays_7seg_nexys3_RemLab.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\displays_7seg_nexys3_RemLab.vhf" into library work
 Parsing entity <displays_7seg_nexys3_RemLab>.
 Parsing architecture <BEHAVIORAL> of entity <displays_7seg_nexys3_remlab>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bloque_convol.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bloque_convol.vhf" into library work
 Parsing entity <COMPM4_HXILINX_bloque_convol>.
 Parsing architecture <COMPM4_HXILINX_bloque_convol_V> of entity <compm4_hxilinx_bloque_convol>.
 Parsing entity <FD4RE_HXILINX_bloque_convol>.
@@ -313,7 +313,7 @@ Parsing entity <Comp_Num_Letra_MUSER_bloque_convol>.
 Parsing architecture <BEHAVIORAL> of entity <comp_num_letra_muser_bloque_convol>.
 Parsing entity <bloque_convol>.
 Parsing architecture <BEHAVIORAL> of entity <bloque_convol>.
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" into library work
 Parsing entity <COMPM4_HXILINX_convol_top_rl_2022>.
 Parsing architecture <COMPM4_HXILINX_convol_top_rl_2022_V> of entity <compm4_hxilinx_convol_top_rl_2022>.
 Parsing entity <FD4RE_HXILINX_convol_top_rl_2022>.
@@ -426,10 +426,10 @@ Elaborating entity <IFD8_HXILINX_convol_top_rl_2022> (architecture <Behavioral>)
 Elaborating entity <displays_7seg_nexys3_RemLab_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <bcd_7seg_neg> (architecture <Behavioral>) from library <work>.
-WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4812: Assignment to boton_der ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4813: Assignment to boton_aba ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4814: Assignment to boton_izq ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4815: Assignment to boton_arr ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4814: Assignment to boton_der ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4815: Assignment to boton_aba ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4816: Assignment to boton_izq ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4817: Assignment to boton_arr ignored, since the identifier is never used
 
 Elaborating entity <Remote_Lab> (architecture <Behavioral>) from library <work>.
 
@@ -450,12 +450,12 @@ Elaborating entity <Conversor_BCD_Bin_MUSER_convol_top_rl_2022> (architecture <B
 Elaborating entity <BCD_A_Bin_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <M2_1_HXILINX_convol_top_rl_2022> (architecture <M2_1_HXILINX_convol_top_rl_2022_V>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 451. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 451. Case statement is complete. others clause is never selected
 
 Elaborating entity <FD8RE_HXILINX_convol_top_rl_2022> (architecture <Behavioral>) from library <work>.
 
 Elaborating entity <control_bcd_bin> (architecture <control_bcd_bin_arch>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bcd_bin.vhd" Line 105. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bcd_bin.vhd" Line 105. Case statement is complete. others clause is never selected
 
 Elaborating entity <Comp_Num_Letra_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
@@ -476,7 +476,7 @@ Elaborating entity <Bin_A_BCD_MUSER_convol_top_rl_2022> (architecture <BEHAVIORA
 Elaborating entity <regdesp8b_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <control_bin_bcd> (architecture <control_bin_bcd_arch>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bin_bcd.vhd" Line 113. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bin_bcd.vhd" Line 113. Case statement is complete. others clause is never selected
 
 Elaborating entity <bCalcSignoMag_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
@@ -487,7 +487,7 @@ Elaborating entity <bCalcConv_MUSER_convol_top_rl_2022> (architecture <BEHAVIORA
 Elaborating entity <bCalcX_i_MUSER_convol_top_rl_2022> (architecture <BEHAVIORAL>) from library <work>.
 
 Elaborating entity <M8_1E_HXILINX_convol_top_rl_2022> (architecture <M8_1E_HXILINX_convol_top_rl_2022_V>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 248. Case statement is complete. others clause is never selected
+INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 248. Case statement is complete. others clause is never selected
 
 Elaborating entity <bIpMemory> (architecture <bIpMemory_a>) from library <work>.
 
@@ -496,21 +496,24 @@ Elaborating entity <bIpMultiplier> (architecture <bIpMultiplier_a>) from library
 Elaborating entity <biPAccumlator> (architecture <biPAccumlator_a>) from library <work>.
 
 Elaborating entity <fsm_convol> (architecture <fsm_convol_arch>) from library <work>.
-INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\fsm_convol.vhd" Line 141. Case statement is complete. others clause is never selected
-WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4290: Net <uart_tx> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4301: Net <XLXI_138_CLK_openSignal> does not have a driver.
-WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" Line 4302: Net <XLXI_138_KEYCLEARB_openSignal> does not have a driver.
+INFO:HDLCompiler:679 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\fsm_convol.vhd" Line 141. Case statement is complete. others clause is never selected
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4270: Net <cuenta_dcm[13]> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4290: Net <uart_tx> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4301: Net <XLXI_138_CLK_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4302: Net <XLXI_138_KEYCLEARB_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4303: Net <XLXI_309_clk_openSignal> does not have a driver.
+WARNING:HDLCompiler:634 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" Line 4304: Net <XLXI_309_sclr_openSignal> does not have a driver.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_30>.
     Set property "IBUF_DELAY_VALUE = 0" for instance <XLXI_30>.
     Set property "IFD_DELAY_VALUE = AUTO" for instance <XLXI_30>.
-    Set property "HU_SET = XLXI_35_118" for instance <XLXI_35>.
+    Set property "HU_SET = XLXI_35_321" for instance <XLXI_35>.
     Set property "IOSTANDARD = DEFAULT" for instance <XLXI_114_1>.
     Set property "SLEW = SLOW" for instance <XLXI_114_1>.
     Set property "DRIVE = 12" for instance <XLXI_114_1>.
@@ -526,61 +529,68 @@ Synthesizing Unit <convol_top_rl_2022>.
     Set property "INIT = 0" for instance <XLXI_142>.
     Set property "SRTYPE = SYNC" for instance <XLXI_142>.
     Set property "DDR_ALIGNMENT = NONE" for instance <XLXI_142>.
-    Set property "HU_SET = XLXI_165_117" for instance <XLXI_165>.
-    Set property "HU_SET = XLXI_180_119" for instance <XLXI_180>.
-    Set property "HU_SET = XLXI_279_1_112" for instance <XLXI_279_1>.
-    Set property "HU_SET = XLXI_279_2_111" for instance <XLXI_279_2>.
-    Set property "HU_SET = XLXI_279_3_110" for instance <XLXI_279_3>.
-    Set property "HU_SET = XLXI_279_4_109" for instance <XLXI_279_4>.
-    Set property "HU_SET = XLXI_288_1_116" for instance <XLXI_288_1>.
-    Set property "HU_SET = XLXI_288_2_115" for instance <XLXI_288_2>.
-    Set property "HU_SET = XLXI_288_3_114" for instance <XLXI_288_3>.
-    Set property "HU_SET = XLXI_288_4_113" for instance <XLXI_288_4>.
-    Set property "HU_SET = XLXI_387_120" for instance <XLXI_387>.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4514: Output port <tecla> of the instance <XLXI_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4593: Output port <CFGCLK> of the instance <XLXI_138> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4593: Output port <CFGMCLK> of the instance <XLXI_138> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4593: Output port <EOS> of the instance <XLXI_138> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4705: Output port <G> of the instance <XLXI_708_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4708: Output port <G> of the instance <XLXI_708_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4711: Output port <G> of the instance <XLXI_708_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4714: Output port <G> of the instance <XLXI_708_3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4756: Output port <P> of the instance <XLXI_860_0> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4759: Output port <P> of the instance <XLXI_860_1> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4762: Output port <P> of the instance <XLXI_860_2> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4765: Output port <P> of the instance <XLXI_860_3> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4768: Output port <P> of the instance <XLXI_860_4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4771: Output port <P> of the instance <XLXI_860_5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4774: Output port <P> of the instance <XLXI_860_6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4777: Output port <P> of the instance <XLXI_860_7> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4780: Output port <anodo> of the instance <XLXI_864> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4793: Output port <swInternal> of the instance <XLXI_865> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 4793: Output port <RxInternal> of the instance <XLXI_865> is unconnected or connected to loadless signal.
+    Set property "HU_SET = XLXI_165_320" for instance <XLXI_165>.
+    Set property "HU_SET = XLXI_180_322" for instance <XLXI_180>.
+    Set property "HU_SET = XLXI_279_1_315" for instance <XLXI_279_1>.
+    Set property "HU_SET = XLXI_279_2_314" for instance <XLXI_279_2>.
+    Set property "HU_SET = XLXI_279_3_313" for instance <XLXI_279_3>.
+    Set property "HU_SET = XLXI_279_4_312" for instance <XLXI_279_4>.
+    Set property "HU_SET = XLXI_288_1_319" for instance <XLXI_288_1>.
+    Set property "HU_SET = XLXI_288_2_318" for instance <XLXI_288_2>.
+    Set property "HU_SET = XLXI_288_3_317" for instance <XLXI_288_3>.
+    Set property "HU_SET = XLXI_288_4_316" for instance <XLXI_288_4>.
+    Set property "HU_SET = XLXI_387_323" for instance <XLXI_387>.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4516: Output port <tecla> of the instance <XLXI_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4543: Output port <O> of the instance <XLXI_87> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4595: Output port <CFGCLK> of the instance <XLXI_138> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4595: Output port <CFGMCLK> of the instance <XLXI_138> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4595: Output port <EOS> of the instance <XLXI_138> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4686: Output port <CLK_OUT2> of the instance <XLXI_306> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4693: Output port <q> of the instance <XLXI_309> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4707: Output port <G> of the instance <XLXI_708_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4710: Output port <G> of the instance <XLXI_708_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4713: Output port <G> of the instance <XLXI_708_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4716: Output port <G> of the instance <XLXI_708_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4758: Output port <P> of the instance <XLXI_860_0> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4761: Output port <P> of the instance <XLXI_860_1> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4764: Output port <P> of the instance <XLXI_860_2> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4767: Output port <P> of the instance <XLXI_860_3> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4770: Output port <P> of the instance <XLXI_860_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4773: Output port <P> of the instance <XLXI_860_5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4776: Output port <P> of the instance <XLXI_860_6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4779: Output port <P> of the instance <XLXI_860_7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4782: Output port <anodo> of the instance <XLXI_864> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4795: Output port <swInternal> of the instance <XLXI_865> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 4795: Output port <RxInternal> of the instance <XLXI_865> is unconnected or connected to loadless signal.
+WARNING:Xst:653 - Signal <cuenta_dcm<13>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <cuenta_dcm<7>> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <uart_tx> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <XLXI_138_CLK_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
 WARNING:Xst:653 - Signal <XLXI_138_KEYCLEARB_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_309_clk_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
+WARNING:Xst:653 - Signal <XLXI_309_sclr_openSignal> is used but never assigned. This sourceless signal will be automatically connected to value GND.
     Summary:
 	no macro.
 Unit <convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <teclado_hexa_completo_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <teclado_hexa_completo_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <teclado_4x4_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_1_98" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_9_99" for instance <XLXI_9>.
-    Set property "HU_SET = XLXI_12_100" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_15_101" for instance <XLXI_15>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_1_301" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_9_302" for instance <XLXI_9>.
+    Set property "HU_SET = XLXI_12_303" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_15_304" for instance <XLXI_15>.
     Summary:
 	no macro.
 Unit <teclado_4x4_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <FD4CE_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q1>.
     Found 1-bit register for signal <Q0>.
@@ -590,44 +600,44 @@ Synthesizing Unit <FD4CE_HXILINX_convol_top_rl_2022>.
 Unit <FD4CE_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <cont_anillo_ce_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <cont_anillo_ce_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <detector_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <detector_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <codif_tecla_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_1_103" for instance <XLXI_1>.
-    Set property "HU_SET = XLXI_3_104" for instance <XLXI_3>.
-    Set property "HU_SET = XLXI_4_105" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_5_106" for instance <XLXI_5>.
-    Set property "HU_SET = XLXI_10_102" for instance <XLXI_10>.
-    Set property "HU_SET = XLXI_13_107" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_14_108" for instance <XLXI_14>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_1_306" for instance <XLXI_1>.
+    Set property "HU_SET = XLXI_3_307" for instance <XLXI_3>.
+    Set property "HU_SET = XLXI_4_308" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_5_309" for instance <XLXI_5>.
+    Set property "HU_SET = XLXI_10_305" for instance <XLXI_10>.
+    Set property "HU_SET = XLXI_13_310" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_14_311" for instance <XLXI_14>.
     Summary:
 	no macro.
 Unit <codif_tecla_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <OR8_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <OR8_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <nivel_a_pulso_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <nivel_a_pulso_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <OFD8_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Set property "IOB = TRUE" for signal <Q>.
     Found 8-bit register for signal <Q>.
     Summary:
@@ -635,7 +645,7 @@ Synthesizing Unit <OFD8_HXILINX_convol_top_rl_2022>.
 Unit <OFD8_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <OFD_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
         INIT = '0'
     Set property "IOB = TRUE" for signal <Q>.
     Found 1-bit register for signal <q_tmp>.
@@ -644,7 +654,7 @@ Synthesizing Unit <OFD_HXILINX_convol_top_rl_2022>.
 Unit <OFD_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <IFD4_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Set property "IOB = TRUE" for signal <Q0>.
     Set property "IOB = TRUE" for signal <Q1>.
     Set property "IOB = TRUE" for signal <Q2>.
@@ -658,7 +668,7 @@ Synthesizing Unit <IFD4_HXILINX_convol_top_rl_2022>.
 Unit <IFD4_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <IFD_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
         INIT = '0'
     Set property "IOB = TRUE" for signal <Q>.
     Found 1-bit register for signal <q_tmp>.
@@ -667,13 +677,13 @@ Synthesizing Unit <IFD_HXILINX_convol_top_rl_2022>.
 Unit <IFD_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <dcm_100m_5m>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\ipcore_dir\dcm_100m_5m.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\ipcore_dir\dcm_100m_5m.vhd".
     Summary:
 	no macro.
 Unit <dcm_100m_5m> synthesized.
 
 Synthesizing Unit <IFD8_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Set property "IOB = TRUE" for signal <Q>.
     Found 8-bit register for signal <Q>.
     Summary:
@@ -681,22 +691,22 @@ Synthesizing Unit <IFD8_HXILINX_convol_top_rl_2022>.
 Unit <IFD8_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <displays_7seg_nexys3_RemLab_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3250: Output port <O> of the instance <XLXI_26> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3255: Output port <O> of the instance <XLXI_27> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3250: Output port <O> of the instance <XLXI_26> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3255: Output port <O> of the instance <XLXI_27> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <displays_7seg_nexys3_RemLab_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <bcd_7seg_neg>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bcd_7seg_neg.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\bcd_7seg_neg.vhd".
     Found 16x7-bit Read Only RAM for signal <SEGMENTO_NEG>
     Summary:
 	inferred   1 RAM(s).
 Unit <bcd_7seg_neg> synthesized.
 
 Synthesizing Unit <Remote_Lab>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Remote_Lab.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Remote_Lab.vhd".
     Found 8-bit register for signal <regEppAdr>.
     Found 8-bit register for signal <regsw>.
     Found 8-bit register for signal <regbtn>.
@@ -722,7 +732,7 @@ Synthesizing Unit <Remote_Lab>.
 Unit <Remote_Lab> synthesized.
 
 Synthesizing Unit <Modulo>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Remote_Lab.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Remote_Lab.vhd".
     Found 1-bit register for signal <led_reg1>.
     Found 1-bit register for signal <led_reg2>.
     Found 1-bit register for signal <guardaDivision>.
@@ -737,80 +747,80 @@ Synthesizing Unit <Modulo>.
 Unit <Modulo> synthesized.
 
 Synthesizing Unit <Division>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Remote_Lab.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Remote_Lab.vhd".
     Summary:
 	inferred  36 Multiplexer(s).
 Unit <Division> synthesized.
 
 Synthesizing Unit <Genera_Tono>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\Remote_Lab.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\Remote_Lab.vhd".
 WARNING:Xst:647 - Input <Periodo<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <Genera_Tono> synthesized.
 
 Synthesizing Unit <sinc_entrada_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <sinc_entrada_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <sincroniza_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <sincroniza_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <bloque_convol_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3033: Output port <dato4> of the instance <XLXI_6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3055: Output port <G> of the instance <XLXI_17_4> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3058: Output port <G> of the instance <XLXI_17_5> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3061: Output port <G> of the instance <XLXI_17_6> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3064: Output port <G> of the instance <XLXI_17_7> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3067: Output port <G> of the instance <XLXI_17_8> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3070: Output port <G> of the instance <XLXI_17_9> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3073: Output port <G> of the instance <XLXI_17_10> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3076: Output port <G> of the instance <XLXI_17_11> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3079: Output port <G> of the instance <XLXI_17_12> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 3082: Output port <G> of the instance <XLXI_17_13> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3033: Output port <dato4> of the instance <XLXI_6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3055: Output port <G> of the instance <XLXI_17_4> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3058: Output port <G> of the instance <XLXI_17_5> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3061: Output port <G> of the instance <XLXI_17_6> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3064: Output port <G> of the instance <XLXI_17_7> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3067: Output port <G> of the instance <XLXI_17_8> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3070: Output port <G> of the instance <XLXI_17_9> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3073: Output port <G> of the instance <XLXI_17_10> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3076: Output port <G> of the instance <XLXI_17_11> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3079: Output port <G> of the instance <XLXI_17_12> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 3082: Output port <G> of the instance <XLXI_17_13> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <bloque_convol_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <Conversor_BCD_Bin_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_16_92" for instance <XLXI_16>.
-    Set property "HU_SET = XLXI_23_93" for instance <XLXI_23>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_16_295" for instance <XLXI_16>.
+    Set property "HU_SET = XLXI_23_296" for instance <XLXI_23>.
     Summary:
 	no macro.
 Unit <Conversor_BCD_Bin_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <BCD_A_Bin_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_12_90" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_88" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_30_89" for instance <XLXI_30>.
-    Set property "HU_SET = XLXI_62_91" for instance <XLXI_62>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_12_293" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_291" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_30_292" for instance <XLXI_30>.
+    Set property "HU_SET = XLXI_62_294" for instance <XLXI_62>.
     Summary:
 	no macro.
 Unit <BCD_A_Bin_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <M2_1_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	inferred   1 Multiplexer(s).
 Unit <M2_1_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <FD8RE_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Found 8-bit register for signal <Q>.
     Summary:
 	inferred   8 D-type flip-flop(s).
 Unit <FD8RE_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <control_bcd_bin>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bcd_bin.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bcd_bin.vhd".
     Found 4-bit register for signal <Sreg0_machine.contador>.
     Found 3-bit register for signal <Sreg0>.
     Found 1-bit register for signal <ldZ>.
@@ -841,18 +851,18 @@ Synthesizing Unit <control_bcd_bin>.
 Unit <control_bcd_bin> synthesized.
 
 Synthesizing Unit <Comp_Num_Letra_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_4_95" for instance <XLXI_4>.
-    Set property "HU_SET = XLXI_14_96" for instance <XLXI_14>.
-    Set property "HU_SET = XLXI_24_94" for instance <XLXI_24>.
-    Set property "HU_SET = XLXI_35_97" for instance <XLXI_35>.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 2798: Output port <GT> of the instance <XLXI_4> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_4_298" for instance <XLXI_4>.
+    Set property "HU_SET = XLXI_14_299" for instance <XLXI_14>.
+    Set property "HU_SET = XLXI_24_297" for instance <XLXI_24>.
+    Set property "HU_SET = XLXI_35_300" for instance <XLXI_35>.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 2798: Output port <GT> of the instance <XLXI_4> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Comp_Num_Letra_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <COMPM4_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Found 4-bit comparator greater for signal <GT> created at line 53
     Found 4-bit comparator greater for signal <LT> created at line 54
     Summary:
@@ -860,7 +870,7 @@ Synthesizing Unit <COMPM4_HXILINX_convol_top_rl_2022>.
 Unit <COMPM4_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <FD4RE_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Found 1-bit register for signal <Q2>.
     Found 1-bit register for signal <Q1>.
     Found 1-bit register for signal <Q0>.
@@ -870,76 +880,76 @@ Synthesizing Unit <FD4RE_HXILINX_convol_top_rl_2022>.
 Unit <FD4RE_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <COMP4_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 Unit <COMP4_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <reg_desp_4_cifras_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <reg_desp_4_cifras_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <Mux_Ent_Sal_7seg_4cifras_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_14_0_82" for instance <XLXI_14_0>.
-    Set property "HU_SET = XLXI_14_1_81" for instance <XLXI_14_1>.
-    Set property "HU_SET = XLXI_14_2_80" for instance <XLXI_14_2>.
-    Set property "HU_SET = XLXI_14_3_79" for instance <XLXI_14_3>.
-    Set property "HU_SET = XLXI_15_0_86" for instance <XLXI_15_0>.
-    Set property "HU_SET = XLXI_15_1_85" for instance <XLXI_15_1>.
-    Set property "HU_SET = XLXI_15_2_84" for instance <XLXI_15_2>.
-    Set property "HU_SET = XLXI_15_3_83" for instance <XLXI_15_3>.
-    Set property "HU_SET = XLXI_16_0_74" for instance <XLXI_16_0>.
-    Set property "HU_SET = XLXI_16_1_73" for instance <XLXI_16_1>.
-    Set property "HU_SET = XLXI_16_2_72" for instance <XLXI_16_2>.
-    Set property "HU_SET = XLXI_16_3_71" for instance <XLXI_16_3>.
-    Set property "HU_SET = XLXI_17_0_78" for instance <XLXI_17_0>.
-    Set property "HU_SET = XLXI_17_1_77" for instance <XLXI_17_1>.
-    Set property "HU_SET = XLXI_17_2_76" for instance <XLXI_17_2>.
-    Set property "HU_SET = XLXI_17_3_75" for instance <XLXI_17_3>.
-    Set property "HU_SET = XLXI_31_87" for instance <XLXI_31>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_14_0_285" for instance <XLXI_14_0>.
+    Set property "HU_SET = XLXI_14_1_284" for instance <XLXI_14_1>.
+    Set property "HU_SET = XLXI_14_2_283" for instance <XLXI_14_2>.
+    Set property "HU_SET = XLXI_14_3_282" for instance <XLXI_14_3>.
+    Set property "HU_SET = XLXI_15_0_289" for instance <XLXI_15_0>.
+    Set property "HU_SET = XLXI_15_1_288" for instance <XLXI_15_1>.
+    Set property "HU_SET = XLXI_15_2_287" for instance <XLXI_15_2>.
+    Set property "HU_SET = XLXI_15_3_286" for instance <XLXI_15_3>.
+    Set property "HU_SET = XLXI_16_0_277" for instance <XLXI_16_0>.
+    Set property "HU_SET = XLXI_16_1_276" for instance <XLXI_16_1>.
+    Set property "HU_SET = XLXI_16_2_275" for instance <XLXI_16_2>.
+    Set property "HU_SET = XLXI_16_3_274" for instance <XLXI_16_3>.
+    Set property "HU_SET = XLXI_17_0_281" for instance <XLXI_17_0>.
+    Set property "HU_SET = XLXI_17_1_280" for instance <XLXI_17_1>.
+    Set property "HU_SET = XLXI_17_2_279" for instance <XLXI_17_2>.
+    Set property "HU_SET = XLXI_17_3_278" for instance <XLXI_17_3>.
+    Set property "HU_SET = XLXI_31_290" for instance <XLXI_31>.
     Summary:
 	no macro.
 Unit <Mux_Ent_Sal_7seg_4cifras_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_31_70" for instance <XLXI_31>.
-    Set property "HU_SET = XLXI_35_68" for instance <XLXI_35>.
-    Set property "HU_SET = XLXI_37_69" for instance <XLXI_37>.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 1931: Output port <mod_out> of the instance <XLXI_3> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_31_273" for instance <XLXI_31>.
+    Set property "HU_SET = XLXI_35_271" for instance <XLXI_35>.
+    Set property "HU_SET = XLXI_37_272" for instance <XLXI_37>.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 1931: Output port <mod_out> of the instance <XLXI_3> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Conversor_Bin_BCD_3cifras_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <Bin_A_BCD_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_12_58" for instance <XLXI_12>.
-    Set property "HU_SET = XLXI_13_56" for instance <XLXI_13>.
-    Set property "HU_SET = XLXI_30_57" for instance <XLXI_30>.
-    Set property "HU_SET = XLXI_53_59" for instance <XLXI_53>.
-INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf" line 1623: Output port <LT> of the instance <XLXI_53> is unconnected or connected to loadless signal.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_12_261" for instance <XLXI_12>.
+    Set property "HU_SET = XLXI_13_259" for instance <XLXI_13>.
+    Set property "HU_SET = XLXI_30_260" for instance <XLXI_30>.
+    Set property "HU_SET = XLXI_53_262" for instance <XLXI_53>.
+INFO:Xst:3210 - "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf" line 1623: Output port <LT> of the instance <XLXI_53> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Bin_A_BCD_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <regdesp8b_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_2_0_67" for instance <XLXI_2_0>.
-    Set property "HU_SET = XLXI_2_1_66" for instance <XLXI_2_1>.
-    Set property "HU_SET = XLXI_2_2_65" for instance <XLXI_2_2>.
-    Set property "HU_SET = XLXI_2_3_64" for instance <XLXI_2_3>.
-    Set property "HU_SET = XLXI_2_4_63" for instance <XLXI_2_4>.
-    Set property "HU_SET = XLXI_2_5_62" for instance <XLXI_2_5>.
-    Set property "HU_SET = XLXI_2_6_61" for instance <XLXI_2_6>.
-    Set property "HU_SET = XLXI_2_7_60" for instance <XLXI_2_7>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_2_0_270" for instance <XLXI_2_0>.
+    Set property "HU_SET = XLXI_2_1_269" for instance <XLXI_2_1>.
+    Set property "HU_SET = XLXI_2_2_268" for instance <XLXI_2_2>.
+    Set property "HU_SET = XLXI_2_3_267" for instance <XLXI_2_3>.
+    Set property "HU_SET = XLXI_2_4_266" for instance <XLXI_2_4>.
+    Set property "HU_SET = XLXI_2_5_265" for instance <XLXI_2_5>.
+    Set property "HU_SET = XLXI_2_6_264" for instance <XLXI_2_6>.
+    Set property "HU_SET = XLXI_2_7_263" for instance <XLXI_2_7>.
     Summary:
 	no macro.
 Unit <regdesp8b_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <control_bin_bcd>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\control_bin_bcd.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\control_bin_bcd.vhd".
     Found 4-bit register for signal <Sreg0_machine.contador>.
     Found 3-bit register for signal <Sreg0>.
     Found 1-bit register for signal <initZ>.
@@ -971,41 +981,41 @@ Synthesizing Unit <control_bin_bcd>.
 Unit <control_bin_bcd> synthesized.
 
 Synthesizing Unit <bCalcSignoMag_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <bCalcSignoMag_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <bCalcConv_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Summary:
 	no macro.
 Unit <bCalcConv_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <bCalcX_i_MUSER_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
-    Set property "HU_SET = XLXI_9_0_55" for instance <XLXI_9_0>.
-    Set property "HU_SET = XLXI_9_1_54" for instance <XLXI_9_1>.
-    Set property "HU_SET = XLXI_9_2_53" for instance <XLXI_9_2>.
-    Set property "HU_SET = XLXI_9_3_52" for instance <XLXI_9_3>.
-    Set property "HU_SET = XLXI_9_4_51" for instance <XLXI_9_4>.
-    Set property "HU_SET = XLXI_9_5_50" for instance <XLXI_9_5>.
-    Set property "HU_SET = XLXI_9_6_49" for instance <XLXI_9_6>.
-    Set property "HU_SET = XLXI_9_7_48" for instance <XLXI_9_7>.
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
+    Set property "HU_SET = XLXI_9_0_258" for instance <XLXI_9_0>.
+    Set property "HU_SET = XLXI_9_1_257" for instance <XLXI_9_1>.
+    Set property "HU_SET = XLXI_9_2_256" for instance <XLXI_9_2>.
+    Set property "HU_SET = XLXI_9_3_255" for instance <XLXI_9_3>.
+    Set property "HU_SET = XLXI_9_4_254" for instance <XLXI_9_4>.
+    Set property "HU_SET = XLXI_9_5_253" for instance <XLXI_9_5>.
+    Set property "HU_SET = XLXI_9_6_252" for instance <XLXI_9_6>.
+    Set property "HU_SET = XLXI_9_7_251" for instance <XLXI_9_7>.
 WARNING:Xst:647 - Input <indice<3:3>> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Summary:
 	no macro.
 Unit <bCalcX_i_MUSER_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <M8_1E_HXILINX_convol_top_rl_2022>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\convol_top_rl_2022.vhf".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\convol_top_rl_2022.vhf".
     Found 1-bit 8-to-1 multiplexer for signal <S2_D7_Mux_0_o> created at line 239.
     Summary:
 	inferred   2 Multiplexer(s).
 Unit <M8_1E_HXILINX_convol_top_rl_2022> synthesized.
 
 Synthesizing Unit <fsm_convol>.
-    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\fsm_convol.vhd".
+    Related source file is "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1_roto\fsm_convol.vhd".
     Set property "enum_encoding = 0010 0011 0101 1001 0000 0100 0111 1000 0110" for signal <Sreg0>.
     Found 1-bit register for signal <inicializar>.
     Found 4-bit register for signal <Sreg0>.
@@ -1924,35 +1934,35 @@ Top Level Output File Name         : convol_top_rl_2022.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 502
+# BELS                             : 481
 #      AND2                        : 22
 #      AND2B1                      : 2
 #      AND3                        : 1
 #      AND3B1                      : 2
 #      AND5B3                      : 4
 #      BUF                         : 17
-#      GND                         : 12
+#      GND                         : 13
 #      INV                         : 46
 #      LUT1                        : 31
 #      LUT2                        : 26
-#      LUT3                        : 60
+#      LUT3                        : 52
 #      LUT4                        : 56
 #      LUT5                        : 19
 #      LUT6                        : 53
-#      MUXCY                       : 55
+#      MUXCY                       : 48
 #      MUXF7                       : 16
 #      OR2                         : 3
 #      OR3                         : 3
-#      VCC                         : 5
+#      VCC                         : 6
 #      XNOR2                       : 3
 #      XOR2                        : 3
 #      XOR3                        : 3
-#      XORCY                       : 60
-# FlipFlops/Latches                : 340
+#      XORCY                       : 52
+# FlipFlops/Latches                : 332
 #      FD                          : 69
 #      FDC                         : 20
 #      FDCE                        : 28
-#      FDE                         : 116
+#      FDE                         : 108
 #      FDP                         : 2
 #      FDR                         : 28
 #      FDRE                        : 72
@@ -1972,8 +1982,8 @@ Primitive and Black Box Usage:
 #      DCM_SP                      : 1
 # Logical                          : 2
 #      NAND2                       : 2
-# DSPs                             : 1
-#      DSP48A1                     : 1
+# DSPs                             : 2
+#      DSP48A1                     : 2
 # Others                           : 1
 #      STARTUP_SPARTAN6            : 1
 
@@ -1984,15 +1994,15 @@ Selected Device : 6slx16csg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             336  out of  18224     1%  
- Number of Slice LUTs:                  291  out of   9112     3%  
-    Number used as Logic:               291  out of   9112     3%  
+ Number of Slice Registers:             328  out of  18224     1%  
+ Number of Slice LUTs:                  283  out of   9112     3%  
+    Number used as Logic:               283  out of   9112     3%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    627
-   Number with an unused Flip Flop:     291  out of    627    46%  
-   Number with an unused LUT:           336  out of    627    53%  
-   Number of fully used LUT-FF pairs:     0  out of    627     0%  
+ Number of LUT Flip Flop pairs used:    611
+   Number with an unused Flip Flop:     283  out of    611    46%  
+   Number with an unused LUT:           328  out of    611    53%  
+   Number of fully used LUT-FF pairs:     0  out of    611     0%  
    Number of unique control sets:        38
 
 IO Utilization: 
@@ -2004,7 +2014,7 @@ Specific Feature Utilization:
  Number of Block RAM/FIFO:                1  out of     32     3%  
     Number using Block RAM only:          1
  Number of BUFG/BUFGCTRLs:                7  out of     16    43%  
- Number of DSP48A1s:                      1  out of     32     3%  
+ Number of DSP48A1s:                      2  out of     32     6%  
 
 ---------------------------
 Partition Resource Summary:
@@ -2027,12 +2037,10 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
-ck_100MHz_pad                      | DCM_SP:CLK2X           | 260   |
-XLXI_309/blk00000001/Q<13>         | BUFG                   | 37    |
-XLXI_309/blk00000001/Q<7>          | BUFG                   | 6     |
+ck_100MHz_pad                      | DCM_SP:CLK2X           | 253   |
+XLXI_864/XLXI_16/Mram_SEGMENTO_NEG | BUFG                   | 59    |
 EppDSTB                            | IBUF+BUFG              | 16    |
 EppASTB                            | IBUF+BUFG              | 8     |
-ck_100MHz_pad                      | DCM_SP:CLKFX           | 16    |
 -----------------------------------+------------------------+-------+
 
 Asynchronous Control Signals Information:
@@ -2043,7 +2051,7 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 11.571ns (Maximum Frequency: 86.426MHz)
+   Minimum period: 15.748ns (Maximum Frequency: 63.502MHz)
    Minimum input arrival time before clock: 5.024ns
    Maximum output required time after clock: 9.459ns
    Maximum combinational path delay: 5.749ns
@@ -2054,38 +2062,37 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'ck_100MHz_pad'
-  Clock period: 11.571ns (frequency: 86.426MHz)
-  Total number of paths / destination ports: 1743 / 525
+  Clock period: 15.748ns (frequency: 63.502MHz)
+  Total number of paths / destination ports: 1575 / 549
 -------------------------------------------------------------------------
-Delay:               5.785ns (Levels of Logic = 2)
-  Source:            XLXI_872/XLXI_36/XLXI_5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (RAM)
+Delay:               7.874ns (Levels of Logic = 1)
+  Source:            XLXI_872/XLXI_36/XLXI_18_7 (FF)
   Destination:       sec_inst (DSP)
   Source Clock:      ck_100MHz_pad rising 2.0X
   Destination Clock: ck_100MHz_pad rising 2.0X
 
-  Data Path: XLXI_872/XLXI_36/XLXI_5/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram to sec_inst
+  Data Path: XLXI_872/XLXI_36/XLXI_18_7 to sec_inst
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     RAMB8BWER:CLKBRDCLK->DOBDO9   11   1.850   0.882  U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.WIDE_PRIM9.ram (douta<7>)
-     end scope: 'XLXI_872/XLXI_36/XLXI_5:douta<7>'
-     begin scope: 'XLXI_872/XLXI_36/XLXI_6:b<7>'
-     begin scope: 'XLXI_872/XLXI_36/XLXI_6/blk00000001:B<7>'
-     SEC:in                    3.053          sec_inst
+     FDE:C->Q             49   0.447   1.533  XLXI_872/XLXI_36/XLXI_18_7 (XLXI_872/dato_sal<7>)
+     begin scope: 'XLXI_872/XLXI_34/XLXI_2:b<7>'
+     begin scope: 'XLXI_872/XLXI_34/XLXI_2/blk00000001:B<7>'
+     SEC:in                    5.894          sec_inst
     ----------------------------------------
-    Total                      5.785ns (4.903ns logic, 0.882ns route)
-                                       (84.7% logic, 15.3% route)
+    Total                      7.874ns (6.341ns logic, 1.533ns route)
+                                       (80.5% logic, 19.5% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'XLXI_309/blk00000001/Q<13>'
+Timing constraint: Default period analysis for Clock 'XLXI_864/XLXI_16/Mram_SEGMENTO_NEG'
   Clock period: 5.716ns (frequency: 174.963MHz)
-  Total number of paths / destination ports: 287 / 57
+  Total number of paths / destination ports: 427 / 77
 -------------------------------------------------------------------------
 Delay:               5.716ns (Levels of Logic = 6)
   Source:            XLXI_1/XLXI_1/XLXI_9/Q3 (FF)
   Destination:       XLXI_1/XLXI_39/XLXI_10/Q2 (FF)
-  Source Clock:      XLXI_309/blk00000001/Q<13> rising
-  Destination Clock: XLXI_309/blk00000001/Q<13> rising
+  Source Clock:      XLXI_864/XLXI_16/Mram_SEGMENTO_NEG rising
+  Destination Clock: XLXI_864/XLXI_16/Mram_SEGMENTO_NEG rising
 
   Data Path: XLXI_1/XLXI_1/XLXI_9/Q3 to XLXI_1/XLXI_39/XLXI_10/Q2
                                 Gate     Net
@@ -2104,27 +2111,6 @@ Delay:               5.716ns (Levels of Logic = 6)
     ----------------------------------------
     Total                      5.716ns (1.605ns logic, 4.111ns route)
                                        (28.1% logic, 71.9% route)
-
-=========================================================================
-Timing constraint: Default period analysis for Clock 'XLXI_309/blk00000001/Q<7>'
-  Clock period: 1.199ns (frequency: 833.854MHz)
-  Total number of paths / destination ports: 4 / 4
--------------------------------------------------------------------------
-Delay:               1.199ns (Levels of Logic = 0)
-  Source:            XLXI_864/XLXI_32 (FF)
-  Destination:       XLXI_864/XLXI_7 (FF)
-  Source Clock:      XLXI_309/blk00000001/Q<7> rising
-  Destination Clock: XLXI_309/blk00000001/Q<7> rising
-
-  Data Path: XLXI_864/XLXI_32 to XLXI_864/XLXI_7
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDSE:C->Q             3   0.447   0.650  XLXI_864/XLXI_32 (XLXI_864/anodo_DUMMY<3>)
-     FD:D                      0.102          XLXI_864/XLXI_7
-    ----------------------------------------
-    Total                      1.199ns (0.549ns logic, 0.650ns route)
-                                       (45.8% logic, 54.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'EppDSTB'
@@ -2168,13 +2154,13 @@ Offset:              3.370ns (Levels of Logic = 2)
                                        (51.9% logic, 48.1% route)
 
 =========================================================================
-Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_309/blk00000001/Q<13>'
+Timing constraint: Default OFFSET IN BEFORE for Clock 'XLXI_864/XLXI_16/Mram_SEGMENTO_NEG'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              1.903ns (Levels of Logic = 2)
   Source:            col_pad<4> (PAD)
   Destination:       XLXI_279_4/q_tmp (FF)
-  Destination Clock: XLXI_309/blk00000001/Q<13> rising
+  Destination Clock: XLXI_864/XLXI_16/Mram_SEGMENTO_NEG rising
 
   Data Path: col_pad<4> to XLXI_279_4/q_tmp
                                 Gate     Net
@@ -2201,7 +2187,7 @@ Offset:              5.024ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O             2   1.222   0.721  XLXI_30 (reset_i)
-     LUT2:I0->O           33   0.203   1.670  XLXI_865/btnInternal<0>1 (n0020<0>)
+     LUT2:I0->O           33   0.203   1.670  XLXI_865/btnInternal<0>1 (n0019<0>)
      LUT6:I0->O            4   0.203   0.683  XLXI_872/XLXI_36/XLXI_16/_n0196_inv1 (XLXI_872/XLXI_36/XLXI_16/_n0196_inv)
      FDE:CE                    0.322          XLXI_872/XLXI_36/XLXI_16/Sreg0_machine.vIndice_0
     ----------------------------------------
@@ -2280,13 +2266,13 @@ Offset:              5.699ns (Levels of Logic = 4)
                                        (62.4% logic, 37.6% route)
 
 =========================================================================
-Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_309/blk00000001/Q<13>'
+Timing constraint: Default OFFSET OUT AFTER for Clock 'XLXI_864/XLXI_16/Mram_SEGMENTO_NEG'
   Total number of paths / destination ports: 4 / 4
 -------------------------------------------------------------------------
 Offset:              4.909ns (Levels of Logic = 2)
   Source:            XLXI_1/XLXI_1/XLXI_2/XLXI_3 (FF)
   Destination:       fila_pad<4> (PAD)
-  Source Clock:      XLXI_309/blk00000001/Q<13> rising
+  Source Clock:      XLXI_864/XLXI_16/Mram_SEGMENTO_NEG rising
 
   Data Path: XLXI_1/XLXI_1/XLXI_2/XLXI_3 to fila_pad<4>
                                 Gate     Net
@@ -2331,43 +2317,35 @@ Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 EppASTB        |    3.494|         |         |         |
 ---------------+---------+---------+---------+---------+
 
-Clock to Setup on destination clock XLXI_309/blk00000001/Q<13>
---------------------------+---------+---------+---------+---------+
-                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------+---------+---------+---------+---------+
-XLXI_309/blk00000001/Q<13>|    5.716|         |         |         |
---------------------------+---------+---------+---------+---------+
-
-Clock to Setup on destination clock XLXI_309/blk00000001/Q<7>
--------------------------+---------+---------+---------+---------+
-                         | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock             |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
--------------------------+---------+---------+---------+---------+
-XLXI_309/blk00000001/Q<7>|    1.199|         |         |         |
--------------------------+---------+---------+---------+---------+
+Clock to Setup on destination clock XLXI_864/XLXI_16/Mram_SEGMENTO_NEG
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+XLXI_864/XLXI_16/Mram_SEGMENTO_NEG|    5.716|         |         |         |
+----------------------------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock ck_100MHz_pad
---------------------------+---------+---------+---------+---------+
-                          | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
-Source Clock              |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
---------------------------+---------+---------+---------+---------+
-EppDSTB                   |    4.181|         |         |         |
-XLXI_309/blk00000001/Q<13>|    1.128|         |         |         |
-ck_100MHz_pad             |    5.785|         |         |         |
---------------------------+---------+---------+---------+---------+
+----------------------------------+---------+---------+---------+---------+
+                                  | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock                      |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+----------------------------------+---------+---------+---------+---------+
+EppDSTB                           |    4.181|         |         |         |
+XLXI_864/XLXI_16/Mram_SEGMENTO_NEG|    1.128|         |         |         |
+ck_100MHz_pad                     |    7.874|         |         |         |
+----------------------------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 13.00 secs
-Total CPU time to Xst completion: 12.31 secs
+Total REAL time to Xst completion: 12.00 secs
+Total CPU time to Xst completion: 12.03 secs
  
 --> 
 
-Total memory usage is 4521040 kilobytes
+Total memory usage is 4520992 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  632 (   0 filtered)
-Number of infos    :   37 (   0 filtered)
+Number of warnings :  639 (   0 filtered)
+Number of infos    :   40 (   0 filtered)
 

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:56
+-- /___/   /\     Timestamp : 11/04/2024 13:27:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcX_i.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/bCalcX_i.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/bCalcX_i.sch
 --Design Name: bCalcX_i
 --Device: spartan6
 --Purpose:
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_75";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_74";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_73";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_72";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_71";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_70";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_69";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_68";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_218";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_217";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_216";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_215";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_214";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_213";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_212";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_211";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(0),

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : BCD_A_Bin.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:54
+-- /___/   /\     Timestamp : 11/04/2024 13:27:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/BCD_A_Bin.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/BCD_A_Bin.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/BCD_A_Bin.sch
 --Design Name: BCD_A_Bin
 --Device: spartan6
 --Purpose:
@@ -124,10 +124,10 @@ architecture BEHAVIORAL of BCD_A_Bin is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_2";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_0";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_1";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_3";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_17";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_15";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_16";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_18";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,

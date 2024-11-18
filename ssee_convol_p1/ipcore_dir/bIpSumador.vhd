@@ -86,7 +86,7 @@ END COMPONENT;
       c_has_sclr => 0,
       c_has_sinit => 0,
       c_has_sset => 0,
-      c_implementation => 0,
+      c_implementation => 1,
       c_latency => 1,
       c_out_width => 8,
       c_sclr_overrides_sset => 1,

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_BCD_Bin.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:57
+-- /___/   /\     Timestamp : 11/04/2024 13:27:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_BCD_Bin.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_BCD_Bin.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Conversor_BCD_Bin.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Conversor_BCD_Bin.sch
 --Design Name: Conversor_BCD_Bin
 --Device: spartan6
 --Purpose:
@@ -159,10 +159,10 @@ architecture BEHAVIORAL of BCD_A_Bin_MUSER_Conversor_BCD_Bin is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_126";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_124";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_125";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_127";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_232";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_230";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_231";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_233";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,
@@ -289,11 +289,11 @@ architecture BEHAVIORAL of Conversor_BCD_Bin is
    signal XLXN_72       : std_logic;
    signal XLXN_77       : std_logic;
    component BCD_A_Bin_MUSER_Conversor_BCD_Bin
-      port ( q0  : out   std_logic; 
+      port ( ck  : in    std_logic; 
+             ldZ : in    std_logic; 
              sin : in    std_logic; 
-             ck  : in    std_logic; 
              d   : in    std_logic_vector (3 downto 0); 
-             ldZ : in    std_logic);
+             q0  : out   std_logic);
    end component;
    
    component GND
@@ -318,8 +318,8 @@ architecture BEHAVIORAL of Conversor_BCD_Bin is
              ldZ           : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_128";
-   attribute HU_SET of XLXI_23 : label is "XLXI_23_129";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_234";
+   attribute HU_SET of XLXI_23 : label is "XLXI_23_235";
 begin
    XLXI_1 : BCD_A_Bin_MUSER_Conversor_BCD_Bin
       port map (ck=>ck,

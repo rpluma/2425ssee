@@ -33,7 +33,7 @@
         <port polarity="Input" name="reset" />
         <port polarity="Output" name="dato_bin(7:0)" />
         <blockdef name="BCD_A_Bin">
-            <timestamp>2014-11-9T16:23:42</timestamp>
+            <timestamp>2024-11-4T10:24:39</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="384" y1="-224" y2="-224" x1="320" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -67,7 +67,7 @@
             <rect width="256" x="64" y="-320" height="256" />
         </blockdef>
         <blockdef name="control_bcd_bin">
-            <timestamp>2014-11-9T17:26:20</timestamp>
+            <timestamp>2024-11-4T10:34:39</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="0" y1="-160" y2="-160" x1="64" />
             <line x2="0" y1="-96" y2="-96" x1="64" />
@@ -77,25 +77,25 @@
             <line x2="384" y1="-32" y2="-32" x1="320" />
         </blockdef>
         <block symbolname="BCD_A_Bin" name="XLXI_1">
-            <blockpin signalname="XLXN_14" name="q0" />
-            <blockpin signalname="XLXN_17" name="sin" />
             <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="cent(3:0)" name="d(3:0)" />
             <blockpin signalname="ldZ" name="ldZ" />
+            <blockpin signalname="XLXN_17" name="sin" />
+            <blockpin signalname="cent(3:0)" name="d(3:0)" />
+            <blockpin signalname="XLXN_14" name="q0" />
         </block>
         <block symbolname="BCD_A_Bin" name="XLXI_3">
-            <blockpin signalname="dato_bin_lsb" name="q0" />
-            <blockpin signalname="XLXN_15" name="sin" />
             <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="unid(3:0)" name="d(3:0)" />
             <blockpin signalname="ldZ" name="ldZ" />
+            <blockpin signalname="XLXN_15" name="sin" />
+            <blockpin signalname="unid(3:0)" name="d(3:0)" />
+            <blockpin signalname="dato_bin_lsb" name="q0" />
         </block>
         <block symbolname="BCD_A_Bin" name="XLXI_2">
-            <blockpin signalname="XLXN_15" name="q0" />
-            <blockpin signalname="XLXN_14" name="sin" />
             <blockpin signalname="ck" name="ck" />
-            <blockpin signalname="dec(3:0)" name="d(3:0)" />
             <blockpin signalname="ldZ" name="ldZ" />
+            <blockpin signalname="XLXN_14" name="sin" />
+            <blockpin signalname="dec(3:0)" name="d(3:0)" />
+            <blockpin signalname="XLXN_15" name="q0" />
         </block>
         <block symbolname="gnd" name="XLXI_4">
             <blockpin signalname="XLXN_17" name="G" />

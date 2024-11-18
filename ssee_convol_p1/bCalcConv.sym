@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="bCalcConv">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-10-31T17:58:42</timestamp>
+    <timestamp>2024-11-4T10:30:31</timestamp>
     <pin polarity="Input" x="0" y="-224" name="dato_nuevo" />
     <pin polarity="Input" x="0" y="-160" name="ck" />
     <pin polarity="Input" x="0" y="-96" name="reset" />

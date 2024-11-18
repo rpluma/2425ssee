@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:08:00
+-- /___/   /\     Timestamp : 11/04/2024 13:27:56
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bCalcConv.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/bCalcConv.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/bCalcConv.sch
 --Design Name: bCalcConv
 --Device: spartan6
 --Purpose:
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_260";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_259";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_258";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_257";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_256";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_255";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_254";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_253";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_388";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_387";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_386";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_385";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_384";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_383";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_382";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_381";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),

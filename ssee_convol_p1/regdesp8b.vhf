@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : regdesp8b.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:56
+-- /___/   /\     Timestamp : 11/04/2024 13:27:50
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/regdesp8b.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/regdesp8b.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/regdesp8b.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/regdesp8b.sch
 --Design Name: regdesp8b
 --Device: spartan6
 --Purpose:
@@ -102,14 +102,14 @@ architecture BEHAVIORAL of regdesp8b is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_100";
-   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_99";
-   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_98";
-   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_97";
-   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_96";
-   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_95";
-   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_94";
-   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_93";
+   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_128";
+   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_127";
+   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_126";
+   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_125";
+   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_124";
+   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_123";
+   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_122";
+   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_121";
 begin
    XLXI_1_0 : FDRE
       port map (C=>ck,

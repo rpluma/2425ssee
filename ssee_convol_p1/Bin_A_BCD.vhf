@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Bin_A_BCD.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:54
+-- /___/   /\     Timestamp : 11/04/2024 13:27:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Bin_A_BCD.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Bin_A_BCD.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Bin_A_BCD.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Bin_A_BCD.sch
 --Design Name: Bin_A_BCD
 --Device: spartan6
 --Purpose:
@@ -169,10 +169,10 @@ architecture BEHAVIORAL of Bin_A_BCD is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_6";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_4";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_5";
-   attribute HU_SET of XLXI_53 : label is "XLXI_53_7";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_21";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_19";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_20";
+   attribute HU_SET of XLXI_53 : label is "XLXI_53_22";
 begin
    mod_out <= mod_out_DUMMY;
    q(3 downto 0) <= q_DUMMY(3 downto 0);

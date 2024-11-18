@@ -87,9 +87,9 @@
         </blockdef>
         <blockdef name="cont_3b">
             <timestamp>2024-11-2T14:31:18</timestamp>
-            <rect width="512" x="32" y="32" height="384" />
-            <line x2="32" y1="208" y2="208" x1="0" />
-            <line x2="544" y1="144" y2="144" style="linewidth:W" x1="576" />
+            <rect width="272" x="32" y="32" height="60" />
+            <line x2="32" y1="64" y2="64" x1="0" />
+            <line x2="304" y1="64" y2="64" style="linewidth:W" x1="336" />
         </blockdef>
         <blockdef name="and5b3">
             <timestamp>2000-1-1T10:10:10</timestamp>

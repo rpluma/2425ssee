@@ -1,2 +1,7 @@
 sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bloque_convol_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch 
 sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bloque_convol_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bloque_convol C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bloque_convol_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bloque_convol_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch 
+sch2sym -intstyle ise -family spartan6 -w -refsym bloque_convol C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sym 
+sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl bloque_convol_drc.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol.sch 

@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sinc_entrada.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:19
+-- /___/   /\     Timestamp : 11/04/2024 13:27:54
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sinc_entrada.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sinc_entrada.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/sinc_entrada.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/sinc_entrada.sch
 --Design Name: sinc_entrada
 --Device: spartan6
 --Purpose:

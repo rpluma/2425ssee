@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Conversor_BCD_Bin">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-11-11T17:18:3</timestamp>
+    <timestamp>2024-11-4T10:35:22</timestamp>
     <pin polarity="Input" x="0" y="-352" name="unid(3:0)" />
     <pin polarity="Input" x="0" y="-288" name="dec(3:0)" />
     <pin polarity="Input" x="0" y="-224" name="cent(3:0)" />
@@ -11,12 +11,15 @@
     <pin polarity="Output" x="416" y="-32" name="dato_nuevo" />
     <pin polarity="Output" x="416" y="-352" name="dato_bin(7:0)" />
     <graph>
+        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="204" y="-392" type="symbol" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-352" type="pin unid(3:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-288" type="pin dec(3:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin cent(3:0)" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-160" type="pin ck" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-96" type="pin inicio" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-32" type="pin reset" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-32" type="pin dato_nuevo" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-352" type="pin dato_bin(7:0)" />
         <rect width="64" x="0" y="-364" height="24" />
         <line x2="0" y1="-352" y2="-352" x1="64" />
         <rect width="64" x="0" y="-300" height="24" />
@@ -27,11 +30,8 @@
         <line x2="0" y1="-96" y2="-96" x1="64" />
         <line x2="0" y1="-32" y2="-32" x1="64" />
         <rect width="288" x="64" y="-384" height="388" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-32" type="pin dato_nuevo" />
         <line x2="416" y1="-32" y2="-32" x1="352" />
-        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-352" type="pin dato_bin(7:0)" />
         <rect width="64" x="352" y="-364" height="24" />
         <line x2="416" y1="-352" y2="-352" x1="352" />
-        <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="204" y="-392" type="symbol" />
     </graph>
 </symbol>

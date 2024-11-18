@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="cont_16bits">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2024-11-2T14:30:17</timestamp>
+    <timestamp>2024-11-4T10:19:52</timestamp>
     <pin polarity="Input" x="0" y="208" name="clk" />
     <pin polarity="Input" x="0" y="304" name="sclr" />
     <pin polarity="Output" x="576" y="144" name="q[15:0]" />

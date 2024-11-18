@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : sincroniza.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:18
+-- /___/   /\     Timestamp : 11/04/2024 13:27:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sincroniza.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/sincroniza.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/sincroniza.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/sincroniza.sch
 --Design Name: sincroniza
 --Device: spartan6
 --Purpose:

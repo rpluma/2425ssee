@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="Comp_Num_Letra">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-11-11T19:17:4</timestamp>
+    <timestamp>2024-11-4T10:27:28</timestamp>
+    <pin polarity="Input" x="0" y="-144" name="tecla_pulsada" />
+    <pin polarity="Input" x="0" y="16" name="ck" />
     <pin polarity="Input" x="0" y="-224" name="cod_tecla(3:0)" />
+    <pin polarity="Input" x="0" y="-64" name="entZ_sal" />
     <pin polarity="Output" x="416" y="-160" name="carga_cifra" />
     <pin polarity="Output" x="416" y="-96" name="letra_a" />
     <pin polarity="Output" x="416" y="-32" name="letra_c" />
     <pin polarity="Output" x="416" y="-224" name="cifra(3:0)" />
-    <pin polarity="Input" x="0" y="16" name="ck" />
-    <pin polarity="Input" x="0" y="-144" name="tecla_pulsada" />
-    <pin polarity="Input" x="0" y="-64" name="entZ_sal" />
     <graph>
         <attrtext style="alignment:BCENTER;fontsize:56;fontname:Arial" attrname="SymbolName" x="208" y="-264" type="symbol" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-144" type="pin tecla_pulsada" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="16" type="pin ck" />
         <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-224" type="pin cod_tecla(3:0)" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin entZ_sal" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-160" type="pin carga_cifra" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-96" type="pin letra_a" />
         <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="344" y="-32" type="pin letra_c" />
@@ -26,10 +29,7 @@
         <line x2="416" y1="-224" y2="-224" x1="352" />
         <rect width="288" x="64" y="-256" height="320" />
         <line x2="0" y1="16" y2="16" x1="64" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="16" type="pin ck" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-144" type="pin tecla_pulsada" />
         <line x2="0" y1="-144" y2="-144" x1="64" />
-        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="72" y="-64" type="pin entZ_sal" />
         <line x2="0" y1="-64" y2="-64" x1="64" />
     </graph>
 </symbol>

@@ -60,7 +60,7 @@
         <port polarity="Output" name="dec(3:0)" />
         <port polarity="Output" name="cent(3:0)" />
         <blockdef name="Bin_A_BCD">
-            <timestamp>2014-11-9T17:33:46</timestamp>
+            <timestamp>2024-11-4T10:23:14</timestamp>
             <rect width="256" x="64" y="-192" height="192" />
             <line x2="384" y1="-160" y2="-160" x1="320" />
             <rect width="64" x="320" y="-44" height="24" />
@@ -70,7 +70,7 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
         </blockdef>
         <blockdef name="regdesp8b">
-            <timestamp>2014-11-10T18:46:48</timestamp>
+            <timestamp>2024-11-4T10:28:15</timestamp>
             <rect width="64" x="0" y="-300" height="24" />
             <line x2="0" y1="-288" y2="-288" x1="64" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
@@ -109,7 +109,7 @@
             <line x2="64" y1="-192" y2="-192" x1="0" />
         </blockdef>
         <blockdef name="control_bin_bcd">
-            <timestamp>2014-11-9T18:35:4</timestamp>
+            <timestamp>2024-11-4T10:28:26</timestamp>
             <rect width="256" x="64" y="-256" height="256" />
             <line x2="0" y1="-224" y2="-224" x1="64" />
             <line x2="0" y1="-128" y2="-128" x1="64" />
@@ -131,25 +131,25 @@
             <blockpin signalname="XLXN_116" name="G" />
         </block>
         <block symbolname="Bin_A_BCD" name="XLXI_2">
+            <blockpin signalname="initZ" name="initZ" />
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="XLXN_9" name="mod_in" />
             <blockpin signalname="XLXN_8" name="mod_out" />
             <blockpin signalname="dec_tmp(3:0)" name="q(3:0)" />
-            <blockpin signalname="XLXN_9" name="mod_in" />
-            <blockpin signalname="initZ" name="initZ" />
-            <blockpin signalname="ck" name="ck" />
         </block>
         <block symbolname="Bin_A_BCD" name="XLXI_1">
+            <blockpin signalname="initZ" name="initZ" />
+            <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="bin_serie_msb" name="mod_in" />
             <blockpin signalname="XLXN_9" name="mod_out" />
             <blockpin signalname="unid_tmp(3:0)" name="q(3:0)" />
-            <blockpin signalname="bin_serie_msb" name="mod_in" />
-            <blockpin signalname="initZ" name="initZ" />
-            <blockpin signalname="ck" name="ck" />
         </block>
         <block symbolname="Bin_A_BCD" name="XLXI_3">
-            <blockpin name="mod_out" />
-            <blockpin signalname="cent_tmp(3:0)" name="q(3:0)" />
-            <blockpin signalname="XLXN_8" name="mod_in" />
             <blockpin signalname="initZ" name="initZ" />
             <blockpin signalname="ck" name="ck" />
+            <blockpin signalname="XLXN_8" name="mod_in" />
+            <blockpin name="mod_out" />
+            <blockpin signalname="cent_tmp(3:0)" name="q(3:0)" />
         </block>
         <block symbolname="fd4re" name="XLXI_35">
             <blockpin signalname="ck" name="C" />

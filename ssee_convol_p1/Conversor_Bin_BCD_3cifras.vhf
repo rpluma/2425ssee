@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_Bin_BCD_3cifras.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:08:00
+-- /___/   /\     Timestamp : 11/04/2024 13:27:52
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_Bin_BCD_3cifras.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Conversor_Bin_BCD_3cifras.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Conversor_Bin_BCD_3cifras.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Conversor_Bin_BCD_3cifras.sch
 --Design Name: Conversor_Bin_BCD_3cifras
 --Device: spartan6
 --Purpose:
@@ -216,10 +216,10 @@ architecture BEHAVIORAL of Bin_A_BCD_MUSER_Conversor_Bin_BCD_3cifras is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_263";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_261";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_262";
-   attribute HU_SET of XLXI_53 : label is "XLXI_53_264";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_238";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_236";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_237";
+   attribute HU_SET of XLXI_53 : label is "XLXI_53_239";
 begin
    mod_out <= mod_out_DUMMY;
    q(3 downto 0) <= q_DUMMY(3 downto 0);
@@ -366,14 +366,14 @@ architecture BEHAVIORAL of regdesp8b_MUSER_Conversor_Bin_BCD_3cifras is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_272";
-   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_271";
-   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_270";
-   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_269";
-   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_268";
-   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_267";
-   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_266";
-   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_265";
+   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_247";
+   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_246";
+   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_245";
+   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_244";
+   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_243";
+   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_242";
+   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_241";
+   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_240";
 begin
    XLXI_1_0 : FDRE
       port map (C=>ck,
@@ -529,11 +529,11 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras is
    signal XLXN_199        : std_logic;
    signal XLXN_200        : std_logic;
    component Bin_A_BCD_MUSER_Conversor_Bin_BCD_3cifras
-      port ( mod_out : out   std_logic; 
-             q       : out   std_logic_vector (3 downto 0); 
+      port ( initZ   : in    std_logic; 
+             ck      : in    std_logic; 
              mod_in  : in    std_logic; 
-             initZ   : in    std_logic; 
-             ck      : in    std_logic);
+             mod_out : out   std_logic; 
+             q       : out   std_logic_vector (3 downto 0));
    end component;
    
    component regdesp8b_MUSER_Conversor_Bin_BCD_3cifras
@@ -574,9 +574,9 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras is
              load          : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_275";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_273";
-   attribute HU_SET of XLXI_37 : label is "XLXI_37_274";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_250";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_248";
+   attribute HU_SET of XLXI_37 : label is "XLXI_37_249";
 begin
    XLXI_1 : Bin_A_BCD_MUSER_Conversor_Bin_BCD_3cifras
       port map (ck=>ck,

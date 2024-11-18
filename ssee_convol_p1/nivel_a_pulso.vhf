@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : nivel_a_pulso.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:21
+-- /___/   /\     Timestamp : 11/04/2024 13:27:51
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/nivel_a_pulso.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/nivel_a_pulso.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/nivel_a_pulso.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/nivel_a_pulso.sch
 --Design Name: nivel_a_pulso
 --Device: spartan6
 --Purpose:

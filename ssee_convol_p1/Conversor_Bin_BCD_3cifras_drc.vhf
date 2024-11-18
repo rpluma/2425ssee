@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Conversor_Bin_BCD_3cifras_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:24:36
+-- /___/   /\     Timestamp : 11/04/2024 11:32:55
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -529,11 +529,11 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras is
    signal XLXN_199        : std_logic;
    signal XLXN_200        : std_logic;
    component Bin_A_BCD_MUSER_Conversor_Bin_BCD_3cifras
-      port ( mod_out : out   std_logic; 
-             q       : out   std_logic_vector (3 downto 0); 
+      port ( initZ   : in    std_logic; 
+             ck      : in    std_logic; 
              mod_in  : in    std_logic; 
-             initZ   : in    std_logic; 
-             ck      : in    std_logic);
+             mod_out : out   std_logic; 
+             q       : out   std_logic_vector (3 downto 0));
    end component;
    
    component regdesp8b_MUSER_Conversor_Bin_BCD_3cifras

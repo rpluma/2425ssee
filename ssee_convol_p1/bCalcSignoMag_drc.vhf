@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcSignoMag_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:24:30
+-- /___/   /\     Timestamp : 11/04/2024 11:32:17
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

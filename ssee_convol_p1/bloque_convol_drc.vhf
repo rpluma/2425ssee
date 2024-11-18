@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bloque_convol_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 22:19:37
+-- /___/   /\     Timestamp : 11/04/2024 11:36:02
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -1610,11 +1610,11 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras_MUSER_bloque_convol is
    signal XLXN_199        : std_logic;
    signal XLXN_200        : std_logic;
    component Bin_A_BCD_MUSER_bloque_convol
-      port ( mod_out : out   std_logic; 
-             q       : out   std_logic_vector (3 downto 0); 
+      port ( initZ   : in    std_logic; 
+             ck      : in    std_logic; 
              mod_in  : in    std_logic; 
-             initZ   : in    std_logic; 
-             ck      : in    std_logic);
+             mod_out : out   std_logic; 
+             q       : out   std_logic_vector (3 downto 0));
    end component;
    
    component regdesp8b_MUSER_bloque_convol
@@ -2188,11 +2188,11 @@ architecture BEHAVIORAL of Conversor_BCD_Bin_MUSER_bloque_convol is
    signal XLXN_72       : std_logic;
    signal XLXN_77       : std_logic;
    component BCD_A_Bin_MUSER_bloque_convol
-      port ( q0  : out   std_logic; 
+      port ( ck  : in    std_logic; 
+             ldZ : in    std_logic; 
              sin : in    std_logic; 
-             ck  : in    std_logic; 
              d   : in    std_logic_vector (3 downto 0); 
-             ldZ : in    std_logic);
+             q0  : out   std_logic);
    end component;
    
    component GND
@@ -2678,25 +2678,25 @@ architecture BEHAVIORAL of bloque_convol is
    end component;
    
    component Comp_Num_Letra_MUSER_bloque_convol
-      port ( cod_tecla     : in    std_logic_vector (3 downto 0); 
+      port ( tecla_pulsada : in    std_logic; 
+             ck            : in    std_logic; 
+             cod_tecla     : in    std_logic_vector (3 downto 0); 
+             entZ_sal      : in    std_logic; 
              carga_cifra   : out   std_logic; 
              letra_a       : out   std_logic; 
              letra_c       : out   std_logic; 
-             cifra         : out   std_logic_vector (3 downto 0); 
-             ck            : in    std_logic; 
-             tecla_pulsada : in    std_logic; 
-             entZ_sal      : in    std_logic);
+             cifra         : out   std_logic_vector (3 downto 0));
    end component;
    
    component reg_desp_4_cifras_MUSER_bloque_convol
-      port ( entrada    : in    std_logic_vector (3 downto 0); 
+      port ( ck         : in    std_logic; 
+             ce         : in    std_logic; 
+             entrada    : in    std_logic_vector (3 downto 0); 
+             sinc_reset : in    std_logic; 
              dato1      : out   std_logic_vector (3 downto 0); 
              dato2      : out   std_logic_vector (3 downto 0); 
              dato3      : out   std_logic_vector (3 downto 0); 
-             dato4      : out   std_logic_vector (3 downto 0); 
-             ck         : in    std_logic; 
-             sinc_reset : in    std_logic; 
-             ce         : in    std_logic);
+             dato4      : out   std_logic_vector (3 downto 0));
    end component;
    
    component GND
@@ -2716,24 +2716,24 @@ architecture BEHAVIORAL of bloque_convol is
              dec_sal         : in    std_logic_vector (3 downto 0); 
              cent_sal        : in    std_logic_vector (3 downto 0); 
              mill_sal        : in    std_logic_vector (3 downto 0); 
+             signo_sal       : in    std_logic; 
              punto_decimal   : out   std_logic_vector (4 downto 1); 
              entZ_sal        : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
              cent            : out   std_logic_vector (3 downto 0); 
-             mill            : out   std_logic_vector (3 downto 0); 
-             signo_sal       : in    std_logic);
+             mill            : out   std_logic_vector (3 downto 0));
    end component;
    
    component Conversor_Bin_BCD_3cifras_MUSER_bloque_convol
-      port ( reset           : in    std_logic; 
+      port ( ck              : in    std_logic; 
+             dato_bin_entero : in    std_logic_vector (7 downto 0); 
+             inicio          : in    std_logic; 
+             reset           : in    std_logic; 
              dato_nuevo      : out   std_logic; 
              unid            : out   std_logic_vector (3 downto 0); 
              dec             : out   std_logic_vector (3 downto 0); 
-             cent            : out   std_logic_vector (3 downto 0); 
-             dato_bin_entero : in    std_logic_vector (7 downto 0); 
-             inicio          : in    std_logic; 
-             ck              : in    std_logic);
+             cent            : out   std_logic_vector (3 downto 0));
    end component;
    
    component bCalcSignoMag_MUSER_bloque_convol

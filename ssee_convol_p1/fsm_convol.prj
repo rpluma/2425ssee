@@ -1,1 +1,1 @@
-vhdl work "bCalcConvFSM.vhd"
+vhdl work "fsm_convol.vhd"

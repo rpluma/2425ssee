@@ -1,0 +1,10 @@
+[Inputs]
+CK
+inicio
+reset
+[Outputs]
+ce_reg_salida
+dato_nuevo
+initZ
+load
+[BiDir]

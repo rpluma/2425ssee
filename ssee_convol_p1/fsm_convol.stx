@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Parameter xsthdpdir set to C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.09 secs
  
 --> Reading design: fsm_convol.prj
@@ -39,13 +39,13 @@ TABLE OF CONTENTS
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\bCalcConvFSM.vhd" into library work
+Parsing VHDL file "C:\Users\Usuario_UMA\Desktop\ssee_convol_p1\fsm_convol.vhd" into library work
 Parsing entity <fsm_convol>.
 Parsing architecture <fsm_convol_arch> of entity <fsm_convol>.
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.29 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.00 secs
  
 --> 
 

@@ -5,27 +5,55 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ck_100MHz_pad</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ck_100MHz_pad</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">XLXI_306/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;cuenta_dcm&lt;7&gt;&quot; TNM_NET = cuenta_dcm&lt;7&gt;;&gt; [convol_top_rl_2022.ucf(256)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">cuenta_dcm&lt;7&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_cuenta_dcm_7_ = PERIOD &quot;cuenta_dcm&lt;7&gt;&quot; 20 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(257)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">cuenta_dcm&lt;7&gt;</arg>&apos;.
+</msg>
+
+<msg type="error" file="ConstraintSystem" num="59" delta="new" >Constraint <arg fmt="%s" index="1">&lt;NET &quot;cuenta_dcm&lt;13&gt;&quot; TNM_NET = cuenta_dcm&lt;13&gt;;&gt; [convol_top_rl_2022.ucf(258)]</arg>: <arg fmt="%s" index="2">NET</arg> &quot;<arg fmt="%s" index="3">cuenta_dcm&lt;13&gt;</arg>&quot; not found.  Please verify that:
+1. The specified design element actually exists in the original design.
+2. The specified object is spelled correctly in the constraint source file.
+</msg>
+
+<msg type="warning" file="ConstraintSystem" num="56" delta="new" >Constraint <arg fmt="%s" index="1">&lt;TIMESPEC TS_cuenta_dcm_13_ = PERIOD &quot;cuenta_dcm&lt;13&gt;&quot; 2 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(259)]</arg>: Unable to find an active <arg fmt="%s" index="2">&apos;TNM&apos; or &apos;TimeGrp&apos;</arg> constraint named &apos;<arg fmt="%s" index="3">cuenta_dcm&lt;13&gt;</arg>&apos;.
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ck_100MHz_pad</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ck_100MHz_pad</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">XLXI_306/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
 <arg fmt="%s" index="7">CLK2X</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_XLXI_306_clk2x = PERIOD &quot;XLXI_306_clk2x&quot; TS_ck_100MHz_pad HIGH 50%&gt;</arg>
 </msg>
 
-<msg type="info" file="ConstraintSystem" num="178" delta="new" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">ck_100MHz_pad</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_ck_100MHz_pad</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">XLXI_306/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
-<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_XLXI_306_clkfx = PERIOD &quot;XLXI_306_clkfx&quot; TS_ck_100MHz_pad * 0.05 HIGH 50%&gt;</arg>
+<msg type="warning" file="ConstraintSystem" num="191" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cuenta_dcm&lt;7&gt;</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_cuenta_dcm_7_</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_cuenta_dcm_7_ = PERIOD &quot;cuenta_dcm&lt;7&gt;&quot; 20 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(257)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_cuenta_dcm_7_ = PERIOD &quot;cuenta_dcm&lt;7&gt;&quot; 20 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(257)]</arg>
 </msg>
 
-<msg type="info" file="NgdBuild" num="1222" delta="new" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">XLXI_306/dcm_sp_inst</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_ck_100MHz_pad = PERIOD &quot;ck_100MHz_pad&quot; 100 MHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(255)]</arg>).
+<msg type="warning" file="ConstraintSystem" num="191" delta="new" >The <arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">cuenta_dcm&lt;13&gt;</arg>&apos;, does not directly or indirectly drive any flip-flops, latches and/or RAMS and cannot be actively used by the referencing <arg fmt="%s" index="3">Period</arg> constraint &apos;<arg fmt="%s" index="4">TS_cuenta_dcm_13_</arg>&apos;. If clock manager blocks are directly or indirectly driven, a new TNM constraint will not be derived even though the referencing constraint is a PERIOD constraint unless an output of the clock manager drives flip-flops, latches or RAMs. This TNM is used in the following user PERIOD specification:
+<arg fmt="%s" index="5">&lt;TIMESPEC TS_cuenta_dcm_13_ = PERIOD &quot;cuenta_dcm&lt;13&gt;&quot; 2 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(259)]
+</arg></msg>
+
+<msg type="warning" file="ConstraintSystem" num="197" delta="new" >The following specification is invalid because the referenced TNM constraint was removed:
+<arg fmt="%s" index="1">&lt;TIMESPEC TS_cuenta_dcm_13_ = PERIOD &quot;cuenta_dcm&lt;13&gt;&quot; 2 KHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(259)]</arg>
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_3</arg>&apos; has unconnected output pin
+<msg type="info" file="NgdBuild" num="1222" delta="old" >Setting <arg fmt="%s" index="1">CLKIN_PERIOD</arg> attribute associated with <arg fmt="%s" index="2">DCM</arg> instance <arg fmt="%s" index="3">XLXI_306/dcm_sp_inst</arg> to <arg fmt="%s" index="4">10.000000</arg> ns based on the period specification (<arg fmt="%s" index="5">&lt;TIMESPEC TS_ck_100MHz_pad = PERIOD &quot;ck_100MHz_pad&quot; 100 MHz HIGH 50%;&gt; [convol_top_rl_2022.ucf(255)]</arg>).
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_2</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_3</arg>&apos; has unconnected output pin
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_1</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_2</arg>&apos; has unconnected output pin
 </msg>
 
-<msg type="warning" file="NgdBuild" num="443" delta="new" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_0</arg>&apos; has unconnected output pin
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_1</arg>&apos; has unconnected output pin
+</msg>
+
+<msg type="warning" file="NgdBuild" num="443" delta="old" >SFF primitive &apos;<arg fmt="%s" index="1">XLXI_872/XLXI_6/XLXI_21_0</arg>&apos; has unconnected output pin
 </msg>
 
 </messages>

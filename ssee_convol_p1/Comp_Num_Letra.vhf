@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : Comp_Num_Letra.vhf
--- /___/   /\     Timestamp : 11/03/2024 13:07:54
+-- /___/   /\     Timestamp : 11/04/2024 13:27:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Comp_Num_Letra.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/Comp_Num_Letra.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Comp_Num_Letra.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/Comp_Num_Letra.sch
 --Design Name: Comp_Num_Letra
 --Device: spartan6
 --Purpose:
@@ -228,10 +228,10 @@ architecture BEHAVIORAL of Comp_Num_Letra is
    end component;
    attribute BOX_TYPE of AND3B1 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_9";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_10";
-   attribute HU_SET of XLXI_24 : label is "XLXI_24_8";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_11";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_24";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_25";
+   attribute HU_SET of XLXI_24 : label is "XLXI_24_23";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_26";
 begin
    XLXI_2 : GND
       port map (G=>cero);

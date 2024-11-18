@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : cont_anillo_ce.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:23
+-- /___/   /\     Timestamp : 11/04/2024 13:27:47
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/cont_anillo_ce.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/cont_anillo_ce.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/cont_anillo_ce.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/cont_anillo_ce.sch
 --Design Name: cont_anillo_ce
 --Device: spartan6
 --Purpose:

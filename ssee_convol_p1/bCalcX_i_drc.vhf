@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i_drc.vhf
--- /___/   /\     Timestamp : 10/31/2024 18:57:40
+-- /___/   /\     Timestamp : 11/04/2024 11:30:42
 -- \   \  /  \ 
 --  \___\/\___\ 
 --

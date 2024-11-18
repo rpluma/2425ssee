@@ -7,11 +7,11 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : codif_tecla.vhf
--- /___/   /\     Timestamp : 11/02/2024 15:04:22
+-- /___/   /\     Timestamp : 11/04/2024 13:27:55
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
---Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/codif_tecla.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/codif_tecla.sch
+--Command: sch2hdl -sympath C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/ipcore_dir -intstyle ise -family spartan6 -flat -suppress -vhdl C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/codif_tecla.vhf -w C:/Users/Usuario_UMA/Desktop/ssee_convol_p1_roto/codif_tecla.sch
 --Design Name: codif_tecla
 --Device: spartan6
 --Purpose:
@@ -213,13 +213,13 @@ architecture BEHAVIORAL of codif_tecla is
              entrada : in    std_logic);
    end component;
    
-   attribute HU_SET of XLXI_1 : label is "XLXI_1_180";
-   attribute HU_SET of XLXI_3 : label is "XLXI_3_181";
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_182";
-   attribute HU_SET of XLXI_5 : label is "XLXI_5_183";
-   attribute HU_SET of XLXI_10 : label is "XLXI_10_179";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_184";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_185";
+   attribute HU_SET of XLXI_1 : label is "XLXI_1_375";
+   attribute HU_SET of XLXI_3 : label is "XLXI_3_376";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_377";
+   attribute HU_SET of XLXI_5 : label is "XLXI_5_378";
+   attribute HU_SET of XLXI_10 : label is "XLXI_10_374";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_379";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_380";
 begin
    XLXI_1 : OR8_HXILINX_codif_tecla
       port map (I0=>tecla(15),
