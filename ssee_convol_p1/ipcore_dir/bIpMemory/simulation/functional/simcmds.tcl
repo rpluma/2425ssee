@@ -57,6 +57,7 @@ wave add /bIpMemory_tb/status
       wave add  /bIpMemory_tb/bIpMemory_synth_inst/BMG_PORT/ADDRA
       wave add  /bIpMemory_tb/bIpMemory_synth_inst/BMG_PORT/DINA
       wave add  /bIpMemory_tb/bIpMemory_synth_inst/BMG_PORT/WEA
+      wave add  /bIpMemory_tb/bIpMemory_synth_inst/BMG_PORT/ENA
       wave add  /bIpMemory_tb/bIpMemory_synth_inst/BMG_PORT/DOUTA
 run all
 quit

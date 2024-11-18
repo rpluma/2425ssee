@@ -4,6 +4,7 @@ dato_nuevo
 reset
 [Outputs]
 inicializar
+acceder
 multiplicar
 acumular
 guardar

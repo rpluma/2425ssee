@@ -88,6 +88,7 @@ USE UNISIM.VCOMPONENTS.ALL;
 ENTITY bIpMemory_exdes IS
   PORT (
       --Inputs - Port A
+    ENA            : IN STD_LOGIC;  --opt port
   
     WEA            : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ADDRA          : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -115,6 +116,7 @@ ARCHITECTURE xilinx OF bIpMemory_exdes IS
   COMPONENT bIpMemory IS
   PORT (
       --Port A
+    ENA        : IN STD_LOGIC;  --opt port
   
     WEA        : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     ADDRA      : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
@@ -147,6 +149,7 @@ BEGIN
   bmg0 : bIpMemory
     PORT MAP (
       --Port A
+      ENA        => ENA,
   
       WEA        => WEA,
       ADDRA      => ADDRA,

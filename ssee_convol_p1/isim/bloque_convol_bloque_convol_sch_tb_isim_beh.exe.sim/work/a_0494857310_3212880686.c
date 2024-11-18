@@ -36,7 +36,7 @@ static void work_a_0494857310_3212880686_p_0(char *t0)
     char *t7;
     char *t8;
 
-LAB0:    xsi_set_current_line(1307, ng0);
+LAB0:    xsi_set_current_line(1306, ng0);
 
 LAB3:    t1 = (t0 + 3432U);
     t2 = *((char **)t1);
@@ -71,7 +71,7 @@ static void work_a_0494857310_3212880686_p_1(char *t0)
     char *t10;
     char *t11;
 
-LAB0:    xsi_set_current_line(1308, ng0);
+LAB0:    xsi_set_current_line(1307, ng0);
 
 LAB3:    t1 = (t0 + 3592U);
     t2 = *((char **)t1);

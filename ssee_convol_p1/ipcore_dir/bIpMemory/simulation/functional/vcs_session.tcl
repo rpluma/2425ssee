@@ -77,6 +77,7 @@ gui_list_add_group -id Wave.1 {bIpMemory_Group}
       gui_sg_addsignal -group bIpMemory_Group  /bIpMemory_tb/bIpMemory_synth_inst/bmg_port/ADDRA
       gui_sg_addsignal -group bIpMemory_Group  /bIpMemory_tb/bIpMemory_synth_inst/bmg_port/DINA
       gui_sg_addsignal -group bIpMemory_Group  /bIpMemory_tb/bIpMemory_synth_inst/bmg_port/WEA
+      gui_sg_addsignal -group bIpMemory_Group  /bIpMemory_tb/bIpMemory_synth_inst/bmg_port/ENA
       gui_sg_addsignal -group bIpMemory_Group  /bIpMemory_tb/bIpMemory_synth_inst/bmg_port/DOUTA
 
 gui_zoom -window Wave.1 -full

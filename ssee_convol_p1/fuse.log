@@ -89,6 +89,7 @@ Compiling architecture m8_1e_hxilinx_bloque_convol_v of entity M8_1E_HXILINX_blo
 Compiling architecture behavioral of entity bCalcX_i_MUSER_bloque_convol [bcalcx_i_muser_bloque_convol_def...]
 Compiling package std_logic_textio
 Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
+Compiling architecture output_stage_behavioral of entity BLK_MEM_GEN_V7_3_output_stage [\BLK_MEM_GEN_V7_3_output_stage("...]
 Compiling architecture softecc_output_reg_stage_behavioral of entity BLK_MEM_GEN_V7_3_softecc_output_reg_stage [\BLK_MEM_GEN_V7_3_softecc_output...]
 Compiling architecture mem_module_behavioral of entity BLK_MEM_GEN_V7_3_mem_module [\BLK_MEM_GEN_V7_3_mem_module("bl...]
 Compiling architecture behavioral of entity BLK_MEM_GEN_V7_3 [\BLK_MEM_GEN_V7_3("blk_mem_gen_v...]
@@ -100,8 +101,9 @@ Compiling package xbip_accum_v2_0_comp
 Compiling package xbip_accum_v2_0_pkg
 Compiling package c_accum_pkg_v11_0
 Compiling package c_reg_fd_v11_0_comp
-Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(16,"0","0",1,0,1...]
-Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(16,16,16,...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(19,"0","100000",...]
+Compiling architecture behavioral of entity c_reg_fd_v11_0 [\c_reg_fd_v11_0(19,"0","0",1,0,1...]
+Compiling architecture behavioral of entity c_addsub_v11_0_legacy [\c_addsub_v11_0_legacy(19,16,19,...]
 Compiling architecture behavioral of entity c_accum_v11_0_legacy [\c_accum_v11_0_legacy("virtex2",...]
 Compiling architecture behavioral of entity c_accum_v11_0 [\c_accum_v11_0("spartan6",0,0,16...]
 Compiling architecture bipaccumlator_a of entity biPAccumlator [bipaccumlator_default]
@@ -110,8 +112,8 @@ Compiling architecture behavioral of entity bCalcConv_MUSER_bloque_convol [bcalc
 Compiling architecture behavioral of entity bloque_convol [bloque_convol_default]
 Compiling architecture behavioral of entity bloque_convol_bloque_convol_sch_...
 Time Resolution for simulation is 1ps.
-Waiting for 75 sub-compilation(s) to finish...
-Compiled 145 VHDL Units
+Waiting for 76 sub-compilation(s) to finish...
+Compiled 149 VHDL Units
 Built simulation executable C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/bloque_convol_bloque_convol_sch_tb_isim_beh.exe
-Fuse Memory Usage: 68000 KB
-Fuse CPU Usage: 1577 ms
+Fuse Memory Usage: 68564 KB
+Fuse CPU Usage: 1531 ms

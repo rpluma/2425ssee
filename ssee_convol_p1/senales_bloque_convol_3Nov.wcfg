@@ -108,8 +108,12 @@
          <obj_property name="TextColor">230 230 230</obj_property>
       </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/indice" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">indice[3:0]</obj_property>
-         <obj_property name="ObjectShortName">indice[3:0]</obj_property>
+         <obj_property name="ElementShortName">indice[2:0]</obj_property>
+         <obj_property name="ObjectShortName">indice[2:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/acceder" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">acceder</obj_property>
+         <obj_property name="ObjectShortName">acceder</obj_property>
       </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/XLXI_2/x_i" type="array" db_ref_id="1">
          <obj_property name="ElementShortName">x_i[7:0]</obj_property>
@@ -135,13 +139,13 @@
          <obj_property name="ObjectShortName">acumular</obj_property>
       </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/res_parc" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">res_parc[15:0]</obj_property>
-         <obj_property name="ObjectShortName">res_parc[15:0]</obj_property>
+         <obj_property name="ElementShortName">res_parc[18:0]</obj_property>
+         <obj_property name="ObjectShortName">res_parc[18:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
       </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/res_parc" type="array" db_ref_id="1">
-         <obj_property name="ElementShortName">res_parc[15:0]</obj_property>
-         <obj_property name="ObjectShortName">res_parc[15:0]</obj_property>
+         <obj_property name="ElementShortName">res_parc[18:0]</obj_property>
+         <obj_property name="ObjectShortName">res_parc[18:0]</obj_property>
       </wvobject>
       <wvobject fp_name="/bloque_convol_bloque_convol_sch_tb/UUT/XLXI_36/guardar" type="logic" db_ref_id="1">
          <obj_property name="ElementShortName">guardar</obj_property>

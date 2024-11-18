@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/14/2024 12:08:25
+-- /___/   /\     Timestamp : 11/14/2024 17:11:12
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -74,7 +74,8 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity bCalcX_i_MUSER_bCalcConv is
-   port ( ck         : in    std_logic; 
+   port ( acceder    : in    std_logic; 
+          ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
           indice     : in    std_logic_vector (2 downto 0); 
@@ -110,11 +111,6 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
              O  : out   std_logic);
    end component;
    
-   component VCC
-      port ( P : out   std_logic);
-   end component;
-   attribute BOX_TYPE of VCC : component is "BLACK_BOX";
-   
    component FDE
       generic( INIT : bit :=  '0');
       port ( C  : in    std_logic; 
@@ -124,22 +120,19 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FDE : component is "BLACK_BOX";
    
-   component FD
-      generic( INIT : bit :=  '0');
-      port ( C : in    std_logic; 
-             D : in    std_logic; 
-             Q : out   std_logic);
+   component VCC
+      port ( P : out   std_logic);
    end component;
-   attribute BOX_TYPE of FD : component is "BLACK_BOX";
+   attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_4";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_3";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_2";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_15";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_14";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_13";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_12";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_11";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_10";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_9";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_8";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -260,9 +253,6 @@ begin
                 S1=>indice(1),
                 S2=>indice(2),
                 O=>XLXN_1(7));
-   
-   XLXI_10 : VCC
-      port map (P=>uno);
    
    XLXI_11_0 : FDE
       port map (C=>ck,
@@ -648,45 +638,56 @@ begin
                 D=>x_6(7),
                 Q=>x_7(7));
    
-   XLXI_23_0 : FD
+   XLXI_24_0 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(0),
                 Q=>x_i(0));
    
-   XLXI_23_1 : FD
+   XLXI_24_1 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(1),
                 Q=>x_i(1));
    
-   XLXI_23_2 : FD
+   XLXI_24_2 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(2),
                 Q=>x_i(2));
    
-   XLXI_23_3 : FD
+   XLXI_24_3 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(3),
                 Q=>x_i(3));
    
-   XLXI_23_4 : FD
+   XLXI_24_4 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(4),
                 Q=>x_i(4));
    
-   XLXI_23_5 : FD
+   XLXI_24_5 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(5),
                 Q=>x_i(5));
    
-   XLXI_23_6 : FD
+   XLXI_24_6 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(6),
                 Q=>x_i(6));
    
-   XLXI_23_7 : FD
+   XLXI_24_7 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(7),
                 Q=>x_i(7));
+   
+   XLXI_25 : VCC
+      port map (P=>uno);
    
 end BEHAVIORAL;
 
@@ -710,6 +711,7 @@ end bCalcConv;
 
 architecture BEHAVIORAL of bCalcConv is
    attribute BOX_TYPE   : string ;
+   signal acceder       : std_logic;
    signal acumular      : std_logic;
    signal ceros         : std_logic_vector (7 downto 0);
    signal c_i           : std_logic_vector (7 downto 0);
@@ -717,7 +719,7 @@ architecture BEHAVIORAL of bCalcConv is
    signal indice        : std_logic_vector (2 downto 0);
    signal inicializar   : std_logic;
    signal multiplicar   : std_logic;
-   signal res_parc      : std_logic_vector (15 downto 0);
+   signal res_parc      : std_logic_vector (18 downto 0);
    signal res_parcl     : std_logic_vector (7 downto 0);
    signal xi_por_ci     : std_logic_vector (15 downto 0);
    signal x_i           : std_logic_vector (7 downto 0);
@@ -726,12 +728,14 @@ architecture BEHAVIORAL of bCalcConv is
              ck         : in    std_logic; 
              dato_ent   : in    std_logic_vector (7 downto 0); 
              indice     : in    std_logic_vector (2 downto 0); 
-             x_i        : out   std_logic_vector (7 downto 0));
+             x_i        : out   std_logic_vector (7 downto 0); 
+             acceder    : in    std_logic);
    end component;
    
    component bIpMemory
       port ( addra : in    std_logic_vector (4 downto 0); 
              dina  : in    std_logic_vector (7 downto 0); 
+             ena   : in    std_logic; 
              wea   : in    std_logic_vector (0 downto 0); 
              clka  : in    std_logic; 
              douta : out   std_logic_vector (7 downto 0));
@@ -746,11 +750,11 @@ architecture BEHAVIORAL of bCalcConv is
    end component;
    
    component biPAccumlator
-      port ( b    : in    std_logic_vector (15 downto 0); 
-             clk  : in    std_logic; 
-             ce   : in    std_logic; 
-             sclr : in    std_logic; 
-             q    : out   std_logic_vector (15 downto 0));
+      port ( b     : in    std_logic_vector (15 downto 0); 
+             clk   : in    std_logic; 
+             ce    : in    std_logic; 
+             sinit : in    std_logic; 
+             q     : out   std_logic_vector (18 downto 0));
    end component;
    
    component GND
@@ -778,16 +782,18 @@ architecture BEHAVIORAL of bCalcConv is
              dato_nuevo    : in    std_logic; 
              reset         : in    std_logic; 
              inicializar   : out   std_logic; 
-             acumular      : out   std_logic; 
-             dato_sal_sync : out   std_logic; 
              multiplicar   : out   std_logic; 
+             acumular      : out   std_logic; 
              guardar       : out   std_logic; 
-             indice        : out   std_logic_vector (2 downto 0));
+             dato_sal_sync : out   std_logic; 
+             indice        : out   std_logic_vector (2 downto 0); 
+             acceder       : out   std_logic);
    end component;
    
 begin
    XLXI_2 : bCalcX_i_MUSER_bCalcConv
-      port map (ck=>ck,
+      port map (acceder=>acceder,
+                ck=>ck,
                 dato_ent(7 downto 0)=>dato_ent(7 downto 0),
                 dato_nuevo=>dato_nuevo,
                 indice(2 downto 0)=>indice(2 downto 0),
@@ -798,6 +804,7 @@ begin
                 addra(2 downto 0)=>indice(2 downto 0),
                 clka=>ck,
                 dina(7 downto 0)=>ceros(7 downto 0),
+                ena=>acceder,
                 wea(0)=>ceros(0),
                 douta(7 downto 0)=>c_i(7 downto 0));
    
@@ -812,8 +819,8 @@ begin
       port map (b(15 downto 0)=>xi_por_ci(15 downto 0),
                 ce=>acumular,
                 clk=>ck,
-                sclr=>inicializar,
-                q(15 downto 0)=>res_parc(15 downto 0));
+                sinit=>inicializar,
+                q(18 downto 0)=>res_parc(18 downto 0));
    
    XLXI_17_0 : GND
       port map (G=>ceros(0));
@@ -923,6 +930,7 @@ begin
       port map (ck=>ck,
                 dato_nuevo=>dato_nuevo,
                 reset=>reset,
+                acceder=>acceder,
                 acumular=>acumular,
                 dato_sal_sync=>dato_sal_sync,
                 guardar=>guardar,

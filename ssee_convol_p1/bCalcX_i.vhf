@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i.vhf
--- /___/   /\     Timestamp : 11/14/2024 12:04:55
+-- /___/   /\     Timestamp : 11/14/2024 17:11:12
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -74,7 +74,8 @@ library UNISIM;
 use UNISIM.Vcomponents.ALL;
 
 entity bCalcX_i is
-   port ( ck         : in    std_logic; 
+   port ( acceder    : in    std_logic; 
+          ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
           indice     : in    std_logic_vector (2 downto 0); 
@@ -110,11 +111,6 @@ architecture BEHAVIORAL of bCalcX_i is
              O  : out   std_logic);
    end component;
    
-   component VCC
-      port ( P : out   std_logic);
-   end component;
-   attribute BOX_TYPE of VCC : component is "BLACK_BOX";
-   
    component FDE
       generic( INIT : bit :=  '0');
       port ( C  : in    std_logic; 
@@ -124,22 +120,19 @@ architecture BEHAVIORAL of bCalcX_i is
    end component;
    attribute BOX_TYPE of FDE : component is "BLACK_BOX";
    
-   component FD
-      generic( INIT : bit :=  '0');
-      port ( C : in    std_logic; 
-             D : in    std_logic; 
-             Q : out   std_logic);
+   component VCC
+      port ( P : out   std_logic);
    end component;
-   attribute BOX_TYPE of FD : component is "BLACK_BOX";
+   attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_65";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_64";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_63";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_62";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_61";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_60";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_59";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_58";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_4";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_3";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_2";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(0),
@@ -260,9 +253,6 @@ begin
                 S1=>indice(1),
                 S2=>indice(2),
                 O=>XLXN_1(7));
-   
-   XLXI_10 : VCC
-      port map (P=>uno);
    
    XLXI_11_0 : FDE
       port map (C=>ck,
@@ -648,45 +638,56 @@ begin
                 D=>x_6(7),
                 Q=>x_7(7));
    
-   XLXI_23_0 : FD
+   XLXI_24_0 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(0),
                 Q=>x_i(0));
    
-   XLXI_23_1 : FD
+   XLXI_24_1 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(1),
                 Q=>x_i(1));
    
-   XLXI_23_2 : FD
+   XLXI_24_2 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(2),
                 Q=>x_i(2));
    
-   XLXI_23_3 : FD
+   XLXI_24_3 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(3),
                 Q=>x_i(3));
    
-   XLXI_23_4 : FD
+   XLXI_24_4 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(4),
                 Q=>x_i(4));
    
-   XLXI_23_5 : FD
+   XLXI_24_5 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(5),
                 Q=>x_i(5));
    
-   XLXI_23_6 : FD
+   XLXI_24_6 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(6),
                 Q=>x_i(6));
    
-   XLXI_23_7 : FD
+   XLXI_24_7 : FDE
       port map (C=>ck,
+                CE=>acceder,
                 D=>XLXN_1(7),
                 Q=>x_i(7));
+   
+   XLXI_25 : VCC
+      port map (P=>uno);
    
 end BEHAVIORAL;
 
