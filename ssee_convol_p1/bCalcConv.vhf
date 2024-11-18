@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcConv.vhf
--- /___/   /\     Timestamp : 11/13/2024 19:51:02
+-- /___/   /\     Timestamp : 11/14/2024 10:55:29
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -77,7 +77,7 @@ entity bCalcX_i_MUSER_bCalcConv is
    port ( ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
-          indice     : in    std_logic_vector (3 downto 0); 
+          indice     : in    std_logic_vector (2 downto 0); 
           x_i        : out   std_logic_vector (7 downto 0));
 end bCalcX_i_MUSER_bCalcConv;
 
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bCalcConv is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_57";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_56";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_55";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_54";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_53";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_52";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_51";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_50";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_152";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_151";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_150";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_149";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_148";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_147";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_146";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_145";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcConv
       port map (D0=>x_0(0),
@@ -714,7 +714,7 @@ architecture BEHAVIORAL of bCalcConv is
    signal ceros         : std_logic_vector (7 downto 0);
    signal c_i           : std_logic_vector (7 downto 0);
    signal guardar       : std_logic;
-   signal indice        : std_logic_vector (3 downto 0);
+   signal indice        : std_logic_vector (2 downto 0);
    signal inicializar   : std_logic;
    signal multiplicar   : std_logic;
    signal res_parc      : std_logic_vector (15 downto 0);
@@ -725,7 +725,7 @@ architecture BEHAVIORAL of bCalcConv is
       port ( dato_nuevo : in    std_logic; 
              ck         : in    std_logic; 
              dato_ent   : in    std_logic_vector (7 downto 0); 
-             indice     : in    std_logic_vector (3 downto 0); 
+             indice     : in    std_logic_vector (2 downto 0); 
              x_i        : out   std_logic_vector (7 downto 0));
    end component;
    
@@ -758,11 +758,11 @@ architecture BEHAVIORAL of bCalcConv is
              dato_nuevo    : in    std_logic; 
              reset         : in    std_logic; 
              inicializar   : out   std_logic; 
-             acumular      : out   std_logic; 
-             dato_sal_sync : out   std_logic; 
              multiplicar   : out   std_logic; 
+             acumular      : out   std_logic; 
              guardar       : out   std_logic; 
-             indice        : out   std_logic_vector (3 downto 0));
+             indice        : out   std_logic_vector (2 downto 0); 
+             dato_sal_sync : out   std_logic);
    end component;
    
    component GND
@@ -790,7 +790,7 @@ begin
       port map (ck=>ck,
                 dato_ent(7 downto 0)=>dato_ent(7 downto 0),
                 dato_nuevo=>dato_nuevo,
-                indice(3 downto 0)=>indice(3 downto 0),
+                indice(2 downto 0)=>indice(2 downto 0),
                 x_i(7 downto 0)=>x_i(7 downto 0));
    
    XLXI_5 : bIpMemory
@@ -822,7 +822,7 @@ begin
                 acumular=>acumular,
                 dato_sal_sync=>dato_sal_sync,
                 guardar=>guardar,
-                indice(3 downto 0)=>indice(3 downto 0),
+                indice(2 downto 0)=>indice(2 downto 0),
                 inicializar=>inicializar,
                 multiplicar=>multiplicar);
    

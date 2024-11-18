@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bloque_convol.vhf
--- /___/   /\     Timestamp : 11/14/2024 08:24:50
+-- /___/   /\     Timestamp : 11/14/2024 10:55:29
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -247,7 +247,7 @@ entity bCalcX_i_MUSER_bloque_convol is
    port ( ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
-          indice     : in    std_logic_vector (3 downto 0); 
+          indice     : in    std_logic_vector (2 downto 0); 
           x_i        : out   std_logic_vector (7 downto 0));
 end bCalcX_i_MUSER_bloque_convol;
 
@@ -302,14 +302,14 @@ architecture BEHAVIORAL of bCalcX_i_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_7";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_6";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_5";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_4";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_3";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_2";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_1";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_0";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_160";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_159";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_158";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_157";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_156";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_155";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_154";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_153";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bloque_convol
       port map (D0=>x_0(0),
@@ -884,7 +884,7 @@ architecture BEHAVIORAL of bCalcConv_MUSER_bloque_convol is
    signal ceros         : std_logic_vector (7 downto 0);
    signal c_i           : std_logic_vector (7 downto 0);
    signal guardar       : std_logic;
-   signal indice        : std_logic_vector (3 downto 0);
+   signal indice        : std_logic_vector (2 downto 0);
    signal inicializar   : std_logic;
    signal multiplicar   : std_logic;
    signal res_parc      : std_logic_vector (15 downto 0);
@@ -895,7 +895,7 @@ architecture BEHAVIORAL of bCalcConv_MUSER_bloque_convol is
       port ( dato_nuevo : in    std_logic; 
              ck         : in    std_logic; 
              dato_ent   : in    std_logic_vector (7 downto 0); 
-             indice     : in    std_logic_vector (3 downto 0); 
+             indice     : in    std_logic_vector (2 downto 0); 
              x_i        : out   std_logic_vector (7 downto 0));
    end component;
    
@@ -928,11 +928,11 @@ architecture BEHAVIORAL of bCalcConv_MUSER_bloque_convol is
              dato_nuevo    : in    std_logic; 
              reset         : in    std_logic; 
              inicializar   : out   std_logic; 
-             acumular      : out   std_logic; 
-             dato_sal_sync : out   std_logic; 
              multiplicar   : out   std_logic; 
+             acumular      : out   std_logic; 
              guardar       : out   std_logic; 
-             indice        : out   std_logic_vector (3 downto 0));
+             indice        : out   std_logic_vector (2 downto 0); 
+             dato_sal_sync : out   std_logic);
    end component;
    
    component GND
@@ -960,7 +960,7 @@ begin
       port map (ck=>ck,
                 dato_ent(7 downto 0)=>dato_ent(7 downto 0),
                 dato_nuevo=>dato_nuevo,
-                indice(3 downto 0)=>indice(3 downto 0),
+                indice(2 downto 0)=>indice(2 downto 0),
                 x_i(7 downto 0)=>x_i(7 downto 0));
    
    XLXI_5 : bIpMemory
@@ -992,7 +992,7 @@ begin
                 acumular=>acumular,
                 dato_sal_sync=>dato_sal_sync,
                 guardar=>guardar,
-                indice(3 downto 0)=>indice(3 downto 0),
+                indice(2 downto 0)=>indice(2 downto 0),
                 inicializar=>inicializar,
                 multiplicar=>multiplicar);
    
@@ -1299,10 +1299,10 @@ architecture BEHAVIORAL of Bin_A_BCD_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of VCC : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_10";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_8";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_9";
-   attribute HU_SET of XLXI_53 : label is "XLXI_53_11";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_163";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_161";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_162";
+   attribute HU_SET of XLXI_53 : label is "XLXI_53_164";
 begin
    mod_out <= mod_out_DUMMY;
    q(3 downto 0) <= q_DUMMY(3 downto 0);
@@ -1449,14 +1449,14 @@ architecture BEHAVIORAL of regdesp8b_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of OR2 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_19";
-   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_18";
-   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_17";
-   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_16";
-   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_15";
-   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_14";
-   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_13";
-   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_12";
+   attribute HU_SET of XLXI_2_0 : label is "XLXI_2_0_172";
+   attribute HU_SET of XLXI_2_1 : label is "XLXI_2_1_171";
+   attribute HU_SET of XLXI_2_2 : label is "XLXI_2_2_170";
+   attribute HU_SET of XLXI_2_3 : label is "XLXI_2_3_169";
+   attribute HU_SET of XLXI_2_4 : label is "XLXI_2_4_168";
+   attribute HU_SET of XLXI_2_5 : label is "XLXI_2_5_167";
+   attribute HU_SET of XLXI_2_6 : label is "XLXI_2_6_166";
+   attribute HU_SET of XLXI_2_7 : label is "XLXI_2_7_165";
 begin
    XLXI_1_0 : FDRE
       port map (C=>ck,
@@ -1657,9 +1657,9 @@ architecture BEHAVIORAL of Conversor_Bin_BCD_3cifras_MUSER_bloque_convol is
              load          : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_22";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_20";
-   attribute HU_SET of XLXI_37 : label is "XLXI_37_21";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_175";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_173";
+   attribute HU_SET of XLXI_37 : label is "XLXI_37_174";
 begin
    XLXI_1 : Bin_A_BCD_MUSER_bloque_convol
       port map (ck=>ck,
@@ -1823,23 +1823,23 @@ architecture BEHAVIORAL of Mux_Ent_Sal_7seg_4cifras_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of BUF : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_34";
-   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_33";
-   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_32";
-   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_31";
-   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_38";
-   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_37";
-   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_36";
-   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_35";
-   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_26";
-   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_25";
-   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_24";
-   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_23";
-   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_30";
-   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_29";
-   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_28";
-   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_27";
-   attribute HU_SET of XLXI_31 : label is "XLXI_31_39";
+   attribute HU_SET of XLXI_14_0 : label is "XLXI_14_0_187";
+   attribute HU_SET of XLXI_14_1 : label is "XLXI_14_1_186";
+   attribute HU_SET of XLXI_14_2 : label is "XLXI_14_2_185";
+   attribute HU_SET of XLXI_14_3 : label is "XLXI_14_3_184";
+   attribute HU_SET of XLXI_15_0 : label is "XLXI_15_0_191";
+   attribute HU_SET of XLXI_15_1 : label is "XLXI_15_1_190";
+   attribute HU_SET of XLXI_15_2 : label is "XLXI_15_2_189";
+   attribute HU_SET of XLXI_15_3 : label is "XLXI_15_3_188";
+   attribute HU_SET of XLXI_16_0 : label is "XLXI_16_0_179";
+   attribute HU_SET of XLXI_16_1 : label is "XLXI_16_1_178";
+   attribute HU_SET of XLXI_16_2 : label is "XLXI_16_2_177";
+   attribute HU_SET of XLXI_16_3 : label is "XLXI_16_3_176";
+   attribute HU_SET of XLXI_17_0 : label is "XLXI_17_0_183";
+   attribute HU_SET of XLXI_17_1 : label is "XLXI_17_1_182";
+   attribute HU_SET of XLXI_17_2 : label is "XLXI_17_2_181";
+   attribute HU_SET of XLXI_17_3 : label is "XLXI_17_3_180";
+   attribute HU_SET of XLXI_31 : label is "XLXI_31_192";
 begin
    entZ_sal <= entZ_sal_DUMMY;
    XLXI_2 : GND
@@ -2060,10 +2060,10 @@ architecture BEHAVIORAL of BCD_A_Bin_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of XOR3 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_12 : label is "XLXI_12_42";
-   attribute HU_SET of XLXI_13 : label is "XLXI_13_40";
-   attribute HU_SET of XLXI_30 : label is "XLXI_30_41";
-   attribute HU_SET of XLXI_62 : label is "XLXI_62_43";
+   attribute HU_SET of XLXI_12 : label is "XLXI_12_195";
+   attribute HU_SET of XLXI_13 : label is "XLXI_13_193";
+   attribute HU_SET of XLXI_30 : label is "XLXI_30_194";
+   attribute HU_SET of XLXI_62 : label is "XLXI_62_196";
 begin
    XLXI_9 : AND2
       port map (I0=>sin,
@@ -2219,8 +2219,8 @@ architecture BEHAVIORAL of Conversor_BCD_Bin_MUSER_bloque_convol is
              ldZ           : out   std_logic);
    end component;
    
-   attribute HU_SET of XLXI_16 : label is "XLXI_16_44";
-   attribute HU_SET of XLXI_23 : label is "XLXI_23_45";
+   attribute HU_SET of XLXI_16 : label is "XLXI_16_197";
+   attribute HU_SET of XLXI_23 : label is "XLXI_23_198";
 begin
    XLXI_1 : BCD_A_Bin_MUSER_bloque_convol
       port map (ck=>ck,
@@ -2531,10 +2531,10 @@ architecture BEHAVIORAL of Comp_Num_Letra_MUSER_bloque_convol is
    end component;
    attribute BOX_TYPE of AND3B1 : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_4 : label is "XLXI_4_47";
-   attribute HU_SET of XLXI_14 : label is "XLXI_14_48";
-   attribute HU_SET of XLXI_24 : label is "XLXI_24_46";
-   attribute HU_SET of XLXI_35 : label is "XLXI_35_49";
+   attribute HU_SET of XLXI_4 : label is "XLXI_4_200";
+   attribute HU_SET of XLXI_14 : label is "XLXI_14_201";
+   attribute HU_SET of XLXI_24 : label is "XLXI_24_199";
+   attribute HU_SET of XLXI_35 : label is "XLXI_35_202";
 begin
    XLXI_2 : GND
       port map (G=>cero);
@@ -2753,9 +2753,9 @@ architecture BEHAVIORAL of bloque_convol is
              ck            : in    std_logic; 
              reset         : in    std_logic; 
              dato_ent      : in    std_logic_vector (7 downto 0); 
+             ventana       : in    std_logic_vector (1 downto 0); 
              dat_sal       : out   std_logic_vector (7 downto 0); 
-             dato_sal_sync : out   std_logic; 
-             ventana       : in    std_logic_vector (1 downto 0));
+             dato_sal_sync : out   std_logic);
    end component;
    
 begin

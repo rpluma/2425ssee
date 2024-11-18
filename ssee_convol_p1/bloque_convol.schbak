@@ -264,7 +264,7 @@
     <sheet sheetnum="1" width="3801" height="2688">
         <attr value="CM" name="LengthUnitName" />
         <attr value="4" name="GridsPerUnit" />
-        <rect style="linestyle:Dash" width="3608" x="80" y="36" height="664" />
+        <rect style="linestyle:Dash" width="3608" x="80" y="36" height="752" />
         <text style="fontsize:40;fontname:Arial" x="136" y="96">Bloque completo para el calculo de la convolucion. Descripcion del datapath:</text>
         <text style="fontsize:40;fontname:Arial" x="208" y="172">1. Entrada de datos desde el teclado. Se compara si el dato introducido es un numero, la letra 'A' o la letra 'C'. Si es un numero se pasa el dato a la salida 'cifra(3:0)', junto a un pulso en 'carga_cifra'</text>
         <text style="fontsize:40;fontname:Arial" x="252" y="216">Si es una letra se genera un pulso en la senyal correspondiente</text>
@@ -613,5 +613,7 @@
             <wire x2="960" y1="2224" y2="2224" x1="688" />
         </branch>
         <iomarker fontsize="28" x="688" y="2224" name="ventana(1:0)" orien="R180" />
+        <text style="fontsize:40;fontname:Arial" x="208" y="680">7. El bloque bCalcConv calcula el valor de la convolucion dependiendo del tipo de ventana (00=rectangular, 01=Hamming, 10=Hann, 11=Kaiser)</text>
+        <text style="fontsize:40;fontname:Arial" x="208" y="760">8 El bloque bCalcSignoMag calcula el valor absoluto y el signo del resultado</text>
     </sheet>
 </drawing>

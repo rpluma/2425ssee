@@ -22,11 +22,8 @@
         <signal name="ceros(0)" />
         <signal name="guardar" />
         <signal name="indice(2:0)" />
-        <signal name="XLXN_13(7:0)" />
-        <signal name="XLXN_21(7:0)" />
         <signal name="xi_por_ci(15:0)" />
         <signal name="res_parc(15:0)" />
-        <signal name="XLXN_29(7:0)" />
         <signal name="ventana(1:0)" />
         <signal name="res_parcl(7:0)" />
         <signal name="res_parc(13:6)" />
@@ -77,7 +74,8 @@
             <line x2="256" y1="80" y2="80" style="linewidth:W" x1="288" />
         </blockdef>
         <blockdef name="fsm_convol">
-            <timestamp>2024-11-14T8:25:29</timestamp>
+            <timestamp>2024-11-14T9:50:40</timestamp>
+            <line x2="416" y1="288" y2="288" x1="352" />
             <line x2="416" y1="160" y2="160" x1="352" />
             <line x2="416" y1="96" y2="96" x1="352" />
             <rect width="64" x="352" y="20" height="24" />
@@ -87,8 +85,7 @@
             <line x2="0" y1="-32" y2="-32" x1="64" />
             <line x2="416" y1="-224" y2="-224" x1="352" />
             <line x2="416" y1="-160" y2="-160" x1="352" />
-            <line x2="416" y1="-96" y2="-96" x1="352" />
-            <rect width="288" x="64" y="-256" height="448" />
+            <rect width="288" x="64" y="-256" height="576" />
         </blockdef>
         <blockdef name="gnd">
             <timestamp>2000-1-1T10:10:10</timestamp>
@@ -150,11 +147,11 @@
             <blockpin signalname="dato_nuevo" name="dato_nuevo" />
             <blockpin signalname="reset" name="reset" />
             <blockpin signalname="inicializar" name="inicializar" />
-            <blockpin signalname="acumular" name="acumular" />
-            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
             <blockpin signalname="multiplicar" name="multiplicar" />
+            <blockpin signalname="acumular" name="acumular" />
             <blockpin signalname="guardar" name="guardar" />
             <blockpin signalname="indice(2:0)" name="indice(2:0)" />
+            <blockpin signalname="dato_sal_sync" name="dato_sal_sync" />
         </block>
         <block symbolname="buf" name="XLXI_21(7:0)">
             <blockpin signalname="res_parc(13:6)" name="I" />
@@ -308,10 +305,6 @@
             <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="800" type="branch" />
             <wire x2="2256" y1="800" y2="800" x1="2240" />
         </branch>
-        <branch name="dato_sal_sync">
-            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="864" type="branch" />
-            <wire x2="2256" y1="864" y2="864" x1="2240" />
-        </branch>
         <branch name="reset">
             <attrtext style="alignment:SOFT-RIGHT;fontsize:28;fontname:Arial" attrname="Name" x="1808" y="928" type="branch" />
             <wire x2="1824" y1="928" y2="928" x1="1808" />
@@ -365,5 +358,9 @@
             <wire x2="1616" y1="1904" y2="1904" x1="1488" />
         </branch>
         <text style="fontsize:44;fontname:Arial" x="1256" y="68">Bloque bCalcConv: Calculo de la convolucion</text>
+        <branch name="dato_sal_sync">
+            <attrtext style="alignment:SOFT-LEFT;fontsize:28;fontname:Arial" attrname="Name" x="2256" y="1248" type="branch" />
+            <wire x2="2256" y1="1248" y2="1248" x1="2240" />
+        </branch>
     </sheet>
 </drawing>

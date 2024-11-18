@@ -7,7 +7,7 @@
 -- \   \   \/     Version : 14.7
 --  \   \         Application : sch2hdl
 --  /   /         Filename : bCalcX_i.vhf
--- /___/   /\     Timestamp : 11/13/2024 19:17:04
+-- /___/   /\     Timestamp : 11/14/2024 10:55:27
 -- \   \  /  \ 
 --  \___\/\___\ 
 --
@@ -77,7 +77,7 @@ entity bCalcX_i is
    port ( ck         : in    std_logic; 
           dato_ent   : in    std_logic_vector (7 downto 0); 
           dato_nuevo : in    std_logic; 
-          indice     : in    std_logic_vector (3 downto 0); 
+          indice     : in    std_logic_vector (2 downto 0); 
           x_i        : out   std_logic_vector (7 downto 0));
 end bCalcX_i;
 
@@ -132,14 +132,14 @@ architecture BEHAVIORAL of bCalcX_i is
    end component;
    attribute BOX_TYPE of FD : component is "BLACK_BOX";
    
-   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_115";
-   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_114";
-   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_113";
-   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_112";
-   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_111";
-   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_110";
-   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_109";
-   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_108";
+   attribute HU_SET of XLXI_9_0 : label is "XLXI_9_0_65";
+   attribute HU_SET of XLXI_9_1 : label is "XLXI_9_1_64";
+   attribute HU_SET of XLXI_9_2 : label is "XLXI_9_2_63";
+   attribute HU_SET of XLXI_9_3 : label is "XLXI_9_3_62";
+   attribute HU_SET of XLXI_9_4 : label is "XLXI_9_4_61";
+   attribute HU_SET of XLXI_9_5 : label is "XLXI_9_5_60";
+   attribute HU_SET of XLXI_9_6 : label is "XLXI_9_6_59";
+   attribute HU_SET of XLXI_9_7 : label is "XLXI_9_7_58";
 begin
    XLXI_9_0 : M8_1E_HXILINX_bCalcX_i
       port map (D0=>x_0(0),

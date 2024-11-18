@@ -4,9 +4,9 @@ dato_nuevo
 reset
 [Outputs]
 inicializar
-acumular
-dato_sal_sync
 multiplicar
+acumular
 guardar
+dato_sal_sync
 =indice[2:0]=
 [BiDir]
