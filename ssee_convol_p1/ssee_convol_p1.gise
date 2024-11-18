@@ -76,11 +76,11 @@
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
-    <transform xil_pn:end_ts="1731600966" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1731600966">
+    <transform xil_pn:end_ts="1731605367" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1731605367">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1731600966" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1731600966">
+    <transform xil_pn:end_ts="1731605367" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1731605367">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="Remote_Lab.vhd"/>
@@ -90,11 +90,11 @@
       <outfile xil_pn:name="control_bin_bcd.vhd"/>
       <outfile xil_pn:name="fsm_convol.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1731600966" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:start_ts="1731600966">
+    <transform xil_pn:end_ts="1731605367" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:start_ts="1731605367">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1731600968" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1731600966">
+    <transform xil_pn:end_ts="1731605369" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:start_ts="1731605367">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
@@ -110,7 +110,7 @@
       <outfile xil_pn:name="reg_desp_4_cifras.vhf"/>
       <outfile xil_pn:name="regdesp8b.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1731600968" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1731600968">
+    <transform xil_pn:end_ts="1731605369" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:start_ts="1731605369">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="ipcore_dir/bIpMemory.ngc"/>
@@ -127,7 +127,7 @@
       <outfile xil_pn:name="ipcore_dir/cont_3b.vhd"/>
       <outfile xil_pn:name="ipcore_dir/dcm_100m_5m.vhd"/>
     </transform>
-    <transform xil_pn:end_ts="1731600968" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1731600968">
+    <transform xil_pn:end_ts="1731605369" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1731605369">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="BCD_A_Bin.vhf"/>
@@ -156,7 +156,7 @@
       <outfile xil_pn:name="reg_desp_4_cifras.vhf"/>
       <outfile xil_pn:name="regdesp8b.vhf"/>
     </transform>
-    <transform xil_pn:end_ts="1731600977" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1731600968">
+    <transform xil_pn:end_ts="1731605378" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:start_ts="1731605369">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -168,7 +168,7 @@
       <outfile xil_pn:name="isim.log"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1731600977" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1731600977">
+    <transform xil_pn:end_ts="1731605378" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:start_ts="1731605378">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
