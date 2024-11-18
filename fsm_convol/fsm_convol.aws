@@ -1,0 +1,13 @@
+[Version]
+Version=15.0
+[Designs]
+fsm_convol=.\fsm_convol\fsm_convol.adf
+[Browser]
+sort=order
+mode=none
+[Order]
+order=1
+[Expand]
+fsm_convol=1
+[Settings]
+Active=fsm_convol
