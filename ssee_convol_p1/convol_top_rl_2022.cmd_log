@@ -1,0 +1,13 @@
+xst -intstyle ise -ifn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.xst" -ofn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.syr" 
+xst -intstyle ise -ifn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.xst" -ofn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.syr" 
+xst -intstyle ise -ifn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.xst" -ofn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc convol_top_rl_2022.ucf -p xc6slx16-csg324-3 convol_top_rl_2022.ngc convol_top_rl_2022.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o convol_top_rl_2022_map.ncd convol_top_rl_2022.ngd convol_top_rl_2022.pcf 
+par -w -intstyle ise -ol high -mt off convol_top_rl_2022_map.ncd convol_top_rl_2022.ncd convol_top_rl_2022.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml convol_top_rl_2022.twx convol_top_rl_2022.ncd -o convol_top_rl_2022.twr convol_top_rl_2022.pcf -ucf convol_top_rl_2022.ucf 
+xst -intstyle ise -ifn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.xst" -ofn "C:/Users/siselec/Downloads/practica1/convol_top_rl_2022.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc convol_top_rl_2022.ucf -p xc6slx16-csg324-3 convol_top_rl_2022.ngc convol_top_rl_2022.ngd  
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -detail -ir off -pr off -lc off -power off -o convol_top_rl_2022_map.ncd convol_top_rl_2022.ngd convol_top_rl_2022.pcf 
+par -w -intstyle ise -ol high -mt off convol_top_rl_2022_map.ncd convol_top_rl_2022.ncd convol_top_rl_2022.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml convol_top_rl_2022.twx convol_top_rl_2022.ncd -o convol_top_rl_2022.twr convol_top_rl_2022.pcf -ucf convol_top_rl_2022.ucf 
+bitgen -intstyle ise -f convol_top_rl_2022.ut convol_top_rl_2022.ncd 

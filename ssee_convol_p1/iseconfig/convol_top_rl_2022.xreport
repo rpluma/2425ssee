@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2024-11-14T20:30:37</DateModified>
+  <DateModified>2024-11-19T13:11:05</DateModified>
   <ModuleName>convol_top_rl_2022</ModuleName>
   <SummaryTimeStamp>2024-11-14T20:01:21</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Usuario_UMA/Desktop/ssee_convol_p1/iseconfig/convol_top_rl_2022.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Usuario_UMA/Desktop/ssee_convol_p1\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/siselec/Downloads/practica1/iseconfig/convol_top_rl_2022.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/siselec/Downloads/practica1\</ImplementationReportsDirectory>
   <DateInitialized>2024-02-06T16:46:11</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
