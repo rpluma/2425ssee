@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/dcm_100m_5m.vhd"
+vhdl work "ipcore_dir/cont_16bits.vhd"
+vhdl work "ipcore_dir/microblaze_basico1.vhd"
+vhdl work "Remote_Lab.vhd"
+vhdl work "mcs_basico1_top.vhf"

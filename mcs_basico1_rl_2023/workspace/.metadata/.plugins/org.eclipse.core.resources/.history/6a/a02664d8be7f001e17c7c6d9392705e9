@@ -1,0 +1,106 @@
+/*
+ * Copyright (c) 2009 Xilinx, Inc.  All rights reserved.
+ *
+ * Xilinx, Inc.
+ * XILINX IS PROVIDING THIS DESIGN, CODE, OR INFORMATION "AS IS" AS A
+ * COURTESY TO YOU.  BY PROVIDING THIS DESIGN, CODE, OR INFORMATION AS
+ * ONE POSSIBLE   IMPLEMENTATION OF THIS FEATURE, APPLICATION OR
+ * STANDARD, XILINX IS MAKING NO REPRESENTATION THAT THIS IMPLEMENTATION
+ * IS FREE FROM ANY CLAIMS OF INFRINGEMENT, AND YOU ARE RESPONSIBLE
+ * FOR OBTAINING ANY RIGHTS YOU MAY REQUIRE FOR YOUR IMPLEMENTATION.
+ * XILINX EXPRESSLY DISCLAIMS ANY WARRANTY WHATSOEVER WITH RESPECT TO
+ * THE ADEQUACY OF THE IMPLEMENTATION, INCLUDING BUT NOT LIMITED TO
+ * ANY WARRANTIES OR REPRESENTATIONS THAT THIS IMPLEMENTATION IS FREE
+ * FROM CLAIMS OF INFRINGEMENT, IMPLIED WARRANTIES OF MERCHANTABILITY
+ * AND FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ */
+
+/*
+ * helloworld.c: simple test application
+ */
+
+#include <stdio.h>
+#include "platform.h"
+#include "xparameters.h"
+#include "xiomodule.h"
+
+void print(char *str);
+
+int main()
+{
+	// Define diversas variables que usaremos para la E/S
+	u32 data;
+	XIOModule iomodule;
+	// Define la variable para el buffer de entrada
+	u8 rx_buf[5];
+	// Define el buffer de salida para la prueba de envío de caracteres
+	u8 msg[16] = "Esto es un test";//
+	// Longitud del mensaje a enviar
+	const int count = 15;
+	// Variable para contadores
+	u32 index = 0;
+
+	// Inicializa el micro
+	init_platform();
+
+	// Inicializa la E/S para GPI y GPO y el módulo de la UART para obtener la dirección base:
+	data = XIOModule_Initialize(&iomodule, XPAR_IOMODULE_0_DEVICE_ID);
+	data = XIOModule_Start(&iomodule);
+	data = XIOModule_CfgInitialize(&iomodule, NULL, 1);
+
+
+	// Retardo necesario para que el Remote Lab se configure correctamente antes de poder operar con la E/S del MicroBlaze
+	while (index < 2000000)
+	{
+		index ++;
+	}
+
+	// Envía por la UART el mensaje indicado
+	xil_printf("\n\r\n\rLec SW - Esc LEDs - L/E UART\n\r");
+
+	// Enviamos una cadena de 15 caracteres utilizando 'Send'.
+	// Esta función es del tipo "non-blocking", por lo que puede retornar
+	// sin haber enviado realmente la cadena completa, y será necesario
+	// llamarla repetidamente dentro de un bucle hasta que toda la cadena
+	// esté enviada.
+	// unsigned int XIOModule_Send(XIOModule *InstancePtr, u8 *DataBufferPtr, unsigned int NumBytes);
+
+	index = 0;
+	while (index < count)
+	{
+		data = XIOModule_Send(&iomodule, &msg[index], count - index);
+		index += data;
+	}
+	xil_printf("\n\rNúmero de caracteres enviados: %d\n\r", index);
+
+	// Recibimos un carácter usando 'Recv' y lo almacenamos en 'rx_buf'
+	// unsigned int XIOModule_Recv(XIOModule *InstancePtr, u8 *DataBufferPtr, unsigned int NumBytes);
+	xil_printf("\n\rPulse una tecla: ");
+
+	// Orden al Remote Lab para que imprima en pantalla todos los mensajes acumulados con "xil_printf"
+	xil_printf("\t");
+
+	while ((data = XIOModule_Recv(&iomodule, rx_buf, 1)) == 0);
+	xil_printf("\n\rNúmero de caracteres recibidos: %d", data);
+	xil_printf("\n\rCarácter recibido: %c\n\r", rx_buf[0]);
+
+	// Bucle principal.
+	// Lee el estado de los switches y lo escribe en los LEDs de salida constantemente
+	// Utiliza el canal 1 de la GPI/O
+	xil_printf("\n\rAhora se leen los switches y se escribe el estado en los leds constantemente...");
+	xil_printf("\t");
+
+	while (1)
+	{
+		data = XIOModule_DiscreteRead(&iomodule, 1);
+		XIOModule_DiscreteWrite(&iomodule, 1, data);
+	}
+	cleanup_platform();
+	return 0;
+}
+
+
+
+// source ipcore_dir/microblaze_mcs_setup.tcl
+// microblaze_mcs_data2mem workspace/hello_world/Debug/hello_world.elf
