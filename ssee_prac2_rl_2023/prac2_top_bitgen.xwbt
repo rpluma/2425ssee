@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\albertod\Documents\_Doc_\Xilinx\ssee_prac2_rl_2023\prac2_top.ncd
+OUTFILE=C:\Users\albertod\Documents\_Doc_\Xilinx\ssee_prac2_rl_2023\prac2_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\albertod\Documents\_Doc_\Xilinx\ssee_prac2_rl_2023
+LICENSE=WebPack
+USER_INFO=_

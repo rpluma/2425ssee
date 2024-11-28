@@ -1,0 +1,18 @@
+# Output products list for <microblaze_prac2>
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
+microblaze_prac2.asy
+microblaze_prac2.bmm
+microblaze_prac2.gise
+microblaze_prac2.ngc
+microblaze_prac2.sym
+microblaze_prac2.vhd
+microblaze_prac2.vho
+microblaze_prac2.xco
+microblaze_prac2.xise
+microblaze_prac2\mb_bootloop_le.elf
+microblaze_prac2\microblaze_mcs_setup.tcl
+microblaze_prac2\system_template.tcl
+microblaze_prac2_flist.txt
+microblaze_prac2_readme.txt
+microblaze_prac2_sdk.xml
