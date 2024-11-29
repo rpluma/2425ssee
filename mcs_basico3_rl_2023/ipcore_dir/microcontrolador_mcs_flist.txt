@@ -1,0 +1,18 @@
+# Output products list for <microcontrolador_mcs>
+mb_bootloop_le.elf
+microblaze_mcs_setup.tcl
+microcontrolador_mcs.asy
+microcontrolador_mcs.bmm
+microcontrolador_mcs.gise
+microcontrolador_mcs.ngc
+microcontrolador_mcs.sym
+microcontrolador_mcs.vhd
+microcontrolador_mcs.vho
+microcontrolador_mcs.xco
+microcontrolador_mcs.xise
+microcontrolador_mcs\mb_bootloop_le.elf
+microcontrolador_mcs\microblaze_mcs_setup.tcl
+microcontrolador_mcs\system_template.tcl
+microcontrolador_mcs_flist.txt
+microcontrolador_mcs_readme.txt
+microcontrolador_mcs_sdk.xml

@@ -1,0 +1,17 @@
+# Output products list for <cont_16bits>
+_xmsgs\pn_parser.xmsgs
+cont_16bits.asy
+cont_16bits.gise
+cont_16bits.ngc
+cont_16bits.sym
+cont_16bits.vhd
+cont_16bits.vho
+cont_16bits.xco
+cont_16bits.xise
+cont_16bits\doc\c_counter_binary_v11_0_readme.txt
+cont_16bits\doc\c_counter_binary_v11_0_vinfo.html
+cont_16bits\doc\ds215_counter.pdf
+cont_16bits_flist.txt
+cont_16bits_xmdf.tcl
+core_resources.txt
+gui_latency.txt

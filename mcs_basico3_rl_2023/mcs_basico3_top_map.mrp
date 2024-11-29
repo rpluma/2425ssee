@@ -1,0 +1,928 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Mapping Report File for Design 'mcs_basico3_top'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off
+-pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd
+mcs_basico3_top.pcf 
+Target Device  : xc6slx16
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : spartan6 -- $Revision: 1.55 $
+Mapped Date    : Mon Dec 04 19:51:02 2023
+
+Design Summary
+--------------
+Number of errors:      0
+Number of warnings:    2
+Slice Logic Utilization:
+  Number of Slice Registers:                 1,287 out of  18,224    7%
+    Number used as Flip Flops:               1,285
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:                2
+  Number of Slice LUTs:                      1,758 out of   9,112   19%
+    Number used as logic:                    1,620 out of   9,112   17%
+      Number using O6 output only:           1,208
+      Number using O5 output only:             195
+      Number using O5 and O6:                  217
+      Number used as ROM:                        0
+    Number used as Memory:                     117 out of   2,176    5%
+      Number used as Dual Port RAM:             64
+        Number using O6 output only:             0
+        Number using O5 output only:             0
+        Number using O5 and O6:                 64
+      Number used as Single Port RAM:            0
+      Number used as Shift Register:            53
+        Number using O6 output only:            46
+        Number using O5 output only:             0
+        Number using O5 and O6:                  7
+    Number used exclusively as route-thrus:     21
+      Number with same-slice register load:      9
+      Number with same-slice carry load:        12
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   707 out of   2,278   31%
+  Number of MUXCYs used:                       304 out of   4,556    6%
+  Number of LUT Flip Flop pairs used:        2,120
+    Number with an unused Flip Flop:           900 out of   2,120   42%
+    Number with an unused LUT:                 362 out of   2,120   17%
+    Number of fully used LUT-FF pairs:         858 out of   2,120   40%
+    Number of unique control sets:             110
+    Number of slice register sites lost
+      to control set restrictions:             383 out of  18,224    2%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        70 out of     232   30%
+    Number of LOCed IOBs:                       70 out of      70  100%
+    IOB Flip Flops:                             13
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                        16 out of      32   50%
+  Number of RAMB8BWERs:                          0 out of      64    0%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       6 out of      16   37%
+    Number used as BUFGs:                        6
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                  12 out of     248    4%
+    Number used as ILOGIC2s:                    12
+    Number used as ISERDES2s:                    0
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   1 out of     248    1%
+    Number used as OLOGIC2s:                     1
+    Number used as OSERDES2s:                    0
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            1 out of       1  100%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+Average Fanout of Non-Clock Nets:                3.80
+
+Peak Memory Usage:  4590 MB
+Total REAL time to MAP completion:  45 secs 
+Total CPU time to MAP completion:   42 secs 
+
+Table of Contents
+-----------------
+Section 1 - Errors
+Section 2 - Warnings
+Section 3 - Informational
+Section 4 - Removed Logic Summary
+Section 5 - Removed Logic
+Section 6 - IOB Properties
+Section 7 - RPMs
+Section 8 - Guide Report
+Section 9 - Area Group and Partition Summary
+Section 10 - Timing Report
+Section 11 - Configuration String Information
+Section 12 - Control Set Information
+Section 13 - Utilization by Hierarchy
+
+Section 1 - Errors
+------------------
+
+Section 2 - Warnings
+--------------------
+WARNING:MapLib:41 - All members of TNM group "cuenta_dcm<13>" have been
+   optimized out of the design.
+WARNING:MapLib:50 - The period specification "TS_cuenta_dcm_13_" has been
+   discarded because the group "cuenta_dcm<13>" has been optimized away.
+
+Section 3 - Informational
+-------------------------
+INFO:LIT:243 - Logical network io_write_data<7> has no load.
+INFO:LIT:395 - The above info message is repeated 98 more times for the
+   following (max. 5 shown):
+   io_write_data<6>,
+   io_write_data<5>,
+   io_write_data<4>,
+   col_pad<4>_IBUF,
+   col_pad<3>_IBUF
+   To see the details of these info messages, please use the -detail switch.
+INFO:MapLib:562 - No environment variables are currently set.
+INFO:LIT:244 - All of the single ended outputs in this design are using slew
+   rate limited output drivers. The delay on speed critical single ended outputs
+   can be dramatically reduced by designating them as fast outputs.
+INFO:Pack:1716 - Initializing temperature to 85.000 Celsius. (default - Range:
+   0.000 to 85.000 Celsius)
+INFO:Pack:1720 - Initializing voltage to 1.140 Volts. (default - Range: 1.140 to
+   1.260 Volts)
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+INFO:Pack:1650 - Map created a placed design.
+INFO:PhysDesignRules:1861 - To achieve optimal frequency synthesis performance
+   with the CLKFX and CLKFX180 outputs of the DCM comp XLXI_866/dcm_sp_inst,
+   consult the device Data Sheet.
+
+Section 4 - Removed Logic Summary
+---------------------------------
+ 159 block(s) removed
+  80 block(s) optimized away
+ 107 signal(s) removed
+
+Section 5 - Removed Logic
+-------------------------
+
+The trimmed logic report below shows the logic removed from your design due to
+sourceless or loadless signals, and VCC or ground connections.  If the removal
+of a signal or symbol results in the subsequent removal of an additional signal
+or symbol, the message explaining that second removal will be indented.  This
+indentation will be repeated as a chain of related logic is removed.
+
+To quickly locate the original cause for the removal of a chain of logic, look
+above the place where that logic is listed in the trimming report, then locate
+the lines that are least indented (begin at the leftmost edge).
+
+Loadless block "XLXI_183/XLXI_58" (AND) removed.
+ The signal "io_byte_enable<1>" is loadless and has been removed.
+  Loadless block "mcs_0/U0/iomodule_0/IO_Byte_Enable_1" (SFF) removed.
+Loadless block "XLXI_183/XLXI_71" (AND) removed.
+ The signal "io_byte_enable<2>" is loadless and has been removed.
+  Loadless block "mcs_0/U0/iomodule_0/IO_Byte_Enable_2" (SFF) removed.
+Loadless block "XLXI_183/XLXI_72" (AND) removed.
+ The signal "io_byte_enable<3>" is loadless and has been removed.
+  Loadless block "mcs_0/U0/iomodule_0/IO_Byte_Enable_3" (SFF) removed.
+Loadless block "XLXI_314" (CKBUF) removed.
+ The signal "cuenta_dcm<13>" is loadless and has been removed.
+  Loadless block "XLXI_867/blk00000001/blk00000025" (SFF) removed.
+   The signal "XLXI_867/blk00000001/sig00000022" is loadless and has been removed.
+    Loadless block "XLXI_867/blk00000001/blk00000006" (XOR) removed.
+     The signal "XLXI_867/blk00000001/sig00000027" is loadless and has been removed.
+      Loadless block "XLXI_867/blk00000001/blk00000009" (MUX) removed.
+       The signal "XLXI_867/blk00000001/sig00000028" is loadless and has been removed.
+        Loadless block "XLXI_867/blk00000001/blk0000000b" (MUX) removed.
+         The signal "XLXI_867/blk00000001/sig00000029" is loadless and has been removed.
+          Loadless block "XLXI_867/blk00000001/blk0000000d" (MUX) removed.
+           The signal "XLXI_867/blk00000001/sig0000002a" is loadless and has been removed.
+            Loadless block "XLXI_867/blk00000001/blk0000000f" (MUX) removed.
+             The signal "XLXI_867/blk00000001/sig0000002b" is loadless and has been removed.
+              Loadless block "XLXI_867/blk00000001/blk00000011" (MUX) removed.
+               The signal "XLXI_867/blk00000001/sig0000002c" is loadless and has been removed.
+                Loadless block "XLXI_867/blk00000001/blk00000013" (MUX) removed.
+               The signal "XLXI_867/blk00000001/sig0000003b" is loadless and has been removed.
+                Loadless block "XLXI_867/blk00000001/blk00000039" (ROM) removed.
+                 The signal "XLXI_867/q<8>" is loadless and has been removed.
+                  Loadless block "XLXI_867/blk00000001/blk0000002a" (SFF) removed.
+                   The signal "XLXI_867/blk00000001/sig0000001d" is loadless and has been removed.
+                    Loadless block "XLXI_867/blk00000001/blk00000010" (XOR) removed.
+             The signal "XLXI_867/blk00000001/sig0000003a" is loadless and has been removed.
+              Loadless block "XLXI_867/blk00000001/blk00000038" (ROM) removed.
+               The signal "XLXI_867/q<9>" is loadless and has been removed.
+                Loadless block "XLXI_867/blk00000001/blk00000029" (SFF) removed.
+                 The signal "XLXI_867/blk00000001/sig0000001e" is loadless and has been removed.
+                  Loadless block "XLXI_867/blk00000001/blk0000000e" (XOR) removed.
+           The signal "XLXI_867/blk00000001/sig00000039" is loadless and has been removed.
+            Loadless block "XLXI_867/blk00000001/blk00000037" (ROM) removed.
+             The signal "XLXI_867/q<10>" is loadless and has been removed.
+              Loadless block "XLXI_867/blk00000001/blk00000028" (SFF) removed.
+               The signal "XLXI_867/blk00000001/sig0000001f" is loadless and has been removed.
+                Loadless block "XLXI_867/blk00000001/blk0000000c" (XOR) removed.
+         The signal "XLXI_867/blk00000001/sig00000038" is loadless and has been removed.
+          Loadless block "XLXI_867/blk00000001/blk00000036" (ROM) removed.
+           The signal "XLXI_867/q<11>" is loadless and has been removed.
+            Loadless block "XLXI_867/blk00000001/blk00000027" (SFF) removed.
+             The signal "XLXI_867/blk00000001/sig00000020" is loadless and has been removed.
+              Loadless block "XLXI_867/blk00000001/blk0000000a" (XOR) removed.
+       The signal "XLXI_867/blk00000001/sig00000037" is loadless and has been removed.
+        Loadless block "XLXI_867/blk00000001/blk00000035" (ROM) removed.
+         The signal "XLXI_867/q<12>" is loadless and has been removed.
+          Loadless block "XLXI_867/blk00000001/blk00000026" (SFF) removed.
+           The signal "XLXI_867/blk00000001/sig00000021" is loadless and has been removed.
+            Loadless block "XLXI_867/blk00000001/blk00000008" (XOR) removed.
+     The signal "XLXI_867/blk00000001/sig00000036" is loadless and has been removed.
+      Loadless block "XLXI_867/blk00000001/blk00000034" (ROM) removed.
+Loadless block "XLXI_873/XLXI_26" (AND) removed.
+ The signal "XLXI_873/anodo_DUMMY<3>" is loadless and has been removed.
+  Loadless block "XLXI_873/XLXI_32" (SFF) removed.
+   The signal "XLXI_873/anodo_DUMMY<2>" is loadless and has been removed.
+    Loadless block "XLXI_873/XLXI_31" (SFF) removed.
+     The signal "XLXI_873/anodo_DUMMY<1>" is loadless and has been removed.
+      Loadless block "XLXI_873/XLXI_30" (SFF) removed.
+       The signal "XLXI_873/anodo_DUMMY<0>" is loadless and has been removed.
+        Loadless block "XLXI_873/XLXI_7" (FF) removed.
+Loadless block "XLXI_873/XLXI_27" (AND) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[17].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[18].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[19].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[20].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[21].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[22].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[23].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[24].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[25].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[26].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[27].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[28].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[29].PC_Bit_I/PC_EX_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[0].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[10].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[11].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[12].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[13].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[14].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[15].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[16].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[17].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[18].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[19].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[1].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[20].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[21].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[22].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[23].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[24].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[25].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[26].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[27].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[28].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[29].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[2].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[30].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[31].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[3].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[4].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[5].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[6].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[7].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[8].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/Result_Mux_I/Using_FPG
+A.Result_Mux_Bits[9].Result_Mux_Bit_I/EX_Result_DFF" (FF) removed.
+Loadless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.Ext_NM_BRK_FDR
+SE" (FF) removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<31>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<29>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<28>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<27>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<26>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<25>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<24>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<23>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<22>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<21>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<20>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<19>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<18>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<17>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Address<16>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<31>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<30>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<29>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<28>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<27>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<26>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<25>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<24>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<23>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<22>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<21>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<20>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<19>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<18>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<17>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<16>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<15>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<14>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<13>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<12>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<11>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<10>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<9>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IO_Write_Data<8>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<7>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<6>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<5>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i<4>" is
+sourceless and has been removed.
+The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/toggle_i" is sourceless
+and has been removed.
+ Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/toggle_i_rstpot"
+(ROM) removed.
+  The signal "mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/toggle_i_rstpot" is
+sourceless and has been removed.
+   Sourceless block "mcs_0/U0/iomodule_0/IOModule_Core_I1/FIT_I1/toggle_i" (SFF)
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<31>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<30>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<29>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<28>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<27>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<26>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<25>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<24>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<23>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<22>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<21>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<20>" is sourceless and has been
+removed.
+The signal "mcs_0/U0/iomodule_0/write_data<15>" is sourceless and has been
+removed.
+The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n" is
+sourceless and has been removed.
+ Sourceless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+" (MUX) removed.
+  The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+/O" is sourceless and has been removed.
+   Sourceless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+/MUXCY_L_BUF" (BUF) removed.
+    The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Using_FPGA.iFetch_MuxCY_3
+/LO" is sourceless and has been removed.
+The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/O" is sourceless and has been removed.
+ Sourceless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X/LO" is sourceless and has been
+removed.
+The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/O" is sourceless and has been removed.
+ Sourceless block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/MUXCY_L_BUF" (BUF) removed.
+  The signal
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L/LO" is sourceless and has been removed.
+The signal "XLXI_867/q<15>" is sourceless and has been removed.
+ Sourceless block "XLXI_867/blk00000001/blk00000020" (XOR) removed.
+  The signal "XLXI_867/blk00000001/sig00000024" is sourceless and has been
+removed.
+   Sourceless block "XLXI_867/blk00000001/blk00000023" (SFF) removed.
+The signal "XLXI_867/q<14>" is sourceless and has been removed.
+ Sourceless block "XLXI_867/blk00000001/blk00000033" (ROM) removed.
+  The signal "XLXI_867/blk00000001/sig00000035" is sourceless and has been
+removed.
+   Sourceless block "XLXI_867/blk00000001/blk00000004" (XOR) removed.
+    The signal "XLXI_867/blk00000001/sig00000023" is sourceless and has been
+removed.
+     Sourceless block "XLXI_867/blk00000001/blk00000024" (SFF) removed.
+   Sourceless block "XLXI_867/blk00000001/blk00000005" (MUX) removed.
+    The signal "XLXI_867/blk00000001/sig00000025" is sourceless and has been
+removed.
+The signal "XLXI_867/blk00000001/sig00000026" is sourceless and has been
+removed.
+
+The trimmed logic reported below is either:
+   1. part of a cycle
+   2. part of disabled logic
+   3. a side-effect of other trimmed logic
+
+The signal "io_write_data<7>" is unused and has been removed.
+ Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_7" (SFF) removed.
+The signal "io_write_data<6>" is unused and has been removed.
+ Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_6" (SFF) removed.
+The signal "io_write_data<5>" is unused and has been removed.
+ Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_5" (SFF) removed.
+The signal "io_write_data<4>" is unused and has been removed.
+ Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_4" (SFF) removed.
+Unused block "XLXI_867/blk00000001/blk00000007" (MUX) removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_4" (SFF)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_5" (SFF)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_6" (SFF)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IOModule_Core_I1/GPO_I2/gpo_io_i_7" (SFF)
+removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_16" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_17" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_18" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_19" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_20" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_21" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_22" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_23" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_24" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_25" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_26" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_27" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_28" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_29" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Address_31" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_10" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_11" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_12" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_13" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_14" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_15" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_16" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_17" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_18" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_19" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_20" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_21" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_22" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_23" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_24" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_25" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_26" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_27" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_28" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_29" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_30" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_31" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_8" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/IO_Write_Data_9" (SFF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_15" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_20" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_21" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_22" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_23" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_24" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_25" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_26" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_27" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_28" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_29" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_30" (FF) removed.
+Unused block "mcs_0/U0/iomodule_0/write_data_31" (FF) removed.
+Unused block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/PC_Module_I/Using_FPGA
+.Not_All_Bits.PC_GEN[17].PC_Bit_I/MUXCY_X" (MUX) removed.
+Unused block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/PreFetch_Buffer_I/Using_F
+PGA.Buffer_DFFs[1].buffer_Addr_MUXCY_L" (MUX) removed.
+Unused block
+"mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/iFetch_In_Progress_n1_INV
+_0" (BUF) removed.
+
+Optimized Block(s):
+TYPE 		BLOCK
+INV 		XLXI_118_1
+INV 		XLXI_118_2
+INV 		XLXI_118_3
+INV 		XLXI_118_4
+GND 		XLXI_165/XST_GND
+VCC 		XLXI_185
+GND 		XLXI_288_1/XST_GND
+GND 		XLXI_288_2/XST_GND
+GND 		XLXI_288_3/XST_GND
+GND 		XLXI_288_4/XST_GND
+GND 		XLXI_35/XST_GND
+GND 		XLXI_746
+VCC 		XLXI_867/blk00000001/blk00000002
+GND 		XLXI_867/blk00000001/blk00000003
+BUF 		XLXI_873/XLXI_46
+BUF 		XLXI_873/XLXI_47
+BUF 		XLXI_873/XLXI_48
+BUF 		XLXI_873/XLXI_49
+INV 		XLXI_873/XLXI_52_0
+INV 		XLXI_873/XLXI_52_1
+INV 		XLXI_873/XLXI_52_2
+INV 		XLXI_873/XLXI_52_3
+INV 		XLXI_873/XLXI_52_4
+INV 		XLXI_873/XLXI_52_5
+INV 		XLXI_873/XLXI_52_6
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[0].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[10].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[11].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[12].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[13].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[14].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[15].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[1].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[20].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[21].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[22].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[23].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[24].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[25].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[26].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[27].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[28].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[29].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[2].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[30].fdr_i
+   optimized to 0
+FDR
+		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[31].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[3].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[4].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[5].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[6].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[8].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/IOModule_Core_I1/intr_ctrl_I1/cipr_rd_dff_all[9].fdr_i
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_10
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_11
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_12
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_13
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_14
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_15
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_16
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_17
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_18
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_19
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_20
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_21
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_22
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_23
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_24
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_25
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_26
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_27
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_28
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_29
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_30
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_31
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_8
+   optimized to 0
+FDR 		mcs_0/U0/iomodule_0/io_bus_read_data_9
+   optimized to 0
+LUT3
+		mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Data_Flow_I/ALU_I/FPGA_Target.No_
+Carry_Decoding.alu_carry_select_LUT
+   optimized to 0
+FDR 		mcs_0/U0/microblaze_I/MicroBlaze_Core_I/Area.Decode_I/Write_DIV_result
+   optimized to 0
+GND 		mcs_0/XST_GND
+VCC 		mcs_0/XST_VCC
+
+To enable printing of redundant blocks removed and signals merged, set the
+detailed map report option and rerun map.
+
+Section 6 - IOB Properties
+--------------------------
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
+|                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+| DB<0>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<1>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<2>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<3>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<4>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<5>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<6>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| DB<7>                              | IOB              | BIDIR     | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| EppASTB                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| EppDSTB                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| EppWAIT                            | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| EppWRITE                           | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| anodo_pad<0>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| anodo_pad<1>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| anodo_pad<2>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| anodo_pad<3>                       | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| boton_aba_pad                      | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| boton_arr_pad                      | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| boton_der_pad                      | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| boton_izq_pad                      | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| ce_display_neg_pad<1>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ce_display_neg_pad<2>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ce_display_neg_pad<3>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ce_display_neg_pad<4>              | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| ck_100MHz_pad                      | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| ck_display_externo_pad             | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW | ODDR         |          |          |
+| col_pad<1>                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| col_pad<2>                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| col_pad<3>                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| col_pad<4>                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| display_pad<0>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<1>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<2>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<3>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<4>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<5>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<6>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| display_pad<7>                     | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| fila_pad<1>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
+| fila_pad<2>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
+| fila_pad<3>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
+| fila_pad<4>                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              | PULLDOWN |          |
+| led_pad<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| led_pad<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| reset_pad                          | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| seg_pad<0>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<1>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<2>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<3>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<4>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<5>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<6>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| seg_pad<7>                         | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| signo_sal_pad                      | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
+| sw_pad<0>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<1>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<2>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<3>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<4>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<5>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<6>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| sw_pad<7>                          | IOB              | INPUT     | LVCMOS33             |       |          |      | IFF          |          |          |
+| uart_rx_pad                        | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
+| uart_tx_pad                        | IOB              | OUTPUT    | LVCMOS33             |       | 12       | SLOW |              |          |          |
++---------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+Section 7 - RPMs
+----------------
+
+Section 8 - Guide Report
+------------------------
+Guide not run on this design.
+
+Section 9 - Area Group and Partition Summary
+--------------------------------------------
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Area Group Information
+----------------------
+
+  No area groups were found in this design.
+
+----------------------
+
+Section 10 - Timing Report
+--------------------------
+A logic-level (pre-route) timing report can be generated by using Xilinx static
+timing analysis tools, Timing Analyzer (GUI) or TRCE (command line), with the
+mapped NCD and PCF files. Please note that this timing report will be generated
+using estimated delay information. For accurate numbers, please generate a
+timing report with the post Place and Route NCD file.
+
+For more information about the Timing Analyzer, consult the Xilinx Timing
+Analyzer Reference Manual; for more information about TRCE, consult the Xilinx
+Command Line Tools User Guide "TRACE" chapter.
+
+Section 11 - Configuration String Details
+-----------------------------------------
+Use the "-detail" map option to print out Configuration Strings
+
+Section 12 - Control Set Information
+------------------------------------
+Use the "-detail" map option to print out Control Set Information.
+
+Section 13 - Utilization by Hierarchy
+-------------------------------------
+Use the "-detail" map option to print out the Utilization by Hierarchy section.

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<symbol version="7" name="cont_16bits">
+    <symboltype>BLOCK</symboltype>
+    <timestamp>2016-10-8T15:40:18</timestamp>
+    <pin polarity="Input" x="0" y="80" name="clk" />
+    <pin polarity="Input" x="0" y="176" name="sclr" />
+    <pin polarity="Output" x="496" y="80" name="q(15:0)" />
+    <graph>
+        <rect width="432" x="32" y="32" height="188" />
+        <line x2="32" y1="80" y2="80" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="80" type="pin clk" />
+        <line x2="32" y1="176" y2="176" x1="0" />
+        <attrtext style="fontsize:24;fontname:Arial" attrname="PinName" x="36" y="176" type="pin sclr" />
+        <text style="fontsize:40;fontname:Arial" x="32" y="8">cont_16bits</text>
+        <line x2="464" y1="80" y2="80" style="linewidth:W" x1="496" />
+        <attrtext style="alignment:RIGHT;fontsize:24;fontname:Arial" attrname="PinName" x="460" y="80" type="pin q(15:0)" />
+    </graph>
+</symbol>
