@@ -1,0 +1,577 @@
+
+/*
+    practica2.c: SISTEMAS ELECTRÓNICOS. PRÁCTICA Nº 2.
+
+    Grado en Ingeniería en Electrónica, Robótica y Mecatrónica.
+
+    Objetivo:
+        Utilizando el software Xilinx ISE 14.7 y Xilinx Software Development Kit (SDK) para programar el MicroBlaze,
+        se pide implementar un sistema de control de luz y temperatura en una vivienda inteligente.
+
+        Este sistema partirá de una serie de datos proporcionados por diversos sensores,
+        como pueden ser la temperatura exterior e interior, la presencia de habitantes en la casa,
+        la luz ambiental o el ruido exterior, y accionará diversos controladores que permitirían subir o bajar persianas,
+        abrir o cerrar ventanas, y arrancar sistemas de calefacción o de aire acondicionado según se necesite,
+        en base a unas normas generales.
+
+ */
+
+
+
+#include "practica2.h"
+
+//- Variables globales
+
+	//  Variable para inicializar la E/S. Se pone global
+	//  para que puedan usarla los manejadores de interrupciones
+	XIOModule iomodule;
+	u8 ModoSensores = 0;
+	u8 ModoActuadores = 0;
+
+
+
+
+//- ControlarActuadores
+    /*
+        El sistema controlará tanto la activación de las luces de la vivienda como la subida y bajada de persianas
+        para favorecer la entrada de luz en función de la cantidad de luz proveniente del exterior,
+        dependiendo de si hay alguien o no en la vivienda.
+
+        Además, controlará la temperatura, manteniendo ésta en un rango de entre 18 y 23°C.
+
+        Para su correcto funcionamiento, el sistema deberá responder de la siguiente forma:
+        C1. Si el detector de presencia no está activo supondremos que la vivienda está vacía, por tanto,
+            se mantienen las luces apagadas, las persianas bajadas y las ventanas cerradas.
+        C2. Si el detector de presencia está activo y el detector de luz muestra una luminosidad exterior entre el 75% y el 100%,
+            se suben las persianas y se mantienen las luces apagadas.
+            Si la luminosidad exterior se encuentra entre el 50% y el 75%,
+            subir las persianas y encender las lámparas.
+            En caso de que la luminosidad exterior sea inferior al 50%,
+            bajar las persianas y encender la iluminación interior.
+        C3. Cuando la temperatura exterior se encuentre entre 18 y 23°C,
+            se deben abrir las ventanas de la vivienda para mantener ésta a la temperatura exterior,
+            así como subir las persianas, independientemente de la luminosidad exterior.
+            Para todo valor de temperatura exterior no perteneciente a este rango,
+            mantener las ventanas cerradas y aplicar el siguiente criterio.
+        C4. Si la temperatura interior se encuentra por debajo de los 18°C,
+            se debe activar la calefacción para alcanzar dicha temperatura.
+            Si esta temperatura es superior a 23°C,
+            se debe activar el aire acondicionado con el objetivo de llegar a estos 23°C.
+            En estos casos, las ventanas deberán estar cerradas, obviamente.
+        C5. Considerando que las temperaturas en el exterior se encontrarán siempre en un rango de entre 0 y 60°C,
+            se debe de activar la calefacción o el aire acondicionado según se ha descrito anteriormente.
+            La potencia tanto del aire acondicionado como de la calefacción vendrá determinada por
+            la diferencia entre la temperatura objetivo y la temperatura del interior de la vivienda,
+            variando de forma lineal según varíe dicha diferencia, de forma que la potencia
+            sea máxima cuando la diferencia de temperaturas sea máxima y
+            nula cuando la temperatura del interior sea igual a la temperatura objetivo.
+        C6. Siempre que el nivel de ruido exterior sea mayor de 40dB,
+            mantener las ventanas cerradas independientemente de la temperatura exterior.
+    */
+
+    u8 ControlarActuadores(st_Sensores *pSen, st_Actuadores *pAct) {
+        //- La función retorno si hay cambios;
+            u8 cambios = 0;
+
+        //- Inicialización de actuadores
+            static u8 inicializar = 1;
+            static st_Sensores prSen;
+            static st_Actuadores prAct;
+
+            if (inicializar) {
+                inicializar = 0;            // no hay que volver a inicializar
+                cambios = 1;                // hay que actualizar la pantalla
+                pAct->ctLuz = APAGADO;
+                pAct->mtVen = APAGADO;
+                pAct->mtPer = APAGADO;
+                pAct->ptCal = APAGADO;
+                pAct->ptAir = APAGADO;
+                pAct->stVen = ST_CERRADAS;
+                pAct->stPer = ST_CERRADAS;
+
+                //- Inicializar el estado anterior de los sensores y actuadores
+                    memcpy(&prSen, pSen, sizeof(st_Sensores));
+                    memcpy(&prAct, pAct, sizeof(st_Actuadores));
+            }
+
+        // C1 Si el detector de presencia no está activo supondremos que la vivienda está vacía,
+        //    por tanto, se mantienen las luces apagadas, las persianas bajadas y las ventanas cerradas.
+        if (pSen->Prese==AUSENTE && prSen.Prese==PRESENTE) {
+            cambios = 1;                // hay que actualizar la pantalla
+            pAct->ctLuz = APAGADO;      // apagado instantáneo de luces
+            pAct->stVen = ST_CERRANDO;  // iniciar el cierre de ventanas
+            pAct->stPer = ST_CERRANDO;  // iniciar el cierre de persianas
+            pAct->ptCal = APAGADO;      // apagar la calefacción para optimizar energía
+            pAct->ptAir = APAGADO;      // apagar el aire acondicionado para optimizar energía
+        }
+
+        // C2a Si el detector de presencia está activo
+        //     y el detector de luz muestra una luminosidad exterior entre el 75% y el 100%
+        //     se suben las persianas y se mantienen las luces apagadas.
+        if (pSen->Prese==PRESENTE && pSen->LuzEx>=75 && pSen->LuzEx<=100) {
+            if (pAct->ctLuz==ENCENDIDO || pAct->stPer!=ST_ABIERTAS) {
+                cambios = 1;                // hay que actualizar la pantalla
+                pAct->ctLuz = APAGADO;      // apagado instantáneo de luces
+                pAct->stPer = ST_ABRIENDO;  // iniciar la apertura de persianas
+            }
+        }
+
+        // C2b Si la luminosidad exterior se encuentra entre el 50% y el 75%,
+        //     subir las persianas y encender las lámparas.
+        else if (pSen->Prese==PRESENTE && pSen->LuzEx>=50 && pSen->LuzEx<75) {
+            if (pAct->ctLuz==APAGADO || pAct->stPer!=ST_ABIERTAS) {
+                cambios = 1;                // hay que actualizar la pantalla
+                pAct->ctLuz = ENCENDIDO;    // encendido instantáneo de luces
+                pAct->stPer = ST_ABRIENDO;  // iniciar la apertura de persianas
+            }
+        }
+
+        // C3a Cuando la temperatura exterior se encuentre entre 18 y 23°C,
+        //     se deben abrir las ventanas de la vivienda para mantener ésta a la temperatura exterior,
+        //     así como subir las persianas, independientemente de la luminosidad exterior.
+        else if (pSen->Prese==PRESENTE && pSen->TemEx>=18 && pSen->TemEx<=23) {
+            if (pAct->ctLuz==APAGADO || pAct->stPer!=ST_ABIERTAS) { //  && pSen->LuzEx<50) {
+                cambios = 1;                // hay que actualizar la pantalla
+                pAct->ctLuz = ENCENDIDO;    // encendido instantáneo de luces
+                pAct->stPer = ST_ABRIENDO;  // iniciar la apertura de persianas
+            }
+        }
+
+        // C2c En caso de que la luminosidad exterior sea inferior al 50%,
+        //     bajar las persianas y encender la iluminación interior.
+        else if (pSen->Prese==PRESENTE) {  //  && pSen->LuzEx<50) {
+            if (pAct->ctLuz==APAGADO || pAct->stPer!=ST_CERRADAS) {
+                cambios = 1;                // hay que actualizar la pantalla
+                pAct->ctLuz = ENCENDIDO;    // encendido instantáneo de luces
+                pAct->stPer = ST_CERRANDO;  // iniciar la apertura de persianas
+            }
+        }
+
+        //- Si cambió algún sensor, actualizar la pantalla aunque no hayan cambiado los actuadores
+            if (memcmp(&prSen, pSen, sizeof(st_Sensores)) != 0) {
+                cambios = 1;
+            }
+
+    /*
+        R3b La idea es que el proceso de abrir o cerrar persianas o ventanas se complete en 10 segundos,
+            comenzando y terminando con movimientos lentos del motor (poca potencia),
+            y estando al 100% de potencia a mitad del recorrido.
+
+    */
+
+        //- Refrescar el valor anterior de los sensores
+            memcpy(&prSen, pSen, sizeof(st_Sensores));
+            memcpy(&prAct, pAct, sizeof(st_Actuadores));
+
+        return cambios;
+    }
+
+//- SimularSensores (requisito U1)
+    /*
+    U1. La placa de control de la FPGA nos permitirá modificar la temperatura exterior, el nivel de ruido, la cantidad de luz y la presencia en la vivienda.
+    Q – A: Permitirán subir-bajar la temperatura exterior en saltos de 1°, partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+    W – S: Permitirán subir-bajar la temperatura interior en saltos de 1°, partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+    E – D: Permitirán subir-bajar el nivel de ruido en saltos de 1dB, partiendo de un valor inicial de 20dB (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+    R – F: Permitirán subir-bajar el porcentaje de luz en saltos de 1%, partiendo de un valor inicial de 75% (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+    P: Permitirá controlar la activación / desactivación del detector de presencia (ON – OFF), partiendo de un valor inicial de OFF.
+    */
+
+    //- Actualiza el valor de un actuador controlando en función de la tecla pulsada y los límites
+    u8 ActualizarValor(char tecla, char subir, char bajar, u8 valorAct, u8 LimInf, u8 LimSup) {
+        if ((tecla == subir) && (valorAct < LimSup))
+            return valorAct + 1;
+        else if ((tecla == bajar) && (valorAct > LimInf))
+            return valorAct - 1;
+        else
+            return valorAct;
+    } // ActualizarValor
+
+
+    void SimularSensores(st_Sensores *pSen) {
+        //- Inicializar los sensores la primera vez
+            static u8 inicializar = 1;
+            if (inicializar) {
+                inicializar = 0;
+                pSen->Prese = AUSENTE;
+                pSen->LuzEx = 75;
+                pSen->TemIn = 20;
+                pSen->TemEx = 20;
+                pSen->Ruido = 20;
+            }
+
+        //- Intento de lectura de una tecla
+            static char rx_buf[2];
+            static u32 numRecv;
+            numRecv = XIOModule_Recv(&iomodule, (u8 *)rx_buf, 1);
+
+        //- Actualización de sensores en función de la tecla pulsada
+            if (numRecv != 0) {
+                pSen->TemEx = ActualizarValor(rx_buf[0], 'Q', 'A', pSen->TemEx, MIN_TEMP, MAX_TEMP);
+                pSen->TemIn = ActualizarValor(rx_buf[0], 'W', 'S', pSen->TemIn, MIN_TEMP, MAX_TEMP);
+                pSen->Ruido = ActualizarValor(rx_buf[0], 'E', 'D', pSen->Ruido, MIN_RUIDO, MAX_RUIDO);
+                pSen->LuzEx = ActualizarValor(rx_buf[0], 'R', 'F', pSen->LuzEx, MIN_LUZEX, MAX_LUZEX);
+                if (rx_buf[0] == 'P') {
+                    pSen->Prese = (pSen->Prese == PRESENTE) ? AUSENTE : PRESENTE; // pSen->Prese = 1-pSen->Prese
+                }
+            }
+    } // SimularSensores
+
+
+    //- ActualizarPantalla (requisito U2)
+        /*
+             U2. En la pantalla se mostrará toda la información del sistema,
+             que incluye el valor de todos los sensores,
+             así como los sistemas que accionamos para el control de la vivienda, con sus unidades respectivas.
+             Cada vez que el usuario modifique algún valor del sensor, o bien debido a un cambio en el sistema
+             por tiempo o por autoincremento/autodecremento de la temperatura,
+             se recalcularán los valores necesarios y se volverá a imprimir toda la información en pantalla.
+             En el caso de las persianas y ventanas, será necesario mostrar tanto si están abiertas o cerradas,
+             así como el % de funcionamiento del motor si se está moviendo;
+             en este último caso, indicar también si la ventana o persiana estaría abriéndose o cerrándose.
+             Inicialmente se encontrará todo cerrado.
+         */
+
+        void ActualizarPantalla(st_Sensores *pSen, st_Actuadores *pAct) {
+            // símbolo para grados centígrados en ASCII
+                #define GRADOS 176
+
+            //- decodificación de constantes simbólicas
+                static const char *decodePrese[] = {"Ausente", "Presente"};
+                static const char *decodeLuces[] = {"Apagadas ", "Encendidas"};
+
+            //- Estado de sensores
+                xil_printf("\n\r\n\rEstado de sensores: ");
+                xil_printf("\n\r   Presencia:    %s", decodePrese[pSen->Prese]);
+                xil_printf("\n\r   Luz exterior: %d %%", pSen->LuzEx);
+                xil_printf("\n\r   Temperatura:  exterior=%d%cC - interior=%d%cC", pSen->TemEx, GRADOS, pSen->TemIn, GRADOS);
+                xil_printf("\n\r   Ruido:        %d dB", pSen->Ruido);
+
+            //- Estado de actuadores
+                xil_printf("\n\r\n\rEstado de actuadores: ");
+
+                //- Luces
+                    xil_printf("\n\r   Luces:    %s                    ", decodeLuces[pAct->ctLuz]);
+
+                //- Ventanas y persianas; indicar el estado y la potencia del motor o sólo el estado si el motor está apagado
+                    /*
+                        R3c Igualmente, acompañar estos valores de % de movimiento del motor con indicaciones
+                        si la ventana se está “CERRANDO” o “ABRIENDO”,
+                        y en el caso de las persianas si están “SUBIENDO” o “BAJANDO”.
+                        Al llegar al final de su recorrido se mostrará por pantalla su situación final.
+                    */
+                    static const char *decodeVents[] = {"Cerradas", "Abriendo", "Abiertas", "Cerrando"};
+                    static const char *decodePerss[] = {"Bajadas ", "Subiendo", "Subidas ", "Bajando "};
+                    if (pAct->mtVen == APAGADO)
+                        xil_printf("\n\r   Ventanas:    %s                    ", decodeVents[pAct->stVen]);
+                    else
+                        xil_printf("\n\r   Ventanas:    %s - motor al %d %%   ", decodeVents[pAct->stVen], pAct->mtVen);
+
+                    if (pAct->mtPer == APAGADO)
+                        xil_printf("\n\r   Persianas:   %s                    ", decodePerss[pAct->stPer]);
+                    else
+                        xil_printf("\n\r   Persianas:   %s - motor al %d %%   ", decodePerss[pAct->stPer], pAct->mtPer);
+
+                //- Calefacción y aire
+                    xil_printf("\n\r   Calefacción:  %d %%          ", pAct->ptCal);
+                    xil_printf("\n\r   Aire acondicionado:  %d %%   ", pAct->ptAir);
+
+            //- Volcar la pantalla
+                xil_printf("\t");
+            return;
+        }
+
+//---------------------------------------------------------------------
+
+/*
+
+* helloworld.c: simple test application
+ */
+
+//#include <stdio.h>
+//#include "platform.h"
+//#include "xparameters.h"
+//#include "xiomodule.h"
+
+
+
+
+
+// Dirección del bus de donde leeremos y escribiremos con el IOBus
+// ATENCIÓN: SÓLO SE PUEDE LLEGAR A DECODIFICAR HASTA 30 BITS, NO LOS 32 DEL BUS.
+static const u32 DIRECCION0 = 0x00000004;
+
+
+
+// Variable para albergar los datos leídos del GPI1 (switches)
+u8 data_sw = 0x00;
+
+// Variable para albergar los datos a escribir en el GPO1 (leds)
+u8 data_gpo1 = 0x00;
+
+
+
+//Variables para los manejadores de interrupciones externas:
+
+// Contador de 0 a 9
+int contador = 0;
+// Variable para el display LCD, en BCD
+u8 valor_bcd = 0;
+
+
+
+void Manejador_INTC2 (void* ref)
+{
+	// Manejador de interrupciones para INTC2 (Interrupción Externa 2), conectada a un botón externo (ARRIBA)
+
+	// Cuando se pulsa el botón, leemos del IOBus el valor que hay en los 4 switches menos significativos de la FPGA,
+	// y escribimos el dato en los 4 bits menos significativos del GPO1, que irán a un display 7 segmentos (millares)
+
+	// Leemos del IoBus, en la DIRECCION0, y ponemos el dato leído en 'data_sw'
+	data_sw = XIOModule_IoReadByte(&iomodule, DIRECCION0);
+
+	// Escribimos el dato de los switches en los 4 bits menos significativos del GPO1, respetando el valor del resto de bits:
+
+	// 1º: Dejamos en 'data_sw' sólo los valores de los 4 bits menos significativos,
+	//     poniendo a cero los 4 más significativos mediante una AND
+	data_sw = data_sw & 0x0F;
+
+	// 2º: Dejamos en 'data_gpo1' sólo los valores de los 4 bits más significativos,
+	//     poniendo a cero los 4 menos significativos mediante una AND
+	data_gpo1 = data_gpo1 & 0xF0;
+
+	// 3º: Calculamos el nuevo valor de salida de 'data_gpo1' haciendo la OR de ella misma con data_sw;
+	data_gpo1 = data_gpo1 | data_sw;
+
+	// 4º: Escribimos en el puerto GPO1
+	XIOModule_DiscreteWrite(&iomodule, 1, data_gpo1);
+}
+
+void Manejador_INTC3 (void* ref)
+{
+	// Manejador de interrupciones para INTC3 (Interrupción Externa 3), conectada a un botón externo (ABAJO)
+
+	// Cuando se pulsa el botón, se lee directamente del GPI1 el valor que hay en los switches de entrada de la FPGA,
+	// y escribimos los 4 bits menos significativos de estos en el IOBus, que irán a un display 7 segmentos (centenas)
+
+	// Lee estado de switches en 'data_sw'
+	data_sw = XIOModule_DiscreteRead(&iomodule, 1);
+
+	// Escribimos en el IOBus, en la DIRECCION0, el dato leído de los switches 'data_sw'
+	XIOModule_IoWriteByte(&iomodule, DIRECCION0, data_sw);
+}
+/*
+  de 3
+  	  3.1.- Dos interrupciones estarán asociadas a la pulsación de los botones derecho e izquierdo de la placa Nexys3 (BTNR y BTNL),
+  	  los cuales provocarán sendas interrupciones que realizarán, respectivamente, el incremento o decremento de uno en uno de un contador cíclico de 0 a 9.
+  	  El valor en BCD de dicho contador (de 4 bits) lo enviaremos al exterior del micro a través del puerto GPO2,
+  	  el cual lo recibirá un módulo de la FPGA que se encargará de gestionar los 4 displays de 7 segmentos de la placa Nexys3,
+  	  y situará dicho valor en la posición de más a la derecha de dichos displays (en las unidades).
+ */
+
+//- Manejador botón derecho: avanzar ciclicamente el modo de sensores/actuadores 1=Prese/ctLuz, 2=LuzEx/mtVen, 3=TemIn/mtPer, 4=TemEx/ptCal 5=Ruido/ptAir
+	void Manejador_BotonDer (void* ref) {
+		//- Leemos los botones del switch para determinar si estamos en modo sensores o actuadores
+		/// encendemos el led 7=sensores 6=actuadores y el led correspondiente al modo
+			u8 data_sw;
+			u8 data_gpo1 = 0x00;
+			data_sw = XIOModule_DiscreteRead(&iomodule, 1);
+
+
+		//- Si el bit más significativo está encendido
+			if (data_sw & 0x80) { // => modo sensores
+				ModoSensores = (ModoSensores+1)%5;
+				// encendemos el led de sensores y el led correspondiente al modo
+				XIOModule_DiscreteWrite(&iomodule, 1, 0x80 | (0x1 << ModoSensores));
+				XIOModule_DiscreteWrite(&iomodule, 2, ModoSensores+1);
+
+
+			} else { // => modo actuadores
+				ModoActuadores = (ModoActuadores+1)%5;
+				XIOModule_DiscreteWrite(&iomodule, 1, 0x40 | (0x1 << ModoActuadores));
+				XIOModule_DiscreteWrite(&iomodule, 2, ModoActuadores+1);
+			}
+	}
+
+
+//- Manejador botón izquierdo: retroceder ciclicamente el modo de sensores/actuadores 1=Prese/ctLuz, 2=LuzEx/mtVen, 3=TemIn/mtPer, 4=TemEx/ptCal 5=Ruido/ptAir
+	void Manejador_BotonIzq (void* ref) {
+		//- Leemos los botones del switch para determinar si estamos en modo sensores o actuadores
+			u8 data_sw;
+			data_sw = XIOModule_DiscreteRead(&iomodule, 1);
+
+		//- Si el bit más significativo está encendido
+			if (data_sw & 0x80) { // => modo sensores
+				ModoSensores = (ModoSensores-1)%5;
+				XIOModule_DiscreteWrite(&iomodule, 2, ModoSensores+1);
+
+			} else { // => modo actuadores
+				ModoActuadores = (ModoActuadores-1)%5;
+				XIOModule_DiscreteWrite(&iomodule, 2, ModoActuadores+1);
+			}
+	}
+
+//- Manejador de interrupciones del temporizador FIT1, programado a 1 segundo
+	void Manejador_Tic_segundos (void* ref)	{
+
+		// Manejador de interrupciones para el FIT1, programado a 1 segundo
+
+
+		// Escribe sólo en los 4 bits más significativos del GPO1, que son los LEDs de salida.
+		// Invertimos cada segundo su valor
+
+		if ((data_gpo1 & 0xF0) == 0x00)   // Sólo miramos los 4 bits más significativos
+			data_gpo1 = data_gpo1 | 0xF0; // Si estaban a 0, ponemos a 1 los 4 bits más significativos haciendo una "OR" con "F"
+		else
+			data_gpo1 = data_gpo1 & 0x0F; // Si estaban a 1, ponemos a 0 los 4 bits más significativos haciendo una "AND" con "0"
+
+		XIOModule_DiscreteWrite(&iomodule, 1, data_gpo1);  // Escribimos en el puerto GPO1
+	}
+
+
+int main()
+{
+    //- Declaración de variables para sensores y actuadores
+        /*
+        R2. Todo el control y almacenamiento de los datos de los sensores se realizará dentro del propio MicroBlaze:
+        detección de presencia, sensor de luz exterior, sensor de temperatura exterior e interior, y detector de ruido exterior.
+        */
+        st_Sensores Sen;
+        st_Actuadores Act;
+
+	//- Inicializa el micro
+        init_platform();
+
+    //- Inicializa el módulo de GPI, GPO y la UART para obtener la dirección base:
+        u32 res; // resultado de llamadas a Xilinx
+    	res = XIOModule_Initialize(&iomodule, XPAR_IOMODULE_0_DEVICE_ID);
+    	res = XIOModule_Start(&iomodule);
+    	res = XIOModule_CfgInitialize(&iomodule, NULL, 1);
+
+    //- Inicializamos el manejador de interrupciones
+    	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID);
+
+    //- Registramos y activamos las interrupciones del temporizador para FIT1 (temporizador a 1 segundo)
+    	XIOModule_Connect(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR, Manejador_Tic_segundos, NULL);
+    	XIOModule_Enable(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR);
+
+    //- Registramos y activamos las interrupciones botón derecho e izquierdo (Interrupciones externa 0 y 1)
+    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_DER, Manejador_BotonDer, NULL);
+    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_IZQ, Manejador_BotonIzq, NULL);
+    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_DER);
+    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_IZQ);
+
+
+	// Define diversas variables que usaremos para la E/S
+	u32 data;
+	u8 index;
+	u32 index2;
+
+	// Define la variable para el buffer de entrada
+	u8 rx_buf[5];
+
+
+	// Iniciamos el manejador de interrupciones
+
+
+
+	// Registramos el manejador de interrupciones para INTC0 (Interrupción externa 0) "Manejador_INTC0"
+
+	// Activamos la interrupción para INTC 0
+
+
+	// Registramos el manejador de interrupciones para INTC 2 (Interrupción externa 2) "Manejador_INTC2"
+	XIOModule_Connect(&iomodule, IDENTIFICADOR_INTC2_EXT, Manejador_INTC2, NULL);
+
+	// Activamos la interrupción para INTC 2
+	XIOModule_Enable(&iomodule, IDENTIFICADOR_INTC2_EXT);
+
+	// Registramos el manejador de interrupciones para INTC 3 (Interrupción externa 3) "Manejador_INTC3"
+	XIOModule_Connect(&iomodule, IDENTIFICADOR_INTC3_EXT, Manejador_INTC3, NULL);
+
+	// Activamos la interrupción para INTC 3
+	XIOModule_Enable(&iomodule, IDENTIFICADOR_INTC3_EXT);
+
+	// Activamos Interrupciones
+	microblaze_enable_interrupts();
+
+
+	index2 = 0;
+	// Retardo necesario para que el Remote Lab se configure correctamente
+	// antes de poder operar con la E/S del MicroBlaze
+	while (index2 < 6000000)
+	{
+		index2 ++;
+	}
+
+
+	// Inicializamos el display de 7 segmentos con el 0
+	valor_bcd = 0;
+	XIOModule_DiscreteWrite(&iomodule, 2, valor_bcd);
+
+	// Envía por la UART el mensaje indicado
+	xil_printf("\n\r\n\rLectura de Switches - Escritura de LEDs - Usando Interrupciones\n\r\n\r");
+
+	xil_printf("\n\rIntroduzca un texto, el Microcontrolador lo convertirá en mayúsculas:\n\r");
+
+	// Enviamos el "\t" al Remote Lab para que imprima todos los xil_printf anteriores.
+	xil_printf("\t\r");
+
+
+
+	// Bucle en el que se espera a recibir un carácter por la UART, y lo escribe otra vez en la misma
+	// pero convertido a mayúsculas (si procede), haciendo un "eco" de lo recibido, por tanto.
+	// Mientras, cada segundo se generará una interrupción en el temporizador FIT1 que detendrá a dicho bucle
+	// y saltará al manejador, y si se pulsa el botón adecuado se generará una interrupción en INTC también
+	while (1)
+	{
+		//SimularSensores(&Sen);
+	    //if (ControlarActuadores(&Sen, &Act)) {
+		//	ActualizarPantalla(&Sen, &Act);
+		//}
+
+		// Leemos un carácter de la UART
+		data = XIOModule_Recv(&iomodule, rx_buf, 1);
+
+		// Si realmente hemos recibido un byte, comprobamos si es una letra minúscula
+		// y la pasamos a mayúsculas; si no es una letra minúscula la enviamos tal y como está.
+		if (data !=0)
+		{
+			// Hemos recibido un dato
+			if ((rx_buf[0] >= 97) & (rx_buf[0] <= 122))
+			{
+				// Es una letra minúscula, la convertimos a mayúscula
+				rx_buf[0] -=32;
+			}
+
+			// Enviamos el dato por la UART. Cuando 'index' valga > 0 quiere decir
+			// que hemos enviado el dato correctamente.
+			index = 0;
+			while (index < 1)
+			{
+				data = XIOModule_Send(&iomodule, rx_buf, 1);
+				index += data;
+			}
+
+			// Si el dato enviado es un retorno de carro ("ENTER") entonces enviamos
+			// un salto de línea adicionalmente.
+			if (rx_buf[0]==13)
+			{
+				index = 0;
+				rx_buf[0] = 10;
+				while (index < 1)
+				{
+					data = XIOModule_Send(&iomodule, rx_buf, 1);
+					index += data;
+				}
+			}
+		 // Enviamos el "\t" para que imprima el Remote Lab el último carácter enviado
+		 xil_printf("\t");
+		}
+	}
+
+	cleanup_platform();
+	return 0;
+}
+
+// source ipcore_dir/microblaze_mcs_setup.tcl
+// microblaze_mcs_data2mem workspace/hello_world/debug/hello_world.elf

@@ -1,0 +1,15 @@
+# Output products list for <bIpSumRes>
+_xmsgs\pn_parser.xmsgs
+bIpSumRes.asy
+bIpSumRes.gise
+bIpSumRes.ngc
+bIpSumRes.sym
+bIpSumRes.vhd
+bIpSumRes.vho
+bIpSumRes.xco
+bIpSumRes.xise
+bIpSumRes\doc\c_addsub_v11_0_readme.txt
+bIpSumRes\doc\c_addsub_v11_0_vinfo.html
+bIpSumRes\doc\ds214_addsub.pdf
+bIpSumRes_flist.txt
+bIpSumRes_xmdf.tcl

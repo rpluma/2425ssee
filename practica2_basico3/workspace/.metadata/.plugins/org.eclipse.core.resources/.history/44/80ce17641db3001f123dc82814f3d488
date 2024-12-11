@@ -1,0 +1,128 @@
+/*
+ * Fichero: 	practica2.h
+ * Autor: 		Ricardo Panero
+ * Fecha:		Noviembre de 2024
+ * Descripción: constantes y estructuras para la práctica 2
+ */
+
+#ifndef PRACTICA2_H_
+#define PRACTICA2_H_
+
+//- Librerías externas
+    #include <stdio.h>
+	#include <string.h>
+    #include "platform.h"
+    #include "xparameters.h"
+    #include "xiomodule.h"
+
+
+//- Estructura para sensores
+	// Por tanto, el objetivo del sistema es crear una vivienda inteligente
+    typedef struct {	// monitorizada por los siguientes componentes y sensores:
+        u8 Prese; 		// 1 detector de presencia en la vivienda (ON – OFF).
+        u8 PSigu;		//  siguiente estado de presencia
+        u8 PTime;		//  tiempo con siguiente estado, si llega a 5 segundos se cambia de estado
+        u8 LuzEx; 		// 1 sensor de luz exterior (0 – 100%).
+        u8 TemIn; 		// 2 sensores de temperatura ambiental, uno interior
+        u8 TemEx; 		// y otro exterior a la vivienda (0 – 60°C).
+        u8 Ruido; 		// 1 detector de ruido exterior (0 – 120 dB).
+    } st_Sensores;
+
+//- Estados de ventanas y persianas
+    // R3a También se controlará en el interior del MicroBlaze la acción sobre los motores de las persianas y ventanas
+    //     para abrirlas y cerrarlas, generando un cambio progresivo en los mismos.
+
+    typedef enum {  // estado de luces, motores de persinas, motores de ventanas, calefacción y aire acondicionado
+    	ST_APAGAR,     // luces, aire y calefacción apagadas
+
+    	ST_ENCENDER,   // luces encendidas
+        ST_CALENTAR,   // encender o mantener la calefacción encendida
+        ST_ENFRIAR,    // encender o mantener la calefacción encendida
+
+    	ST_CERRADAS,   // ventanas/persianas cerradas, motor parado
+        ST_ABRIENDO,   // ventanas/persianas abriéndose, motor encendido
+        ST_ABIERTAS,   // ventanas/persianas abiertas, motor parado
+        ST_CERRANDO,   // ventanas/persianas cerrándose, motor encendido
+
+    	ST_BAJADAS,   // ventanas/persianas cerradas, motor parado
+        ST_SUBIENDO,  // ventanas/persianas abriéndose, motor encendido
+        ST_SUBIDAS,   // ventanas/persianas abiertas, motor parado
+        ST_BAJANDO,   // ventanas/persianas cerrándose, motor encendido
+
+        ST_MANTENER     // valor especial para requisito de no cambiar el estado
+    } est_act;
+
+    static const char *decod_estado[] = {"apagadas",
+    		"encendidas", "calentando", "enfriando",
+    		"cerradas", "abriendo", "abiertas", "cerrando",
+    		"bajadas", "subiendo", "subidas", "bajando"};
+    };
+
+//- Estructura para motores de ventanas y persianas
+    typedef struct {
+    	est_act     estad;  	// estado de las ventanas, segun enumerado
+    	u8			poten;      // potencia de motores (0=MIN_POTENCIA, 100=MAX_POTENCIA)
+    	u8			grado;		// grado de apertura o cierre (0=MIN_APERTURA, 50=MED_APERTURA, 100=MAX_APERTURA)
+    } actuador;
+
+//- Estructura para actuadores
+    typedef struct { // Y los sistemas que accionaremos serán los siguientes:
+    	actuador luz;   // Luces de la casa, apagando o encendiendo las mismas (ON – OFF).
+    	actuador ven; 	// 1 motor para el control de la apertura y cierre de ventanas (0 – 100%)
+        actuador per; 	// 1 motor para controlar la subida y bajada de persianas (0 – 100%).
+        actuador cal;   // 1 control de calefacción, controlando la potencia de acción del mismo (0 – 100%).
+        actuador air;	// 1 control de aire acondicionado, también con control de potencia de acción (0 – 100%).
+    } st_Actuadores;
+
+//- Constantes simbólicas relacionadas con sensores
+    #define AUSENTE 0
+    #define PRESENTE 1
+    #define MIN_LUZEX 0
+    #define MAX_LUZEX 100
+
+    #define MIN_RUIDO 0
+    #define MAX_RUIDO 120
+
+    #define MIN_TEMP 0
+    #define MAX_TEMP  60
+
+    #define OBJ_AIR 23 // Objetivo para el aire acondicionado
+	#define OBJ_CAL 18 // Objetivo para la calefacción
+
+    const u32 MASK_0_AIR =           (OBJ_AIR << 8);
+    const u32 MASK_0_CAL =           (OBJ_CAL << 8);
+    const u32 MASK_1_AIR = (1<<16) | (OBJ_AIR << 8);
+    const u32 MASK_1_CAL = (1<<16) | (OBJ_CAL << 8);
+
+//- Constantes simbólicas relacionadas con actuadores
+    #define MIN_MOTOR 0
+    #define MAX_MOTOR 100
+
+	#define MIN_APERTURA 0
+	#define MED_APERTURA 50
+	#define MAX_APERTURA 100
+
+//- Interrupciones
+    // Constantes para tratar las interrupciones externas y asociarlas a sus correspondientes manejadores.
+    // La primera está situada siempre en XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR,
+    // y las siguientes en posiciones consecutivas.
+    static const u8 INTERRUPCION_BOTON_DER = XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR;
+    static const u8 INTERRUPCION_BOTON_IZQ = XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR+1;
+    static const u8 INTERRUPCION_BOTON_ARR = XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR+2;
+    static const u8 INTERRUPCION_BOTON_ABA = XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR+3;
+    static const u8 INTERRUPCION_POTENCIA_U = XIN_IOMODULE_EXTERNAL_INTERRUPT_INTR+4;
+
+//- Constantes relacionadas con el micro
+	#define GPI_POTENCIA 1
+    #define GPI_SWITCHES 2
+	#define GPO_TEMPERATURAS 1
+    #define GPO_LEDS 2
+	#define GPO_BCDS 3
+
+//- Teclas asociadas a los botones de la FPGA
+	#define TECLA_ARR '8'
+	#define TECLA_ABA '2'
+	#define TECLA_IZQ '4'
+	#define TECLA_DER '6'
+
+#endif /* PRACTICA2_H_ */

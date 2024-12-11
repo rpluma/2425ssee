@@ -1,0 +1,131 @@
+xst -intstyle ise -ifn "C:/Users/albertod/Documents/_Doc_/Xilinx/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/albertod/Documents/_Doc_/Xilinx/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Desktop/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Desktop/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Desktop/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Desktop/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Desktop/mcs_basico3/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Desktop/mcs_basico3/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023_1207/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023_1207/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023_1207/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023_1207/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 
+xst -intstyle ise -ifn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.xst" -ofn "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/mcs_basico3_top.syr" 
+ngdbuild -intstyle ise -dd _ngo -sd ipcore_dir -nt timestamp -uc mcs_basico3_top.ucf -p xc6slx16-csg324-3 mcs_basico3_top.ngc mcs_basico3_top.ngd -bm "ipcore_dir/microcontrolador_mcs.bmm" 
+map -intstyle ise -p xc6slx16-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -global_opt off -mt off -ir off -pr off -lc off -power off -o mcs_basico3_top_map.ncd mcs_basico3_top.ngd mcs_basico3_top.pcf 
+par -w -intstyle ise -ol high -mt off mcs_basico3_top_map.ncd mcs_basico3_top.ncd mcs_basico3_top.pcf 
+trce -intstyle ise -v 3 -s 3 -n 3 -fastpaths -xml mcs_basico3_top.twx mcs_basico3_top.ncd -o mcs_basico3_top.twr mcs_basico3_top.pcf -ucf mcs_basico3_top.ucf 
+bitgen -intstyle ise -f mcs_basico3_top.ut mcs_basico3_top.ncd 

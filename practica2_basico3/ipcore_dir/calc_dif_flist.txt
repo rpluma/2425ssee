@@ -1,0 +1,15 @@
+# Output products list for <calc_dif>
+_xmsgs\pn_parser.xmsgs
+calc_dif.asy
+calc_dif.gise
+calc_dif.ngc
+calc_dif.sym
+calc_dif.vhd
+calc_dif.vho
+calc_dif.xco
+calc_dif.xise
+calc_dif\doc\c_addsub_v11_0_readme.txt
+calc_dif\doc\c_addsub_v11_0_vinfo.html
+calc_dif\doc\ds214_addsub.pdf
+calc_dif_flist.txt
+calc_dif_xmdf.tcl

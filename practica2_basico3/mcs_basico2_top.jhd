@@ -1,0 +1,9 @@
+MODULE mcs_basico2_top
+	SUBMODULE dcm_100m_5m
+		INSTANCE XLXI_866
+	SUBMODULE cont_16bits
+		INSTANCE XLXI_867
+	SUBMODULE Remote_Lab
+		INSTANCE XLXI_865
+	SUBMODULE microblaze_basico2
+		INSTANCE mcs_0

@@ -1,0 +1,10 @@
+Command line:
+   calc_potencia_calc_potencia_sch_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  50243
+
+Sat Dec 07 07:16:33 2024
+
+
+ Elaboration Time: 0.125 sec

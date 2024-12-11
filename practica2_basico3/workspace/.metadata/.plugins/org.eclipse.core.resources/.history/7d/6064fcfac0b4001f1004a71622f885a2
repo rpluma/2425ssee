@@ -1,0 +1,834 @@
+/*
+ * Fichero: 	practica2.c
+ * Autor: 		Ricardo Panero
+ * Fecha:		Noviembre de 2024
+ * Descripción: SISTEMAS ELECTRÓNICOS. PRÁCTICA Nº 2.
+
+   Objetivo:
+
+	Utilizando el software Xilinx ISE 14.7 y Xilinx Software Development Kit (SDK) para programar el MicroBlaze,
+	se pide implementar un sistema de control de luz y temperatura en una vivienda inteligente.
+
+	Este sistema partirá de una serie de datos proporcionados por diversos sensores,
+	como pueden ser la temperatura exterior e interior, la presencia de habitantes en la casa,
+	la luz ambiental o el ruido exterior, y accionará diversos controladores que permitirían subir o bajar persianas,
+	abrir o cerrar ventanas, y arrancar sistemas de calefacción o de aire acondicionado según se necesite,
+	en base a unas normas generales.
+
+	Por tanto, el objetivo del sistema es crear una vivienda inteligente monitorizada por los siguientes componentes y sensores:
+	• 1 detector de presencia en la vivienda (ON – OFF).
+	• 1 sensor de luz exterior (0 – 100%).
+	• 2 sensores de temperatura ambiental, uno interior y otro exterior a la vivienda (0 – 60°C).
+	• 1 detector de ruido exterior (0 – 120 dB).
+
+	Y los sistemas que accionaremos serán los siguientes:
+	• Luces de la casa, apagando o encendiendo las mismas (ON – OFF).
+	• 1 motor para el control de la apertura y cierre de ventanas (0 – 100%).
+	• 1 motor para controlar la subida y bajada de persianas (0 – 100%).
+	• 1 control de calefacción, controlando la potencia de acción del mismo (0 – 100%).
+	• 1 control de aire acondicionado, también con control de potencia de acción (0 – 100%).
+
+	El sistema controlará tanto la activación de las luces de la vivienda como la subida y bajada de persianas para favorecer la entrada de luz
+	en función de la cantidad de luz proveniente del exterior, dependiendo de si hay alguien o no en la vivienda.
+
+	Además, controlará la temperatura, manteniendo ésta en un rango de entre 18 y 23°C.
+
+	Para su correcto funcionamiento, el sistema deberá responder de la siguiente forma:
+	C1. Si el detector de presencia no está activo supondremos que la vivienda está vacía,
+		por tanto, se mantienen las luces apagadas, las persianas bajadas y las ventanas cerradas.
+	C2. Si el detector de presencia está activo y el detector de luz muestra una luminosidad exterior entre el 75% y el 100%,
+			se suben las persianas y se mantienen las luces apagadas.
+		Si la luminosidad exterior se encuentra entre el 50% y el 75%,
+			subir las persianas y encender las lámparas.
+		En caso de que la luminosidad exterior sea inferior al 50%,
+			bajar las persianas y encender la iluminación interior.
+	C3. Cuando la temperatura exterior se encuentre entre 18 y 23°C,
+			se deben abrir las ventanas de la vivienda para mantener ésta a la temperatura exterior, así como subir las persianas, independientemente de la luminosidad exterior.
+		Para todo valor de temperatura exterior no perteneciente a este rango,
+			mantener las ventanas cerradas y aplicar el siguiente criterio.
+	C4. Si la temperatura interior se encuentra por debajo de los 18°C,
+			se debe activar la calefacción para alcanzar dicha temperatura.
+		Si esta temperatura es superior a 23°C,
+			se debe activar el aire acondicionado con el objetivo de llegar a estos 23°C.
+		En estos casos, las ventanas deberán estar cerradas, obviamente.
+	C5. Considerando que las temperaturas en el exterior se encontrarán siempre en un rango de entre 0 y 60°C,
+			se debe de activar la calefacción o el aire acondicionado según se ha descrito anteriormente.
+			La potencia tanto del aire acondicionado como de la calefacción vendrá determinada por
+			la diferencia entre la temperatura objetivo y la temperatura del interior de la vivienda,
+			variando de forma lineal según varíe dicha diferencia,
+			de forma que la potencia sea máxima cuando la diferencia de temperaturas sea máxima
+			y nula cuando la temperatura del interior sea igual a la temperatura objetivo.
+	C6. Siempre que el nivel de ruido exterior sea mayor de 40dB,
+			mantener las ventanas cerradas independientemente de la temperatura exterior.
+
+
+	Interacción del usuario con el sistema:
+	U1. La placa de control de la FPGA nos permitirá modificar la temperatura exterior, el nivel de ruido, la cantidad de luz y la presencia en la vivienda.
+		Q – A: Permitirán subir-bajar la temperatura exterior en saltos de 1°,
+				partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema),
+				controlando los valores mínimos y máximos posibles.
+		W – S: Permitirán subir-bajar la temperatura interior en saltos de 1°,
+				partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema),
+				controlando los valores mínimos y máximos posibles.
+		E – D: Permitirán subir-bajar el nivel de ruido en saltos de 1dB,
+				partiendo de un valor inicial de 20dB (preprogramado al inicio del sistema),
+				controlando los valores mínimos y máximos posibles.
+		R – F: Permitirán subir-bajar el porcentaje de luz en saltos de 1%,
+				partiendo de un valor inicial de 75% (preprogramado al inicio del sistema),
+				controlando los valores mínimos y máximos posibles.
+		P: 	  Permitirá controlar la activación / desactivación del detector de presencia (ON – OFF),
+				partiendo de un valor inicial de OFF.
+
+	U2. En la pantalla se mostrará toda la información del sistema, que incluye
+	 	 el valor de todos los sensores, así como los sistemas que accionamos para el control de la vivienda, con sus unidades respectivas.
+		 Cada vez que el usuario modifique algún valor del sensor,
+		 	 o bien debido a un cambio en el sistema por tiempo
+ 	 	 	 o por autoincremento/autodecremento de la temperatura,
+		 	 se recalcularán los valores necesarios y se volverá a imprimir toda la información en pantalla.
+		 En el caso de las persianas y ventanas, será necesario mostrar tanto si están abiertas o cerradas,
+		 	 así como el % de funcionamiento del motor si se está moviendo;
+		 	 en este último caso, indicar también si la ventana o persiana estaría abriéndose o cerrándose.
+		 Inicialmente se encontrará todo cerrado.
+
+	Restricciones:
+		R1. Para suponer un cambio de estado en el sensor de presencia en la vivienda,
+			éste deberá estar al menos 5 segundos consecutivos en un nuevo estado (ON u OFF).
+			Si vuelve a cambiar al estado previo antes de 5 segundos
+				no se debe realizar ninguna acción,
+				y el tiempo de cuenta de 5 segundos se resetea.
+		R2. Todo el control y almacenamiento de los datos de los sensores se realizará dentro del propio MicroBlaze:
+			detección de presencia, sensor de luz exterior, sensor de temperatura exterior e interior, y detector de ruido exterior.
+		R3. También se controlará en el interior del MicroBlaze la acción sobre los motores de las persianas y ventanas para abrirlas y cerrarlas,
+			generando un cambio progresivo en los mismos.
+			La idea es que el proceso de abrir o cerrar persianas o ventanas se complete en 10 segundos,
+			comenzando y terminando con movimientos lentos del motor (poca potencia), y estando al 100% de potencia a mitad del recorrido.
+			Igualmente, acompañar estos valores de % de movimiento del motor con indicaciones
+				si la ventana se está “CERRANDO” o “ABRIENDO”,
+				y en el caso de las persianas si están “SUBIENDO” o “BAJANDO”.
+			Al llegar al final de su recorrido se mostrará por pantalla su situación final.
+		R4. Se controlará en la parte de la FPGA el cálculo de la potencia correspondiente a los motores de la calefacción y el aire acondicionado,
+				proporcionándole el MicroBlaze los datos necesarios, a través de uno o varios GPO de salida,
+				para calcular la potencia instantánea del motor en cada caso,
+				acompañando los datos con una señal de sincronismo necesaria (“datos_nuevos”)
+				que también saldrá por un GPO de salida.
+			El valor del % de potencia del motor, una vez calculado, se leerá por un puerto GPI de entrada al MicroBlaze
+				cuando el módulo externo así lo indique,
+				utilizando para ello una interrupción externa (INTC).
+		R5. El alumno será responsable de crear las funciones lineales de control de la potencia de la calefacción y del aire acondicionado para que cumplan con los requisitos establecidos.
+				Estos cálculos, como se ha indicado, se realizarán en un único módulo en la parte de la FPGA,
+				diseñando el circuito necesario para aceptar los datos desde el MicroBlaze,
+				activando el cálculo,
+				y ofreciendo los resultados de nuevo al MicroBlaze.
+		R6. Igualmente, el alumno deberá implementar en el MicroBlaze un sistema lógico de “autoincrementos” o “autodecrementos”
+			cada cierto tiempo en la temperatura interior de la vivienda en caso de abrirse las ventanas y persianas para adecuar la temperatura interna a la externa
+			o cuando se activa la calefacción o el aire acondicionado,
+			llegando a la temperatura objetivo (18°C en el caso de ser necesario calentar la vivienda y 23°C en el caso de tener que enfriarla).
+
+ */
+
+#include "practica2.h"
+
+//==================================== VARIABLES GLOBALES
+	//- Hardware de Xilinx
+		XIOModule iomodule;
+
+	//- R2. Todo el control y almacenamiento de los datos de los sensores se realizará dentro del propio MicroBlaze...
+        st_Sensores Sen;
+		st_Actuadores Act;
+		st_Temporizador Tem;
+
+
+
+//==================================== GESTIÓN DE POTENCIA CALCULADA EN FPGA
+	// C5. Considerando que las temperaturas en el exterior se encontrarán siempre en un rango de entre 0 y 60°C,
+    //     se debe de activar la calefacción o el aire acondicionado según se ha descrito anteriormente.
+    //     La potencia tanto del aire acondicionado como de la calefacción vendrá determinada por
+    //     la diferencia entre la temperatura objetivo y la temperatura del interior de la vivienda,
+    //     variando de forma lineal según varíe dicha diferencia,
+    //     de forma que la potencia sea máxima cuando la diferencia de temperaturas sea máxima
+    //     y nula cuando la temperatura del interior sea igual a la temperatura objetivo.
+
+
+	//- Actualizar_Pot_Clim: Petición asíncrona a la FPGA de un nuevo cálculo de la potencia
+		void Actualizar_Pot_Clim() {
+			//- Inicializar el semáforo y el número de ejecuciones
+				Tem.sema_fpga = 0;
+
+			//- Si desde la última vez no cambió la temperatura interior, no hace falta volver a recalcular
+				if (Act.TemIn_ant == Sen.TemIn) {
+					return;
+				}
+
+			//- Con frío y las ventanase cerradas, pedir el cálculo de potencia para calentar a 18 grados
+				if (Sen.Prese==PRESENTE && Sen.TemIn<OBJ_CAL && Act.ven.estad==ST_CERRADAS) {
+					Act.cal.estad = ST_CALENTAR;
+					Act.air.estad = ST_APAGAR;
+					Act.TemIn_ant = Sen.TemIn;
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_CAL | (Sen.TemIn)); // dato
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_1_CAL | (Sen.TemIn)); // pulso
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_CAL | (Sen.TemIn)); // dato
+					Tem.ejec_fpga++;
+				}
+
+			//- Con calor y las ventanas cerradas, pedir el cálculo de potencia para enfriar a 23 grados
+				else if (Sen.Prese==PRESENTE && Sen.TemIn>OBJ_AIR && Act.ven.estad==ST_CERRADAS) {
+					Act.cal.estad = ST_APAGAR;
+					Act.air.estad = ST_ENFRIAR;
+					Act.TemIn_ant = Sen.TemIn;
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_AIR | (Sen.TemIn)); // dato
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_1_AIR | (Sen.TemIn)); // pulso
+					XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_AIR | (Sen.TemIn)); // dato
+					Tem.ejec_fpga++;
+				}
+
+			//- Si no hay que calentar ni enfriar, apagar los motores
+				else {
+					Act.cal.estad = ST_APAGAR;
+					Act.air.estad = ST_APAGAR;
+					Act.cal.poten = 0;
+					Act.air.poten = 0;
+				}
+		}
+
+	//- Manejador respuesta del cálculo de potencia
+		void Manejador_Pot_Clim (void* ref) {
+			Tem.sema_fpga = 1;
+			Act.pot_clima = XIOModule_DiscreteRead(&iomodule, GPI_POTENCIA);
+		}
+
+	//- Respuesta_PotenClim: Petición asíncrona a la FPGA de un nuevo cálculo de la potencia
+		void Respuesta_Pot_Clim() {
+			//- Omitir la ejecución si el semáforo está apagado
+				if (!Tem.sema_fpga)
+					return;
+
+			//- Desactivar el semáforo de la FPGA y activar el de los actuadores para recontrolar con la nueva potencia de climatización
+				Tem.sema_fpga = 0;
+				Tem.sema_actu = 1;
+
+			//- Si la potencia calculada es negativa, hay que actualizar la potencia de la calefacción
+				if (Act.pot_clima < 0) {
+					Act.cal.poten = -Act.pot_clima;
+				}
+
+			//- Si la potencia calculada es positiva, hay que actualizar la potencia del aire
+				else { // if (Act.pot_clima >= 0) {
+					Act.air.poten = Act.pot_clima;
+				}
+
+
+		} // ActualizarPotenClim
+
+
+
+//==================================== GESTIÓN DE SENSORES
+
+	//- Manejadores de botones para simular la pulsación de teclas de dirección
+		void Manejador_BotonDer (void* ref) {
+			Sen.sig_tecla = TECLA_DER; //- Simulamos que hemos pulsado la tecla del botón derecho (dígito 6)
+		}
+
+		void Manejador_BotonIzq (void* ref) {
+			Sen.sig_tecla = TECLA_IZQ; //- Simulamos que hemos pulsado la tecla del botón izquierdo (dígito 4)
+		}
+
+		void Manejador_BotonArr (void* ref) {
+			Sen.sig_tecla = TECLA_ARR; //- Simulamos que hemos pulsado la tecla del botón arriba (dígito 8)
+		}
+
+		void Manejador_BotonAba (void* ref) {
+			Sen.sig_tecla = TECLA_ABA; //- Simulamos que hemos pulsado la tecla del botón abajo (dígito 2)
+		}
+
+
+	//- SimularSensores: modifica el valor de los sensores a petición del usuario
+	    // U1. La placa de control de la FPGA nos permitirá modificar la temperatura exterior, el nivel de ruido, la cantidad de luz y la presencia en la vivienda.
+	    //     Q – A: Permitirán subir-bajar la temperatura exterior en saltos de 1°, partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+	    //     W – S: Permitirán subir-bajar la temperatura interior en saltos de 1°, partiendo de un valor inicial de 20°C (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+	    //     E – D: Permitirán subir-bajar el nivel de ruido en saltos de 1dB, partiendo de un valor inicial de 20dB (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+	    //     R – F: Permitirán subir-bajar el porcentaje de luz en saltos de 1%, partiendo de un valor inicial de 75% (preprogramado al inicio del sistema), controlando los valores mínimos y máximos posibles.
+	    //     P: Permitirá controlar la activación / desactivación del detector de presencia (ON – OFF), partiendo de un valor inicial de OFF.
+	    void SimularSensores() {
+
+	    	//- Si se pulsó ningún botón, mostrarlo como si se hubiera pulsado una tecla
+	    		if (Sen.sig_tecla != '\0') {
+	    			Sen.ult_tecla = Sen.sig_tecla;
+	    		}
+
+	    	//- Si no se pulsó ningún botón, intentar leer una nueva tecla del puerto serie
+				else {
+	    			//- Lectura del puerto serie
+	                	static char rx_buf[2];
+	                	static u32 numRecv;
+	                	numRecv = XIOModule_Recv(&iomodule, (u8 *)rx_buf, 1);
+
+	                //- Si hay datos, actualizar la última tecla pulsada y convertirla a mayúsculas
+						if (numRecv != 0) {
+							Sen.sig_tecla = rx_buf[0];
+							Sen.ult_tecla = Sen.sig_tecla;
+							if (Sen.sig_tecla >='a')
+								Sen.sig_tecla -= 0x20;
+						}
+				}
+
+	    	//- Si no se ha pulsado ninguna tecla o botón, salir sin cambios
+	    		if (Sen.sig_tecla == '\0') {
+	    			return;
+	    		}
+
+			//- Actualizar los semáforos
+  				Tem.sema_pant = 1;  // Como se ha pulsado una tecla que actualizar la pantalla
+	    		Tem.sema_actu = 1; 	// Si cambió algún sensor hay que recalcular los actuadores
+
+			//- Tratamiento de los botones/teclas de dirección
+	            if ((Sen.sig_tecla==TECLA_IZQ) || (Sen.sig_tecla==TECLA_DER) || (Sen.sig_tecla==TECLA_ARR) || (Sen.sig_tecla==TECLA_ABA)) {
+	            	const char *TeclasArriba = "PRQWE"; // teclas para subir los sensores
+	            	const char *TeclasAbajo  = "PFASD"; // teclas para bajar los sensores
+
+
+	            	//- Cambiar el número de sensor/actuador activo con las teclas de izquierda y derecha
+						if (Sen.sig_tecla==TECLA_IZQ && Sen.modo_sensores) {
+							Sen.num_activo = (Sen.num_activo==0) ? 4 : Sen.num_activo - 1;
+						} else if (Sen.sig_tecla==TECLA_IZQ) { //  && !modo_sensores)
+							Act.num_activo = (Act.num_activo==0) ? 4 : Act.num_activo - 1;
+						} else if (Sen.sig_tecla == TECLA_DER && Sen.modo_sensores) {
+							Sen.num_activo = (Sen.num_activo==4) ? 0 : Sen.num_activo + 1;
+						} else if (Sen.sig_tecla == TECLA_DER) { // && !modo_sensores
+							Act.num_activo = (Act.num_activo==4) ? 0 : Act.num_activo + 1;
+						}
+
+					//- Simular la tecla para incrementar el sensor dependiendo de qué sensor está activo
+						if (Sen.sig_tecla==TECLA_ARR && Sen.modo_sensores) {
+							Sen.sig_tecla = TeclasArriba[Sen.num_activo];
+						}
+
+					//- Simular la tecla para decrementar el sensor dependiendo de qué sensor está activo
+						else if (Sen.sig_tecla==TECLA_ABA && Sen.modo_sensores) {
+							Sen.sig_tecla = TeclasAbajo[Sen.num_activo];
+						}
+	            } // teclas de dirección
+
+			//- Actualizamos sensores según la tecla pulsada o los botones equivalentes
+	            switch (Sen.sig_tecla) {
+	            	case 'R': if (Sen.LuzEx < MAX_LUZEX) Sen.LuzEx++; break; // subir luz exterior
+	            	case 'F': if (Sen.LuzEx > MIN_LUZEX) Sen.LuzEx--; break; // bajar luz exterior
+	            	case 'Q': if (Sen.TemEx < MAX_TEMPE) Sen.TemEx++; break; // subir temperatura exterior
+	            	case 'A': if (Sen.TemEx > MIN_TEMPE) Sen.TemEx--; break; // bajar temperatura exterior
+	            	case 'W': if (Sen.TemIn < MAX_TEMPE) Sen.TemIn++; break; // subir temperatura exterior
+	            	case 'S': if (Sen.TemIn > MIN_TEMPE) Sen.TemIn--; break; // bajar temperatura exterior
+	            	case 'E': if (Sen.Ruido < MAX_RUIDO) Sen.Ruido++; break; // subir nivel de ruido
+	            	case 'D': if (Sen.Ruido > MIN_RUIDO) Sen.Ruido--; break; // bajar nivel de ruido
+
+		            case 'P': // Actualización del siguiente estado de presencia
+						// R1. Para suponer un cambio de estado en el sensor de presencia en la vivienda,
+						//     éste deberá estar al menos 5 segundos consecutivos en un nuevo estado (ON u OFF).
+						//     Si vuelve a cambiar al estado previo antes de 5 segundos
+						//  	no se debe realizar ninguna acción,
+						//		y el tiempo de cuenta de 5 segundos se resetea.
+						Sen.Prese_sig = (Sen.Prese_sig==PRESENTE) ? AUSENTE : PRESENTE; // siguiente estado de presencia
+						Tem.tics_pres = 0; // cada vez que se pulse P, inicializar el timer de espera de 5 segundos
+						break;
+	            }
+
+			//- Reseteamos la última tecla para la siguiente iteración
+				Sen.sig_tecla = '\0';
+
+	    } // SimularSensores
+
+
+
+//==================================== GESTIÓN DE LA PANTALLA
+
+	//- EstadoMotores: Visualiza "Motor al X%" o espacios si el motor está apagado
+	    void ImprimirPotencia(u8 potencia) {
+	    	if (potencia == 0) {
+	    		xil_printf("                ");
+	    	} else {
+	    		xil_printf("Motor al %d%%   ", potencia);
+	    	}
+	    }
+
+	//- RefrecarPantalla: Actualiza la pantalla sólo si el semáforo indica que hubo algún cambio
+        //    U2. En la pantalla se mostrará toda la información del sistema,
+        //       que incluye el valor de todos los sensores,
+        //       así como los sistemas que accionamos para el control de la vivienda, con sus unidades respectivas.
+        //
+        //    Cada vez que el usuario modifique algún valor del sensor,
+        //       o bien debido a un cambio en el sistema
+        //    	 por tiempo o por autoincremento/autodecremento de la temperatura,
+        //    se recalcularán los valores necesarios y se volverá a imprimir toda la información en pantalla.
+        //
+        //    En el caso de las persianas y ventanas, será necesario mostrar tanto si están abiertas o cerradas,
+        //       así como el % de funcionamiento del motor si se está moviendo;
+        //       en este último caso, indicar también si la ventana o persiana estaría abriéndose o cerrándose.
+        //    Inicialmente se encontrará todo cerrado.
+		void RefrecarPantalla() {
+
+			//- Omitir el refresco si el semáforo está apagado o no ha pasado suficiente tiempo desde la última vez
+				if (!Tem.sema_pant || Tem.tics_pant < TICS_PANTALLA)
+					return;
+
+			//- Actualizar el semáforo, el número de tics desde el último refresco y el número de ejecuciones
+				Tem.sema_pant = 0;
+				Tem.tics_pant = 0;
+				Tem.ejec_pant++;
+
+			//- Leer el estado de los switches para saber si estamos en modo sensores o modo actuadores
+				Sen.modo_sensores = (XIOModule_DiscreteRead(&iomodule, GPI_SWITCHES) & MASK_SEN);
+
+			//- Actualizar los leds y el valor a mostrar en el display dependiendo del modo sensores/actuadores y del que está activo
+				if (Sen.modo_sensores) {
+					XIOModule_DiscreteWrite(&iomodule, GPO_LEDS,  MASK_SEN | (0x1 << (4-Sen.num_activo)));
+					switch (Sen.num_activo) {
+						case 0:  Sen.valor_display = Sen.Prese; break;
+						case 1:  Sen.valor_display = Sen.LuzEx; break;
+						case 2:  Sen.valor_display = Sen.TemEx; break;
+						case 3:  Sen.valor_display = Sen.TemIn; break;
+						case 4:  Sen.valor_display = Sen.Ruido; break;
+					}
+
+				} else { // modo actuadores
+					XIOModule_DiscreteWrite(&iomodule, GPO_LEDS,  MASK_ACT | (0x1 << (4-Act.num_activo)));
+					switch (Act.num_activo) {
+						case 0:  Sen.valor_display = Act.luz.estad; break;
+						case 1:  Sen.valor_display = Act.ven.poten; break;
+						case 2:  Sen.valor_display = Act.per.poten; break;
+						case 3:  Sen.valor_display = Act.cal.poten; break;
+						case 4:  Sen.valor_display = Act.air.poten; break;
+					}
+				}
+
+			//- Actualizar los 4 displays de 7 segmentos
+				u16 data_bcd;
+				data_bcd = ((Sen.modo_sensores) ? 0xd000 : 0xA000) ; // Primer dígito: d=datos de sensores y A=Actuadores
+				data_bcd |= ((Sen.modo_sensores) ? Sen.num_activo : Act.num_activo) << 8; // segundo dígito, cuál está activo
+				data_bcd |= Sen.valor_display; // tercer y cuarto dígito: valor del sensor/actuador activo en hexadecimal
+				XIOModule_DiscreteWrite(&iomodule, GPO_BCDS, data_bcd);
+
+			//- Mover el cursor al inicio e indicar la tecla pulsada
+	            xil_printf("\033[H");
+	            xil_printf("\n\rTecla pulsada='%c'  ", Sen.ult_tecla);
+	            xil_printf("\n\rEjecuciones: Control=%d, FPGA=%d, Pantalla=%d", Tem.ejec_actu, Tem.ejec_fpga, Tem.ejec_pant);
+
+			//- Imprimir en pantalla el estado de los sensores marcando con * el que está activo
+				static const char *decodePrese[] = {"Ausente", "Presente"};
+	            #define GRADOS 176
+				#define SACTIVO(X) (Sen.modo_sensores && Sen.num_activo == X) ? '*' : ' '
+	            xil_printf("\n\r\n\rESTADO DE SENSORES: ");
+	            xil_printf("\n\r %c Presencia P:              %s     ", SACTIVO(0), decodePrese[Sen.Prese]);
+	            xil_printf("\n\r %c Luz exterior R/F:         %d %%  ", SACTIVO(1), Sen.LuzEx);
+	            xil_printf("\n\r %c Temperatura exterior Q/A: %d %cC ", SACTIVO(2), Sen.TemEx, GRADOS);
+	            xil_printf("\n\r %c Temperatura interior W/S: %d %cC ", SACTIVO(3), Sen.TemIn, GRADOS);
+	            xil_printf("\n\r %c Ruido E/D:                %d dB  ", SACTIVO(4), Sen.Ruido);
+
+	        //- Imprimir en pantalla el estado de los actuadores marcando con * el que está activo
+	            // R3c Igualmente, acompañar estos valores de % de movimiento del motor con indicaciones
+	            //     si la ventana se está “CERRANDO” o “ABRIENDO”,
+	            //     y en el caso de las persianas si están “SUBIENDO” o “BAJANDO”.
+	            //     Al llegar al final de su recorrido se mostrará por pantalla su situación final.
+
+	            #define AACTIVO(X) (!Sen.modo_sensores && Act.num_activo == X) ? '*' : ' '
+	            xil_printf("\n\r\n\rESTADO DE ACTUADORES: ");
+		        xil_printf("\n\r %c Luces:       %s  ", AACTIVO(0), decod_estado[Act.luz.estad]);
+		        xil_printf("\n\r %c Ventanas:   %s ", AACTIVO(1), decod_estado[Act.ven.estad]); ImprimirPotencia(Act.ven.poten);
+		        xil_printf("\n\r %c Persianas:  %s ", AACTIVO(2), decod_estado[Act.per.estad]); ImprimirPotencia(Act.per.poten);
+	            xil_printf("\n\r %c Calefacción: %s ", AACTIVO(3), decod_estado[Act.cal.estad]); ImprimirPotencia(Act.cal.poten);
+	            xil_printf("\n\r %c Aire acond.: %s ", AACTIVO(4), decod_estado[Act.air.estad]); ImprimirPotencia(Act.air.poten);
+
+	        //- Volcar la pantalla
+	            xil_printf("\t");
+
+	    } // RefrecarPantalla
+
+
+
+//==================================== GESTIÓN DE REACCIÓN DE ACTUADORES ANTE CAMBIOS EN SENSORES
+
+	//- ControlarActuadores: cambia el estado de los actuadores
+	    void ControlarActuadores() {
+			//   El sistema controlará tanto la activación de las luces de la vivienda como la subida y bajada de persianas
+			//   para favorecer la entrada de luz en función de la cantidad de luz proveniente del exterior,
+			//   dependiendo de si hay alguien o no en la vivienda.
+			//   Además, controlará la temperatura, manteniendo ésta en un rango de entre 18 y 23°C.
+			//   Para su correcto funcionamiento, el sistema deberá responder de la siguiente forma:
+			//   C1. Si el detector de presencia no está activo supondremos que la vivienda está vacía, por tanto,
+			//       se mantienen las luces apagadas, las persianas bajadas y las ventanas cerradas.
+			//   C2. Si el detector de presencia está activo y el detector de luz muestra una luminosidad exterior entre el 75% y el 100%,
+			//       se suben las persianas y se mantienen las luces apagadas.
+			//       Si la luminosidad exterior se encuentra entre el 50% y el 75%,
+			//       subir las persianas y encender las lámparas.
+			//       En caso de que la luminosidad exterior sea inferior al 50%,
+			//       bajar las persianas y encender la iluminación interior.
+			//   C3. Cuando la temperatura exterior se encuentre entre 18 y 23°C,
+			//       se deben abrir las ventanas de la vivienda para mantener ésta a la temperatura exterior,
+			//       así como subir las persianas, independientemente de la luminosidad exterior.
+			//       Para todo valor de temperatura exterior no perteneciente a este rango,
+			//       mantener las ventanas cerradas y aplicar el siguiente criterio.
+			//   C4. Si la temperatura interior se encuentra por debajo de los 18°C,
+			//       se debe activar la calefacción para alcanzar dicha temperatura.
+			//       Si esta temperatura es superior a 23°C,
+			//       se debe activar el aire acondicionado con el objetivo de llegar a estos 23°C.
+			//       En estos casos, las ventanas deberán estar cerradas, obviamente.
+			//   C5. Considerando que las temperaturas en el exterior se encontrarán siempre en un rango de entre 0 y 60°C,
+			//       se debe de activar la calefacción o el aire acondicionado según se ha descrito anteriormente.
+			//       La potencia tanto del aire acondicionado como de la calefacción vendrá determinada por
+			//       la diferencia entre la temperatura objetivo y la temperatura del interior de la vivienda,
+			//       variando de forma lineal según varíe dicha diferencia, de forma que la potencia
+			//       sea máxima cuando la diferencia de temperaturas sea máxima y
+			//       nula cuando la temperatura del interior sea igual a la temperatura objetivo.
+			//   C6. Siempre que el nivel de ruido exterior sea mayor de 40dB,
+			//       mantener las ventanas cerradas independientemente de la temperatura exterior.
+
+			//- Omitir el control de actuadores si el semáforo está apagado
+				if (!Tem.sema_actu)
+					return;
+
+			//- Actualizar el semáforo, el número de tics desde el último refresco y el número de ejecuciones
+				Tem.sema_actu = 0;
+				Tem.ejec_actu++;
+				Tem.sema_pant = 1; // si se actualizan los actuadores, forzar que se refresque la pantalla
+
+	    	//- Guardar el estado anterior de ventanas y persianas para saber si cambia
+	    		u8 ven_antes, per_antes;
+	    		ven_antes = Act.ven.estad;
+	    		per_antes = Act.per.estad;
+
+		    //- C1 Si el detector de presencia no está activo supondremos que la vivienda está vacía,
+	        	// por tanto, se mantienen las luces apagadas, las persianas bajadas y las ventanas cerradas.
+		        if (Sen.Prese==AUSENTE) {
+		        	Act.luz.estad = ST_APAGAR;
+		        	Act.ven.estad = ST_CERRADAS;
+		        	Act.per.estad = ST_BAJADAS;
+		        }
+
+		    //- C2a Si el detector de presencia está activo
+	        	//  y el detector de luz muestra una luminosidad exterior entre el 75% y el 100%
+	        	//  se suben las persianas y se mantienen las luces apagadas.
+	        	if (Sen.Prese==PRESENTE && Sen.LuzEx>=75 && Sen.LuzEx<=100) {
+	        		Act.luz.estad = ST_APAGAR;
+	        		Act.per.estad = ST_SUBIDAS;
+	        	}
+
+		    //- C2b Si la luminosidad exterior se encuentra entre el 50% y el 75%,
+		        //  subir las persianas y encender las lámparas.
+		        else if (Sen.Prese==PRESENTE && Sen.LuzEx>=50 && Sen.LuzEx<75) {
+		        	Act.luz.estad = ST_ENCENDER;
+		        	Act.per.estad = ST_SUBIDAS;
+				}
+
+		    //- C2c En caso de que la luminosidad exterior sea inferior al 50%,
+		        //  bajar las persianas y encender la iluminación interior.
+		        else if (Sen.Prese==PRESENTE) {  //  && Sen.LuzEx<50) {
+		        	Act.luz.estad = ST_ENCENDER;
+		        	Act.per.estad = ST_BAJADAS;
+		        }
+
+		    //- C3a Cuando la temperatura exterior se encuentre entre 18 y 23°C,
+		        //  se deben abrir las ventanas de la vivienda para mantener ésta a la temperatura exterior,
+		        //  así como subir las persianas, independientemente de la luminosidad exterior.
+		        if (Sen.Prese==PRESENTE && Sen.TemEx>=OBJ_CAL && Sen.TemEx<=OBJ_AIR) {
+		        	Act.ven.estad = ST_ABIERTAS;
+		        	Act.per.estad = ST_SUBIDAS;
+		        }
+
+		    //- C3b Para todo valor de temperatura exterior no perteneciente a este rango,
+		        //     mantener las ventanas cerradas y aplicar el siguiente criterio.
+		        // C4a Si la temperatura interior se encuentra por debajo de los 18°C,
+		        //     se debe activar la calefacción para alcanzar dicha temperatura.
+		        // C4b Si esta temperatura es superior a 23°C,
+		        //     se debe activar el aire acondicionado con el objetivo de llegar a estos 23°C.
+		        //     En estos casos, las ventanas deberán estar cerradas, obviamente.
+		        else if (Sen.Prese==PRESENTE && Sen.TemIn<OBJ_CAL) {
+		        	Act.ven.estad = ST_CERRADAS;
+		        }
+
+		        else if (Sen.Prese==PRESENTE) { // && Sen.TemIn > OBJ_AIR
+		        	Act.ven.estad = ST_CERRADAS;
+		        }
+
+	        //- C6: Cierre de la ventana cuando hay ruido;
+		        // aunque haga buen tiempo, puede ser necesario encender la climatización porque las ventanas están cerradas por el ruido
+				// C6. Siempre que el nivel de ruido exterior sea mayor de 40dB,
+				//     mantener las ventanas cerradas independientemente de la temperatura exterior.
+				if (Sen.Ruido>40) {
+					Act.ven.estad = ST_CERRADAS;
+				}
+
+			//- inicio de apertura o cierre gradual de ventanas
+				if (Act.ven.estad==ST_ABIERTAS && ven_antes!=ST_ABIERTAS) {
+					Act.ven.estad = ST_ABRIENDO;
+				} else if (Act.ven.estad==ST_CERRADAS && ven_antes!=ST_CERRADAS) {
+					Act.ven.estad = ST_CERRANDO;
+				}
+
+			//- inicio de apertura o cierre gradual de persianas
+				if (Act.per.estad==ST_SUBIDAS && per_antes!=ST_SUBIDAS) {
+					Act.per.estad = ST_SUBIENDO;
+				} else if (Act.per.estad==ST_BAJADAS && per_antes!=ST_BAJADAS) {
+					Act.per.estad = ST_BAJANDO;
+				}
+
+			//- Si cambiambiaron las necesidades de climatización, recalcular la potencia de los motores
+				Actualizar_Pot_Clim();
+
+			//- Si la potencia es cero, o la temperatura es buena, o con ventanas abiertas o no hay nadie en casa, apagar la climatización
+				if (Act.pot_clima==0 || (Sen.TemIn>=OBJ_CAL && Sen.TemIn<=OBJ_AIR) || Act.ven.estad==ST_ABIERTAS || Sen.Prese==AUSENTE) {
+					Act.cal.estad = ST_APAGAR;
+					Act.air.estad = ST_APAGAR;
+					Act.cal.poten = 0;
+					Act.air.poten = 0;
+				}
+
+
+	    } // ControlarActuadores
+
+
+
+//==================================== GESTIÓN DEL TEMPORIZADOR
+
+	//- Manejador_Temporizador: interrupciones del temporizador FIT1, programado a 0.1 segundos
+		// R3b La idea es que el proceso de abrir o cerrar persianas o ventanas se complete en 10 segundos,
+		//     comenzando y terminando con movimientos lentos del motor (poca potencia),
+		//     y estando al 100% de potencia a mitad del recorrido.
+		void Manejador_Temporizador (void* ref)	{
+
+			//- activar el semáforo para ejecutar la lógica del temporizador
+            	Tem.sema_temp = 1;
+
+            //- Incrementar los números de tics
+	        	Tem.tics_pant++;
+            	Tem.tics_pres++;
+            	Tem.tics_auto++;
+
+            //- Incrementar/decrementar el grado de apertura de las ventanas
+            	if (Act.ven.estad==ST_ABRIENDO && Tem.grad_vent<GRAD_MAX_APERTURA) {
+            		Tem.grad_vent++;
+            	} else if (Act.ven.estad==ST_CERRANDO && Tem.grad_vent>GRAD_MIN_APERTURA) {
+            		Tem.grad_vent--;
+            	}
+
+            //- Incrementar/decrementar el grado de apertura de las persianas
+            	if (Act.per.estad==ST_SUBIENDO && Tem.grad_pers<GRAD_MAX_APERTURA) {
+            		Tem.grad_pers++;
+            	} else if (Act.per.estad==ST_BAJANDO && Tem.grad_pers>GRAD_MIN_APERTURA) {
+            		Tem.grad_pers--;
+            	}
+
+	    } // Manejador_Temporizador
+
+
+
+	//- ActualizarPorTiemo: ajusta sensores y actuadores periódicamente
+		void ActualizarPorTiemo() {
+
+			//- Si el semáforo está desactivado, volver sin hacer nada
+				if (!Tem.sema_temp) {
+					return;
+				}
+
+			//- Desactivar el semáforo hasta la siguiente interrupción
+				Tem.sema_temp = 0;
+
+			//- Si ha cambiado el switch de modo sensores/actuadores, actualizar la variable y refrescar la pantalla
+        		u8 modo_sensores;
+				modo_sensores = (XIOModule_DiscreteRead(&iomodule, GPI_SWITCHES) & 0x80);
+				if (Sen.modo_sensores != modo_sensores) {
+					Sen.modo_sensores = modo_sensores;
+					Tem.sema_pant = 1;
+				}
+
+			//- Si cambió el sensor de presencia y han pasado 5 segundos, cambiar el estado y recontrolar
+				if (Sen.Prese!=Sen.Prese_sig && Tem.tics_pres >= TICS_PRESENCIA_5SEG) {
+					Sen.Prese = Sen.Prese_sig;
+					Tem.sema_actu = 1;
+				}
+
+			//- si las ventanas se están moviendo, actualizar la pantalla y comprobar si llegaron a final de recorrido
+				if (Act.ven.estad==ST_ABRIENDO || Act.ven.estad==ST_CERRANDO) {
+					Tem.sema_pant = 1;
+					if (Tem.grad_vent == GRAD_MAX_APERTURA) {
+						Act.ven.estad = ST_ABIERTAS;
+						Tem.sema_actu = 1;
+					} else if (Tem.grad_vent == GRAD_MIN_APERTURA) {
+						Act.ven.estad = ST_CERRADAS;
+						Tem.sema_actu = 1;
+					}
+					if (Tem.grad_vent <= GRAD_MED_APERTURA) { // entre 0 y 100 (0% a 50% de apertura), la potencia es ascendente
+						Act.ven.poten = Tem.grad_vent;
+					}
+					else { // entre 101 y 200 (50% a 100% de apertura), la potencia es descendente
+						Act.ven.poten = GRAD_MAX_APERTURA - Tem.grad_vent;
+					}
+				} // (Act.ven.estad==ST_ABRIENDO || Act.ven.estad==ST_CERRANDO)
+
+			//- si las persianas se están moviendo, actualizar la pantalla y comprobar si llegaron a final de recorrido
+				if (Act.per.estad==ST_SUBIENDO || Act.per.estad==ST_BAJANDO) {
+					Tem.sema_pant = 1;
+					if (Tem.grad_pers == GRAD_MAX_APERTURA) {
+						Act.per.estad = ST_SUBIDAS;
+						Tem.sema_actu = 1;
+					} else if (Tem.grad_pers == GRAD_MIN_APERTURA) {
+						Act.per.estad = ST_BAJADAS;
+						Tem.sema_actu = 1;
+					}
+					if (Tem.grad_pers <= GRAD_MED_APERTURA) { // entre 0 y 100 (0% a 50% de apertura), la potencia es ascendente
+						Act.per.poten = Tem.grad_pers;
+					}
+					else { // entre 101 y 200 (50% a 100% de apertura), la potencia es descendente
+						Act.per.poten = GRAD_MAX_APERTURA - Tem.grad_pers;
+					}
+				} // (Act.per.estad==ST_SUBIENDO || Act.per.estad==ST_BAJANDO)
+
+
+			//- R6. Igualmente, el alumno deberá implementar en el MicroBlaze un sistema lógico de “autoincrementos” o “autodecrementos”
+				//  cada cierto tiempo en la temperatura interior de la vivienda en caso de abrirse las ventanas y persianas para adecuar la temperatura interna a la externa
+			    //  o cuando se activa la calefacción o el aire acondicionado,
+				//  llegando a la temperatura objetivo (18°C en el caso de ser necesario calentar la vivienda y 23°C en el caso de tener que enfriarla).
+				if (Tem.tics_auto >= TICS_AUTOINCREMENTO) {
+					//- Resetear el temporizador e inicilizar el valor de la siguiente temperatura interior
+						Tem.tics_auto = 0;
+						Sen.TemIn_sig = Sen.TemIn;
+
+					//- Con las ventanas abiertas, la temperatura subirá o bajará 1 grado, dependiendo de la diferencia entre interior y exterior
+						if (Act.ven.estad == ST_ABIERTAS) {
+							Sen.TemIn_sig += (Sen.TemIn_sig < Sen.TemEx) ? 1 : -1;
+						}
+
+					//- Con la calefacción encendida, la temperatura sube 2 grados
+						if (Act.cal.poten > 0) {
+							Sen.TemIn_sig += 2;
+						}
+
+					//- Con el aire encendido, la temperatura baja 2 grados
+						else if (Act.air.poten > 0) {
+							Sen.TemIn_sig -=2;
+						}
+
+					//- Si la nueva temperatura cambia, actualizar la temperatura interior y activar el semáforo de actuadores
+						if (Sen.TemIn != Sen.TemIn_sig) {
+							Sen.TemIn = Sen.TemIn_sig;
+							Tem.sema_actu = 1;
+						}
+				}	// Tem.tics_auto >= TICS_AUTOINCREMENTO
+
+		} // ActualizarPorTiemo
+
+
+
+
+
+
+//---------------------------------------------------------------------
+
+
+//==================================== INICIALIZACIÓN
+
+	void Inicializar() {
+		//- Inicializa el micro
+	        init_platform();
+
+	    //- Inicializa el módulo de GPI, GPO y la UART para obtener la dirección base:
+	        u32 res; // resultado de llamadas a Xilinx
+	    	res = XIOModule_Initialize(&iomodule, XPAR_IOMODULE_0_DEVICE_ID);
+	    	res = XIOModule_Start(&iomodule);
+	    	res = XIOModule_CfgInitialize(&iomodule, NULL, 1);
+
+	    //- Inicializamos el manejador de interrupciones
+	    	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID);
+
+	    //- Registramos y activamos las interrupciones del temporizador para FIT1 (temporizador a 1 segundo)
+	    	XIOModule_Connect(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR, Manejador_Temporizador, NULL);
+	    	XIOModule_Enable(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR);
+
+	    //- Registramos y activamos las interrupciones botón derecho e izquierdo (Interrupciones externa 0 y 1)
+	    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_DER, Manejador_BotonDer, NULL);
+	    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_IZQ, Manejador_BotonIzq, NULL);
+	    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_ARR, Manejador_BotonArr, NULL);
+	    	XIOModule_Connect(&iomodule, INTERRUPCION_BOTON_ABA, Manejador_BotonAba, NULL);
+	    	XIOModule_Connect(&iomodule, INTERRUPCION_POTENCIA_U, Manejador_Pot_Clim, NULL);
+
+	    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_DER);
+	    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_IZQ);
+	    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_ARR);
+	    	XIOModule_Enable(&iomodule, INTERRUPCION_BOTON_ABA);
+	    	XIOModule_Enable(&iomodule, INTERRUPCION_POTENCIA_U);
+
+		//- Activamos Interrupciones
+			microblaze_enable_interrupts();
+
+		//- Retardo necesario para que el Remote Lab se configure correctamente antes de operar con la E/S del MicroBlaze
+			u32 index2;
+			for (index2 = 0; index2 < 6000000; index2 ++)
+				;
+			xil_printf("\t");
+
+		//- Inicializar los actuadores
+			// número de actuador activo
+			Act.num_activo = 0;
+
+			// estado actual
+			Act.luz.estad = ST_APAGAR;
+			Act.ven.estad = ST_CERRADAS;
+			Act.per.estad = ST_BAJADAS;
+			Act.cal.estad = ST_APAGAR;
+			Act.air.estad = ST_APAGAR;
+
+			// potencia de motores
+			Act.ven.poten = 0;
+			Act.per.poten = 0;
+			Act.cal.poten = 0;
+			Act.air.poten = 0;
+			Act.pot_clima = 0;
+
+
+		//- Inicializar los sensores
+			Sen.num_activo = 0;
+			Sen.Prese = AUSENTE;
+			Sen.Prese_sig = AUSENTE;
+			Sen.LuzEx = 75;
+			Sen.TemIn = 20;
+			Sen.TemEx = 20;
+			Sen.Ruido = 20;
+			Sen.ult_tecla = ' ';
+			Sen.sig_tecla = '\0';
+
+		//- Temporizadores
+			memset((void *)&Tem, 0, sizeof(st_Temporizador));
+			Tem.sema_pant = 1;
+
+		} // Inicializar
+
+//==================================== MAIN
+	int main()
+	{
+		//- Inicialización de la placa
+			Inicializar();
+
+		//- Bucle principal
+			while (1)
+			{
+				//- Leer el teclado para simular los cambios en los sensores
+					SimularSensores();
+
+				//- Si saltó la interrupción del temporizador, actualizar sensores y actuadores
+					ActualizarPorTiemo();
+
+				//- Si se pulsaron teclas o se modificó algo por tiempo, hay que controlar los actuadores
+					ControlarActuadores();
+
+				//- Si hubo una respuesta de cálculo de potencia de climatización, ajustar los actuadores
+					Respuesta_Pot_Clim();
+
+				//- Si cambió algún dato, refrescar la pantalla
+					RefrecarPantalla();
+
+			} // while (1)
+
+		//- Finalización (código no alcanzable)
+			cleanup_platform();
+			return 0;
+
+	} // main
+
+// source ipcore_dir/microblaze_mcs_setup.tcl
+// microblaze_mcs_data2mem workspace/hello_world/debug/hello_world.elf

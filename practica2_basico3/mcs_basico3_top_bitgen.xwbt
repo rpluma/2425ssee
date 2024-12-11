@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\Users\Usuario_UMA\Downloads\mcs_basico3_rl_2023\mcs_basico3_top.ncd
+OUTFILE=C:\Users\Usuario_UMA\Downloads\mcs_basico3_rl_2023\mcs_basico3_top.bit
+FAMILY=Spartan6
+PART=xc6slx16-3csg324
+WORKINGDIR=C:\Users\Usuario_UMA\Downloads\mcs_basico3_rl_2023
+LICENSE=WebPack
+USER_INFO=176074171_0_0_047

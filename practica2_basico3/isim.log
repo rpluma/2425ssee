@@ -1,0 +1,16 @@
+ISim log file
+Running: C:\Users\Usuario_UMA\Downloads\mcs_basico3_rl_2023\calc_potencia_calc_potencia_sch_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -view C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_simres.wcfg -wdb C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_isim_beh.wdb 
+ISim P.20131013 (signature 0x7708f090)
+WARNING: A WEBPACK license was found.
+WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
+WARNING: ISim will run in Lite mode. Please refer to the ISim documentation for more information on the differences between the Lite and the Full version.
+This is a Lite version of ISim.
+Time resolution is 1 ps
+# onerror resume
+# run 300 ns
+Simulator is doing circuit initialization process.
+Finished circuit initialization process.
+at 0 ps, Instance /calc_potencia_calc_potencia_sch_tb/UUT/XLXI_93/U0/xbip_addsub/i_xbip_addsub_behv/addsub_usecase/i_addsub/ : Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+# run 1.00us
+# run 1.00us
+# run 11.00us

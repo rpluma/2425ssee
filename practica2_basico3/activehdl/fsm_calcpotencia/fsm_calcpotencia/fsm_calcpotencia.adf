@@ -1,0 +1,32 @@
+[Project]
+Current Flow=Multivendor
+VCS=0
+version=4
+Current Config=compile
+[Configurations]
+compile=fsm_calcpotencia
+[Library]
+fsm_calcpotencia=.\fsm_calcpotencia\fsm_calcpotencia.lib
+[$LibMap$]
+fsm_calcpotencia=.
+Active_lib=
+[Settings]
+FLOW_TYPE=HDL
+LANGUAGE=VHDL
+REFRESH_FLOW=1
+FLOWTOOLS=ONLY_IMPL
+ON_SERVERFARM_SYNTH=0
+ON_SERVERFARM_IMPL=0
+ON_SERVERFARM_SIM=0
+[IMPLEMENTATION]
+UCF=
+[Files]
+/fsm_calcpotencia.asf=-1
+[Files.Data]
+.\src\fsm_calcpotencia.asf=State Diagram
+[file_out:/fsm_calcpotencia.asf]
+/..\compile\fsm_calcpotencia.vhd=-1
+[HierarchyViewer]
+HierarchyInformation=
+ShowHide=ShowTopLevel
+Selected=

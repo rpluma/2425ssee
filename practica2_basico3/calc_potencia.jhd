@@ -1,0 +1,7 @@
+MODULE calc_potencia
+	SUBMODULE bIpSumRes
+		INSTANCE XLXI_93
+	SUBMODULE bIpDividir
+		INSTANCE XLXI_94
+	SUBMODULE fsm_calcpotencia
+		INSTANCE XLXI_98

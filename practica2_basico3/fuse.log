@@ -1,0 +1,71 @@
+Running: C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\fuse.exe -intstyle ise -incremental -lib secureip -o C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_isim_beh.exe -prj C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_beh.prj work.calc_potencia_calc_potencia_sch_tb 
+ISim P.20131013 (signature 0x7708f090)
+Number of CPUs detected in this system: 4
+Turning on mult-threading, number of parallel sub-compilation jobs: 8 
+Determining compilation order of HDL files
+Parsing VHDL file "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/ipcore_dir/bIpSumRes.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/ipcore_dir/bIpDividir.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/fsm_potencia.vhd" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia.vhf" into library work
+Parsing VHDL file "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_tb.vhd" into library work
+Starting static elaboration
+Completed static elaboration
+Compiling package standard
+Compiling package std_logic_1164
+Compiling package numeric_std
+Compiling package vcomponents
+Compiling package textio
+Compiling package vital_timing
+Compiling package vital_primitives
+Compiling package vpkg
+Compiling package std_logic_arith
+Compiling package std_logic_unsigned
+Compiling architecture fd_v of entity FD [\FD('0')\]
+Compiling architecture inv_v of entity INV [inv_default]
+Compiling architecture and2_v of entity AND2 [and2_default]
+Compiling architecture m2_1_hxilinx_calc_potencia_v of entity M2_1_HXILINX_calc_potencia [m2_1_hxilinx_calc_potencia_defau...]
+Compiling architecture fde_v of entity FDE [\FDE('0')\]
+Compiling package xbip_addsub_v2_0_comp
+Compiling package bip_utils_pkg_v2_0
+Compiling package bip_usecase_utils_pkg_v2_0
+Compiling package c_addsub_pkg_v11_0
+Compiling package xbip_pipe_v2_0_xst_comp
+Compiling package xbip_dsp48_addsub_v2_0_comp
+Compiling package xbip_pipe_v2_0_comp
+Compiling package std_logic_signed
+Compiling package bip_dsp48_addsub_pkg_v2_0
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,1,0,0,"0...]
+Compiling architecture behavioral of entity xbip_dsp48_addsub_v2_0 [\xbip_dsp48_addsub_v2_0(0,0,"spa...]
+Compiling architecture behavioral of entity xbip_addsub_v2_0 [\xbip_addsub_v2_0("spartan6",0,1...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0 [\xbip_pipe_v2_0(0,1,0,0,0,1,0,"0...]
+Compiling architecture behavioral of entity xbip_pipe_v2_0_xst [\xbip_pipe_v2_0_xst(0,1,0,0,0,1,...]
+Compiling architecture behavioral of entity c_addsub_v11_0 [\c_addsub_v11_0(0,"spartan6",1,1...]
+Compiling architecture bipsumres_a of entity bIpSumRes [bipsumres_default]
+Compiling architecture vcc_v of entity VCC [vcc_default]
+Compiling architecture gnd_v of entity GND [gnd_default]
+Compiling architecture srlc16e_v of entity SRLC16E [\SRLC16E("0000000000000001")(0,1...]
+Compiling architecture srlc32e_v of entity SRLC32E [\SRLC32E("0000000000000000000000...]
+Compiling architecture lut1_v of entity LUT1 [\LUT1("0010")(0,3)\]
+Compiling architecture lut6_v of entity LUT6 [\LUT6("0000000011111110111111100...]
+Compiling architecture lut5_v of entity LUT5 [\LUT5("1001011010010110100101101...]
+Compiling architecture lut4_v of entity LUT4 [\LUT4("1001011011110000")(0,15)\]
+Compiling architecture lut3_v of entity LUT3 [\LUT3("10010110")(0,7)\]
+Compiling architecture lut2_v of entity LUT2 [\LUT2("1110")(0,3)\]
+Compiling architecture muxcy_v of entity MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity XORCY [xorcy_default]
+Compiling architecture structure of entity bIpDividir [bipdividir_default]
+Compiling architecture m4_1e_hxilinx_calc_potencia_v of entity M4_1E_HXILINX_calc_potencia [m4_1e_hxilinx_calc_potencia_defa...]
+Compiling architecture fsm_calcpotencia_arch of entity fsm_calcpotencia [fsm_calcpotencia_default]
+Compiling architecture buf_v of entity BUF [buf_default]
+Compiling architecture behavioral of entity calc_potencia [calc_potencia_default]
+Compiling architecture behavioral of entity calc_potencia_calc_potencia_sch_...
+Time Resolution for simulation is 1ps.
+Waiting for 45 sub-compilation(s) to finish...
+Compiled 120 VHDL Units
+Built simulation executable C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_isim_beh.exe
+Fuse Memory Usage: 74812 KB
+Fuse CPU Usage: 1436 ms

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="bip_dsp48_addsub_pkg_v2_0" />
+            <top_module name="bip_usecase_utils_pkg_v2_0" />
+            <top_module name="bip_utils_pkg_v2_0" />
+            <top_module name="c_addsub_pkg_v11_0" />
+            <top_module name="calc_potencia_calc_potencia_sch_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_signed" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="vcomponents" />
+            <top_module name="vital_primitives" />
+            <top_module name="vital_timing" />
+            <top_module name="vpkg" />
+            <top_module name="xbip_addsub_v2_0_comp" />
+            <top_module name="xbip_dsp48_addsub_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_comp" />
+            <top_module name="xbip_pipe_v2_0_xst_comp" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="34" />
+   <wvobject fp_name="divider22" type="divider">
+      <obj_property name="label">Entradas</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/temin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temin[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temin[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/temob" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temob[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temob[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/temmax" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temmax[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temmax[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/temmin" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temmin[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temmin[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/potencia" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">potencia[7:0]</obj_property>
+      <obj_property name="ObjectShortName">potencia[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/tem_n" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tem_n</obj_property>
+      <obj_property name="ObjectShortName">tem_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider21" type="divider">
+      <obj_property name="label">Sincro</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/tem_p" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">tem_p</obj_property>
+      <obj_property name="ObjectShortName">tem_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/temint" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temint[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temint[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/temobj" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">temobj[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temobj[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/potencia_p" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">potencia_p</obj_property>
+      <obj_property name="ObjectShortName">potencia_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider26" type="divider">
+      <obj_property name="label">Sumador</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/sa" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sa[15:0]</obj_property>
+      <obj_property name="ObjectShortName">sa[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/sb" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">sb[12:0]</obj_property>
+      <obj_property name="ObjectShortName">sb[12:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/res" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">res[15:0]</obj_property>
+      <obj_property name="ObjectShortName">res[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/add" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">add</obj_property>
+      <obj_property name="ObjectShortName">add</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider30" type="divider">
+      <obj_property name="label">Calor</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/calor" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calor[7:0]</obj_property>
+      <obj_property name="ObjectShortName">calor[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/ce_calor" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce_calor</obj_property>
+      <obj_property name="ObjectShortName">ce_calor</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider32" type="divider">
+      <obj_property name="label">Calor x 100</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/calorx100" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calorx100[15:0]</obj_property>
+      <obj_property name="ObjectShortName">calorx100[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/ce_calorx100" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce_calorx100</obj_property>
+      <obj_property name="ObjectShortName">ce_calorx100</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider33" type="divider">
+      <obj_property name="label">Rango</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/rango" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rango[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rango[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/ce_rango" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ce_rango</obj_property>
+      <obj_property name="ObjectShortName">ce_rango</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider34" type="divider">
+      <obj_property name="label">Potencia</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/calorx100" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">calorx100[15:0]</obj_property>
+      <obj_property name="ObjectShortName">calorx100[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/rango" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">rango[7:0]</obj_property>
+      <obj_property name="ObjectShortName">rango[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/quot" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">quot[15:0]</obj_property>
+      <obj_property name="ObjectShortName">quot[15:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/potencia" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">potencia[7:0]</obj_property>
+      <obj_property name="ObjectShortName">potencia[7:0]</obj_property>
+      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/UUT/potencia_p" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">potencia_p</obj_property>
+      <obj_property name="ObjectShortName">potencia_p</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/reset" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">reset</obj_property>
+      <obj_property name="ObjectShortName">reset</obj_property>
+   </wvobject>
+   <wvobject fp_name="/calc_potencia_calc_potencia_sch_tb/ck" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">ck</obj_property>
+      <obj_property name="ObjectShortName">ck</obj_property>
+   </wvobject>
+</wave_config>

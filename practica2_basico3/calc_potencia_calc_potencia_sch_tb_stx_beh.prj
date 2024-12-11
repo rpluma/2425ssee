@@ -1,0 +1,4 @@
+vhdl isim_temp "ipcore_dir/bIpSumRes.vhd"
+vhdl isim_temp "ipcore_dir/bIpDividir.vhd"
+vhdl isim_temp "fsm_potencia.vhd"
+vhdl isim_temp "calc_potencia_tb.vhd"

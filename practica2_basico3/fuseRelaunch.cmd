@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_isim_beh.exe" -prj "C:/Users/Usuario_UMA/Downloads/mcs_basico3_rl_2023/calc_potencia_calc_potencia_sch_tb_beh.prj" "work.calc_potencia_calc_potencia_sch_tb" 

@@ -1,0 +1,5 @@
+vhdl work "ipcore_dir/bIpSumRes.vhd"
+vhdl work "ipcore_dir/bIpDividir.vhd"
+vhdl work "fsm_potencia.vhd"
+vhdl work "calc_potencia.vhf"
+vhdl work "calc_potencia_tb.vhd"

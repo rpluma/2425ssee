@@ -1,0 +1,15 @@
+MODULE mcs_basico3_top
+	SUBMODULE dcm_100m_5m
+		INSTANCE XLXI_866
+	SUBMODULE cont_16bits
+		INSTANCE XLXI_867
+	SUBMODULE Remote_Lab
+		INSTANCE XLXI_865
+	SUBMODULE microcontrolador_mcs
+		INSTANCE mcs_0
+	SUBMODULE iobus_salida
+		INSTANCE XLXI_183
+	SUBMODULE displays_7seg_nexys3_RemLab
+		INSTANCE XLXI_873
+	SUBMODULE calc_potencia
+		INSTANCE XLXI_876
