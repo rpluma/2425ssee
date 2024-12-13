@@ -187,7 +187,7 @@
 		void Act_Calc_Pot_Clima() {
 			//- Si desde la última vez no cambió la temperatura interior, no hace falta volver a recalcular la potencia de climatización
 				static char Ultima_temperatura = 0;
-				if (Ultima_temperatura == Valores[SEN_TemIn]) {
+				if (Tem.sema_fpga || Ultima_temperatura==Valores[SEN_TemIn]) {
 					return;
 				}
 
@@ -197,6 +197,7 @@
 			//- R4: LLAMADA DE MICROBLAZE A FPGA
 				//- Con frío dentro de la casa, calcular la potencia para llegar al a 18 grados (aunque la casa esté vacía o las ventanas abiertas)
 					if (Ultima_temperatura<UMBRAL_CALEF) {
+						Tem.sema_fpga = 1;
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_CAL | (u8)Ultima_temperatura); // dato
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_1_CAL | (u8)Ultima_temperatura); // pulso
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_CAL | (u8)Ultima_temperatura); // dato
@@ -207,6 +208,7 @@
 
 				//- Con calor dentre de la casa, calcular la potencia para llegar a 23 grados
 					else if (Ultima_temperatura>UMBRAL_AIREA) {
+						Tem.sema_fpga = 1;
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_AIR | (u8)Ultima_temperatura); // dato
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_1_AIR | (u8)Ultima_temperatura); // pulso
 						XIOModule_DiscreteWrite(&iomodule, GPO_TEMPERATURAS, MASK_0_AIR | (u8)Ultima_temperatura); // dato
@@ -225,6 +227,9 @@
 		void Act_Manejador_Pot_Clim (void* ref) {
 			//- R4b: INTERRUPCIÓN RESPUESTA FPGA
 				Act_pot_clima = XIOModule_DiscreteRead(&iomodule, GPI_POTENCIA);
+
+			//- Desactivar el semáforo para permitir nuevas llamadas
+				Tem.sema_fpga = 0;
 
 			//- con la nueva potencia calculada, volver a controlar los actuadores en la siguiente iteración
 				Tem.sema_actu = 1;
@@ -553,8 +558,8 @@
 
 			//- U2a: CONTENIDO PANTALLA
 				//- Mover el cursor al inicio e indicar la tecla pulsada
-		            xil_printf("\033[H");
-		            xil_printf("\n\rTecla pulsada='%c'  ", ui.ult_tecla);
+		            xil_printf("\033[H\t\r");
+		            xil_printf("Tecla pulsada=[%c]  ", ui.ult_tecla);
 
 				//- Actualizar los leds y el valor a mostrar en la placa display dependiendo del sensor/actuador activo
 					#ifdef MEJORAS
@@ -565,7 +570,8 @@
 						XIOModule_DiscreteWrite(&iomodule, GPO_LEDS,  MASK_ACT | (0x1 << (ui.sa_activo-UMBRAL_SEN_ACT)));
 						XIOModule_DiscreteWrite(&iomodule, GPO_BCDS, 0xA000 | ((ui.sa_activo-UMBRAL_SEN_ACT) << 8) | Valores[ui.sa_activo]);
 					}
-		            xil_printf("\n\rNº EJECUCIONES:\n\rControl=%d\n\rFPGA=%d\n\rPantalla=%d", Tem.ejec_actu, Tem.ejec_fpga, Tem.ejec_pant);
+		            xil_printf("\n\rNº EJECUCIONES:    \n\r Control=%d      \n\r FPGA=%d      \n\r Pantalla=%d      ",
+		            		Tem.ejec_actu, Tem.ejec_fpga, Tem.ejec_pant);
 					#endif
 
 				//- Visualizar todos los sensores y actuadores
@@ -577,9 +583,11 @@
 		            	UI_ImprimirPotencia(iSenAct); // opcionalmente, imprime motor al X %
 		            	xil_printf("      "); // espacios adicionales para borrar texto previo en la línea
 		            }
-
-		        //- Volcar la pantalla
+		        //- poner el cursor al principio de una nueva línea y volcar la pantalla
 		            xil_printf("\t");
+		            xil_printf("\n\r");
+
+
 
 	    } // UI_RefrecarPantalla
 
@@ -589,11 +597,11 @@
 
 //==================================== GESTIÓN DEL TEMPORIZADOR
 
-	//- Tem_Manejador_INTC: interrupciones del temporizador FIT1, programado a 0.1 segundos
+	//- Tem_Manejador_FIT1: interrupciones del temporizador FIT1, programado a 0.1 segundos
 		// R3b La idea es que el proceso de abrir o cerrar persianas o ventanas se complete en 10 segundos,
 		//     comenzando y terminando con movimientos lentos del motor (poca potencia),
 		//     y estando al 100% de potencia a mitad del recorrido.
-		void Tem_Manejador_INTC (void* ref)	{
+		void Tem_Manejador_FIT1 (void* ref)	{
 
 			//- activar el semáforo para ejecutar la lógica del temporizador
             	Tem.sema_temp = 1;
@@ -620,7 +628,7 @@
 	            		Tem.grad_pers--;
 	            	}
 
-	    } // Tem_Manejador_INTC
+	    } // Tem_Manejador_FIT1
 
 
 
@@ -736,7 +744,7 @@
 	    	microblaze_register_handler(XIOModule_DeviceInterruptHandler, XPAR_IOMODULE_0_DEVICE_ID);
 
 	    //- Registramos y activamos las interrupciones del temporizador para FIT1 (temporizador a 1 segundo)
-	    	XIOModule_Connect(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR, Tem_Manejador_INTC, NULL);
+	    	XIOModule_Connect(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR, Tem_Manejador_FIT1, NULL);
 	    	XIOModule_Enable(&iomodule, XIN_IOMODULE_FIT_1_INTERRUPT_INTR);
 
 	    //- Registramos y activamos las interrupciones botón derecho e izquierdo (Interrupciones externa 0 y 1)
@@ -789,6 +797,7 @@
 			memset((void *)&Tem, 0, sizeof(st_Temporizador));
 			Tem.sema_actu = 1;
 			Tem.sema_pant = 1; // U2B:
+			Tem.sema_fpga = 0;
 
 		} // Inicializar
 
@@ -804,11 +813,11 @@
 				//- Leer el teclado para simular los cambios en los sensores
 					UI_SimularSensores();
 
-				//- Actualiza el estado de los sensores
-					Sen_ActualizarEstados();
-
 				//- Si saltó la interrupción del temporizador, actualizar sensores y actuadores
 					Tem_ActualizarTics();
+
+				//- Actualiza el estado de los sensores
+					Sen_ActualizarEstados();
 
 				//- Si se pulsaron teclas o se modificó algo por tiempo, hay que controlar los actuadores
 					Act_ControlarActuadores();

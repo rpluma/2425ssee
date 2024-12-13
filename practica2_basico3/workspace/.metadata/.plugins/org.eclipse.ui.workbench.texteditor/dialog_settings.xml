@@ -1,28 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
-		<item value="353" key="DIALOG_WIDTH"/>
-		<item value="719" key="DIALOG_Y_ORIGIN"/>
-		<item value="1755" key="DIALOG_X_ORIGIN"/>
-		<item value="513" key="DIALOG_HEIGHT"/>
-		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|5|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		<item value="257" key="DIALOG_WIDTH"/>
+		<item value="637" key="DIALOG_Y_ORIGIN"/>
+		<item value="381" key="DIALOG_HEIGHT"/>
+		<item value="1431" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="casesensitive"/>
 		<item value="false" key="isRegEx"/>
+		<item value="false" key="casesensitive"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="ControlarActuadores" key="selection"/>
+		<item value="sema_fpga" key="selection"/>
 		<list key="findhistory">
+			<item value="sema_fpga"/>
+			<item value="intc"/>
 			<item value="ControlarActuadores"/>
 			<item value="pIomodule"/>
 			<item value="potcli"/>
 			<item value="PotCli"/>
 			<item value="Segundos"/>
 			<item value="POTCLI"/>
-			<item value="CLI"/>
-			<item value="POTENCIA"/>
 		</list>
 		<list key="replacehistory">
 		</list>

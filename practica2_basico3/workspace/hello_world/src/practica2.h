@@ -60,6 +60,7 @@
                 u8  sema_actu;           // semáforo para indicar que hay que recontrolar los actuadores
                 u8  sema_pant;           // semáforo para indicar que hay que refrescar la pantalla
                 u8  sema_temp;           // semáforo para indicar que ha saltado la interrupción al menos una vez
+                u8  sema_fpga;			 // semáforo para detectar si la FPGA no ha devuelto un valor después dee ser invocada
             //- contadores de veces que se ejecuta una función
                 #ifdef MEJORAS
                 u16 ejec_pant;           // número de veces que se refresca la pantalla
@@ -228,7 +229,7 @@
             "\n\r%c E/D) Ruido: %s [%d dB]",
 
             "\n\r\n\rESTADO DE ACTUADORES"
-            "\n\r %c Luces: %s",
+            "\n\r%c Luces: %s",
 
             "\n\r%c Ventanas: %s",
             "\n\r%c Persianas: %s",
